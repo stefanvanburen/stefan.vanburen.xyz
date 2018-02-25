@@ -1,3 +1,6 @@
 [submodule "themes/hemingway2"]
 	path = themes/hemingway2
 	url = https://gitlab.com/beli3ver/hemingway2.git
+[submodule "themes/hugo-xmin"]
+	path = themes/hugo-xmin
+	url = https://github.com/yihui/hugo-xmin
