@@ -1,7 +1,7 @@
 languageCode = "en-us"
 title = "Stefan VanBuren"
 baseurl = "http://svbn.me/"
-theme = "hemingway2"
+theme = "hugo-xmin"
 
 [taxonomies]
 tag = "tags"
