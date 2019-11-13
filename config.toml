@@ -1,26 +1,14 @@
 languageCode = "en-us"
-title = "Stefan VanBuren"
-baseurl = "http://svbn.me/"
-theme = "hugo-xmin"
+title = "Stefan VanBuren 🤖"
+baseurl = "https://svbn.me/"
+theme = "hugo-theme-basic"
+enableEmoji = true
+description = "Stefan VanBuren's personal site."
 
-[taxonomies]
-tag = "tags"
-category = "categories"
+[[params.menu]]
+  name = "blog"
+  url = "blog/"
 
-[params]
-
-[params.highlight]
-style = "github"
-languages = ["go", "python"]
-
-[[params.social]]
-url = "https://github.com/svanburen"
-fa_icon = "fa-github"
-
-[[params.social]]
-url = "https://twitter.com/svbn_"
-fa_icon = "fa-twitter"
-
-[[params.social]]
-url = "/index.xml"
-fa_icon = "fa-rss"
+[[params.menu]]
+  name = "about"
+  url = "about/"
