@@ -1,7 +1,3 @@
-
-# Created by https://www.gitignore.io/api/hugo
-
-### Hugo ###
-hugo.exe
+# Generated files by hugo
 /public/
-# End of https://www.gitignore.io/api/hugo
+/resources/_gen/
