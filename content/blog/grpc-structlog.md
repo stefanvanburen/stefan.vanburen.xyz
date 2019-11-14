@@ -1,5 +1,5 @@
 +++
-title = "gRPC and structlog in Pyhon"
+title = "gRPC and structlog in Python"
 description = ""
 tags = ["development", "python", "grpc", "structlog"]
 categories = ["Development"]
@@ -9,7 +9,7 @@ draft = true
 +++
 
 [`structlog`](https://github.com/hynek/structlog) is a fantastic Python library for structured logging.
-One of it's best features, for the sake of request based applications, is threadlocal storage.
+One of it's best features, for the sake of request based applications, is thread-local storage.
 This allows for per-request variables to be bound to a logger that is local to the request, which further enhances debugging.
 
 I generally find that when paired with gRPC, the best method is a per-RPC decorator that deals with setting up the logging, amongst other things.
