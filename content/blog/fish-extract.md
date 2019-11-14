@@ -114,3 +114,5 @@ Also, the `string match` functions were largely cobbled together from StackOverf
 I strongly suggest [aliasing this function to `x`](https://github.com/svanburen/dotfiles/blob/9e62163c674f3fef58a12d752daa78b4c5eeecbe/config.fish#L21), or some other short sequence, for easier usage.
 
 And voilà, we have a working general purpose extraction function, in `fish`!
+
+🐠
