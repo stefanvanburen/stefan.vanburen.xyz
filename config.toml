@@ -4,6 +4,9 @@ baseurl = "https://svbn.me/"
 theme = "hugo-theme-basic"
 enableEmoji = true
 description = "Stefan VanBuren's personal site."
+pygmentsCodeFences = true
+# TODO: this isn't working; probably need to modify some css
+pygmentsOptions = "nowrap=True"
 
 [[params.menu]]
   name = "blog"
