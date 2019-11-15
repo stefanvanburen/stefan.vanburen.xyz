@@ -5,8 +5,7 @@ theme = "hugo-theme-basic"
 enableEmoji = true
 description = "Stefan VanBuren's personal site."
 pygmentsCodeFences = true
-# TODO: this isn't working; probably need to modify some css
-pygmentsOptions = "nowrap=True"
+pygmentsStyle = "algol_nu"
 
 [[params.menu]]
   name = "blog"
