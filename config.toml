@@ -1,5 +1,5 @@
 languageCode = "en-us"
-title = "Stefan VanBuren 🤖"
+title = "Stefan VanBuren"
 baseurl = "https://svbn.me/"
 theme = "hugo-theme-basic"
 enableEmoji = true
@@ -8,6 +8,14 @@ pygmentsCodeFences = true
 pygmentsStyle = "solarized-dark"
 pygmentsUseClasses = false
 
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+
+[params]
+  titleEmoji = ":robot:"
+
 [[params.menu]]
   name = "blog"
   url = "blog/"
@@ -15,3 +23,7 @@ pygmentsUseClasses = false
 [[params.menu]]
   name = "about"
   url = "about/"
+
+[[params.menu]]
+  name = "rss"
+  url = "index.xml"
