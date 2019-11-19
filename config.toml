@@ -5,7 +5,8 @@ theme = "hugo-theme-basic"
 enableEmoji = true
 description = "Stefan VanBuren's personal site."
 pygmentsCodeFences = true
-pygmentsStyle = "algol_nu"
+pygmentsStyle = "solarized-dark"
+pygmentsUseClasses = false
 
 [[params.menu]]
   name = "blog"
