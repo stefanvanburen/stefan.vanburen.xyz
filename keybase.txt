@@ -1,0 +1,55 @@
+==================================================================
+https://keybase.io/zttc
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://svbn.me
+  * I am zttc (https://keybase.io/zttc) on keybase.
+  * I have a public key ASCBBt-GsvTJsfL7DGJwj_VSXqah_eyH5sNo_rA_PH5K4wo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120c6d0694c51b4dea5a2aed3d5d6e4363f9ab59669dcde76cf489d9e2a7527d0f00a",
+      "host": "keybase.io",
+      "kid": "01208106df86b2f4c9b1f2fb0c62708ff5525ea6a1fdec87e6c368feb03f3c7e4ae30a",
+      "uid": "189070f563b5ba34b2bf558b57085c19",
+      "username": "zttc"
+    },
+    "merkle_root": {
+      "ctime": 1574178818,
+      "hash": "d51299e62bff3def2719fc5996144d8f78c743f4de438af223106802847863112c3a602126f2bbbc8f5e26e2f767454a51929372b0f6b86ed5832be08bbe1198",
+      "hash_meta": "68dca3a781b63eff981a5758535437d25897a0f72b07b2dfa245a3ba8a650fc6",
+      "seqno": 10212165
+    },
+    "service": {      "entropy": "AP96XeXVmO9+DmMfJ6RZ4N33",
+      "hostname": "svbn.me",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.0.0"
+  },
+  "ctime": 1574178824,
+  "expire_in": 504576000,
+  "prev": "39072c33bddd4ed8e69cf744c01daa5c4dd9f213bae0eb7eda61b1e27a093330",
+  "seqno": 66,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEggQbfhrL0ybHy+wxicI/1Ul6mof3sh+bDaP6wPzx+SuMKp3BheWxvYWTESpcCQsQgOQcsM73dTtjmnPdEwB2qXE3Z8hO64Ot+2mGx4noJMzDEIHU2Gs1P5iDZRw1xjwaBBjHJuk6k90lOGGVr2arS0cwxAgHCo3NpZ8RAi8cARqhkPMITUcFw5n+0uelB1U6GztsY9oOkEjLYz1eY8hkhunaMo4Z1e+ep9+PMnjEvu94liLlYWe7/W93vCqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIK7Ayal9GcekxAwPDHorM0vJsmiHgR13c0s1zJ+83a1fo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/zttc
+
+==================================================================
