@@ -3,6 +3,7 @@ title = "Stefan VanBuren"
 baseurl = "https://svbn.me/"
 theme = "hugo-theme-basic"
 enableEmoji = true
+enableRobotsTXT = true
 description = "Stefan VanBuren's personal site."
 pygmentsCodeFences = true
 pygmentsStyle = "solarized-dark"
