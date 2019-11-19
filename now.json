@@ -1,6 +1,5 @@
 {
   "name": "blog",
   "alias": ["svbn.me"],
-  "version": 2,
-  "routes": [{ "src": "/keybase.txt", "dest": "/keybase.txt" }]
+  "version": 2
 }
