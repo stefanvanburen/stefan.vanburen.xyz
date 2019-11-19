@@ -22,6 +22,11 @@ article, h1 {
   font-family: 'IBM Plex Sans', system-ui;
 }
 
+/* TODO: this should be specific to the lists on pages rather than lists within articles */
+li {
+  font-family: 'IBM Plex Mono', monocode, monospace;
+}
+
 code {
   padding: 2px 4px;
   font-size: 80%;
