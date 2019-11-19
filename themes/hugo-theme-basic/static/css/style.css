@@ -4,9 +4,13 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+article, h1 {
+  font-family: 'IBM Plex Sans', system-ui;
+}
+
 code {
   padding: 2px 4px;
-  font-size: 90%;
+  font-size: 80%;
   background-color: #fff;
   /* border-radius: 4px; */
 }
@@ -26,7 +30,40 @@ pre {
 
 pre,
 code {
-  font-family: monocode, monospace;
+  font-family: 'IBM Plex Mono', monocode, monospace;
   -webkit-font-smoothings: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Roughly borrowed from https://tobiasahlin.com/blog/css-trick-animating-link-underlines/ */
+
+a {
+  position: relative;
+  color: #3F00FF;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #3F00FF;
+}
+
+a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
 }
