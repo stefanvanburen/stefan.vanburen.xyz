@@ -15,7 +15,9 @@ pygmentsUseClasses = false
   tag = "tags"
 
 [params]
+  author = "Stefan VanBuren"
   titleEmoji = ":robot:"
+  description = "Stefan VanBuren's personal site."
 
 [[params.menu]]
   name = "blog"
