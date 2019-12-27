@@ -5,7 +5,6 @@ tags = ["book", "review"]
 categories = ["book-reviews"]
 # series = []
 date = 2019-12-26T20:40:50-05:00
-draft = true
 +++
 
 Rating: 4/5 ⭐️
