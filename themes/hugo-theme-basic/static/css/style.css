@@ -50,3 +50,8 @@ code {
   -webkit-font-smoothings: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* https://frankchimero.com/blog/2020/redesign-this-design/ */
+p {
+  max-width: 33em;
+}
