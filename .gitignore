@@ -1,3 +1,6 @@
 # Generated files by hugo
 /public/
 /resources/_gen/
+
+.now
+node_modules

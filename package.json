@@ -1,5 +1,5 @@
 {
-  "scripts": {
-    "build": "hugo"
+  "dependencies": {
+    "now": "^17.0.2"
   }
 }
