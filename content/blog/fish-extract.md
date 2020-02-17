@@ -1,10 +1,10 @@
 +++
-title = "`extract` in fish"
+Title = "`extract` in fish"
 description = ""
 tags = ["development", "fish", "shell"]
 categories = ["Development"]
 # series = []
-date = 2019-11-14T10:40:55-05:00
+Date = 2019-11-14T10:40:55-05:00
 draft = false
 +++
 I recently switched from `zsh` to `fish` as my shell of choice.

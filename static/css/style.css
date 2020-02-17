@@ -5,17 +5,6 @@
 body {
   color: var(--color);
   background-color: var(--background-color);
-  -webkit-font-smoothings: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-
-  /* Adds a transition, which is a bit jarring when the OS is set to light mode but the site remembers dark mode, and vice versa */
-  /* --duration: 0.5s; */
-  /* --timing: ease; */
-
-  /* transition: */
-  /*   color var(--duration) var(--timing), */
-  /*   background-color var(--duration) var(--timing); */
 }
 
 article, h1 {
@@ -47,8 +36,6 @@ pre {
 pre,
 code {
   font-family: 'IBM Plex Mono', monocode, monospace;
-  -webkit-font-smoothings: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 /* https://frankchimero.com/blog/2020/redesign-this-design/ */
