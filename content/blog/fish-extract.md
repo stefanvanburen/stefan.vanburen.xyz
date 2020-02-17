@@ -2,7 +2,6 @@
 title = "`extract` in fish"
 description = ""
 tags = ["development", "fish", "shell"]
-categories = ["Development"]
 date = 2019-11-14T10:40:55-05:00
 draft = false
 +++
