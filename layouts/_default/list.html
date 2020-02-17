@@ -1,0 +1,16 @@
+{{ define "main" }}
+<span>/ </span>
+  <a href="{{ .Site.BaseURL  }}" class="b">{{ .Site.Title  }}</a>
+  <ul>
+    {{ range .Pages.ByDate.Reverse }}
+    <li class="list lh-copy">
+      <span class="code f6 gray">{{ .Date.Format "2006-01-02" }} ⟶ </span>
+      <a
+        class="f3 b"
+        href="{{ .Permalink}}"
+        >{{ .Title }}
+      </a>
+    </li>
+    {{ end }}
+  </ul>
+{{ end }}

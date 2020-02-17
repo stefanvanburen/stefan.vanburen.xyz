@@ -1,0 +1,16 @@
+  {{ define "main" }}
+<section id="main">
+  <div>
+    <h1 id="title" class="f2">
+      {{ .Site.Title }} {{ .Site.Params.TitleEmoji | emojify }}
+    </h1>
+    <ul class="list pl0">
+      {{ range .Site.Params.menu }}
+      <li class="b mv3">
+        <a class="f3 b pa1" href="{{ .url }}">{{ .name }}</a>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+</section>
+  {{end}}
