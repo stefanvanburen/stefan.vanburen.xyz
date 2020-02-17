@@ -1,6 +1,4 @@
 {{ define "main" }}
-<span>/ </span>
-  <a href="{{ .Site.BaseURL }}" class="b">{{ .Site.Title }}</a>
   <ul>
     {{ range .Pages.ByDate.Reverse }}
     <li class="list lh-copy">
