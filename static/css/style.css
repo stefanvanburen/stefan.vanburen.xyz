@@ -7,6 +7,11 @@ body {
   background-color: var(--background-color);
 }
 
+/* https://frankchimero.com/blog/2020/redesign-this-design/ */
+p {
+  max-width: 33em;
+}
+
 article {
   font-family: 'IBM Plex Sans', system-ui;
 }
@@ -14,6 +19,7 @@ article {
 code {
   padding: 2px 4px;
   font-size: 80%;
+  font-family: 'IBM Plex Mono', monaco, monospace;
 }
 
 pre {
@@ -26,14 +32,4 @@ pre {
   white-space: pre;
   overflow-x: auto;
   border: 1px solid var(--background-color);
-}
-
-pre,
-code {
-  font-family: 'IBM Plex Mono', monocode, monospace;
-}
-
-/* https://frankchimero.com/blog/2020/redesign-this-design/ */
-p {
-  max-width: 33em;
 }

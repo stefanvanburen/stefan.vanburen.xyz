@@ -1,25 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    {{ partial "meta.html" . }}
-    <title>{{ block "title" . }}
-      <!-- Blocks may include default content. -->
-      {{ .Site.Title }}
-    {{ end }}
-    </title>
-    <link rel="canonical" href="{{ .Permalink }}" />
-  {{ $sitetitle := .Site.Title }}
-  {{ with .OutputFormats.Get "RSS" }}
-      <link
-        href="{{ .RelPermalink }}"
-        rel="alternate"
-        type="application/rss+xml"
-        title="{{ $sitetitle }}"
-      />
-  {{ end }}
-    {{ partial "head_includes.html" . }}
-  </head>
+  {{ partial "header.html" . }}
+  {{ partial "nav.html" . }}
   <body class="sans-serif w-90 w-60-ns center center-ns mv2 mv5-ns">
     {{ block "main" . }}
     {{ end }}

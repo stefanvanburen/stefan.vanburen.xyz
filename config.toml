@@ -1,31 +1,9 @@
 languageCode = "en-us"
 title = "Stefan VanBuren"
 baseurl = "https://svbn.me/"
-enableEmoji = true
+copyright = "Stefan VanBuren ©️ 2020 — BY-NC-SA 4.0"
 enableRobotsTXT = true
 description = "Stefan VanBuren's personal site."
 pygmentsCodeFences = true
 pygmentsStyle = "solarized-dark"
 pygmentsUseClasses = false
-
-[taxonomies]
-  category = "categories"
-  series = "series"
-  tag = "tags"
-
-[params]
-  author = "Stefan VanBuren"
-  titleEmoji = ":robot:"
-  description = "Stefan VanBuren's personal site."
-
-[[params.menu]]
-  name = "blog"
-  url = "blog/"
-
-[[params.menu]]
-  name = "about"
-  url = "about/"
-
-[[params.menu]]
-  name = "rss"
-  url = "index.xml"
