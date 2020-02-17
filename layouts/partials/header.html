@@ -1,20 +1,19 @@
 <head>
   <meta charset="utf-8" />
-
-  {{ partial "meta.html" . }}
-
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta property="article:published_time" content="{{ .Date.Format "2006-01-02"}} "/>
+  <meta property="article:modified_time" content="{{ .Date.Format "2006-01-02"}} "/>
   <title>{{ .Title }}</title>
   <link rel="canonical" href="{{ .Permalink }}" />
-  {{ $title := .Title }}
-  {{ with .OutputFormats.Get "RSS" }}
-    <link
-      href="{{ .RelPermalink }}"
-      rel="alternate"
-      type="application/rss+xml"
-      title="{{ $title }}"
-    />
-  {{ end }}
-  {{ partial "head_includes.html" . }}
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.11.1/css/tachyons.min.css" />
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css" />
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/light.css" media="(prefers-color-scheme: no-preference), (prefers-color-scheme: light)">
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/dark.css" media="(prefers-color-scheme: dark)">
+  <script type="module" src="https://cdn.pika.dev/dark-mode-toggle"></script>
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 </head>
