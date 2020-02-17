@@ -1,8 +1,3 @@
-+++
-title = "About Me"
-date = "2019-11-19"
-+++
-
 # Hi, I'm Stefan
 
 I'm a software engineer based in Boston.
