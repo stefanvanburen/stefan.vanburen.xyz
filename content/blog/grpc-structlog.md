@@ -2,8 +2,6 @@
 title = "gRPC and structlog in Python"
 description = ""
 tags = ["development", "python", "grpc", "structlog"]
-categories = ["Development"]
-# series = []
 date = 2019-11-13T15:13:01-05:00
 draft = true
 +++
