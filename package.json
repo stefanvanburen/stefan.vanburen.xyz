@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "build": "hugo"
+  },
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^2.1.0",
     "autoprefixer": "^9.7.4",
