@@ -23,6 +23,12 @@
     {{ end }}
     {{ end }}
 
+    {{ $lightStyles := resources.Get "light.css" | toCSS | postCSS }}
+    <link rel="stylesheet" href="{{ $lightStyles.Permalink }}" media="(prefers-color-scheme: no-preference), (prefers-color-scheme: light)">
+
+    {{ $darkStyles := resources.Get "dark.css" | toCSS | postCSS }}
+    <link rel="stylesheet" href="{{ $darkStyles.Permalink }}" media="(prefers-color-scheme: dark)">
+
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
   </head>
   <nav class="dt w-100">
