@@ -15,13 +15,13 @@ p {
 }
 
 article {
-  font-family: 'IBM Plex Sans', system-ui;
+  font-family: "IBM Plex Sans", system-ui;
 }
 
 code {
   padding: 2px 4px;
   font-size: 80%;
-  font-family: 'IBM Plex Mono', monaco, monospace;
+  font-family: "IBM Plex Mono", monaco, monospace;
 }
 
 pre {
