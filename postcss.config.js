@@ -1,5 +1,6 @@
 module.exports = {
   plugins: {
+    "postcss-import": {},
     // Removes unused CSS
     // https://github.com/FullHuman/purgecss/tree/master/packages/postcss-purgecss
     "@fullhuman/postcss-purgecss": {
