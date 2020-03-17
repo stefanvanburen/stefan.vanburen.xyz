@@ -1,11 +1,10 @@
 +++
 title = "Colophon"
-date = 2020-02-17T08:27:49-05:00
-draft = false
+description = "Details on tools used to build this site."
 +++
 The code for this website is open source — you can find it [here](https://github.com/svanburen/blog).
 
-This website is built with [hugo](https://github.com/gohugoio/hugo) and deployed via [now](https://zeit.co/home).
+This website is built with [hugo](https://github.com/gohugoio/hugo) and deployed on [netlify](https://www.netlify.com/).
 
 The theme is roughly based on [hugo-theme-basic](https://themes.gohugo.io/hugo-theme-basic/).
 
