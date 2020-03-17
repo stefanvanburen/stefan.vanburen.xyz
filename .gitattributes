@@ -1,0 +1,2 @@
+# do not try to merge the yarn.lock file - instead; it should just be regenerated
+yarn.lock -diff
