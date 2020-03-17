@@ -1,3 +1,8 @@
++++
+title = "Stefan VanBuren's Home on the Web"
+description = "Homepage of svbn.me"
++++
+
 # Hi, I'm Stefan
 
 I'm a software engineer based in Boston.
