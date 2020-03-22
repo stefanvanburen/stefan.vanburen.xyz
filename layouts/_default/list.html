@@ -1,14 +1,15 @@
 {{ define "main" }}
-  <ul>
+  <ol>
     {{ range .Pages.ByDate.Reverse }}
-    <li class="list lh-copy">
+    <li class="list pb3">
       <span class="code f6 gray">{{ .Date.Format "2006-01-02" }} ⟶ </span>
       <a
-        class="f3 b"
+        class="f4 b"
         href="{{ .Permalink}}"
-        >{{ .Title }}
+      >
+      {{ .Title }}
       </a>
     </li>
     {{ end }}
-  </ul>
+  </ol>
 {{ end }}

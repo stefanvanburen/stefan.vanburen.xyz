@@ -17,17 +17,10 @@
     {{ $styles := resources.Get "style.css" | toCSS | postCSS }}
     <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
     {{ else }}
-    {{/* is minify really relevant here? we're using cssnano already at the end of the postcss pipeline */}}
-    {{ with $styles := resources.Get "style.css" | toCSS | postCSS | minify | fingerprint }}
+      {{ with $styles := resources.Get "style.css" | toCSS | postCSS | minify | fingerprint }}
     <style>{{ .Content | safeCSS }}</style>
+      {{ end }}
     {{ end }}
-    {{ end }}
-
-    {{ $lightStyles := resources.Get "light.css" | toCSS | postCSS }}
-    <link rel="stylesheet" href="{{ $lightStyles.Permalink }}" media="(prefers-color-scheme: no-preference), (prefers-color-scheme: light)">
-
-    {{ $darkStyles := resources.Get "dark.css" | toCSS | postCSS }}
-    <link rel="stylesheet" href="{{ $darkStyles.Permalink }}" media="(prefers-color-scheme: dark)">
 
     {{/* Favicon */}}
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -35,16 +28,22 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
   </head>
-  <nav class="dt w-100">
-    <span>/ </span>
-      <a href="/" class="b">{{ .Site.Title }}</a>
-      <div class="dtc v-mid w-75 tr">
-        <a class="b pa1 f6 f5-ns mr3 mr4-ns" href="/blog">blog</a>
-        <a class="b pa1 f6 f5-ns mr3 mr4-ns" href="/index.xml">rss</a>
-        <a class="b pa1 f6 f5-ns mr3 mr4-ns" href="/colophon">colophon</a>
-      </div>
-  </nav>
-  <body class="sans-serif w-90 w-60-ns center center-ns mv2 mv5-ns">
-    {{ block "main" . }}{{ end }}
+  <body class="sans-serif w-90 w-50-ns center mv2 mv5-ns">
+    <header>
+      <nav class="flex justify-between">
+        <div>
+          <span>/ </span>
+          <a href="/" class="b">{{ .Site.Title }}</a>
+        </div>
+        <div>
+          <a class="b mr3 mr4-ns" href="/blog">blog</a>
+          <a class="b mr3 mr4-ns" href="/index.xml">rss</a>
+          <a class="b" href="/colophon">colophon</a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      {{ block "main" . }}{{ end }}
+    </main>
   </body>
 </html>

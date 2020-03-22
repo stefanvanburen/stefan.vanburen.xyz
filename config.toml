@@ -4,6 +4,9 @@ baseurl = "https://svbn.me/"
 copyright = "Stefan VanBuren ©️ 2020 — BY-NC-SA 4.0"
 enableRobotsTXT = true
 description = "Stefan VanBuren's personal site."
-pygmentsCodeFences = true
-pygmentsStyle = "solarized-dark"
-pygmentsUseClasses = false
+
+[markup]
+  [markup.highlight]
+    noClasses = true
+    style = "arduino"
+    tabWidth = 4
