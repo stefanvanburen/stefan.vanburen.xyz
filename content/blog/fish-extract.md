@@ -13,7 +13,7 @@ However, I still miss a few of the `zsh` niceties that I had been used to over t
 Even after moving away from oh-my-zsh as my plugin manager in `zsh`, I had used my new manager to grab [just that plugin](https://github.com/svanburen/dotfiles/blob/74dd7a02b83ca1874d721e242e0f466ca1f65692/zshrc#L13-L14) for my usage.
 
 After a cursory google, it seemed like a `fish` port of the plugin didn't exist, so I decided to try to port over the plugin myself.
-You can find the whole function [here](https://github.com/svanburen/dotfiles/blob/9e62163c674f3fef58a12d752daa78b4c5eeecbe/config.fish#L65-L125).
+You can find the whole function [in my config.fish in my dotfiles](https://github.com/svanburen/dotfiles/blob/9e62163c674f3fef58a12d752daa78b4c5eeecbe/config.fish#L65-L125).
 
 First, we'll define a function named `extract` and give it a description.
 I've also noted in a comment where this function was ported from.

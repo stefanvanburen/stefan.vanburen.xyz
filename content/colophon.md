@@ -2,7 +2,7 @@
 title = "Colophon"
 description = "Details on tools used to build this site."
 +++
-The code for this website is open source — you can find it [here](https://github.com/svanburen/blog).
+The code for this website is open source — you can find it [on GitHub at svanburen/blog](https://github.com/svanburen/blog).
 
 This website is built with [hugo](https://github.com/gohugoio/hugo) and deployed on [netlify](https://www.netlify.com/).
 

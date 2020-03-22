@@ -2,7 +2,7 @@
   <ol>
     {{ range .Pages.ByDate.Reverse }}
     <li class="list pb3">
-      <span class="code f6 gray">{{ .Date.Format "2006-01-02" }} ⟶ </span>
+      <span class="code f6 dark-gray">{{ .Date.Format "2006-01-02" }} ⟶ </span>
       <a
         class="f4 b"
         href="{{ .Permalink}}"
