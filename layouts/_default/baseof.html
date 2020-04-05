@@ -3,7 +3,6 @@
   <head>
     {{ hugo.Generator }}
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     {{ if .Description }}<meta name="description" content="{{ .Description }}" />{{ end }}
     <meta name="HandheldFriendly" content="True" />
     <meta name="MobileOptimized" content="320" />
@@ -23,10 +22,9 @@
     {{ end }}
 
     {{/* Favicon */}}
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
   </head>
   <body class="sans-serif w-90 w-50-ns center mv2 mv5-ns">
     <header>
