@@ -13,17 +13,16 @@ code {
 }
 
 a {
-  color: #3f00ff;
+  color: #000;
   position: relative;
-  text-decoration: none;
-  background-image: linear-gradient(currentColor, currentColor);
-  background-position: 0% 100%;
-  background-repeat: no-repeat;
-  background-size: 0% 2px;
-  transition: background-size 0.3s;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+a:visited {
+  color: #333;
 }
 
 a:hover {
-  background-size: 100% 2px;
-  color: #3f00ff;
+  color: #f10c45;
 }
