@@ -1,7 +1,7 @@
 {{ define "main" }}
-  <ol>
+  <ol class="list">
     {{ range .Pages.ByDate.Reverse }}
-    <li class="list pb3">
+    <li class="pb3">
       <span class="code f6 dark-gray">{{ .Date.Format "2006-01-02" }} ⟶ </span>
       <a
         class="f4 b"
