@@ -6,14 +6,14 @@ date = 2019-11-14T10:40:55-05:00
 draft = false
 +++
 
-I recently switched from `zsh` to `fish` as my shell of choice.
-I liked the idea of starting from scratch, with the sane defaults that `fish` provides, as my https://github.com/svanburen/dotfiles/blob/master/zshrc[`zsh` configuration files were getting a bit out of control].
+I recently switched from https://en.wikipedia.org/wiki/Z_shell[zsh] to https://fishshell.com/[fish] as my shell of choice.
+I liked the idea of starting from scratch, with the sane defaults that fish provides, as my https://github.com/svanburen/dotfiles/blob/master/zshrc[zsh configuration files were getting a bit out of control].
 
 For the most part, the transition was fairly painless and straightforward.
-However, I still miss a few of the `zsh` niceties that I had been used to over the years - one being https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/extract/extract.plugin.zsh[`extract` function provided in oh-my-zsh].
-Even after moving away from oh-my-zsh as my plugin manager in `zsh`, I had used my new manager to grab https://github.com/svanburen/dotfiles/blob/74dd7a02b83ca1874d721e242e0f466ca1f65692/zshrc#L13-L14[just that plugin] for my usage.
+However, I still miss a few of the zsh niceties that I had been used to over the years - one being https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/extract/extract.plugin.zsh[`extract` function provided in oh-my-zsh].
+Even after moving away from oh-my-zsh as my plugin manager in zsh, I had used my new manager to grab https://github.com/svanburen/dotfiles/blob/74dd7a02b83ca1874d721e242e0f466ca1f65692/zshrc#L13-L14[just that plugin] for my usage.
 
-After a cursory google, it seemed like a `fish` port of the plugin didn't exist, so I decided to try to port over the plugin myself.
+After a cursory google, it seemed like a fish port of the plugin didn't exist, so I decided to try to port over the plugin myself.
 You can find the whole function https://github.com/svanburen/dotfiles/blob/9e62163c674f3fef58a12d752daa78b4c5eeecbe/config.fish#L65-L125[in my config.fish in my dotfiles].
 
 First, we'll define a function named `extract` and give it a description.
@@ -132,10 +132,10 @@ end
 {{< / highlight >}}
 ----
 
-This was my first experience trying to port a larger function from `zsh` to `fish`, and it definitely took some playing around with the various test functions to get it right.
+This was my first experience trying to port a larger function from zsh to fish, and it definitely took some playing around with the various test functions to get it right.
 Also, the `string match` functions were largely cobbled together from StackOverflow.
 I strongly suggest https://github.com/svanburen/dotfiles/blob/9e62163c674f3fef58a12d752daa78b4c5eeecbe/config.fish#L21[aliasing this function to `x`], or some other short sequence, for easier usage.
 
-And voilà, we have a working general purpose extraction function, in `fish`!
+And voilà, we have a working general purpose extraction function, in fish!
 
 🐠
