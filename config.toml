@@ -5,6 +5,10 @@ copyright = "Stefan VanBuren ©️ 2020 — BY-NC-SA 4.0"
 enableRobotsTXT = true
 description = "Stefan VanBuren's personal site."
 
+[author]
+  # for RSS
+  name = "Stefan VanBuren"
+
 [markup]
   [markup.highlight]
     noClasses = true
