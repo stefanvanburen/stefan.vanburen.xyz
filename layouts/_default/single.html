@@ -1,3 +1,7 @@
+{{ define "header_extra" }}
+  <meta property="article:published_time" content="{{ .Date.Format "2006-01-02"}} "/>
+{{ end }}
+
 {{ define "main" }}
   <h1>{{ .Title }}</h1>
   <article class="lh-copy measure-wide">

@@ -1,28 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    {{ hugo.Generator }}
-    <meta charset="utf-8" />
-    {{ if .Description }}<meta name="description" content="{{ .Description }}" />{{ end }}
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta property="article:published_time" content="{{ .Date.Format "2006-01-02"}} "/>
-    <meta property="article:modified_time" content="{{ .Date.Format "2006-01-02"}} "/>
-    {{ if .Title }}<title>{{ .Title }}</title>{{ end }}
-    <link rel="canonical" href="{{ .Permalink }}" />
-
-    {{ if eq (getenv "HUGO_ENV") "development" }}
-    {{ $styles := resources.Get "style.css" | toCSS | postCSS }}
-    <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
-    {{ else }}
-      {{ with $styles := resources.Get "style.css" | toCSS | postCSS | minify | fingerprint }}
-    <style>{{ .Content | safeCSS }}</style>
-      {{ end }}
-    {{ end }}
-
-    {{/* Favicon */}}
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    {{ block "header" . }}{{ end }}
+    {{ block "header_extra" . }}{{ end }}
   </head>
   <body class="sans-serif w-90 w-50-ns center mv2 mv5-ns">
     <header>
