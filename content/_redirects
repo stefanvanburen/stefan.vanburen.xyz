@@ -1,0 +1,4 @@
+# redirect to 404.html for netlify
+# https://gohugo.io/templates/404/
+# https://docs.netlify.com/routing/redirects/redirect-options/#http-status-codes
+/* /404.html 404
