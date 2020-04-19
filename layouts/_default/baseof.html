@@ -4,16 +4,13 @@
     {{ block "header" . }}{{ end }}
     {{ block "header_extra" . }}{{ end }}
   </head>
-  <body class="sans-serif w-90 w-50-ns center mv2 mv5-ns">
+  <body class="sans-serif w-90 center mt3">
     <header>
-      <nav class="flex justify-between items-center">
-        <section>
-          <span>/ </span>
-          <a href="/" class="b">{{ .Site.Title }}</a>
-        </section>
-        <ul class="list flex justify-between">
-          <li><a class="b mr3 mr4-ns" href="/blog">blog</a></li>
-          <li><a class="b" href="/colophon">colophon</a></li>
+      <nav class="flex flex-column">
+        <a href="/" class="b">{{ .Site.Title }}</a>
+        <ul class="list flex flex-column ph0 mb0">
+          <li><a href="/blog">blog</a></li>
+          <li><a href="/colophon">colophon</a></li>
         </ul>
       </nav>
     </header>

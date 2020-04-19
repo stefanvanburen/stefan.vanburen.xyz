@@ -1,0 +1,13 @@
++++
+title = "Colophon"
+description = "Details on tools and technologies used to build this site."
++++
+The code for this website is open source — you can find it on GitHub at https://github.com/svanburen/blog[svanburen/blog].
+
+This website is built with https://github.com/gohugoio/hugo[hugo] and deployed on https://www.netlify.com/[netlify].
+
+The theme is roughly based on https://themes.gohugo.io/hugo-theme-basic/[hugo-theme-basic].
+
+The code is licensed under the https://github.com/svanburen/blog/blob/master/LICENSE[MIT License].
+
+The content is licensed as https://creativecommons.org/licenses/by-nc-sa/4.0/[CC BY-NC-SA 4.0].

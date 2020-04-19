@@ -1,10 +1,10 @@
 {{ define "main" }}
   <ol class="list ph0">
     {{ range .Pages.ByDate.Reverse }}
-    <li class="pb3">
-      <span class="code f6 dark-gray">{{ .Date.Format "2006-01-02" }} ⟶ </span>
+    <li class="pb3 nowrap truncate">
+      <span class="code f6 dark-gray">{{ .Date.Format "2006-01-02" }}⟶</span>
       <a
-        class="f4 b"
+        class="f5 b"
         href="{{ .Permalink}}"
       >
       {{ .Title }}
