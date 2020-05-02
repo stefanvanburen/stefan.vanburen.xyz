@@ -1,5 +1,22 @@
 @import "node_modules/tachyons/css/tachyons.css";
 
+:root {
+    --background-color: white;
+    --text-color: black;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: rgb(17, 17, 17);
+        --text-color: rgb(170, 170, 170);
+    }
+}
+
 pre {
   padding: 9.5px;
   line-height: 1.2;
@@ -13,13 +30,9 @@ code {
 }
 
 a {
-  color: #000;
+  color: var(--text-color);
   position: relative;
   text-decoration: underline;
-}
-
-a:visited {
-  color: #333;
 }
 
 a:hover {
