@@ -6,13 +6,15 @@
   </head>
   <body class="sans-serif ma3 ma4-ns">
     <header>
-      <nav>
+      <nav class="mb2">
         <a href="/" class="b">{{ .Site.Title }}</a>
         <ul class="list flex flex-column ph0 mb0">
           <li><a href="/blog">blog</a></li>
           <li><a href="/colophon">colophon</a></li>
         </ul>
       </nav>
+      <span data-set-theme-dark>🌙</span>
+      <span data-set-theme-light class="dn">☀️</span>
     </header>
     <main>
       {{ block "main" . }}{{ end }}

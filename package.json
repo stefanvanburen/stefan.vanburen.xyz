@@ -5,6 +5,7 @@
     "cssnano": "^4.1.10",
     "minimist": "^1.2.2",
     "postcss-cli": "^7.1.0",
+    "postcss-dark-theme-class": "^0.4.0",
     "postcss-import": "^12.0.1",
     "prettier": "^1.19.1",
     "stylelint": "^13.2.1",
