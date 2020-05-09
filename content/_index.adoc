@@ -10,6 +10,6 @@ I'm currently interested in Clojure, Rust, TypeScript, and Elixir.
 
 I've also programmed in C, C++, Java, and others, to varying degrees of enjoyment. 😉
 
-Check out my open source work on https://github.com/svanburen[GitHub].
+Check out my open source work https://github.com/svanburen[on GitHub].
 
-Feel free to shoot me an email - vanburenstefan (at) gmail (dot) com.
+Feel free to mailto:vanburenstefan@gmail.com[send me an email].
