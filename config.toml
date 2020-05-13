@@ -11,6 +11,4 @@ description = "Stefan VanBuren's personal site."
 
 [markup]
   [markup.highlight]
-    noClasses = true
     style = "arduino"
-    tabWidth = 4
