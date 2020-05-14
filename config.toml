@@ -8,3 +8,7 @@ description = "Stefan VanBuren's personal site."
 [author]
   # for RSS
   name = "Stefan VanBuren"
+
+[markup]
+  [markup.highlight]
+    style = "bw"
