@@ -16,3 +16,9 @@ lightButton.addEventListener("click", () => {
   darkButton.classList.toggle("dn", false);
   lightButton.classList.toggle("dn", true);
 });
+
+if (html.dataset.theme === "light") {
+  darkButton.classList.toggle("dn", false);
+} else {
+  lightButton.classList.toggle("dn", false);
+}
