@@ -11,20 +11,16 @@ The only thing that's rough about this workflow is whenever I have local changes
 
 [source,bash]
 ----
-{{< highlight bash >}}
 ▵ git pull
 error: cannot pull with rebase: You have unstaged changes.
 error: please commit or stash them.
-{{< / highlight >}}
 ----
 
 To work around this, I'd typically do a compound shell command (I'm using `fish` - you would typically do this with `&&` in `bash`):
 
 [source,bash]
 ----
-{{< highlight bash >}}
 ▵ git stash; and git pull; and git stash pop
-{{< / highlight >}}
 ----
 
 I recently discovered the solution to needing this: `git pull --autostash`!
@@ -32,12 +28,10 @@ It automatically stashes your current working directory and re-applies it after 
 
 [source,bash]
 ----
-{{< highlight bash >}}
 ▵ git pull --autostash
 Created autostash: a14af18
 Current branch master is up to date.
 Applied autostash.
-{{< / highlight >}}
 ----
 
 This option is so handy for my workflow that I https://github.com/svanburen/dotfiles/commit/297733[made an alias for it].
