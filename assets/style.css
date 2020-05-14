@@ -23,6 +23,7 @@ pre {
   word-break: break-all;
   word-wrap: break-word;
   overflow-x: auto;
+  border: 1px dashed;
 }
 
 code {

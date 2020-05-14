@@ -3,13 +3,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    {{ if eq (getenv "HUGO_ENV") "development" }}
-    {{ $styles := resources.Get "style.css" | toCSS | postCSS }}
-    <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
-    {{ else }}
-      {{ with resources.Get "style.css" | toCSS | postCSS | minify | fingerprint }}
+    {{ with resources.Get "style.css" | toCSS | postCSS | minify | fingerprint }}
     <style>{{ .Content | safeCSS }}</style>
-      {{ end }}
     {{ end }}
 
     {{/* Favicon */}}
