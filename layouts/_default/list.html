@@ -2,7 +2,7 @@
   <ol class="list ph0">
     {{ range .Pages.ByDate.Reverse }}
     <li class="pb3 nowrap truncate">
-      <span class="code f6 dark-gray">{{ .Date.Format "2006-01-02" }}⟶</span>
+      <span class="code f6">{{ .Date.Format "2006-01-02" }} ⌁ </span>
       <a
         class="f5 b"
         href="{{ .Permalink}}"
