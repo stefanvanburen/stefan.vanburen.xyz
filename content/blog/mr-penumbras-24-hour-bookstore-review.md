@@ -1,5 +1,5 @@
 +++
-title = "Mr. Penumbra's 24-hour bookstore review"
+title = "\"Mr. Penumbra's 24-hour Bookstore\" review"
 description = ""
 tags = ["book", "review"]
 date = 2019-12-26T20:40:50-05:00
