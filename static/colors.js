@@ -1,38 +1,45 @@
+const localStorageKey = "color-scheme";
+const dark = "dark";
+const light = "light";
+
 const html = document.documentElement;
+
 const darkButton = document.querySelector("[data-set-theme-dark]");
 const lightButton = document.querySelector("[data-set-theme-light]");
 
-const darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-
-if (darkModeMediaQuery.matches) {
-  lightButton.classList.toggle("dn", false);
-} else {
-  darkButton.classList.toggle("dn", false);
-}
-
-darkModeMediaQuery.addListener(e => {
-  const darkModeOn = e.matches;
-  if (darkModeOn) {
-    html.dataset.theme = "dark";
-    darkButton.classList.toggle("dn", true);
-    lightButton.classList.toggle("dn", false);
-  } else {
-    html.dataset.theme = "light";
-    darkButton.classList.toggle("dn", false);
-    lightButton.classList.toggle("dn", true);
-  }
-});
-
-darkButton.addEventListener("click", () => {
-  html.dataset.theme = "dark";
-
+function darkMode() {
+  html.dataset.theme = dark;
   darkButton.classList.toggle("dn", true);
   lightButton.classList.toggle("dn", false);
+}
+
+function lightMode() {
+  html.dataset.theme = light;
+  darkButton.classList.toggle("dn", false);
+  lightButton.classList.toggle("dn", true);
+}
+
+darkButton.addEventListener("click", () => {
+  darkMode();
+  localStorage.setItem(localStorageKey, dark);
 });
 
 lightButton.addEventListener("click", () => {
-  html.dataset.theme = "light";
-
-  darkButton.classList.toggle("dn", false);
-  lightButton.classList.toggle("dn", true);
+  lightMode();
+  localStorage.setItem(localStorageKey, light);
 });
+
+const storedValue = localStorage.getItem(localStorageKey);
+if (storedValue) {
+  // If we have a value in localStorage for the client already, use their choice.
+  storedValue === light ? lightMode() : darkMode();
+} else {
+  // Otherwise, if they have a color-scheme preference, use it.
+  const darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+  darkModeMediaQuery.matches ? darkMode() : lightMode();
+
+  darkModeMediaQuery.addListener(e => {
+    e.matches ? darkMode() : lightMode();
+  });
+}
