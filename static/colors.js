@@ -9,14 +9,14 @@ const lightButton = document.querySelector("[data-set-theme-light]");
 
 function darkMode() {
   html.dataset.theme = dark;
-  darkButton.classList.toggle("dn", true);
-  lightButton.classList.toggle("dn", false);
+  darkButton.toggleAttribute("hidden", true);
+  lightButton.toggleAttribute("hidden", false);
 }
 
 function lightMode() {
   html.dataset.theme = light;
-  darkButton.classList.toggle("dn", false);
-  lightButton.classList.toggle("dn", true);
+  darkButton.toggleAttribute("hidden", false);
+  lightButton.toggleAttribute("hidden", true);
 }
 
 darkButton.addEventListener("click", () => {
