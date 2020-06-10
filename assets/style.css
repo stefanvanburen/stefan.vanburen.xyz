@@ -3,8 +3,9 @@
 :root {
   color-scheme: light dark;
 
-  --background-color: white;
-  --text-color: black;
+  /* Light theme colors */
+  --background-color: rgb(255, 255, 255);
+  --text-color: rgb(0, 0, 0);
 }
 
 body {
@@ -22,8 +23,6 @@ body {
 pre {
   padding: 9.5px;
   line-height: 1.2;
-  word-break: break-all;
-  word-wrap: break-word;
   overflow-x: auto;
   border: 1px dotted;
 
@@ -37,10 +36,15 @@ code {
 
 a {
   color: var(--text-color);
-  position: relative;
-  text-decoration: underline;
+  text-decoration-style: underline;
 }
 
 a:hover {
-  color: #f10c45;
+  color: var(--background-color);
+  background: var(--text-color);
+}
+
+::selection {
+  background: var(--text-color);
+  color: var(--background-color);
 }
