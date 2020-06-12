@@ -42,6 +42,7 @@ a {
 a:hover {
   color: var(--background-color);
   background: var(--text-color);
+  text-decoration-style: dotted;
 }
 
 ::selection {
