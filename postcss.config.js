@@ -1,6 +1,7 @@
 const postcssimport = require("postcss-import");
 const purgecss = require("@fullhuman/postcss-purgecss");
 const darkTheme = require("postcss-dark-theme-class");
+const autoprefixer = require('autoprefixer')
 
 module.exports = {
   plugins: [
@@ -16,6 +17,7 @@ module.exports = {
       // still added.
       whitelist: ["a", "pre", "code"]
     }),
+    autoprefixer(),
     darkTheme({
       darkSelector: '[data-theme="dark"]',
       lightSelector: '[data-theme="light"]'
