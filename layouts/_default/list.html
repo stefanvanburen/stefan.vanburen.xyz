@@ -1,12 +1,12 @@
 {{ define "main" }}
-  <h1 class="f3">posts</h1>
+  <h1 class="f3">Posts</h1>
 
   <ol class="list ph0">
     {{ range .Pages.ByDate.Reverse }}
     <li class="pb3 nowrap truncate">
-      <span class="code f6">{{ .Date.Format "2006-01-02" }} ⌁ </span>
+      <span class="code f5">{{ .Date.Format "2006-01-02" }} ⌁ </span>
       <a
-        class="f5 b"
+        class="f4"
         href="{{ .RelPermalink}}"
       >
       {{ .Title }}
