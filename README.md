@@ -2,8 +2,6 @@
 
 Built with [hugo](https://github.com/gohugoio/hugo).
 
-Deployed on [Netlify](https://www.netlify.com/).
-
 Theme based on [hugo-theme-basic](https://themes.gohugo.io/hugo-theme-basic/).
 
 Favicon generated via [favicon.io](https://favicon.io/).

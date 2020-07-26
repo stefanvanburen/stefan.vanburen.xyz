@@ -4,7 +4,7 @@ description = "Details on tools and technologies used to build this site."
 +++
 The code for this website is open source — you can find it on GitHub at [svanburen/blog](https://github.com/svanburen/blog).
 
-This website is built with [hugo](https://github.com/gohugoio/hugo) and deployed on [netlify](https://www.netlify.com).
+This website is built with [hugo](https://github.com/gohugoio/hugo).
 
 The theme is roughly based on [hugo-theme-basic](https://themes.gohugo.io/hugo-theme-basic/).
 
