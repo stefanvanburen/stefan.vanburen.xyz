@@ -11,14 +11,11 @@ module.exports = {
     // https://github.com/FullHuman/purgecss/tree/master/packages/postcss-purgecss
     purgecss({
       content: ["./layouts/**/*.html"],
-      css: ["./assets/style.css"],
       // whitelist determines the selectors I deliberately want to avoid purging
       // Because some of the selectors in styles.css aren't created until after
       // being converted to HTML, these must be whitelisted so the styles are
       // still added.
       whitelist: ["a", "pre", "code"],
-      // needed for 'a[href^="http"]' rule
-      whitelistPatterns: [/a*/],
     }),
     autoprefixer(),
     darkTheme({

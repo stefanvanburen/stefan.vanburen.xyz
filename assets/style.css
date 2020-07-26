@@ -1,5 +1,7 @@
 @import "node_modules/tachyons/css/tachyons.css";
 
+/* purgecss start ignore */
+
 :root {
   color-scheme: light dark;
 
@@ -53,3 +55,5 @@ a[href^="http"]::after {
   background: var(--text-color);
   color: var(--background-color);
 }
+
+/* purgecss end ignore */
