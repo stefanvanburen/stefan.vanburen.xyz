@@ -1,7 +1,5 @@
 {
   "dependencies": {
-    "@fullhuman/postcss-purgecss": "^2.1.0",
-    "autoprefixer": "^9.7.4",
     "postcss-cli": "^7.1.1",
     "postcss-dark-theme-class": "^0.4.0",
     "postcss-import": "^12.0.1",

@@ -45,6 +45,10 @@ a:hover {
   text-decoration-style: dotted;
 }
 
+a[href^="http"]::after {
+  content: "↗";
+}
+
 ::selection {
   background: var(--text-color);
   color: var(--background-color);
