@@ -12,3 +12,6 @@ description = "Stefan VanBuren's personal site."
 [markup]
   [markup.highlight]
     style = "bw"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
