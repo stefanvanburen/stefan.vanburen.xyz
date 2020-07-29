@@ -21,7 +21,7 @@ To work around this, I'd typically do a compound shell command (I'm using `fish`
 ▵ git stash; and git pull; and git stash pop
 ```
 
-I recently discovered the solution to needing this: `git pull -\-autostash`!
+I recently discovered the solution to needing this: `git pull --autostash`!
 It automatically stashes your current working directory and re-applies it after the pull.
 
 
