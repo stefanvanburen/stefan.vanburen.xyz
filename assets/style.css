@@ -41,7 +41,7 @@ a {
   text-decoration-style: underline;
 }
 
-a:hover {
+a::hover {
   color: var(--background-color);
   background: var(--text-color);
   text-decoration-style: dotted;
