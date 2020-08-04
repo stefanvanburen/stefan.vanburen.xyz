@@ -13,6 +13,11 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 
+    {{/* prose font */}}
+    <link rel="stylesheet" href="/iosevka-sparkle-3.3.1/iosevka-sparkle.css">
+    {{/* code font */}}
+    <link rel="stylesheet" href="/ttf-iosevka-ss08-3.3.1/iosevka-ss08.css">
+
     {{ range .AlternativeOutputFormats -}}
     <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
     {{ end -}}
