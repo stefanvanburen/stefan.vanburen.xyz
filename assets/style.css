@@ -13,7 +13,6 @@
 body {
   background-color: var(--background-color);
   color: var(--text-color);
-  font-family: 'Iosevka Sparkle Web', system-ui, sans;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -34,15 +33,7 @@ pre {
 }
 
 code {
-  font-family: 'Iosevka SS08 Web', monospace;
-}
-
-/* <code> directly within paragraphs */
-p > code {
-  /* slight grey */
-  background-color: #EEEEEE;
-  /* ensure the entire <code></code> is on the same line */
-  white-space: nowrap;
+  font-family: monospace;
 }
 
 a {
