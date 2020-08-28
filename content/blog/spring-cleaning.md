@@ -21,7 +21,7 @@ I finally reached a breaking point, [removing the `cheat` tool](https://github.c
 There was nothing wrong with it, but I wasn't using it as often as I thought.
 I used this as momentum to move on to my [other](https://github.com/svanburen/dotfiles/commits/master?after=f56b7bf67301f60785f7a7af1ced945d25b4d5c8+174) [configuration](https://github.com/svanburen/dotfiles/commits/master?before=f56b7bf67301f60785f7a7af1ced945d25b4d5c8+175) [files](https://github.com/svanburen/dotfiles/commits/master?before=f56b7bf67301f60785f7a7af1ced945d25b4d5c8+140), mostly my vimrc.
 Previously, I had been fairly lax on my git hygiene for the repo, using commit messages like ["Various updates"](https://github.com/svanburen/dotfiles/commit/26852a) or simply a ["✨"](https://github.com/svanburen/dotfiles/commit/579368).
-I knew that removing all that accumulated knowledge meant that I needed to have better practices, so I started using a ``tool: `` prefix on my commit subjects, and trying to be better about abiding to [atomic commits](https://en.wikipedia.org/wiki/Atomic_commit#Atomic_commit_convention).
+I knew that removing all that accumulated knowledge meant that I needed to have better practices, so I started using a `tool:` prefix on my commit subjects, and trying to be better about abiding to [atomic commits](https://en.wikipedia.org/wiki/Atomic_commit#Atomic_commit_convention).
 
 ## (neo)vim
 

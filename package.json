@@ -1,5 +1,6 @@
 {
-  "dependencies": {
+  "devDependencies": {
+    "markdownlint": "^0.20.4",
     "@fullhuman/postcss-purgecss": "^2.3.0",
     "autoprefixer": "^9.8.6",
     "postcss-cli": "^7.1.1",

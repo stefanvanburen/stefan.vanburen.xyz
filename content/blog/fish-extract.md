@@ -18,12 +18,14 @@ You can find the whole function [in my config.fish in my dotfiles](https://githu
 
 First, we'll define a function named `extract` and give it a description.
 I've also noted in a comment where this function was ported from.
+
 ```fish
 function extract -d "extract files from archives"
     # largely adapted from https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/extract/extract.plugin.zsh
 ```
 
 The function first checks if we have arguments - if we have none, there's nothing to do, so we'll echo a usage string to stderr and exit.
+
 ```fish
     # no arguments, write usage
     if test (count $argv) -eq 0
@@ -35,6 +37,7 @@ The function first checks if we have arguments - if we have none, there's nothin
 Next, we check to see if the `-r` / `--remove` option has been supplied as the first argument.
 If it is, we'll remove the archive files after they've been successfully unarchived.
 We also remove this argument so that our main loop can iterate correctly over the filenames.
+
 ```fish
     set remove_file 0
     if test $argv[1] = "-r"; or test $argv[1] = "--remove"
@@ -44,11 +47,13 @@ We also remove this argument so that our main loop can iterate correctly over th
 ```
 
 Now comes the main loop, which iterates over the filenames supplied.
+
 ```fish
     for i in $argv[1..-1]
 ```
 
 First, we ensure that the filename arguments are valid files:
+
 ```fish
         if test ! -f $i
             echo "extract: '$i' is not a valid file" >&2
@@ -58,12 +63,14 @@ First, we ensure that the filename arguments are valid files:
 
 We default our success value to `0` - if the file's extension isn't something we can deal with, we'll set this to `1` so that we can avoid removing the file even if the remove option is set.
 Then, we grab the extension via some fish regex matching, using the `string match` function.
+
 ```fish
         set success 0
         set extension (string match -r ".*(\.[^\.]*)\$" $i)[2]
 ```
 
 Now, we've reached the main switch statement, which is largely a translation of the `zsh` version's unarchiving calls to `fish`.
+
 ```fish
         switch $extension
             case '*.tar.gz' '*.tgz'
@@ -100,6 +107,7 @@ Now, we've reached the main switch statement, which is largely a translation of 
 ```
 
 Finally, we'll remove the original file if we've successfully unarchived the file, and end the loop and the function.
+
 ```fish
         if test $success -eq 0; and test $remove_file -eq 1
             rm $i

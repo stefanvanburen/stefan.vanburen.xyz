@@ -24,7 +24,6 @@ To work around this, I'd typically do a compound shell command (I'm using `fish`
 I recently discovered the solution to needing this: `git pull --autostash`!
 It automatically stashes your current working directory and re-applies it after the pull.
 
-
 ```commandline
 ▵ git pull --autostash
 Created autostash: a14af18
