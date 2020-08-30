@@ -17,6 +17,11 @@
     <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
     {{ end -}}
 
+    {{/* prose font */}}
+    <link rel="stylesheet" href="/iosevka-sparkle-3/iosevka-sparkle.css">
+    {{/* code font */}}
+    <link rel="stylesheet" href="/iosevka-3/iosevka.css">
+
     {{ if .Title }}<title>{{ .Title }}</title>{{ end }}
     {{ if .Description }}<meta name="description" content="{{ .Description }}" />{{ end }}
 
