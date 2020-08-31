@@ -3,9 +3,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    {{ with resources.Get "style.css" | toCSS | postCSS | minify | fingerprint }}
-    <style>{{ .Content | safeCSS }}</style>
-    {{ end }}
+    {{ $style := resources.Get "style.css" | toCSS | postCSS | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
 
     {{/* Favicon */}}
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
