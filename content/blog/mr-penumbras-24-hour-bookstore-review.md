@@ -8,7 +8,7 @@ draft = false
 
 Rating: 4/5 ⭐️
 
-### _Warning: Spoilers below_
+## _Warning: Spoilers below_
 
 [Mr. Penumbra's 24-hour bookstore](https://bookish.tech/search?id=13538873&type=goodreads) is an amusing and intriguing tale concerning a new clerk at a strange bookstore who uncovers the mysteries of his new place of work.
 Clay (the clerk and main protagonist) discovers a secret society that his employer is a part of, and seeks to bring the mystery to light.
