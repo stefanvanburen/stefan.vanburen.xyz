@@ -33,8 +33,10 @@ pre {
   background-color: var(--background-color) !important;
 }
 
-code {
-  font-family: monospace;
+h2 {
+  /* Because we're using Tachyons, and we're setting our `<h1>`s to be `f3`, we
+   * set our `<h2>`s to be the equivalent of `f4`. */
+  font-size: 1.25rem;
 }
 
 code {
