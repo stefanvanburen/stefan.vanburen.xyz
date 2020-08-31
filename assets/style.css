@@ -51,10 +51,10 @@ code {
 
 a {
   color: var(--text-color);
-  text-decoration-style: underline;
+  text-decoration-style: solid;
 }
 
-a::hover {
+a:hover {
   color: var(--background-color);
   background: var(--text-color);
   text-decoration-style: dotted;
