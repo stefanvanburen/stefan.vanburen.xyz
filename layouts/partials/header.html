@@ -3,6 +3,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    {{/* prose font */}}
+    <link rel="stylesheet" href="/iosevka-sparkle-3/iosevka-sparkle.css">
+    {{/* code font */}}
+    <link rel="stylesheet" href="/iosevka-3/iosevka.css">
+
     {{ $style := resources.Get "style.css" | toCSS | postCSS | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $style.Permalink }}">
 
@@ -15,11 +20,6 @@
     {{ range .AlternativeOutputFormats -}}
     <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
     {{ end -}}
-
-    {{/* prose font */}}
-    <link rel="stylesheet" href="/iosevka-sparkle-3/iosevka-sparkle.css">
-    {{/* code font */}}
-    <link rel="stylesheet" href="/iosevka-3/iosevka.css">
 
     {{ if .Title }}<title>{{ .Title }}</title>{{ end }}
     {{ if .Description }}<meta name="description" content="{{ .Description }}" />{{ end }}
