@@ -12,7 +12,6 @@
 body {
   background-color: var(--background-color);
   color: var(--text-color);
-  font-family: 'Iosevka Sparkle Web', system-ui, sans;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -37,10 +36,6 @@ h2 {
   /* Because we're using Tachyons, and we're setting our `<h1>`s to be `f3`, we
    * set our `<h2>`s to be the equivalent of `f4`. */
   font-size: 1.25rem;
-}
-
-code {
-  font-family: 'Iosevka Web', monospace;
 }
 
  /* <code> directly within paragraphs */
