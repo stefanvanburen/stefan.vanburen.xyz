@@ -2,7 +2,7 @@
 
 /* purgecss start ignore */
 
-:root {
+html {
   /* Light theme colors */
   --background-color: rgb(255, 255, 255);
   --text-color: rgb(0, 0, 0);
