@@ -7,7 +7,7 @@ draft = false
 +++
 
 I recently switched from [zsh](https://en.wikipedia.org/wiki/Z_shell) to [fish](https://fishshell.com/) as my shell of choice.
-I liked the idea of starting from scratch, with the sane defaults that fish provides, as my [zsh configuration files were getting a bit out of control](https://github.com/svanburen/dotfiles/blob/master/zshrc).
+I liked the idea of starting from scratch, with the sane defaults that fish provides, as my [zsh configuration files were getting a bit out of control](https://github.com/svanburen/dotfiles/commit/10d9acc84179425772597d5a4c34c70a8bddd906#diff-53cae0c7df819f6e6a8104beae0f53a1).
 
 For the most part, the transition was fairly painless and straightforward.
 However, I still miss a few of the zsh niceties that I had been used to over the years - one being [`extract` function provided in oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/extract/extract.plugin.zsh).
