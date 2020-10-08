@@ -9,17 +9,17 @@ html {
   --inline-code-background-color: #EEEEEE;
 }
 
+@media (prefers-color-scheme: dark) {
+  html {
+    --background-color: rgb(17, 17, 17);
+    --text-color: rgb(240, 240, 240);
+    --inline-code-background-color: #555555;
+  }
+}
+
 body {
   background-color: var(--background-color);
   color: var(--text-color);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background-color: rgb(17, 17, 17);
-    --text-color: rgb(240, 240, 240);
-    --inline-code-background-color: #555;
-  }
 }
 
 pre {
