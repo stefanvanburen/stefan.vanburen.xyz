@@ -1,7 +1,7 @@
 {
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^3.0.0",
-    "autoprefixer": "^9.8.6",
+    "autoprefixer": "^10.0.1",
     "markdownlint": "^0.21.0",
     "postcss": "^8.1.1",
     "postcss-cli": "^8.1.0",
