@@ -10,8 +10,8 @@
     {{ if .Date }}
     <time class="i f5" datetime={{ .Date }}>{{ .Date.Format "2006-01-02" }}</time>
     {{ end }}
-    <div class="f4 lh-copy measure-wide">
+    <section class="f4 lh-copy measure-wide">
     {{ .Content }}
-    </div>
+    </section>
   </article>
 {{ end }}
