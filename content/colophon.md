@@ -11,3 +11,7 @@ The theme is roughly based on [hugo-theme-basic](https://themes.gohugo.io/hugo-t
 The code is licensed under the [MIT License](https://github.com/svanburen/blog/blob/master/LICENSE).
 
 The content is licensed as [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+
+For now, the body font is [Inter Display](https://rsms.me/inter/), and the monospace font is [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono).
+
+For now, this website is hosted on a [Digital Ocean Droplet](https://m.do.co/c/1e04a4500ebb) (referral link).
