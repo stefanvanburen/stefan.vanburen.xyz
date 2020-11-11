@@ -15,7 +15,8 @@
     <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
     {{ end -}}
 
-    {{ if .Title }}<title>{{ .Title }}</title>{{ end }}
+    {{/* Add " | svbn.me" to the title shown in the title bar / tab name */}}
+    {{ if .Title }}<title>{{ .Title }} | svbn.me</title>{{ end }}
     {{ if .Description }}<meta name="description" content="{{ .Description }}" />{{ end }}
 
     <script src="/colors.js" defer></script>
