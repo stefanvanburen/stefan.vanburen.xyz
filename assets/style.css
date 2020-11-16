@@ -1,5 +1,4 @@
 @import "node_modules/tachyons/css/tachyons.css";
-@import url('https://rsms.me/inter/inter-display.css');
 
 /* purgecss start ignore */
 
@@ -8,8 +7,6 @@ html {
   --background-color: rgb(255, 255, 255);
   --text-color: rgb(0, 0, 0);
   --inline-code-background-color: #EEEEEE;
-
-  font-family: 'InterDisplay', sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,10 +15,6 @@ html {
     --text-color: rgb(240, 240, 240);
     --inline-code-background-color: #555555;
   }
-}
-
-@supports (font-variation-settings: normal) {
-  html { font-family: 'InterDisplay var', sans-serif; }
 }
 
 body {
@@ -53,7 +46,7 @@ h2 {
 }
 
 pre, code, samp {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: monospace;
   font-size: 16px;
 }
 
