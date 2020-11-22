@@ -8,7 +8,7 @@
   <article>
     <h1 class="f3">{{ .Title }}</h1>
     {{ if .Date }}
-    <time class="i f5" datetime={{ .Date }}>{{ .Date.Format "2006-01-02" }}</time>
+    <time class="i f5" datetime={{ .Date.Format "2006-01-02" }}>{{ .Date.Format "2006-01-02" }}</time>
     {{ end }}
     <section class="f4 lh-copy measure-wide">
     {{ .Content }}
