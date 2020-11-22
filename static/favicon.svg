@@ -1,5 +1,1 @@
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-<circle cy="50px" fill="#ee483e" r="10px" cx="25px"></circle>
-<circle cy="50px" fill="#ee483e" r="10px" cx="50px"></circle>
-<circle cy="50px" fill="#ee483e" r="10px" cx="75px"></circle>
-</svg>
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g fill="#ee483e"><circle cx="25" cy="50" r="10"/><circle cx="50" cy="50" r="10"/><circle cx="75" cy="50" r="10"/></g></svg>
