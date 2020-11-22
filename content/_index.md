@@ -1,9 +1,7 @@
 +++
-title = "Home"
+title = " Hi, I'm Stefan"
 description = "Homepage of svbn.me"
 +++
-# Hi, I'm Stefan
-
 I'm a software engineer based in Boston.
 
 Maybe you're interested in [what I'm up to now?](/now)
