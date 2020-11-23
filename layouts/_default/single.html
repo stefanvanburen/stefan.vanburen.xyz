@@ -5,11 +5,11 @@
 {{ end }}
 
 {{ define "main" }}
-  <article class="f4 lh-copy measure-wide">
-    <h1 class="f3">{{ .Title }}</h1>
-    {{ if .Date }}
-    <time class="i f5" datetime={{ .Date.Format "2006-01-02" }}>{{ .Date.Format "2006-01-02" }}</time>
-    {{ end }}
-    {{ .Content }}
-  </article>
+<article>
+  {{ if .Date }}
+  <time class="italic text-sm mb-4" datetime={{ .Date.Format "2006-01-02" }}>{{ .Date.Format "2006-01-02" }}</time>
+  {{ end }}
+  <h1 class="font-bold text-2xl">{{ .Title }}</h1>
+  {{ .Content }}
+</article>
 {{ end }}

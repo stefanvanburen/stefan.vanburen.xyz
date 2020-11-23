@@ -1,4 +1,6 @@
-@import "node_modules/tachyons/css/tachyons.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* purgecss start ignore */
 
@@ -22,9 +24,16 @@ body {
   color: var(--text-color);
 }
 
+h2 {
+  font-weight: 700;
+  /* from tailwind: text-xl */
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
 pre {
   padding: 9.5px;
-  line-height: 1.2;
+  line-height: 1.25;
   overflow-x: auto;
   border: 1px dotted;
 
@@ -32,10 +41,9 @@ pre {
   background-color: var(--background-color) !important;
 }
 
-h2 {
-  /* Because we're using Tachyons, and we're setting our `<h1>`s to be `f3`, we
-   * set our `<h2>`s to be the equivalent of `f4`. */
-  font-size: 1.25rem;
+p {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
 }
 
  /* <code> directly within paragraphs */
@@ -52,13 +60,13 @@ pre, code, samp {
 
 a {
   color: var(--text-color);
-  text-decoration-style: solid;
+  text-decoration: underline;
 }
 
 a:hover {
   color: var(--background-color);
   background: var(--text-color);
-  text-decoration-style: dotted;
+  text-decoration: none;
 }
 
 a[href^="http"]::after {

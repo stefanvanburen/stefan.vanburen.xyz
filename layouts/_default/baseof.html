@@ -4,18 +4,20 @@
     {{ block "header" . }}{{ end }}
     {{ block "header_extra" . }}{{ end }}
   </head>
-  <body class="sans-serif ma3 ma4-ns">
-    <header>
-      <nav class="mb2">
-        <a href="/" class="f3 b">{{ .Site.Title }}</a>
-        <ul class="list flex flex-column ph0 mb0">
-          <li><a class="f4" href="/blog">blog</a></li>
-          <li><a class="f4" href="/colophon">colophon</a></li>
-          <li><a class="f4" href="/now">now</a></li>
+  <body class="font-sans mx-auto px-3 my-4 max-w-prose">
+    <header class="mb-8">
+      <nav class="grid grid-cols-2">
+        <span><a href="/" class="text-xl font-bold">{{ .Site.Title }}</a></span>
+        <ul class="flex justify-between">
+          <li><a href="/blog" class="mr-2">blog</a></li>
+          <li><a href="/colophon" class="mr-2">colophon</a></li>
+          <li><a href="/now">now</a></li>
+          <li>
+            <span data-set-theme-dark class="cursor-pointer" hidden>🌚</span>
+            <span data-set-theme-light class="cursor-pointer" hidden>🌞</span>
+          </li>
         </ul>
       </nav>
-      <span data-set-theme-dark class="pointer" hidden>🌚</span>
-      <span data-set-theme-light class="pointer" hidden>🌞</span>
     </header>
     <main>
       {{ block "main" . }}{{ end }}

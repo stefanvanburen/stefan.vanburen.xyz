@@ -1,15 +1,15 @@
 {{ define "main" }}
-  <h1 class="f3">Posts</h1>
+<h1 class="font-bold text-2xl mb-2">Posts</h1>
 
-  <ol class="list ph0">
-    {{ range .Pages.ByDate.Reverse }}
-    <li class="pb3 nowrap truncate">
-      <span class="code f5">{{ .Date.Format "2006-01-02" }} ⌁ </span>
-      <a
-        class="f4"
-        href="{{ .RelPermalink}}"
-      >{{ .Title }}</a>
-    </li>
-    {{ end }}
-  </ol>
+<ol class="space-y-2">
+  {{ range .Pages.ByDate.Reverse }}
+  <li class="truncate">
+    <span class="font-mono text-sm">{{ .Date.Format "2006-01-02" }} ⌁ </span>
+    <a
+      class="text-xl"
+      href="{{ .RelPermalink}}"
+    >{{ .Title }}</a>
+  </li>
+  {{ end }}
+</ol>
 {{ end }}

@@ -10,4 +10,4 @@ Other than that, hunkering down for the Boston winter, avoiding the virus, and e
 
 Based on https://nownownow.com/
 
-Last updated: <time class="i f5">November 11, 2020</time>
+<span class="text-sm">Last updated: <time class="italic">November 11, 2020</time></span>
