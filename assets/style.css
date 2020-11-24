@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* purgecss start ignore */
-
 html {
   /* Light theme colors */
   --background-color: rgb(255, 255, 255);
@@ -77,5 +75,3 @@ a[href^="http"]::after {
   background: var(--text-color);
   color: var(--background-color);
 }
-
-/* purgecss end ignore */
