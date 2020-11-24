@@ -1,8 +1,8 @@
----
-title: "Misusing go's `fmt.Sscanf`"
-date: 2020-11-09T08:12:09-05:00
-draft: false
----
++++
+title = "Misusing go's `fmt.Sscanf`"
+date = 2020-11-09T08:12:09-05:00
+draft = false
++++
 Recently I was building a new website in go at $work and needed to do some URL parsing to grab some expected parameters in the URL.
 The URL was expected to look something like the following: `/path/:id1/:id2`, where I was trying to grab `id1` and `id2` out of the URL.
 

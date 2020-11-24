@@ -1,6 +1,5 @@
 +++
 title = "`extract` in fish"
-description = ""
 date = 2019-11-14T10:40:55-05:00
 draft = false
 +++

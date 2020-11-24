@@ -1,8 +1,8 @@
----
-title: "rams.vim"
-date: 2020-09-15T16:38:18-04:00
-draft: false
----
++++
+title = "rams.vim"
+date = 2020-09-15T16:38:18-04:00
+draft = false
++++
 I published the vim colorscheme I've been using for the last few months [publicly on GitHub](https://github.com/svanburen/rams.vim).
 It's called rams.vim, after the famous German Designer, [Dieter Rams](https://en.wikipedia.org/wiki/Dieter_Rams).
 

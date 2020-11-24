@@ -1,8 +1,8 @@
----
-title: "git pull --autostash"
-date: 2020-05-13T19:11:09-04:00
-draft: false
----
++++
+title = "git pull --autostash"
+date = 2020-05-13T19:11:09-04:00
+draft = false
++++
 I've recently moved from a largely merge commit based git workflow to a squash and merge based one.
 Learning to flex my `git rebase` muscles has been refreshing, and I'm enjoying the cleaner `git log` that results.
 

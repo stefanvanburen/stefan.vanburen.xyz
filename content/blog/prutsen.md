@@ -1,8 +1,8 @@
----
-title: "prutsen"
-date: 2020-06-11T21:24:16-04:00
-draft: false
----
++++
+title = "prutsen"
+date = 2020-06-11T21:24:16-04:00
+draft = false
++++
 I recently learned of "prutsen", a Dutch word meaning ["to fiddle around"](https://en.wiktionary.org/wiki/prutsen).
 In a lot of ways, I think it encompasses a lot of how I approach some of my computer diversions.
 
