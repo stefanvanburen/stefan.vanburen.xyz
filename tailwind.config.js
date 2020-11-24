@@ -11,7 +11,6 @@ module.exports = {
   variants: {},
   plugins: [],
   corePlugins: {
-    preflight: false,
     animation: false,
   }
 }
