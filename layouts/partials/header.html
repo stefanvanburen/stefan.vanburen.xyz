@@ -6,8 +6,12 @@
 {{ $style := resources.Get "style.css" | toCSS | postCSS | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $style.Permalink }}">
 
+{{/* Favicon */}}
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="mask-icon" href="/favicon.svg" color="#ee483e">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#ffffff">
 
 {{ range .AlternativeOutputFormats -}}
 <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
