@@ -12,6 +12,4 @@ jobs:
       with:
         extended: true
 
-    - uses: bahmutov/npm-install@v1
-
     - run: hugo
