@@ -2,7 +2,6 @@ languageCode = "en-us"
 title = "Stefan VanBuren"
 baseurl = "https://svbn.me/"
 copyright = "Stefan VanBuren ©️ 2020 — BY-NC-SA 4.0"
-enableRobotsTXT = true
 description = "Stefan VanBuren's personal site."
 
 disableKinds = ["taxonomy", "term"]
