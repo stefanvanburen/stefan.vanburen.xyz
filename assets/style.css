@@ -75,3 +75,8 @@ a[href^="http"]::after {
   background: var(--text-color);
   color: var(--background-color);
 }
+
+blockquote {
+  border-left: medium solid #ccc;
+  padding-left: 1em;
+}
