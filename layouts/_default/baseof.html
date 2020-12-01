@@ -4,19 +4,13 @@
     {{ block "header" . }}{{ end }}
     {{ block "header_extra" . }}{{ end }}
   </head>
-  <body class="font-sans mx-auto px-3 my-4 max-w-prose">
-    <header class="mb-8">
-      <nav class="grid grid-cols-2">
-        <span><a href="/" class="text-xl font-bold">{{ .Site.Title }}</a></span>
-        <ul class="flex justify-between">
-          <li><a href="/blog" class="mr-2">blog</a></li>
-          <li><a href="/colophon" class="mr-2">colophon</a></li>
-          <li><a href="/now">now</a></li>
-          <li>
-            <span data-set-theme-dark class="cursor-pointer" hidden>🌚</span>
-            <span data-set-theme-light class="cursor-pointer" hidden>🌞</span>
-          </li>
-        </ul>
+  <body>
+    <header>
+      <a href="/"><strong>Stefan VanBuren</strong></a>
+      <nav>
+        <a href="/blog">blog</a>
+        <a href="/colophon">colophon</a>
+        <a href="/now">now</a>
       </nav>
     </header>
     <main>

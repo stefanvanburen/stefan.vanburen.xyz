@@ -1,11 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 html {
   /* Light theme colors */
-  --background-color: rgb(255, 255, 255);
-  --text-color: rgb(0, 0, 0);
+  --background-color: rgb(250, 250, 250);
+  --text-color: rgb(17, 17, 17);
   --inline-code-background-color: #EEEEEE;
 }
 
@@ -20,13 +16,15 @@ html {
 body {
   background-color: var(--background-color);
   color: var(--text-color);
-}
-
-h2 {
-  font-weight: 700;
-  /* from tailwind: text-xl */
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+  margin-left: auto;
+  margin-right: auto;
+  /* tachyons measure-wide */
+  max-width: 34em;
+  /* ensure there's always some padding from the content */
+  padding: 1rem;
+  font-family: sans-serif;
+  /* default line-height in tailwind */
+  line-height: 1.5;
 }
 
 pre {
@@ -39,26 +37,26 @@ pre {
   background-color: var(--background-color) !important;
 }
 
-p {
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-}
-
- /* <code> directly within paragraphs */
- p > code {
+/* <code> directly within paragraphs */
+p > code {
   background-color: var(--inline-code-background-color);
   /* ensure the entire <code></code> is on the same line */
   white-space: nowrap;
 }
 
-pre, code, samp {
-  font-family: monospace;
-  font-size: 16px;
+pre, code, samp, kbd {
+  font-family: ui-monospace, monospace;
 }
 
 a {
   color: var(--text-color);
   text-decoration: underline;
+}
+
+ol, ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 a:hover {
@@ -79,4 +77,5 @@ a[href^="http"]::after {
 blockquote {
   border-left: medium solid #ccc;
   padding-left: 1em;
+  margin: 0;
 }
