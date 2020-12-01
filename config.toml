@@ -16,4 +16,5 @@ disableKinds = ["taxonomy", "term"]
     style = "bw"
   [markup.goldmark]
     [markup.goldmark.renderer]
+      # allows for inline HTML
       unsafe = true
