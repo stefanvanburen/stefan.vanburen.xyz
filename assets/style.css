@@ -22,7 +22,7 @@ body {
   max-width: 34em;
   /* ensure there's always some padding from the content */
   padding: 1rem;
-  font-family: sans-serif;
+  font-family: ui-sans-serif, system-ui, sans-serif;
   /* default line-height in tailwind */
   line-height: 1.5;
 }
