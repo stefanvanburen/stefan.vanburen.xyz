@@ -26,9 +26,9 @@ From the book:
   <p>
     "This Dutch word translates loosely to doing something of very little significance that only looks like work, or tinkering."
   </p>
-  <footer>
+  <figcaption>
     Page 11, <cite><a href="https://thedobook.co/products/do-inhabit-style-your-space-for-a-creative-and-considered-life">Do Inhabit</a></cite>
-  </footer>
+  </figcaption>
 </blockquote>
 
 Good to know where it originally came from!
