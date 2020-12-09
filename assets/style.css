@@ -44,7 +44,7 @@ p > code {
   white-space: nowrap;
 }
 
-pre, code, samp, kbd {
+pre, code, samp, kbd, .mono {
   font-family: ui-monospace, monospace;
 }
 
