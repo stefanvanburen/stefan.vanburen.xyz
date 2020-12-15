@@ -16,12 +16,9 @@ html {
 body {
   background-color: var(--background-color);
   color: var(--text-color);
-  margin-left: auto;
-  margin-right: auto;
+  margin: 1em auto;
   /* tachyons measure-wide */
   max-width: 34em;
-  /* ensure there's always some padding from the content */
-  padding: 1rem;
   font-family: ui-sans-serif, system-ui, sans-serif;
   /* default line-height in tailwind */
   line-height: 1.5;
