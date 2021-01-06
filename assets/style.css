@@ -16,7 +16,9 @@ html {
 body {
   background-color: var(--background-color);
   color: var(--text-color);
-  margin: 1em auto;
+  /* ensure there's always some padding from the content */
+  padding: 1rem;
+  margin: 1rem auto;
   /* tachyons measure-wide */
   max-width: 34em;
   font-family: ui-sans-serif, system-ui, sans-serif;
