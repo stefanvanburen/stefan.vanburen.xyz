@@ -13,4 +13,4 @@ tasks:
 - upload: |
     cd svbn.me
     echo "StrictHostKeyChecking=no" >> ~/.ssh/config
-    rsync -rP public/ root@45.55.222.214:/var/lib/caddy/
+    rsync -rP public/ root@svbn.me:/var/lib/caddy/
