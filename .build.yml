@@ -5,7 +5,7 @@ packages:
 sources:
   - https://git.sr.ht/~zetetic/svbn.me
 secrets:
-  - 9d20c3ee-bd6a-4d71-875f-7291c15ffbd6
+  - fbcd43b2-ba04-4bd6-bd4c-f27b80336573
 tasks:
 - build: |
     cd svbn.me
