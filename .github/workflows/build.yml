@@ -12,4 +12,19 @@ jobs:
       with:
         extended: true
 
-    - run: hugo
+    - run: hugo --minify
+
+    - name: Deploy to server
+      id: deploy
+      uses: Pendect/action-rsyncer@v1.1.0
+      env:
+        DEPLOY_KEY: ${{secrets.DEPLOY_KEY}}
+      with:
+        flags: '-avzr'
+        options: ''
+        ssh_options: ''
+        src: 'public/'
+        dest: 'root@45.55.222.214:/var/lib/caddy/'
+
+- name: Display status from deploy
+  run: echo "${{ steps.deploy.outputs.status }}"
