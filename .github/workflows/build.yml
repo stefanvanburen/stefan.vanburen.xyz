@@ -26,5 +26,5 @@ jobs:
         src: 'public/'
         dest: 'root@45.55.222.214:/var/lib/caddy/'
 
-- name: Display status from deploy
-  run: echo "${{ steps.deploy.outputs.status }}"
+    - name: Display status from deploy
+      run: echo "${{ steps.deploy.outputs.status }}"
