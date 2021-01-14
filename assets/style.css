@@ -47,6 +47,10 @@ pre, code, samp, kbd, .mono {
   font-family: ui-monospace, monospace;
 }
 
+h1 {
+  font-size: 1.5em;
+}
+
 a {
   color: var(--text-color);
   text-decoration: underline;
