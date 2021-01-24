@@ -1,5 +1,5 @@
 ---
-title: "Font Variant Numeric"
+title: "font-variant-numeric"
 date: 2021-01-24T12:55:27-05:00
 draft: false
 ---
