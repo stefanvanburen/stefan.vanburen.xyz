@@ -9,7 +9,7 @@ secrets:
 tasks:
 - build: |
     cd svbn.me
-    hugo
+    hugo --minify
 - upload: |
     cd svbn.me
     echo "StrictHostKeyChecking=no" >> ~/.ssh/config
