@@ -1,2 +1,0 @@
-# do not try to merge the package-lock.json file - instead; it should just be regenerated
-package-lock.json -diff
