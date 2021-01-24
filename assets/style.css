@@ -62,6 +62,10 @@ ol, ul {
   padding: 0;
 }
 
+.nums {
+  font-variant-numeric: tabular-nums;
+}
+
 a:hover {
   color: var(--background-color);
   background: var(--text-color);
