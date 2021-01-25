@@ -3,8 +3,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-{{ $css := resources.Get "style.css" | toCSS | minify | fingerprint }}
-<link rel="stylesheet" href="{{ $css.Permalink }}">
+{{ with resources.Get "style.css" | minify }}
+<style>{{ .Content | safeCSS }}</style>
+{{ end }}
 
 {{/* Favicon */}}
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
