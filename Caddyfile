@@ -17,10 +17,10 @@ header {
 	# enable HSTS
 	Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
 
-	# all content comes from our own domain, but we do use inline CSS
-	Content-Security-Policy "default-src 'self'; style-src 'unsafe-inline'"
+	# all content comes from our own domain
+	Content-Security-Policy "default-src 'self'; style-src 'self'"
 	# FOR testing
-	# Content-Security-Policy-Report-Only "default-src 'self'; style-src 'unsafe-inline'"
+	# Content-Security-Policy-Report-Only "default-src 'self'; style-src 'self'"
 
 	# by default, things are static / immutable
 	Cache-Control "public, max-age=31536000, immutable"
