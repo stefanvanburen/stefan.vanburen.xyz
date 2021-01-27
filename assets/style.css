@@ -66,6 +66,18 @@ ol, ul {
   font-variant-numeric: tabular-nums;
 }
 
+/* for anchor links, don't underline regularly */
+.anchor {
+  text-decoration: none;
+}
+
+/* on hover of an anchor, underline and don't override the colors, like other links do. */
+.anchor:hover {
+  color: inherit;
+  background: inherit;
+  text-decoration: underline;
+}
+
 a:hover {
   color: var(--background-color);
   background: var(--text-color);
