@@ -1,15 +1,4 @@
-{{ define "header_extra" }}
-  {{ if .Date }}
-  <meta property="article:published_time" content="{{ .Date }} "/>
-  {{ end }}
-{{ end }}
-
 {{ define "main" }}
-<article>
-  <h1>{{ .Title }}</h1>
-  {{ if .Date }}
-  <time datetime={{ .Date.Format "2006-01-02" }}>{{ .Date.Format "2006-01-02" }}</time>
-  {{ end }}
-  {{ .Content }}
-</article>
+<h1>{{ .Title }}</h1>
+{{ .Content }}
 {{ end }}
