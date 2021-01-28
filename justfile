@@ -1,12 +1,18 @@
 dev:
 	hugo server -D
 
-deploy:
-	# rm -rf public
-	# hugo --gc --minify
+clean:
+	rm -rf public
+
+build:
+	hugo --gc --minify
+
+rebuild: clean build
+
+deploy: rebuild
 	# NOTE: cannot use the --delete option because it removes the local
 	# directories caddy uses to run.
-	# rsync -azvhP public/ droplet:/var/lib/caddy/
+	rsync -azvhP public/ droplet:/var/lib/caddy/
 	just caddy
 
 caddy:
