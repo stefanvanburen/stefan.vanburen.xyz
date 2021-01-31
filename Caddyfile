@@ -18,9 +18,9 @@ header {
 	Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
 
 	# all content comes from our own domain
-	Content-Security-Policy "default-src 'self'; style-src 'self'"
+	Content-Security-Policy "default-src 'self'; style-src 'self'; script-src 'unsafe-inline'"
 	# FOR testing
-	# Content-Security-Policy-Report-Only "default-src 'self'; style-src 'self'"
+	# Content-Security-Policy-Report-Only "default-src 'self'; style-src 'self'; script-src 'unsafe-inline'"
 
 	# by default, things are static / immutable
 	Cache-Control "public, max-age=31536000, immutable"
