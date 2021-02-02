@@ -3,6 +3,7 @@ title = "Spring Cleaning"
 date = 2020-04-18T08:11:33-04:00
 draft = false
 +++
+
 Spring is in the air!
 Inspired by [Deletion Day](https://deletionday.com/), I've been tidying up some of my physical and digital life.
 I've deleted old accounts, removed applications that I'm not using, and gotten rid of extraneous hardware.

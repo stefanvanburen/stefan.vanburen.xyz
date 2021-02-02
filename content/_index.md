@@ -2,6 +2,7 @@
 title = "Home"
 description = "Homepage of svbn.me"
 +++
+
 I'm a software engineer based in Boston.
 
 Maybe you're interested in [what I'm up to now?](/now)

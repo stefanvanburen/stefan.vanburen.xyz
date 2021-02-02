@@ -1,8 +1,8 @@
----
-title: "font-variant-numeric"
-date: 2021-01-24T12:55:27-05:00
-draft: false
----
++++
+title = "font-variant-numeric"
+date = 2021-01-24T12:55:27-05:00
+draft = false
++++
 
 I was reminded of the `font-variant-numeric` CSS property by [Jim Nielsen, here](https://twitter.com/jimniels/status/1353081335347351552), and ended up using it in a similar way for the dates on my [list of blog posts](/blog).
 
