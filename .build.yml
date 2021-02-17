@@ -7,10 +7,10 @@ sources:
 secrets:
   - fa3c2c3e-b38e-4807-81ca-72b32e572f88
 tasks:
-- build: |
+  - build: |
     cd svbn.me
     hugo --minify
-- upload: |
+  - upload: |
     cd svbn.me
     echo "StrictHostKeyChecking=no" >> ~/.ssh/config
     rsync -rP public/ root@svbn.me:/var/lib/caddy/
