@@ -4,6 +4,14 @@ html {
   --text-color: rgb(17, 17, 17);
   --inline-code-background-color: #EEEEEE;
 
+  --size-300: 0.75rem;
+  --size-400: 1rem;
+  --size-500: 1.33rem;
+  --size-600: 1.77rem;
+  --size-700: 2.36rem;
+  --size-800: 3.15rem;
+  --size-900: 4.2rem;
+
   /* Sticky footer. */
   height: 100%;
 }
@@ -41,6 +49,8 @@ time {
 /* Add some vertical padding to the footer in both directions. */
 footer {
   padding: 2em 0;
+
+  font-size: var(--size-500);
 }
 
 /* Space out the footer links a bit. */
@@ -70,7 +80,13 @@ pre, code, samp, kbd, .mono {
 }
 
 h1 {
-  font-size: 1.5em;
+  font-size: var(--size-700);
+  max-width: 25ch;
+}
+
+h2, h3 {
+  font-size: var(--size-600);
+  max-width: 25ch;
 }
 
 a {
@@ -82,6 +98,9 @@ ol, ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .nums {
@@ -119,4 +138,31 @@ blockquote {
   border-left: medium solid #ccc;
   padding-left: 1em;
   margin: 0;
+}
+
+@media (min-width: 45em) {
+  h1 {
+    font-size: var(--size-900);
+  }
+
+  h2 {
+    font-size: var(--size-700);
+  }
+
+  p {
+    font-size: var(--size-500);
+  }
+
+  ol {
+    font-size: var(--size-500);
+  }
+
+  figcaption {
+    font-size: var(--size-400);
+  }
+
+  blockquote p {
+    font-size: var(--size-600);
+    max-width: 40ch;
+  }
 }
