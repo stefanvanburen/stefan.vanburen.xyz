@@ -5,16 +5,16 @@
     {{ block "header_extra" . }}{{ end }}
   </head>
   <body>
-    <header>
-      <a href="/"><strong>Stefan VanBuren</strong></a>
+    <main>
+      {{ block "main" . }}{{ end }}
+    </main>
+    <footer>
       <nav>
+        <a href="/">about</a>
         <a href="/blog">blog</a>
         <a href="/colophon">colophon</a>
         <a href="/now">now</a>
       </nav>
-    </header>
-    <main>
-      {{ block "main" . }}{{ end }}
-    </main>
+    </footer>
   </body>
 </html>

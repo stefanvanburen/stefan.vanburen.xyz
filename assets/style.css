@@ -3,6 +3,9 @@ html {
   --background-color: rgb(250, 250, 250);
   --text-color: rgb(17, 17, 17);
   --inline-code-background-color: #EEEEEE;
+
+  /* Sticky footer. */
+  height: 100%;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,12 +21,31 @@ body {
   color: var(--text-color);
   /* ensure there's always some padding from the content */
   padding: 0 1rem;
-  margin: 1rem auto;
+  margin: 0 auto;
   /* tachyons measure-wide */
   max-width: 34em;
   font-family: ui-sans-serif, system-ui, sans-serif;
   /* default line-height in tailwind */
   line-height: 1.5;
+
+  /* Sticky footer. */
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+time {
+  font-style: italic;
+}
+
+/* Add some vertical padding to the footer in both directions. */
+footer {
+  padding: 2em 0;
+}
+
+/* Space out the footer links a bit. */
+footer > nav > a  {
+  margin-right: 1em;
 }
 
 pre {
