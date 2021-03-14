@@ -27,12 +27,17 @@ html {
 body {
   background-color: var(--background-color);
   color: var(--text-color);
-  /* ensure there's always some padding from the content */
-  padding: 0 1rem;
-  margin: 0 auto;
-  /* tachyons measure-wide */
-  max-width: 34em;
+
+  /* https://piccalil.li/tutorial/improve-the-readability-of-the-content-on-your-website#heading-the-post-block */
+  width: 90vw;
+  width: clamp(16rem, 90vw, 70rem);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+
   font-family: ui-sans-serif, system-ui, sans-serif;
+
   /* default line-height in tailwind */
   line-height: 1.5;
 
@@ -99,7 +104,6 @@ ol, ul {
 }
 
 li {
-  flex: 1;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
