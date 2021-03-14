@@ -162,12 +162,8 @@ blockquote {
     font-size: var(--size-500);
   }
 
-  figcaption {
-    font-size: var(--size-400);
-  }
-
   blockquote p {
-    font-size: var(--size-600);
+    font-size: var(--size-500);
     max-width: 40ch;
   }
 
