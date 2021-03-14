@@ -49,8 +49,6 @@ time {
 /* Add some vertical padding to the footer in both directions. */
 footer {
   padding: 2em 0;
-
-  font-size: var(--size-500);
 }
 
 /* Space out the footer links a bit. */
@@ -98,6 +96,10 @@ ol, ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+li {
+  flex: 1;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -164,5 +166,9 @@ blockquote {
   blockquote p {
     font-size: var(--size-600);
     max-width: 40ch;
+  }
+
+  footer {
+    font-size: var(--size-500);
   }
 }
