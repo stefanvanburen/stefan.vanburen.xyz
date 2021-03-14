@@ -1,8 +1,8 @@
 html {
   /* Light theme colors */
-  --background-color: rgb(250, 250, 250);
-  --text-color: rgb(17, 17, 17);
-  --inline-code-background-color: #EEEEEE;
+  --background-color: rgb(235, 235, 235);
+  --text-color: rgb(38, 43, 49);
+  --inline-code-background-color: rgb(210, 210, 210);
 
   --size-300: 0.75rem;
   --size-400: 1rem;
@@ -18,9 +18,9 @@ html {
 
 @media (prefers-color-scheme: dark) {
   html {
-    --background-color: rgb(17, 17, 17);
-    --text-color: rgb(240, 240, 240);
-    --inline-code-background-color: #555555;
+    --background-color: rgb(20, 20, 20);
+    --text-color: rgb(235, 235, 235);
+    --inline-code-background-color: rgb(100, 100, 100);
   }
 }
 
