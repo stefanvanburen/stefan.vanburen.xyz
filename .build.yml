@@ -3,7 +3,7 @@ packages:
   - hugo
 oauth: pages.sr.ht/PAGES:RW
 environment:
-  site: svbn.srht.site
+  site: svbn.me
 sources:
   - https://git.sr.ht/~svbn/svbn.me
 tasks:
