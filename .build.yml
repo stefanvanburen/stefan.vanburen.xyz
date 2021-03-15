@@ -2,6 +2,9 @@ image: alpine/edge
 packages:
   - rsync
   - hugo
+oauth: pages.sr.ht/PAGES:RW
+environment:
+  site: svbn.srht.site
 sources:
   - https://git.sr.ht/~zetetic/svbn.me
 secrets:
@@ -10,7 +13,6 @@ tasks:
   - build: |
       cd svbn.me
       hugo --minify
+      tar -C public -cvz . > site.tar.gz
   - upload: |
-      cd svbn.me
-      echo "StrictHostKeyChecking=no" >> ~/.ssh/config
-      rsync -rP public/ root@svbn.me:/var/lib/caddy/
+      acurl -f https://pages.sr.ht/publish/$site -Fcontent=@site.tar.gz
