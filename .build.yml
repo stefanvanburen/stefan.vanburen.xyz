@@ -6,7 +6,9 @@ environment:
   site: svbn.me
 tasks:
   - build: |
+      cd svbn.me
       hugo --minify
       tar -C public -cvz . > site.tar.gz
   - upload: |
+      cd svbn.me
       acurl -f https://pages.sr.ht/publish/$site -Fcontent=@site.tar.gz
