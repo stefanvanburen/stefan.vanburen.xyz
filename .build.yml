@@ -1,14 +1,11 @@
-image: alpine/edge
+image: alpine/latest
 packages:
-  - rsync
   - hugo
 oauth: pages.sr.ht/PAGES:RW
 environment:
   site: svbn.srht.site
 sources:
-  - https://git.sr.ht/~zetetic/svbn.me
-secrets:
-  - fa3c2c3e-b38e-4807-81ca-72b32e572f88
+  - https://git.sr.ht/~svbn/svbn.me
 tasks:
   - build: |
       cd svbn.me
