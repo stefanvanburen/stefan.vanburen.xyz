@@ -1,186 +1,200 @@
-html {
-  /* Light theme colors */
-  --background-color: rgb(235, 235, 235);
-  --text-color: rgb(38, 43, 49);
-  --light-grey: rgb(210, 210, 210);
-  --grey: rgb(120, 120, 120);
-
-  --size-300: 0.75rem;
-  --size-400: 1rem;
-  --size-500: 1.33rem;
-  --size-600: 1.77rem;
-  --size-700: 2.36rem;
-  --size-800: 3.15rem;
-  --size-900: 4.2rem;
-
-  /* Sticky footer. */
-  height: 100%;
-}
-
-@media (prefers-color-scheme: dark) {
+@media screen {
   html {
-    --background-color: rgb(20, 20, 20);
-    --text-color: rgb(235, 235, 235);
-    --light-grey: rgb(100, 100, 100);
-  }
-}
+    /* Light theme colors */
+    --background-color: rgb(235, 235, 235);
+    --text-color: rgb(38, 43, 49);
+    --light-grey: rgb(210, 210, 210);
+    --grey: rgb(120, 120, 120);
 
-body {
-  background-color: var(--background-color);
-  color: var(--text-color);
+    --size-300: 0.75rem;
+    --size-400: 1rem;
+    --size-500: 1.33rem;
+    --size-600: 1.77rem;
+    --size-700: 2.36rem;
+    --size-800: 3.15rem;
+    --size-900: 4.2rem;
 
-  /* https://piccalil.li/tutorial/improve-the-readability-of-the-content-on-your-website#heading-the-post-block */
-  width: 90vw;
-  width: clamp(16rem, 90vw, 70rem);
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-
-  font-family: ui-sans-serif, system-ui, sans-serif;
-
-  /* default line-height in tailwind */
-  line-height: 1.5;
-
-  /* Sticky footer. */
-  min-height: 100%;
-  display: grid;
-  grid-template-rows: 1fr auto;
-}
-
-time {
-  font-style: italic;
-}
-
-/* Add some vertical padding to the footer in both directions. */
-footer {
-  padding: 2em 0;
-}
-
-/* Space out the footer links a bit. */
-footer > nav > a  {
-  margin-right: 1em;
-}
-
-pre {
-  padding: 9.5px;
-  line-height: 1.25;
-  overflow-x: auto;
-  border: 1px dotted;
-
-  /* Override the background set by the code formatter */
-  background-color: var(--background-color) !important;
-}
-
-/* <code> directly within paragraphs */
-p > code {
-  background-color: var(--light-grey);
-  /* ensure the entire <code></code> is on the same line */
-  white-space: nowrap;
-}
-
-pre, code, samp, kbd, .mono {
-  font-family: ui-monospace, monospace;
-}
-
-h1 {
-  font-size: var(--size-700);
-  max-width: 25ch;
-}
-
-h2, h3 {
-  font-size: var(--size-600);
-  max-width: 25ch;
-}
-
-a {
-  color: var(--text-color);
-  text-decoration: underline;
-}
-
-ol, ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-li > a {
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.nums {
-  font-variant-numeric: tabular-nums;
-}
-
-/* for anchor links, don't underline regularly */
-.anchor {
-  text-decoration: none;
-}
-
-/* on hover of an anchor, underline and don't override the colors, like other links do. */
-.anchor:hover {
-  color: inherit;
-  background: inherit;
-  text-decoration: underline;
-}
-
-a:hover {
-  color: var(--background-color);
-  background: var(--text-color);
-  text-decoration: none;
-}
-
-a[href^="http"]::after {
-  content: "↗";
-}
-
-::selection {
-  background: var(--text-color);
-  color: var(--background-color);
-}
-
-blockquote {
-  border-left: medium solid #ccc;
-  padding-left: 1em;
-  margin: 0;
-}
-
-.text-sm {
-  font-size: var(--size-300);
-}
-
-.text-grey {
-  color: var(--grey);
-}
-
-@media (min-width: 45em) {
-  h1 {
-    font-size: var(--size-900);
+    /* Sticky footer. */
+    height: 100%;
   }
 
-  h2 {
-    font-size: var(--size-700);
+  @media (prefers-color-scheme: dark) {
+    html {
+      --background-color: rgb(20, 20, 20);
+      --text-color: rgb(235, 235, 235);
+      --light-grey: rgb(100, 100, 100);
+    }
   }
 
-  p {
-    font-size: var(--size-500);
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+
+    /* https://piccalil.li/tutorial/improve-the-readability-of-the-content-on-your-website#heading-the-post-block */
+    width: 90vw;
+    width: clamp(16rem, 90vw, 70rem);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+
+    font-family: ui-sans-serif, system-ui, sans-serif;
+
+    /* default line-height in tailwind */
+    line-height: 1.5;
+
+    /* Sticky footer. */
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: 1fr auto;
   }
 
-  ol {
-    font-size: var(--size-500);
+  time {
+    font-style: italic;
   }
 
-  blockquote p {
-    font-size: var(--size-500);
-    max-width: 40ch;
-  }
-
+  /* Add some vertical padding to the footer in both directions. */
   footer {
-    font-size: var(--size-500);
+    padding: 2em 0;
+  }
+
+  /* Space out the footer links a bit. */
+  footer > nav > a  {
+    margin-right: 1em;
+  }
+
+  pre {
+    padding: 9.5px;
+    line-height: 1.25;
+    overflow-x: auto;
+    border: 1px dotted;
+
+    /* Override the background set by the code formatter */
+    background-color: var(--background-color) !important;
+  }
+
+  /* <code> directly within paragraphs */
+  p > code {
+    background-color: var(--light-grey);
+    /* ensure the entire <code></code> is on the same line */
+    white-space: nowrap;
+  }
+
+  pre, code, samp, kbd, .mono {
+    font-family: ui-monospace, monospace;
+  }
+
+  h1 {
+    font-size: var(--size-700);
+    max-width: 25ch;
+  }
+
+  h2, h3 {
+    font-size: var(--size-600);
+    max-width: 25ch;
+  }
+
+  a {
+    color: var(--text-color);
+    text-decoration: underline;
+  }
+
+  ol, ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li > a {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .nums {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* for anchor links, don't underline regularly */
+  .anchor {
+    text-decoration: none;
+  }
+
+  /* on hover of an anchor, underline and don't override the colors, like other links do. */
+  .anchor:hover {
+    color: inherit;
+    background: inherit;
+    text-decoration: underline;
+  }
+
+  a:hover {
+    color: var(--background-color);
+    background: var(--text-color);
+    text-decoration: none;
+  }
+
+  a[href^="http"]::after {
+    content: "↗";
+  }
+
+  ::selection {
+    background: var(--text-color);
+    color: var(--background-color);
+  }
+
+  blockquote {
+    border-left: medium solid #ccc;
+    padding-left: 1em;
+    margin: 0;
   }
 
   .text-sm {
-    font-size: var(--size-400);
+    font-size: var(--size-300);
+  }
+
+  .text-grey {
+    color: var(--grey);
+  }
+
+  @media (min-width: 45em) {
+    h1 {
+      font-size: var(--size-900);
+    }
+
+    h2 {
+      font-size: var(--size-700);
+    }
+
+    p {
+      font-size: var(--size-500);
+    }
+
+    ol {
+      font-size: var(--size-500);
+    }
+
+    blockquote p {
+      font-size: var(--size-500);
+      max-width: 40ch;
+    }
+
+    footer {
+      font-size: var(--size-500);
+    }
+
+    .text-sm {
+      font-size: var(--size-400);
+    }
+  }
+}
+
+@media print {
+  * {
+    background: #fff;
+    color: #000;
+  }
+
+  footer,
+  .email-reply {
+    display: none;
   }
 }

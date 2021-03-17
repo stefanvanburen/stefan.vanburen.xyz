@@ -18,6 +18,10 @@
   {{ .Content }}
 </article>
 
-<hr>
-<a href="mailto:me@svbn.me?subject={{ .Title }}">Reply via email</a>
+<div class="email-reply">
+  <hr>
+  <a
+    href="mailto:me@svbn.me?subject={{ .Title }}"
+  >Reply via email</a>
+</div>
 {{ end }}
