@@ -2,7 +2,8 @@ html {
   /* Light theme colors */
   --background-color: rgb(235, 235, 235);
   --text-color: rgb(38, 43, 49);
-  --inline-code-background-color: rgb(210, 210, 210);
+  --light-grey: rgb(210, 210, 210);
+  --grey: rgb(120, 120, 120);
 
   --size-300: 0.75rem;
   --size-400: 1rem;
@@ -20,7 +21,7 @@ html {
   html {
     --background-color: rgb(20, 20, 20);
     --text-color: rgb(235, 235, 235);
-    --inline-code-background-color: rgb(100, 100, 100);
+    --light-grey: rgb(100, 100, 100);
   }
 }
 
@@ -73,7 +74,7 @@ pre {
 
 /* <code> directly within paragraphs */
 p > code {
-  background-color: var(--inline-code-background-color);
+  background-color: var(--light-grey);
   /* ensure the entire <code></code> is on the same line */
   white-space: nowrap;
 }
@@ -149,6 +150,10 @@ blockquote {
   font-size: var(--size-300);
 }
 
+.text-grey {
+  color: var(--grey);
+}
+
 @media (min-width: 45em) {
   h1 {
     font-size: var(--size-900);
@@ -173,5 +178,9 @@ blockquote {
 
   footer {
     font-size: var(--size-500);
+  }
+
+  .text-sm {
+    font-size: var(--size-400);
   }
 }

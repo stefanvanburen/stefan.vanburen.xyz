@@ -6,10 +6,15 @@
 
 {{ define "main" }}
 <article>
-  <h1>{{ .Title }}</h1>
   {{ if .Date }}
-  <time datetime={{ .Date.Format "2006-01-02" }}>{{ .Date.Format "2006-01-02" }}</time>
+  <time
+    class="text-sm text-grey"
+    datetime={{ .Date.Format "2006-01-02" }}
+  >{{ .Date.Format "January 2, 2006" }}</time>
   {{ end }}
+
+  <h1>{{ .Title }}</h1>
+
   {{ .Content }}
 </article>
 
