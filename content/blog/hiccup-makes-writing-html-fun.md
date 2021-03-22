@@ -1,6 +1,7 @@
 +++
 title = "Hiccup Makes Writing HTML Fun"
 date = 2021-03-21T19:48:36-04:00
+description = "A discussion on writing Hiccup syntax"
 draft = false
 +++
 At $work, I've been writing a web application that is server-side rendered via Go's `html/template` package.
