@@ -177,6 +177,11 @@ blockquote {
     font-size: var(--size-500);
   }
 
+  pre {
+    /* unset the 90vw, and instead just use the inherited width */
+    width: inherit;
+  }
+
   blockquote p {
     font-size: var(--size-500);
     max-width: 40ch;
