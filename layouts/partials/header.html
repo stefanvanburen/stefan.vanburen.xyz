@@ -18,8 +18,8 @@
 <link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#ffffff">
 
-{{ range .AlternativeOutputFormats -}}
-<link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
+{{ with .OutputFormats.Get "rss" -}}
+<link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}" title="svbn.me rss feed">
 {{ end -}}
 
 {{/* Add " | svbn.me" to the title shown in the title bar / tab name */}}
