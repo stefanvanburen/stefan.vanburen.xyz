@@ -44,7 +44,7 @@
       <guid>{{ .Permalink }}</guid>
       <description>
         {{ .Content | html }}
-        <hr>
+        <hr />
         <a href="mailto:me@svbn.me?subject={{ .Title }}">Reply via email</a>
       </description>
     </item>
