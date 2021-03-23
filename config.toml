@@ -14,6 +14,9 @@ disableKinds = ["taxonomy", "term"]
   [markup.highlight]
     style = "bw"
   [markup.goldmark]
+    [markup.goldmark.extensions]
+      # we can't use this because it emits bad HTML for the RSS feed.
+      typographer = false
     [markup.goldmark.renderer]
       # allows for inline HTML
       unsafe = true
