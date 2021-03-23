@@ -51,7 +51,6 @@ A `<form>` in Hiccup might look like this:
   [:input {:type "text"
            :id "state-input"
            :name "state"}]]
-
 ;; …
 ```
 
@@ -64,7 +63,7 @@ The beauty begins when you start to weave in the logic:
   [id classes disabled?]
   [:button {:id id
             :class (if disabled? (merge classes disabled-classes) classes)
-            :disabled disabled?})
+            :disabled disabled?}])
 ```
 
 In this way, Hiccup is similar to the JSX syntax while writing React — and this approach has been taken to the ClojureScript side via the [Reagent](https://github.com/reagent-project/reagent) library.
