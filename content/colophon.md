@@ -7,6 +7,9 @@ The code for this website is open source — you can find it on sourcehut at [~s
 
 This website is built with [hugo](https://github.com/gohugoio/hugo).
 
+The font is your system's sans-serif font, and for the monospaced bits, your system's monospaced font.
+If something looks off, [let me know](mailto:me@svbn.me)!
+
 The code is licensed under the [MIT License](https://github.com/svanburen/blog/blob/master/LICENSE).
 
 The content is licensed as [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
