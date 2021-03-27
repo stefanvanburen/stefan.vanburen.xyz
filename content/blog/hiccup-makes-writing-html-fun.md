@@ -62,7 +62,9 @@ The beauty begins when you start to weave in the logic:
 (defn button
   [id classes disabled?]
   [:button {:id id
-            :class (if disabled? (merge classes disabled-classes) classes)
+            :class (if disabled?
+                     (merge classes disabled-classes)
+                     classes)
             :disabled disabled?}])
 ```
 
