@@ -33,7 +33,7 @@ body {
   width: 90vw;
   width: clamp(16rem, 90vw, 70rem);
 
-  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-family: 'Gill Sans', ui-sans-serif, system-ui, sans-serif;
 
   /* default line-height in tailwind */
   line-height: 1.5;
