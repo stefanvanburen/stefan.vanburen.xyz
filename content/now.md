@@ -3,10 +3,10 @@ title = "Now"
 description = "What I'm up to, now"
 +++
 
-Playing a ton of [Monopoly Deal](https://hasbrogaming.hasbro.com/en-us/product/monopoly-deal-card-game).
+Started watching old *Survivor* seasons.
 
-Slowly running out of TV shows.
+Paying too much attention to typography and fonts.
 
-Celebrating new beginnings.
+Enjoying spring, while it lasts!
 
-<span class="text-sm">Based on [nownownow.com](https://nownownow.com/). Last updated: <time datetime="2021-03-14" class="italic">March 14, 2021</time></span>
+<span class="text-sm">Based on [nownownow.com](https://nownownow.com/). Last updated: <time datetime="2021-03-27">March 27, 2021</time></span>
