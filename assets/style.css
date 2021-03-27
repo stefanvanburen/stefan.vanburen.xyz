@@ -112,6 +112,11 @@ li > a {
   text-overflow: ellipsis;
 }
 
+.back-link {
+  display: block;
+  margin-bottom: 1rem;
+}
+
 .nums {
   font-variant-numeric: tabular-nums;
 }
