@@ -78,6 +78,10 @@ p > code {
   white-space: nowrap;
 }
 
+li > code {
+  background-color: var(--light-grey);
+}
+
 pre, code, samp, kbd, .mono {
   font-family: ui-monospace, monospace;
 }
