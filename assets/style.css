@@ -17,6 +17,12 @@ html {
   height: 100%;
 }
 
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     --background-color: rgb(20, 20, 20);
@@ -32,8 +38,6 @@ body {
   /* https://piccalil.li/tutorial/improve-the-readability-of-the-content-on-your-website#heading-the-post-block */
   width: 90vw;
   width: clamp(16rem, 90vw, 70rem);
-
-  font-family: ui-sans-serif, system-ui, sans-serif;
 
   /* default line-height in tailwind */
   line-height: 1.5;
