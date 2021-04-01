@@ -5,9 +5,19 @@ oauth: pages.sr.ht/PAGES:RW
 environment:
   site: svbn.me
 tasks:
+  - download-fonts: |
   - build: |
       cd svbn.me
       hugo --minify
+
+      wget https://github.com/rsms/inter/releases/download/v3.17/Inter-3.17.zip
+      unzip Inter-3.17.zip
+      mv Inter\ Web/* public/
+
+      wget https://github.com/arrowtype/recursive/releases/download/v1.078/ArrowType-Recursive-1.078.zip
+      unzip ArrowType-Recursive-1.078.zip
+      mv ArrowType-Recursive-1.078/Recursive_Web/woff2_variable_subsets/fonts/Recursive_VF_1.078--subset_range_english_basic.woff2 public/recursive.woff2
+
       tar -C public -cvz . > site.tar.gz
   - upload: |
       cd svbn.me
