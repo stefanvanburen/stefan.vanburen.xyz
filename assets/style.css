@@ -23,8 +23,6 @@ html { font-family: 'Inter', sans-serif; }
   html { font-family: 'Inter var', sans-serif; }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Recursive@1&display=swap');
-
 @media (prefers-color-scheme: dark) {
   html {
     --background-color: rgb(20, 20, 20);
