@@ -21,6 +21,7 @@ html {
  font-family: 'Recursive';
  src: url('/recursive.woff2') format('woff2-variations');
  font-weight: 300 1000;
+ font-variation-settings: "MONO" 1;
 }
 
 @media (prefers-color-scheme: dark) {
