@@ -42,6 +42,8 @@ body {
   /* default line-height in tailwind */
   line-height: 1.5;
 
+  font-family: 'Inter', sans-serif;
+
   /* Sticky footer. */
   min-height: 100%;
   display: grid;
