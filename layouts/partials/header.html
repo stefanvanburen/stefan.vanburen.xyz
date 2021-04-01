@@ -11,7 +11,7 @@
 {{ $css := resources.Get "style.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $css.Permalink }}">
 
-<link href="https://fonts.googleapis.com/css2?family=Recursive:CASL,MONO@1,1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Recursive:MONO@1&display=swap" rel="stylesheet">
 
 {{/* Favicon */}}
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
