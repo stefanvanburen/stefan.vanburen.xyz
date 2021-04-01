@@ -17,13 +17,6 @@ html {
   height: 100%;
 }
 
-@font-face {
-  font-family: 'Recursive';
-  src: url('/recursive.woff2') format('woff2-variations');
-  font-weight: 300 1000;
-  font-display: swap;
-}
-
 @media (prefers-color-scheme: dark) {
   html {
     --background-color: rgb(20, 20, 20);
@@ -43,7 +36,7 @@ body {
   /* default line-height in tailwind */
   line-height: 1.5;
 
-  font-family: 'Inter', sans-serif;
+  font-family: ui-sans-serif, system-ui, sans-serif;
 
   /* Sticky footer. */
   min-height: 100%;
@@ -90,8 +83,7 @@ li > code {
 }
 
 pre, code, samp, kbd, .mono {
-  font-family: 'Recursive', monospace;
-  font-variation-settings: "MONO" 1;
+  font-family: ui-monospace, monospace;
 }
 
 h1 {
