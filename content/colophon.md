@@ -7,7 +7,7 @@ The code for this website is open source — you can find it on sourcehut at [~s
 
 This website is built with [hugo](https://github.com/gohugoio/hugo).
 
-The body font is [Inter](https://rsms.me/inter), and for the monospaced bits, your system's monospaced font.
+The body font is [Inter](https://rsms.me/inter), and for the monospaced bits, [Recursive Mono](https://www.recursive.design).
 If something looks off, [let me know](mailto:me@svbn.me)!
 
 The code is licensed under the [MIT License](https://github.com/svanburen/blog/blob/master/LICENSE).
