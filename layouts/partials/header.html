@@ -22,7 +22,7 @@
 <meta name="theme-color" content="#ffffff">
 
 {{ with .OutputFormats.Get "rss" -}}
-<link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}" title="svbn.me rss feed">
+<link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
 {{ end -}}
 
 {{/* Add " | svbn.me" to the title shown in the title bar / tab name */}}
