@@ -204,15 +204,3 @@ blockquote {
     font-size: var(--size-400);
   }
 }
-
-@media print {
-  * {
-    background: #fff;
-    color: #000;
-  }
-
-  footer,
-  .email-reply {
-    display: none;
-  }
-}

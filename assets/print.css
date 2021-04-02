@@ -1,0 +1,9 @@
+* {
+  background: #fff;
+  color: #000;
+}
+
+footer,
+.email-reply {
+  display: none;
+}
