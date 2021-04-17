@@ -3,14 +3,14 @@ packages:
   - hugo
 oauth: pages.sr.ht/PAGES:RW
 environment:
-  site: svbn.me
+  site: stefan.vanburen.xyz
 tasks:
   - download-fonts: |
   - build: |
-      cd svbn.me
+      cd stefan.vanburen.xyz
       hugo --minify
 
       tar -C public -cvz . > site.tar.gz
   - upload: |
-      cd svbn.me
+      cd stefan.vanburen.xyz
       acurl -f https://pages.sr.ht/publish/$site -Fcontent=@site.tar.gz
