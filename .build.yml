@@ -5,7 +5,6 @@ oauth: pages.sr.ht/PAGES:RW
 environment:
   site: stefan.vanburen.xyz
 tasks:
-  - download-fonts: |
   - build: |
       cd stefan.vanburen.xyz
       hugo --minify
