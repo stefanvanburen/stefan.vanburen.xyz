@@ -3,7 +3,7 @@ title = "Colophon"
 description = "Details on tools and technologies used to build this site."
 +++
 
-The code for this website is open source — you can find it on sourcehut at [~svbn/svbn.me](https://git.sr.ht/~svbn/svbn.me).
+The code for this website is open source — you can find it on sourcehut at [~svbn/stefan.vanburen.xyz](https://git.sr.ht/~svbn/stefan.vanburen.xyz).
 
 This website is built with [hugo](https://github.com/gohugoio/hugo).
 

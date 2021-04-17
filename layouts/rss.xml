@@ -32,7 +32,7 @@
       <description>
         {{ .Content | html }}
         <hr />
-        <a href="mailto:me@svbn.me?subject={{ .Title }}">Reply via email</a>
+        <a href="mailto:stefan@vanburen.xyz?subject={{ .Title }}">Reply via email</a>
       </description>
     </item>
     {{ end }}

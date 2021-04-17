@@ -25,8 +25,8 @@
 <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
 {{ end -}}
 
-{{/* Add " · svbn.me" to the title shown in the title bar / tab name */}}
-{{ if .Title }}<title>{{ .Title }} · svbn.me</title>{{ end }}
+{{/* Add " · stefan.vanburen.xyz" to the title shown in the title bar / tab name */}}
+{{ if .Title }}<title>{{ .Title }} · stefan.vanburen.xyz</title>{{ end }}
 {{ if .Description }}<meta name="description" content="{{ .Description }}" />{{ end }}
 
 {{end}}

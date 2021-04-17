@@ -1,4 +1,4 @@
-# [svbn.me](https://svbn.me)
+# [stefan.vanburen.xyz](https://stefan.vanburen.xyz)
 
 Built with [hugo](https://github.com/gohugoio/hugo).
 
