@@ -1,6 +1,6 @@
-# https://svbn.me
+# https://stefan.vanburen.xyz
 
-**NOTE**: The canonical source for this repository is now at https://git.sr.ht/~svbn/svbn.me.
+**NOTE**: The canonical source for this repository is now at https://git.sr.ht/~svbn/stefan.vanburen.xyz.
 
 Built with [hugo](https://github.com/gohugoio/hugo).
 
