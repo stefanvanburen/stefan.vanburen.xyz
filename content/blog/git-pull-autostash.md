@@ -7,7 +7,7 @@ draft = false
 I've recently moved from a largely merge commit based git workflow to a squash and merge based one.
 Learning to flex my `git rebase` muscles has been refreshing, and I'm enjoying the cleaner `git log` that results.
 
-As part of the workflow, I've changed my `git pull` to [default to rebasing on pull](https://github.com/svanburen/dotfiles/commit/de0f57867ba3270212c02884ec1053e64158fa1b), rather than merging (the default).
+As part of the workflow, I've changed my `git pull` to [default to rebasing on pull](https://github.com/stefanvanburen/dotfiles/commit/de0f57867ba3270212c02884ec1053e64158fa1b), rather than merging (the default).
 The only thing that's rough about this workflow is whenever I have local changes, `git pull` will fail, telling me that I have unstaged changes:
 
 ```commandline
@@ -32,6 +32,6 @@ Current branch master is up to date.
 Applied autostash.
 ```
 
-This option is so handy for my workflow that I [made an alias for it](https://github.com/svanburen/dotfiles/commit/297733).
+This option is so handy for my workflow that I [made an alias for it](https://github.com/stefanvanburen/dotfiles/commit/297733).
 
 🥳

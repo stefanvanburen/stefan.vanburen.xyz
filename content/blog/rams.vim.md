@@ -4,7 +4,7 @@ date = 2020-09-15T16:38:18-04:00
 draft = false
 +++
 
-I published the vim colorscheme I've been using for the last few months [publicly on GitHub](https://github.com/svanburen/rams.vim).
+I published the vim colorscheme I've been using for the last few months [publicly on GitHub](https://github.com/stefanvanburen/rams.vim).
 It's called rams.vim, after the German Designer, [Dieter Rams](https://en.wikipedia.org/wiki/Dieter_Rams).
 
 I had the idea for the colorscheme after watching [Gary Hustwit's](https://en.wikipedia.org/wiki/Gary_Hustwit) [_Rams_](https://en.wikipedia.org/wiki/Rams_(2018_film)).

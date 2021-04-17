@@ -5,14 +5,14 @@ draft = false
 +++
 
 I recently switched from [zsh](https://en.wikipedia.org/wiki/Z_shell) to [fish](https://fishshell.com/) as my shell of choice.
-I liked the idea of starting from scratch, with the sane defaults that fish provides, as my [zsh configuration files were getting a bit out of control](https://github.com/svanburen/dotfiles/commit/10d9acc84179425772597d5a4c34c70a8bddd906#diff-53cae0c7df819f6e6a8104beae0f53a1).
+I liked the idea of starting from scratch, with the sane defaults that fish provides, as my [zsh configuration files were getting a bit out of control](https://github.com/stefanvanburen/dotfiles/commit/10d9acc84179425772597d5a4c34c70a8bddd906#diff-53cae0c7df819f6e6a8104beae0f53a1).
 
 For the most part, the transition was fairly painless and straightforward.
 However, I still miss a few of the zsh niceties that I had been used to over the years - one being [`extract` function provided in oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/extract/extract.plugin.zsh).
-Even after moving away from oh-my-zsh as my plugin manager in zsh, I had used my new manager to grab [just that plugin](https://github.com/svanburen/dotfiles/blob/74dd7a02b83ca1874d721e242e0f466ca1f65692/zshrc#L13-L14) for my usage.
+Even after moving away from oh-my-zsh as my plugin manager in zsh, I had used my new manager to grab [just that plugin](https://github.com/stefanvanburen/dotfiles/blob/74dd7a02b83ca1874d721e242e0f466ca1f65692/zshrc#L13-L14) for my usage.
 
 After a cursory google, it seemed like a fish port of the plugin didn't exist, so I decided to try to port over the plugin myself.
-You can find the whole function [in my config.fish in my dotfiles](https://github.com/svanburen/dotfiles/blob/9e62163c674f3fef58a12d752daa78b4c5eeecbe/config.fish#L65-L125).
+You can find the whole function [in my config.fish in my dotfiles](https://github.com/stefanvanburen/dotfiles/blob/9e62163c674f3fef58a12d752daa78b4c5eeecbe/config.fish#L65-L125).
 
 First, we'll define a function named `extract` and give it a description.
 I've also noted in a comment where this function was ported from.
@@ -116,7 +116,7 @@ end
 
 This was my first experience trying to port a larger function from zsh to fish, and it definitely took some playing around with the various test functions to get it right.
 Also, the `string match` functions were largely cobbled together from StackOverflow.
-I strongly suggest [aliasing this function to `x`](https://github.com/svanburen/dotfiles/blob/9e62163c674f3fef58a12d752daa78b4c5eeecbe/config.fish#L21), or some other short sequence, for easier usage.
+I strongly suggest [aliasing this function to `x`](https://github.com/stefanvanburen/dotfiles/blob/9e62163c674f3fef58a12d752daa78b4c5eeecbe/config.fish#L21), or some other short sequence, for easier usage.
 
 And voilà, we have a working general purpose extraction function, in fish!
 

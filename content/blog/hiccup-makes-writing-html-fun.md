@@ -69,7 +69,7 @@ The beauty begins when you start to weave in the logic:
 ```
 
 In this way, Hiccup is similar to the JSX syntax while writing React — and this approach has been taken to the ClojureScript side via the [Reagent](https://github.com/reagent-project/reagent) library.
-(A more thorough example of Reagent-style Hiccup code can be found in my [seven-guis](https://github.com/svanburen/seven-guis/blob/main/src/app/main.cljs) project).
+(A more thorough example of Reagent-style Hiccup code can be found in my [seven-guis](https://github.com/stefanvanburen/seven-guis/blob/main/src/app/main.cljs) project).
 
 And, when you pair Hiccup with [Parinfer](http://shaunlebron.github.io/parinfer/) + [Conjure](https://github.com/Olical/conjure), the DX is too good to pass up.
 While I love writing Go, the conciseness, simplicity and the REPL of Clojure have drawn me in.

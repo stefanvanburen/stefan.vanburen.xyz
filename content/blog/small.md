@@ -5,7 +5,7 @@ draft = false
 +++
 
 I was browsing through my GitHub repositories the other day and noticed `small`, a CLI tool I started working on about two years ago to convert text.
-I finally polished up the repo and [published it for all to see](https://github.com/svanburen/small).
+I finally polished up the repo and [published it for all to see](https://github.com/stefanvanburen/small).
 
 It's really not much, but it gave me a chance to think about the expected behaviors associated with a tool like `small`.
 In particular, support for being piped (`$ command | small`) is a critical bit of playing nice with other UNIX-y tools.[^1]
