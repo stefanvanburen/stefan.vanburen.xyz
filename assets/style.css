@@ -1,4 +1,4 @@
-html {
+:root {
   /* Light theme colors */
   --background-color: rgb(235, 235, 235);
   --text-color: rgb(38, 43, 49);
@@ -12,7 +12,9 @@ html {
   --size-700: 2.36rem;
   --size-800: 3.15rem;
   --size-900: 4.2rem;
+}
 
+html {
   /* Sticky footer. */
   height: 100%;
 }
