@@ -1,0 +1,11 @@
+{{ define "main" }}
+<h1>TIL</h1>
+
+<ol>
+  {{ range .Pages.ByDate.Reverse }}
+  <li>
+    <span class="nums">{{ .Date.Format "2006-01-02" }}</span> ⌁ <a href="{{.RelPermalink}}">{{ .Title }}</a>
+  </li>
+  {{ end }}
+</ol>
+{{ end }}
