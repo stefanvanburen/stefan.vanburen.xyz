@@ -184,7 +184,7 @@ blockquote {
     font-size: var(--size-500);
   }
 
-  ol {
+  ol, ul {
     font-size: var(--size-500);
   }
 
