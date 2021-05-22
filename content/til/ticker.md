@@ -1,7 +1,7 @@
 ---
 title: "time.Ticker in Go"
 date: 2021-05-21T20:25:49-04:00
-draft: true
+draft: false
 ---
 
 The [`time.Ticker`](https://golang.org/pkg/time/#Ticker) type in Go is incredibly useful for situations in which polling is needed.
