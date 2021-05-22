@@ -4,7 +4,7 @@ date: 2021-05-21T20:25:49-04:00
 draft: false
 ---
 
-The [`time.Ticker`](https://golang.org/pkg/time/#Ticker) type in Go is incredibly useful for situations in which polling is needed.
+The [`time.Ticker`](https://golang.org/pkg/time/#Ticker) type in Go is incredibly useful for situations in which [polling](https://en.wikipedia.org/wiki/Polling_(computer_science)) is needed.
 
 The easiest way to use the Ticker is via the [`time.Tick`](https://golang.org/pkg/time/#example_Sleep) function, which just provides access to the ticking channel, which makes it easy to `range` over:
 
