@@ -20,7 +20,7 @@ html {
 }
 
 @media (prefers-color-scheme: dark) {
-  html {
+  :root {
     --background-color: rgb(20, 20, 20);
     --text-color: rgb(235, 235, 235);
     --light-grey: rgb(100, 100, 100);
