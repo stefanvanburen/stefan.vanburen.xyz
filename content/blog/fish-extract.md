@@ -19,7 +19,8 @@ I've also noted in a comment where this function was ported from.
 
 ```fish
 function extract -d "extract files from archives"
-    # largely adapted from https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/extract/extract.plugin.zsh
+    # largely adapted from 
+    # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/extract
 ```
 
 The function first checks if we have arguments - if we have none, there's nothing to do, so we'll echo a usage string to stderr and exit.
@@ -27,7 +28,9 @@ The function first checks if we have arguments - if we have none, there's nothin
 ```fish
     # no arguments, write usage
     if test (count $argv) -eq 0
-        echo "Usage: extract [-option] [file ...]\n Options:\n -r, --remove    Remove archive after unpacking." >&2
+        echo "Usage: extract [-option] [file ...] " >&2
+        echo " Options:" >&2 
+        echo " -r, --remove    Remove archive after unpacking." >&2 
         exit 1
     end
 ```
