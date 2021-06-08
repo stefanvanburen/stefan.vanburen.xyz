@@ -67,7 +67,7 @@ pre {
   border: 1px dotted;
   /* cap the width at 90% of the viewport
    * this is important for mobile so that we can scroll within <pre> */
-  width: 90vw;
+  max-width: 90vw;
 
   /* Override the background set by the code formatter */
   background-color: var(--background-color) !important;
@@ -186,11 +186,6 @@ blockquote {
 
   ol, ul {
     font-size: var(--size-500);
-  }
-
-  pre {
-    /* unset the 90vw, and instead just use the inherited width */
-    width: inherit;
   }
 
   blockquote p {
