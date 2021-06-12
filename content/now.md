@@ -3,10 +3,10 @@ title = "Now"
 description = "What I'm up to, now"
 +++
 
-Started watching old *Survivor* seasons.
+Getting back into running, while it's nice out!
 
-Paying too much attention to typography and fonts.
+Starting up some summer travel plans.
 
-Enjoying spring, while it lasts!
+Doing my best to stay safe from the sun, while still being outside. 🌞
 
-<span class="text-sm">Based on [nownownow.com](https://nownownow.com/). Last updated: <time datetime="2021-03-27">March 27, 2021</time></span>
+<span class="text-sm">Based on [nownownow.com](https://nownownow.com/). Last updated: <time datetime="2021-06-12">June 12, 2021</time></span>
