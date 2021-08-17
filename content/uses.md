@@ -5,6 +5,8 @@ description = "My personal computing environment."
 
 A page detailing my personal computing environment.
 
+> inspired by [usesthis.com](https://usesthis.com) and [uses.tech](https://uses.tech)
+
 ## Hardware
 
 ### Desk setup
