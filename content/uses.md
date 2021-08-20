@@ -11,7 +11,7 @@ A page detailing my personal computing environment.
 
 ### Desk setup
 - Computers:
-  - Personal: MacBook M1 13" (2021)
+  - Personal: MacBook Pro M1 13" (2020)
   - Work: MacBook Pro 16" (2019)
 - Monitor: Acer XR342CK (34" curved monitor)
 - Keyboard(s):
