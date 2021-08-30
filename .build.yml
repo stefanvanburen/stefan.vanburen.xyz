@@ -17,9 +17,9 @@ tasks:
       current_branch=$(git branch --show-current)
 
       # Only upload on the main branch.
-      if [ "$(current_branch)" != "main" ]
+      if [ "$current_branch" != "main" ]
       then
-        echo "Current branch is " $(current_branch) ", not publishing site!"
+        echo "Current branch is " $current_branch ", not publishing site!"
         exit 0
       fi
 
