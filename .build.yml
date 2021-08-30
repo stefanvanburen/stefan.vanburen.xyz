@@ -14,10 +14,13 @@ tasks:
   - upload: |
       cd stefan.vanburen.xyz
 
+      current_branch=$(git branch --show-current)
+
       # Only upload on the main branch.
-      if [ "$(git branch --show-current)" != "main" ]
+      if [ "$(current_branch)" != "main" ]
       then
-        return
+        echo "Current branch is " $(current_branch) ", not publishing site!"
+        exit 0
       fi
 
       acurl -f https://pages.sr.ht/publish/$site -Fcontent=@site.tar.gz
