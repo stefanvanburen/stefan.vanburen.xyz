@@ -1,9 +1,9 @@
 ---
 title: "Go Templates Whitespace"
 date: 2021-08-31T18:41:20-04:00
-draft: true
+draft: false
 ---
-When writing HTML templates in Go, knowing about the whitespace modifiers is crucial for keeping both the templates and the output HTML looking good.
+When writing HTML templates in Go, knowing about the [whitespace modifiers](https://pkg.go.dev/text/template#hdr-Text_and_spaces) is crucial for keeping both the templates and the output HTML looking good.
 
 For example, if you had the following template, with `.SomeText` being `"foo"` and `.Something` being `true`:
 
