@@ -98,6 +98,14 @@ h2, h3 {
   max-width: 25ch;
 }
 
+p {
+  /**
+   * tachyons' measure-wide
+   * http://tachyons.io/docs/typography/measure/
+   */
+  max-width: 34em;
+}
+
 a {
   color: var(--text-color);
   text-decoration: underline;
