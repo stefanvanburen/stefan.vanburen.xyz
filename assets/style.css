@@ -56,8 +56,8 @@ footer {
 }
 
 /* Space out the footer links a bit. */
-footer > nav > a  {
-  margin-right: 1em;
+footer > a  {
+  margin-right: 0.5em;
 }
 
 pre {
