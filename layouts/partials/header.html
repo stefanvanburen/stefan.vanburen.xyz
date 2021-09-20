@@ -19,7 +19,9 @@
 <link rel="mask-icon" href="/favicon.svg" color="#ee483e">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<meta name="theme-color" content="#ffffff">
+{{/* --background-color from assets/style.css */}}
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="rgb(235, 235, 235)">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="rgb(20, 20, 20)">
 
 {{ with .OutputFormats.Get "rss" -}}
 <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
