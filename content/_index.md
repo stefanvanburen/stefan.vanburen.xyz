@@ -11,4 +11,4 @@ Check out my open source work <a href="https://github.com/stefanvanburen" rel="m
 
 Feel free to <a href="mailto:stefan@vanburen.xyz" rel="me">send me an email</a>.
 
-👹
+🎃
