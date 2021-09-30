@@ -4,7 +4,6 @@
   --text-color: rgb(38, 43, 49);
   --light-grey: rgb(210, 210, 210);
   --grey: rgb(120, 120, 120);
-
   --size-300: 0.75rem;
   --size-400: 1rem;
   --size-500: 1.33rem;
@@ -38,6 +37,7 @@ body {
   /* default line-height in tailwind */
   line-height: 1.5;
 
+  /* https://blog.jim-nielsen.com/2020/system-fonts-on-the-web/ */
   font-family: ui-sans-serif, system-ui, sans-serif;
 
   /* Sticky footer. */
@@ -65,6 +65,7 @@ pre {
   line-height: 1.25;
   overflow-x: auto;
   border: 1px dotted;
+
   /* cap the width at 90% of the viewport
    * this is important for mobile so that we can scroll within <pre> */
   max-width: 90vw;
@@ -73,9 +74,18 @@ pre {
   background-color: var(--background-color) !important;
 }
 
+pre,
+code,
+samp,
+kbd,
+.mono {
+  font-family: ui-monospace, monospace;
+}
+
 /* <code> directly within paragraphs */
 p > code {
   background-color: var(--light-grey);
+
   /* ensure the entire <code></code> is on the same line */
   white-space: nowrap;
 }
@@ -84,16 +94,13 @@ li > code {
   background-color: var(--light-grey);
 }
 
-pre, code, samp, kbd, .mono {
-  font-family: ui-monospace, monospace;
-}
-
 h1 {
   font-size: var(--size-700);
   max-width: 15ch;
 }
 
-h2, h3 {
+h2,
+h3 {
   font-size: var(--size-600);
   max-width: 25ch;
 }
@@ -193,7 +200,8 @@ blockquote {
     font-size: var(--size-500);
   }
 
-  ol, ul {
+  ol,
+  ul {
     font-size: var(--size-500);
   }
 
@@ -204,12 +212,13 @@ blockquote {
 
   footer {
     font-size: var(--size-500);
+
     /* for larger screens, display block so that links appear over to the left */
     display: block;
   }
 
   /* Space out the footer links a bit. */
-  footer > a  {
+  footer > a {
     margin-right: 0.5em;
   }
 
