@@ -50,14 +50,14 @@ time {
   font-style: italic;
 }
 
-/* Add some vertical padding to the footer in both directions. */
 footer {
+  /* Add some vertical padding to the footer in both directions. */
   padding: 2em 0;
-}
 
-/* Space out the footer links a bit. */
-footer > a  {
-  margin-right: 0.5em;
+  /* Flex the links, so they are evenly spaced */
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-evenly;
 }
 
 pre {
@@ -172,6 +172,7 @@ blockquote {
   color: var(--grey);
 }
 
+/* adjustments for larger screens */
 @media (min-width: 45em) {
   body {
     margin-left: auto;
@@ -203,6 +204,13 @@ blockquote {
 
   footer {
     font-size: var(--size-500);
+    /* for larger screens, display block so that links appear over to the left */
+    display: block;
+  }
+
+  /* Space out the footer links a bit. */
+  footer > a  {
+    margin-right: 0.5em;
   }
 
   .text-sm {
