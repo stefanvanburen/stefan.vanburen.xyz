@@ -3,10 +3,8 @@ title = "Now"
 description = "What I'm up to, now"
 +++
 
-Getting back into running, while it's nice out!
+Enjoying the last "warm" days in Boston.
 
-Starting up some summer travel plans.
+Ready for a spooooky October. 👻
 
-Doing my best to stay safe from the sun, while still being outside. 🌞
-
-<span class="text-sm">Based on [nownownow.com](https://nownownow.com/). Last updated: <time datetime="2021-06-12">June 12, 2021</time></span>
+<span class="text-sm">Based on [nownownow.com](https://nownownow.com/). Last updated: <time datetime="2021-10-01">October 1, 2021</time></span>
