@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--
+  Hello!
+
+  There are many résumés out there, but this is mine. Glad you're having a look!
+
+  Inspiration:
+  * https://typographyforlawyers.com/resumes.html
+  * https://microformats.org/wiki/h-resume (mostly have abandoned this)
+
+  NOTE(s) (to myself):
+  * Generally, I want to keep the content here to just under a printed page.
+    If that means occasionally trimming down or completely removing (or
+    commenting out!) previous experience, so be it!
+  * Easy on the links - keep them mostly to previous companies, and make
+    them `noreferrer noopener`. The underlines will be removed in the
+    printed PDF, so don't use links in lieu of writing something out more
+    fully.
+  * Current job bullets should be in the present-tense, unless the bullet is
+    about a particular (ended) project in which case it should be past-tense. All
+    past job bullets should be in past-tense.
+  -->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Stefan VanBuren">
+    <title>Résumé • stefan.vanburen.xyz</title>
+    <meta name="description" content="Stefan VanBuren's Résumé"/>
+
+    <!--
+      inform the browser that we prefer a light colorscheme, but support dark as well
+      TODO: actually have a dark theme?
+    -->
+    <!-- <meta name="color-scheme" content="light dark"> -->
+
+    <style>
+      html {
+        font-family: system-ui;
+      }
+
+      /* via http://bettermotherfuckingwebsite.com */
+
+      body {
+        margin: 40px auto;
+        max-width: 650px;
+        line-height: 1.6;
+        font-size: 12px;
+        color: #444;
+        padding: 0 10px;
+      }
+
+      h1,
+      h2,
+      h3 {
+        line-height: 1.2;
+      }
+
+      /* via https://github.com/hawkz/gdcss/blob/master/gd.css */
+
+      dl {
+        display: grid;
+        grid-template-columns: [dt] max-content [dd] 1fr;
+      }
+
+      dt {
+        font-weight: 700;
+      }
+
+      /* Our styles */
+
+      h1 {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 0.2em;
+      }
+
+      h2 {
+        margin-block-end: 0.2em;
+      }
+
+      h3 {
+        margin-bottom: 0;
+      }
+
+      ol {
+        list-style: none;
+        padding-left: 0;
+        margin-top: 0;
+      }
+
+      ul {
+        list-style: square;
+      }
+
+      .flex {
+        display: flex;
+        align-items: baseline;
+      }
+
+      .space-between {
+        justify-content: space-between;
+      }
+
+      address {
+        /* Seems to be set to italic in Safari. Remove the default. */
+        font-style: unset;
+        display: flex;
+        justify-content: center;
+      }
+
+      .dot {
+        margin-right: 0.25em;
+        margin-left: 0.25em;
+      }
+
+      .summary {
+        display: flex;
+        justify-content: center;
+      }
+
+      a {
+        color: black;
+      }
+
+      @media print {
+        a {
+          /* no need to underline links when printing */
+          text-decoration: none;
+        }
+      }
+    </style>
+
+  </head>
+  <body>
+    <header>
+      <h1 class="p-name">Stefan VanBuren</h1>
+
+      <address>
+        <a href="mailto:stefan@vanburen.xyz">stefan@vanburen.xyz</a>
+        <span class="dot">·</span>
+        <a href="https://github.com/stefanvanburen">github.com/stefanvanburen</a>
+        <span class="dot">·</span>
+        <!-- <a href="https://stefan.vanburen.xyz">stefan.vanburen.xyz</a> -->
+        <!-- <span class="dot">·</span> -->
+        <span>Boston, MA</span>
+      </address>
+
+      <hr>
+
+      <section>
+        <!-- <h2>Summary</h2> -->
+        <p>
+          I am a software engineer with a focus on designing, building, and maintaining
+          reliable, efficient, and scalable systems.
+          <!-- decomplected? -->
+          I enjoy learning new skills and applying them in my career,
+          leveraging my knowledge across the technology stack.
+          I take pride in my work and treat programming both as a craft and an engineering discipline.
+        </p>
+      </section>
+    </header>
+
+    <hr>
+
+    <main>
+      <section>
+        <h2>Experience</h2>
+
+        <ol>
+
+          <li>
+            <div class="flex space-between">
+              <h3>
+                <a href="https://blues.io" target="_blank" rel="noopener noreferrer">
+                  Blues Wireless
+                </a>
+              </h3>
+              <span><time datetime="2020-01">January 2020</time> - Present</span>
+            </div>
+
+            <em>Staff Software Engineer</em>
+
+            <ul>
+              <li>
+                Responsible for enhancing and maintaining the
+                <a href="https://notehub.io" target="_blank" rel="noopener noreferrer">Notehub web application</a>,
+                including the Go web server backend,
+                the various supporting services (authentication, authorization, external data stores),
+                and the frontend HTML, CSS and JavaScript
+              </li>
+              <li>
+                Lead developer of the Notehub public API, handling the design, implementation, and documentation,
+                working in concert with the developer experience team to maximize API ergonomics
+              </li>
+              <li>
+                Tasked with developing and maintaining the administrative interface of the Notehub platform
+              </li>
+              <li>
+                Actively contributes to the development of internal tools, documentation, coding standards, etc.
+              </li>
+              <li>
+                Designed, implemented, and oversaw the transition of the platform to a new pricing model
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <div class="flex space-between">
+              <h3>
+                <a href="https://catch.co" target="_blank" rel="noopener noreferrer">
+                  Catch
+                </a>
+              </h3>
+              <span><time datetime="2017-11">November 2017</time> - <time datetime="2019-11">November 2019</time></span>
+            </div>
+
+            <em>Senior Software Engineer</em>
+
+            <ul>
+              <li>Led the design and implementation of the backend GraphQL API server, written in Go</li>
+              <li>Primary developer of the user authentication, platform notification, and financial data aggregation services, all written in Python and communicating via gRPC</li>
+              <li>Worked in tandem with the mobile apps and design teams to build clean abstractions and APIs</li>
+            </ul>
+          </li>
+
+          <li>
+            <div class="flex space-between">
+              <h3>RadiantBlue Technologies</h3>
+              <span><time datetime="2016-05">May 2016</time> - <time datetime="2016-08">August 2016</time></span>
+            </div>
+
+            <em>Software Development Intern</em>
+
+            <ul>
+              <li>Developed an open source event and trigger system using Go</li>
+              <li>Designed and implemented repeated messaging using cron-like syntax</li>
+              <!-- <li>Coordinated with development lead on decisions concerning database and API structure</li> -->
+              <!-- <li>Utilized Git and GitHub on a daily basis for code review and pull requests</li> -->
+            </ul>
+          </li>
+
+          <!-- <li> -->
+          <!--   <div class="flex"> -->
+          <!--     <h3>Leidos</h3> -->
+          <!--     <!-1- <em>Bethesda, MD</em> -1-> -->
+          <!--   </div> -->
+          <!--   Software Engineering Co-op (June 2014 - December 2014) -->
+          <!--   <ul> -->
+          <!--     <li>Built robust solutions for large scale ocean simulation software using Python and C++</li> -->
+          <!--     <li>Engineered messaging protocols for inter-application communication</li> -->
+          <!--     <li>Employed Linux systems and Mercurial version control</li> -->
+          <!--   </ul> -->
+          <!-- </li> -->
+
+
+        <!-- ### Innovative Defensive Technologies (Arlington, VA): -->
+        <!-- Software Development Intern (May 2012 - August 2012) -->
+
+        <!-- * Collaborated with other interns to create testing software for internal testing -->
+        <!-- * Worked with software engineers to develop test suite for DOD software -->
+        <!-- * Wrote shell scripts for retrieval and organization of generated data -->
+
+        </ol>
+      </section>
+
+      <hr>
+
+      <section>
+        <h2>Skills</h2>
+
+        <dl>
+          <dt>Languages</dt>
+          <dd>Go, Python, HTML, CSS, JavaScript, SQL, Clojure, ClojureScript, TypeScript, C, C++, Java</dd>
+
+          <dt>Tools</dt>
+          <dd>AWS, Git, GitHub, Postgres, SQLite, Unix command line tools</dd>
+        </dl>
+
+      </section>
+
+      <hr>
+
+      <section>
+        <h2>Education</h2>
+        <h3>Virginia Tech</h3>
+        <dl>
+          <dt>Major</dt>
+          <dd>Computer Engineering</dd>
+
+          <dt>Minor</dt>
+          <dd>Computer Science</dd>
+        </dl>
+      </section>
+
+    </main>
+  </body>
+</html>
