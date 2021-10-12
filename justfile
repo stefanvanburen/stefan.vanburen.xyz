@@ -1,5 +1,8 @@
 dev:
 	hugo server -D
 
-lint:
+deps:
+	npm i -D
+
+lint: deps
 	npx stylelint "assets/*.css"
