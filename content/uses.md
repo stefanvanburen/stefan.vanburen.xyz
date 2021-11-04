@@ -35,6 +35,8 @@ A page detailing my personal computing environment.
   - my [config.fish](https://github.com/stefanvanburen/dotfiles/blob/main/config.fish), and my [custom fish functions](https://github.com/stefanvanburen/dotfiles/tree/main/fish_functions)
 - tmux: terminal multiplexer
   - my [tmux.conf](https://github.com/stefanvanburen/dotfiles/blob/main/tmux.conf)
+- git: version control
+  - my global [gitconfig](https://github.com/stefanvanburen/dotfiles/blob/main/gitconfig) and [gitignore](https://github.com/stefanvanburen/dotfiles/blob/main/gitignore) files
 - fzf: fuzzy finder, both in fish and neovim
 - just: project specific commands
 - gh: GitHub's command line interface
