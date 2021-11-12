@@ -96,13 +96,11 @@ li > code {
 
 h1 {
   font-size: var(--size-700);
-  max-width: 15ch;
 }
 
 h2,
 h3 {
   font-size: var(--size-600);
-  max-width: 25ch;
 }
 
 p {
@@ -207,7 +205,6 @@ blockquote {
 
   blockquote p {
     font-size: var(--size-500);
-    max-width: 40ch;
   }
 
   footer {
