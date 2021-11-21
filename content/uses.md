@@ -32,18 +32,18 @@ A page detailing my personal computing environment.
 
 For the most part, my terminal software is configured in [my dotfiles](https://github.com/stefanvanburen/dotfiles).
 
-- neovim: programming and writing
+- [neovim](https://neovim.io): programming and writing
   - my [neovim dotfiles](https://github.com/stefanvanburen/dotfiles/tree/main/nvim), largely written in [Fennel](https://fennel-lang.org) via the magic of [Aniseed](https://github.com/Olical/aniseed)
-- fish: shell
+- [fish](https://fishshell.com): shell
   - my [config.fish](https://github.com/stefanvanburen/dotfiles/blob/main/config.fish), and my [custom fish functions](https://github.com/stefanvanburen/dotfiles/tree/main/fish_functions)
-- tmux: terminal multiplexer
+- [tmux](https://github.com/tmux/tmux): terminal multiplexer
   - my [tmux.conf](https://github.com/stefanvanburen/dotfiles/blob/main/tmux.conf)
-- git: version control
+- [git](https://git-scm.com): version control
   - my global [gitconfig](https://github.com/stefanvanburen/dotfiles/blob/main/gitconfig) and [gitignore](https://github.com/stefanvanburen/dotfiles/blob/main/gitignore) files
 - [fzf](https://github.com/junegunn/fzf): fuzzy finder, both in fish and [neovim](https://github.com/junegunn/fzf.vim)
 - [just](https://github.com/casey/just): project specific commands
 - [gh](https://cli.github.com): GitHub's command line interface
-- starship
+- [starship](https://starship.rs): shell prompt
   - my [starship.toml](https://github.com/stefanvanburen/dotfiles/blob/main/starship.toml)
 
 ### macOS
