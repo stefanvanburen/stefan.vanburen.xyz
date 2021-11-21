@@ -3,8 +3,11 @@ title = "Now"
 description = "What I'm up to, now"
 +++
 
-Enjoying the last "warm" days in Boston.
+Readjusting to the cold weather - trying to get a few runs in before the New England winter hits.
 
-Ready for a spooooky October. 👻
+Integrating a third cat into our household.
 
-<span class="text-sm">Based on [nownownow.com](https://nownownow.com/). Last updated: <time datetime="2021-10-01">October 1, 2021</time></span>
+Looking forward to a great holiday season 🎄.
+
+<span class="text-sm">Based on [nownownow.com](https://nownownow.com/).
+Last updated: <time datetime="2021-11-21">November 21, 2021</time></span>.
