@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>All Content RSS</title>
+    <title>TILs RSS</title>
     <link>{{ .Permalink }}</link>
-    <description>All content on stefan.vanburen.xyz</description>
+    <description>TILs on stefan.vanburen.xyz</description>
     <generator>Hugo -- gohugo.io</generator>
     {{ with .Site.LanguageCode }}
     <language>{{.}}</language>
@@ -22,7 +22,7 @@
     {{ with .OutputFormats.Get "RSS" }}
       {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
     {{ end }}
-    {{ range where site.RegularPages "Type" "in" site.Params.mainSections }}
+    {{ range where site.RegularPages "Type" "==" "til" }}
     <item>
       <title>{{ .Title }}</title>
       <link>{{ .Permalink }}</link>

@@ -23,9 +23,9 @@
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="rgb(235, 235, 235)">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="rgb(20, 20, 20)">
 
-{{ with .OutputFormats.Get "rss" -}}
-<link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
-{{ end -}}
+<link rel="alternate" type="application/rss+xml" href="/index.xml" title="All Content RSS">
+<link rel="alternate" type="application/rss+xml" href="/blog/index.xml" title="Blog Posts RSS">
+<link rel="alternate" type="application/rss+xml" href="/til/index.xml" title="TILs RSS">
 
 {{/* Add " · stefan.vanburen.xyz" to the title shown in the title bar / tab name */}}
 {{ if .Title }}<title>{{ .Title }} · stefan.vanburen.xyz</title>{{ end }}

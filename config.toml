@@ -6,6 +6,10 @@ description = "Stefan VanBuren's personal site."
 
 disableKinds = ["taxonomy", "term"]
 
+# for RSS
+[params]
+  mainSections = ['blog', 'til']
+
 [author]
   # for RSS
   name = "Stefan VanBuren"
