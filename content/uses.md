@@ -11,9 +11,9 @@ A page detailing my personal computing environment.
 
 ### Desk setup
 - Computers:
-  - Personal: MacBook Pro M1 13" (2020)
-  - Work: MacBook Pro 16" (2019)
-- Monitor: Acer XR342CK (34" curved monitor)
+  - Personal: [MacBook Pro M1 13" (2020)](https://support.apple.com/kb/SP824)
+  - Work: [MacBook Pro 16" (2019)](https://support.apple.com/kb/SP809)
+- Monitor: [Acer XR342CK (34" curved monitor)](https://www.acer.com/ac/en/US/content/model/UM.CX2AA.001)
 - Keyboard(s):
   - [Kinesis Advantage 2](https://kinesis-ergo.com/keyboards/advantage2-keyboard/)
   - [HHKB Professional 2](https://en.wikipedia.org/wiki/Happy_Hacking_Keyboard)
@@ -29,6 +29,9 @@ A page detailing my personal computing environment.
 ## Software
 
 ### Terminal
+
+For the most part, my terminal software is configured in [my dotfiles](https://github.com/stefanvanburen/dotfiles).
+
 - neovim: programming and writing
   - my [neovim dotfiles](https://github.com/stefanvanburen/dotfiles/tree/main/nvim), largely written in [Fennel](https://fennel-lang.org) via the magic of [Aniseed](https://github.com/Olical/aniseed)
 - fish: shell
@@ -37,9 +40,9 @@ A page detailing my personal computing environment.
   - my [tmux.conf](https://github.com/stefanvanburen/dotfiles/blob/main/tmux.conf)
 - git: version control
   - my global [gitconfig](https://github.com/stefanvanburen/dotfiles/blob/main/gitconfig) and [gitignore](https://github.com/stefanvanburen/dotfiles/blob/main/gitignore) files
-- fzf: fuzzy finder, both in fish and neovim
-- just: project specific commands
-- gh: GitHub's command line interface
+- [fzf](https://github.com/junegunn/fzf): fuzzy finder, both in fish and [neovim](https://github.com/junegunn/fzf.vim)
+- [just](https://github.com/casey/just): project specific commands
+- [gh](https://github.com/github/hub): GitHub's command line interface
 - starship
   - my [starship.toml](https://github.com/stefanvanburen/dotfiles/blob/main/starship.toml)
 
@@ -49,4 +52,3 @@ A page detailing my personal computing environment.
 - [Things.app](https://culturedcode.com/things/)
 - [Dash](https://kapeli.com/dash)
 - [Alacritty](https://github.com/alacritty/alacritty): terminal emulator
-- Spotify: for listening to music
