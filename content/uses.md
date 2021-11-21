@@ -42,7 +42,7 @@ For the most part, my terminal software is configured in [my dotfiles](https://g
   - my global [gitconfig](https://github.com/stefanvanburen/dotfiles/blob/main/gitconfig) and [gitignore](https://github.com/stefanvanburen/dotfiles/blob/main/gitignore) files
 - [fzf](https://github.com/junegunn/fzf): fuzzy finder, both in fish and [neovim](https://github.com/junegunn/fzf.vim)
 - [just](https://github.com/casey/just): project specific commands
-- [gh](https://github.com/github/hub): GitHub's command line interface
+- [gh](https://cli.github.com): GitHub's command line interface
 - starship
   - my [starship.toml](https://github.com/stefanvanburen/dotfiles/blob/main/starship.toml)
 
