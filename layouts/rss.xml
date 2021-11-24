@@ -1,6 +1,6 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Stefan VanBuren · All Content RSS</title>
+    <title>Stefan VanBuren · All Content</title>
     <link>{{ .Permalink }}</link>
     <description>All content on stefan.vanburen.xyz</description>
     <generator>Hugo -- gohugo.io</generator>

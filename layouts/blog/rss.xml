@@ -1,6 +1,6 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Stefan VanBuren · Blog Posts RSS</title>
+    <title>Stefan VanBuren · Blog Posts</title>
     <link>{{ .Permalink }}</link>
     <description>Blog Posts on stefan.vanburen.xyz</description>
     <generator>Hugo -- gohugo.io</generator>

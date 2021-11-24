@@ -1,6 +1,6 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Stefan VanBuren · TILs RSS</title>
+    <title>Stefan VanBuren · TILs</title>
     <link>{{ .Permalink }}</link>
     <description>TILs on stefan.vanburen.xyz</description>
     <generator>Hugo -- gohugo.io</generator>
