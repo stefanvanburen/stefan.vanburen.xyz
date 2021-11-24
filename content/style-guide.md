@@ -1,6 +1,5 @@
 ---
 title: "Style Guide"
-date: 2021-10-11T15:27:58-04:00
 draft: true
 ---
 Permanently in draft. via https://poormansstyleguide.com
