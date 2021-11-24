@@ -3,7 +3,6 @@
   color: #000;
 }
 
-footer,
-.email-reply {
+footer {
   display: none;
 }

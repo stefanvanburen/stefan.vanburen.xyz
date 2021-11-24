@@ -18,12 +18,14 @@
   <h1>{{ .Title }}</h1>
 
   {{ .Content }}
-</article>
 
-<div class="email-reply">
-  <hr>
-  Thoughts? Corrections? Feel free to <a
-    href="mailto:stefan@vanburen.xyz?subject={{ .Title }}"
-  >reply via email</a>!
-</div>
+  <footer>
+    <hr>
+    <p class="text-sm">
+      Thoughts?
+      Corrections?
+      Feel free to <a href="mailto:stefan@vanburen.xyz?subject={{ .Title }}">reply via email</a>!
+    </p>
+  </footer>
+</article>
 {{ end }}
