@@ -37,8 +37,16 @@ body {
   /* default line-height in tailwind */
   line-height: 1.5;
 
-  /* https://blog.jim-nielsen.com/2020/system-fonts-on-the-web/ */
-  font-family: ui-sans-serif, system-ui, sans-serif;
+  /* via https://blog.jim-nielsen.com/2020/system-fonts-on-the-web/
+     Not including `system-ui`, because of https://infinnie.github.io/blog/2017/systemui.html */
+  font-family:
+    /* use the sans-serif font that the operating system
+       classifies as a sans-serif font for native apps */
+    ui-sans-serif,
+    /* use a sans-serif family as determined by the browser
+       which may or may not be a configurable option for
+       the user to override */
+    sans-serif;
 
   /* Sticky footer. */
   min-height: 100%;
