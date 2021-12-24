@@ -24,3 +24,6 @@ disableKinds = ["taxonomy", "term"]
     [markup.goldmark.renderer]
       # allows for inline HTML
       unsafe = true
+
+[gmnhg]
+baseUrl = "gemini://stefan.vanburen.xyz"

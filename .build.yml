@@ -5,11 +5,18 @@ oauth: pages.sr.ht/PAGES:RW
 environment:
   site: stefan.vanburen.xyz
 tasks:
-  - build: |
+  - build-hugo: |
       cd stefan.vanburen.xyz
       hugo --minify
 
-      tar -C public -cvz . > site.tar.gz
+      tar -C public -cvz . > site-hugo.tar.gz
+
+  - build-gmni: |
+      cd stefan.vanburen.xyz
+      go install github.com/tdemin/gmnhg/cmd/gmnhg@latest
+      gmnhg
+
+      tar -C output -cvz . > site-gmni.tar.gz
 
   - upload: |
       cd stefan.vanburen.xyz
@@ -21,4 +28,5 @@ tasks:
         exit 0
       fi
 
-      acurl -f https://pages.sr.ht/publish/$site -Fcontent=@site.tar.gz
+      acurl -f https://pages.sr.ht/publish/$site -Fcontent=@site-hugo.tar.gz
+      acurl -f https://pages.sr.ht/publish/$site -Fcontent=@site-gmni.tar.gz -Fprotocol=GEMINI
