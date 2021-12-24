@@ -2,6 +2,10 @@ I'm a software engineer based in Boston.
 
 Maybe you're interested in [what I'm up to now?](/now.md)
 
-Check out my open source work <a href="https://github.com/stefanvanburen" rel="me">on GitHub</a>.
+Check out my open source work on GitHub.
 
-Feel free to <a href="mailto:stefan@vanburen.xyz" rel="me">send me an email</a>.
+[GitHub](https://github.com/stefanvanburen)
+
+Feel free to send me an email.
+
+[send me an email](mailto:stefan@vanburen.xyz)
