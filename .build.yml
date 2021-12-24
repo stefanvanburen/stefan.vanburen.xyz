@@ -1,5 +1,6 @@
 image: alpine/latest
 packages:
+  - go
   - hugo
 oauth: pages.sr.ht/PAGES:RW
 environment:
