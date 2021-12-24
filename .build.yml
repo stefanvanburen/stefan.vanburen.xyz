@@ -14,8 +14,9 @@ tasks:
 
   - build-gmni: |
       cd stefan.vanburen.xyz
-      go install github.com/tdemin/gmnhg/cmd/gmnhg@latest
-      gmnhg
+      # this installs gmnhg to /home/build/stefan.vanburen.xyz/bin
+      GOBIN=$PWD/bin go install github.com/tdemin/gmnhg/cmd/gmnhg@latest
+      ./bin/gmnhg
 
       tar -C output -cvz . > site-gmni.tar.gz
 
