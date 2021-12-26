@@ -31,4 +31,5 @@ tasks:
       fi
 
       acurl -f https://pages.sr.ht/publish/$site -Fcontent=@site-hugo.tar.gz
+      acurl -f https://pages.sr.ht/publish/svbn.srht.site -Fcontent=@site-hugo.tar.gz
       acurl -f https://pages.sr.ht/publish/$site -Fcontent=@site-gmni.tar.gz -Fprotocol=GEMINI
