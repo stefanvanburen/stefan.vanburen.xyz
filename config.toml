@@ -6,6 +6,8 @@ description = "Stefan VanBuren's personal site."
 
 disableKinds = ["taxonomy", "term"]
 
+ignoreFiles = [ "_index\\.gmi\\.md$" ]
+
 # for RSS
 [params]
   mainSections = ['blog', 'til']
@@ -26,4 +28,4 @@ disableKinds = ["taxonomy", "term"]
       unsafe = true
 
 [gmnhg]
-baseUrl = "gemini://stefan.vanburen.xyz"
+  baseUrl = "gemini://stefan.vanburen.xyz"
