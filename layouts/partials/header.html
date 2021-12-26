@@ -9,10 +9,10 @@
 <meta name="color-scheme" content="light dark">
 
 {{ $css := resources.Get "style.css" | minify | fingerprint }}
-<link rel="stylesheet" href="{{ $css.Permalink }}">
+<link rel="stylesheet" href="{{ $css.RelPermalink }}">
 
 {{ $css := resources.Get "print.css" | minify | fingerprint }}
-<link rel="stylesheet" href="{{ $css.Permalink }}" media="print">
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" media="print">
 
 {{/* Favicon */}}
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
