@@ -1,11 +1,15 @@
 repos:
-- repo: local
-  hooks:
-  - id: stylelint
-    name: stylelint
-    description: Runs stylelint on assets/*.css files.
-    entry: just lint
-    language: system
-    types: [css]
-    files: ^assets/
-    pass_filenames: false
+  - repo: local
+    hooks:
+    - id: stylelint
+      name: stylelint
+      description: Runs stylelint on assets/*.css files.
+      entry: just lint
+      language: system
+      types: [css]
+      files: ^assets/
+      pass_filenames: false
+  - repo: https://github.com/DavidAnson/markdownlint-cli2
+    rev: v0.3.2
+    hooks:
+      - id: markdownlint-cli2

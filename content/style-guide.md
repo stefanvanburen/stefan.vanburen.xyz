@@ -2,6 +2,7 @@
 title: "Style Guide"
 draft: true
 ---
+<!-- markdownlint-disable -->
 Permanently in draft. via https://poormansstyleguide.com
 
 # Headings

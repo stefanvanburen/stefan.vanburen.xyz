@@ -1,3 +1,8 @@
++++
+title = "Home"
+description = "Homepage of stefan.vanburen.xyz"
++++
+
 I'm a software engineer based in Boston.
 
 Maybe you're interested in [what I'm up to now?](/now.gmi)

@@ -1,0 +1,18 @@
+# https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
+
+# Default state for all rules
+default: true
+
+# MD004/ul-style - Unordered list style
+MD004:
+  # List style - for best compatibility with Gemini
+  style: "asterisk"
+
+# MD013/line-length - Line length
+# I'll handle this myself, as I tend to like writing with Semantic Linefeeds,
+# which don't always play nicely with line lengths.
+MD013: false
+
+# MD033/no-inline-html - Inline HTML
+# I use inline HTML sparingly, when needed!
+MD033: false
