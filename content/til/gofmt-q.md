@@ -14,9 +14,9 @@ But the `%q` verb obviates the need for that manual quoting.
 
 From the [package documentation](https://pkg.go.dev/fmt@go1.17):
 
-> %s	the uninterpreted bytes of the string or slice
+> %s    the uninterpreted bytes of the string or slice
 >
-> %q	a double-quoted string safely escaped with Go syntax
+> %q    a double-quoted string safely escaped with Go syntax
 
 And a quick example (on the [Go Playground](https://play.golang.org/p/w-DfnVMSi_k)):
 
