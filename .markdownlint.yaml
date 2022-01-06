@@ -3,6 +3,11 @@
 # Default state for all rules
 default: true
 
+# MD003/heading-style/header-style - Heading style
+MD003:
+  # Heading style
+  style: "atx"
+
 # MD004/ul-style - Unordered list style
 MD004:
   # List style - for best compatibility with Gemini
