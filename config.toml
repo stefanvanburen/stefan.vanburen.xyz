@@ -13,8 +13,9 @@ ignoreFiles = [ "_index\\.gmi\\.md$" ]
   mainSections = ['blog', 'til']
 
 [author]
-  # for RSS
+  # for feeds
   name = "Stefan VanBuren"
+  email = "stefan@vanburen.xyz"
 
 [markup]
   [markup.highlight]
