@@ -32,9 +32,9 @@
       <description>
         {{ .Content | html }}
         <hr />
-	Thoughts?
-	Corrections?
-	Feel free to <a href="mailto:stefan@vanburen.xyz?subject={{ .Title }}" >reply via email</a>!
+	{{ with partial "rss-footer.html" . }}
+	{{ . | html }}
+	{{ end }}
       </description>
     </item>
     {{ end }}
