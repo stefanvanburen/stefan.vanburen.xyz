@@ -29,5 +29,11 @@ I realized that the [`IN`] function takes a list of literals,
 whereas [`ANY`] is an array function that takes a single array literal.
 Thus, when I'm passing a `pq.StringArray`, it only works with the array function.
 
+---
+
+I found this out going through [lib/pq](https://github.com/lib/pq)'s issues,
+finding [this issue](https://github.com/lib/pq/issues/600) with [this comment](https://github.com/lib/pq/issues/600#issuecomment-294143990) explaining the difference quite well,
+which also pointed to a [simpler case](https://github.com/lib/pq/issues/515) where [this comment](https://github.com/lib/pq/issues/515#issuecomment-252393112) cleared things up for me.
+
 [`IN`]: https://www.postgresql.org/docs/current/functions-comparisons.html#FUNCTIONS-COMPARISONS-IN-SCALAR
 [`ANY`]: https://www.postgresql.org/docs/current/functions-comparisons.html#id-1.5.8.30.16
