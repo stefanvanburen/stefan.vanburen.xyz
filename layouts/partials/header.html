@@ -1,4 +1,3 @@
-{{ define "header" }}
 {{ hugo.Generator }}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,5 +26,3 @@
 {{/* Add " · stefan.vanburen.xyz" to the title shown in the title bar / tab name */}}
 {{ if .Title }}<title>{{ .Title }} · stefan.vanburen.xyz</title>{{ end }}
 {{ if .Description }}<meta name="description" content="{{ .Description }}" />{{ end }}
-
-{{end}}
