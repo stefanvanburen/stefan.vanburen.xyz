@@ -26,7 +26,7 @@
       <description>
         {{ .Content | html }}
         <hr />
-	{{ with partial "rss-footer.html" . }}
+	{{ with partial "article-footer.html" . }}
 	{{ . | html }}
 	{{ end }}
       </description>
