@@ -10,3 +10,7 @@ lint:
 
 fix:
 	markdownlint-cli2-fix "content/**/*.md"
+
+clean:
+	rm -rf public/
+	rm -rf resources/
