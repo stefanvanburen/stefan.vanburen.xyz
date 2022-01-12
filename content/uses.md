@@ -49,8 +49,8 @@ For the most part, my terminal software is configured in [my dotfiles](https://g
 
 ### macOS
 
-* **Safari**
-* **Mail.app**
+* [**Safari**](https://www.apple.com/safari/)
+* [**Mail.app**](https://en.wikipedia.org/wiki/Apple_Mail)
 * **[Things.app](https://culturedcode.com/things/)**
 * **[Dash](https://kapeli.com/dash)**
 * **[Alacritty](https://github.com/alacritty/alacritty)**: terminal emulator
