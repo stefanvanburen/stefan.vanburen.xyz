@@ -155,7 +155,6 @@ a:hover {
 
 /* for anchor links, don't underline regularly and hide by default. */
 .anchor {
-  visibility: hidden;
   color: var(--light-grey);
   background: var(--background-color);
   text-decoration: none;
@@ -166,16 +165,6 @@ a:hover {
   color: var(--light-grey);
   background: var(--background-color);
   text-decoration: underline;
-}
-
-/* show anchors on hover of a heading with a link */
-h1:hover a,
-h2:hover a,
-h3:hover a,
-h4:hover a,
-h5:hover a,
-h6:hover a {
-  visibility: visible;
 }
 
 a[href^="http"]::after {
