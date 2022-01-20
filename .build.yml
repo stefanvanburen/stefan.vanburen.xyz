@@ -8,7 +8,7 @@ environment:
 tasks:
   - build-hugo: |
       cd stefan.vanburen.xyz
-      hugo --minify
+      hugo
 
       tar -C public -cvz . > site-hugo.tar.gz
 

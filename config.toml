@@ -12,6 +12,12 @@ ignoreFiles = [ "_index\\.gmi\\.md$" ]
 [params]
   mainSections = ['blog', 'til']
 
+[minify]
+  # minify output by default
+  minifyOutput = true
+  # don't minify xml files (RSS feeds)
+  disableXML = true
+
 [author]
   # for feeds
   name = "Stefan VanBuren"
