@@ -10,9 +10,9 @@ The quick summary is that one of our systems was looking for the maximum numeric
 A very simplified example:
 
 ```postgresql
-SELECT 
+SELECT
   max(balances)
-FROM 
+FROM
   unnest(ARRAY[
     '{"balance": 7}'::jsonb->>'balance',
     '{"balance": 17}'::jsonb->>'balance'
@@ -24,9 +24,9 @@ This returns `7`, because while the "balance" field is a numeric JSON value, the
 Instead, you need to make sure to [cast the values](https://www.postgresql.org/docs/current/sql-expressions.html#SQL-SYNTAX-TYPE-CASTS) before comparing:
 
 ```postgresql
-SELECT 
+SELECT
   max(balances)
-FROM 
+FROM
   unnest(ARRAY[
     ('{"balance": 7}'::jsonb->>'balance')::integer,
     ('{"balance": 17}'::jsonb->>'balance')::integer
