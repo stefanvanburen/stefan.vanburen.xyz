@@ -1,7 +1,5 @@
 # [stefan.vanburen.xyz](https://stefan.vanburen.xyz)
 
-The site is also deployed to [the gemini protocol](https://gemini.circumlunar.space) at [gemini://stefan.vanburen.xyz](gemini://stefan.vanburen.xyz).
-
 Built with [hugo](https://github.com/gohugoio/hugo).
 
 The code here is licensed under the [MIT License](./LICENSE).

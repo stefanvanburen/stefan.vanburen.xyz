@@ -1,6 +1,5 @@
 image: alpine/latest
 packages:
-  - go
   - hugo
 oauth: pages.sr.ht/PAGES:RW
 environment:
@@ -11,14 +10,6 @@ tasks:
       hugo
 
       tar -C public -cvz . > site-hugo.tar.gz
-
-  - build-gmni: |
-      cd stefan.vanburen.xyz
-      # this installs gmnhg to /home/build/stefan.vanburen.xyz/bin
-      GOBIN=$PWD/bin go install github.com/tdemin/gmnhg/cmd/gmnhg@latest
-      ./bin/gmnhg
-
-      tar -C output -cvz . > site-gmni.tar.gz
 
   - upload: |
       cd stefan.vanburen.xyz
@@ -31,5 +22,3 @@ tasks:
       fi
 
       acurl -f https://pages.sr.ht/publish/$site -Fcontent=@site-hugo.tar.gz
-      acurl -f https://pages.sr.ht/publish/svbn.srht.site -Fcontent=@site-hugo.tar.gz
-      acurl -f https://pages.sr.ht/publish/$site -Fcontent=@site-gmni.tar.gz -Fprotocol=GEMINI
