@@ -12,7 +12,7 @@ In particular, support for being piped (`$ command | small`) is a critical bit o
 
 Anyways, it was fun getting it out there.
 
-```commandline
+```console
 $ small -h
 USAGE
   small [FLAGS] [TEXT...]
