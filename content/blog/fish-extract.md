@@ -1,8 +1,8 @@
-+++
-title = "`extract` in fish"
-date = 2019-11-14T10:40:55-05:00
-draft = false
-+++
+---
+title: '`extract` in fish'
+date: "2019-11-14T10:40:55-05:00"
+draft: false
+---
 
 I recently switched from [zsh](https://en.wikipedia.org/wiki/Z_shell) to [fish](https://fishshell.com/) as my shell of choice.
 I liked the idea of starting from scratch, with the sane defaults that fish provides, as my [zsh configuration files were getting a bit out of control](https://github.com/stefanvanburen/dotfiles/commit/10d9acc84179425772597d5a4c34c70a8bddd906#diff-53cae0c7df819f6e6a8104beae0f53a1).
@@ -19,7 +19,7 @@ I've also noted in a comment where this function was ported from.
 
 ```fish
 function extract -d "extract files from archives"
-    # largely adapted from 
+    # largely adapted from
     # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/extract
 ```
 
@@ -29,8 +29,8 @@ The function first checks if we have arguments - if we have none, there's nothin
     # no arguments, write usage
     if test (count $argv) -eq 0
         echo "Usage: extract [-option] [file ...] " >&2
-        echo " Options:" >&2 
-        echo " -r, --remove    Remove archive after unpacking." >&2 
+        echo " Options:" >&2
+        echo " -r, --remove    Remove archive after unpacking." >&2
         exit 1
     end
 ```

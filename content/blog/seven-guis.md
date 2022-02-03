@@ -1,8 +1,8 @@
-+++
-title = "Seven GUIs"
-date = 2021-09-10T12:29:17-04:00
-draft = false
-+++
+---
+title: Seven GUIs
+date: "2021-09-10T12:29:17-04:00"
+draft: false
+---
 
 Recently I polished up and published my seven-guis project.
 It’s an implementation of the [7GUIs “GUI Programming Benchmark”](https://eugenkiss.github.io/7guis/), written in [ClojureScript](https://clojurescript.org/) and [Reagent](https://github.com/reagent-project/reagent).

@@ -1,6 +1,6 @@
 ---
-title: "Uses"
-date: 2021-08-16T21:28:11-04:00
+title: Uses
+date: "2021-08-16T21:28:11-04:00"
 draft: false
 ---
 I've added a new [uses](/uses) page, detailing my personal computing setup.

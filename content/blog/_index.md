@@ -1,4 +1,4 @@
-+++
-title = "Blog Posts"
-description = "list of blog posts on stefan.vanburen.xyz"
-+++
+---
+title: Blog Posts
+description: list of blog posts on stefan.vanburen.xyz
+---

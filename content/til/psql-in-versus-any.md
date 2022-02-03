@@ -1,6 +1,6 @@
 ---
-title: "PostgreSQL IN versus ANY"
-date: 2022-01-11T08:40:46-05:00
+title: PostgreSQL IN versus ANY
+date: "2022-01-11T08:40:46-05:00"
 draft: false
 ---
 

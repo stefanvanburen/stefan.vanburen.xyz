@@ -1,8 +1,8 @@
-+++
-title = "small"
-date = 2020-07-29T19:24:11-04:00
-draft = false
-+++
+---
+title: small
+date: "2020-07-29T19:24:11-04:00"
+draft: false
+---
 
 I was browsing through my GitHub repositories the other day and noticed `small`, a CLI tool I started working on about two years ago to convert text.
 I finally polished up the repo and [published it for all to see](https://github.com/stefanvanburen/small).
@@ -30,4 +30,4 @@ $ small "here's some text!"
 
 🤖
 
-[^1]: Reminder to myself that _testing_ CLIs that support pipes in Go is *really hard*.
+[^1]: Reminder to myself that _testing_ CLIs that support pipes in Go is _really hard_.

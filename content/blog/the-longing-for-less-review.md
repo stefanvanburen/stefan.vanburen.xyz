@@ -1,8 +1,8 @@
-+++
-title = "'The Longing for Less' Book Review"
-date = 2020-05-04T19:44:03-04:00
-draft = true
-+++
+---
+title: "Book Review: The Longing for Less"
+date: "2020-05-04T19:44:03-04:00"
+draft: true
+---
 
 Rating: 5/5 ⭐️
 

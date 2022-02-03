@@ -1,6 +1,6 @@
 ---
-title: "Go's package fmt %q verb for strings"
-date: 2021-09-23T10:00:45-04:00
+title: Go's package fmt %q verb for strings
+date: "2021-09-23T10:00:45-04:00"
 draft: false
 ---
 I wasn't aware of the Go `fmt` package `%q` verb, for quoting strings.

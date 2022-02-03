@@ -1,7 +1,7 @@
-+++
-title = "Uses"
-description = "My personal computing environment."
-+++
+---
+title: Uses
+description: My personal computing environment.
+---
 
 A page detailing my personal computing environment.
 

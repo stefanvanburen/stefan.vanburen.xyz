@@ -1,6 +1,6 @@
 ---
-title: "PostgreSQL and jsonb type casts"
-date: 2022-01-19T18:30:21-05:00
+title: PostgreSQL and jsonb type casts
+date: "2022-01-19T18:30:21-05:00"
 draft: false
 ---
 

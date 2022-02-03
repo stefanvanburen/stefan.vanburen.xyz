@@ -1,6 +1,6 @@
 ---
-title: "run vs errgroup"
-date: 2021-05-11T10:38:26-04:00
+title: run vs errgroup
+date: "2021-05-11T10:38:26-04:00"
 draft: false
 ---
 

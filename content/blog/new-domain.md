@@ -1,8 +1,8 @@
-+++
-title = "New Domain"
-date = 2021-04-16T21:07:47-04:00
-draft = false
-+++
+---
+title: New Domain
+date: "2021-04-16T21:07:47-04:00"
+draft: false
+---
 A quick domain update:
 
 * svbn.me -> stefan.vanburen.xyz

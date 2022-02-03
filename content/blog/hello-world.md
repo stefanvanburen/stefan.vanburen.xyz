@@ -1,8 +1,7 @@
-+++
-title = "Hello, world!"
-description = "Just an introductory post."
-date = 2019-11-13T14:47:53-05:00
-draft = false
-+++
+---
+title: Hello, world!
+date: "2019-11-13T14:47:53-05:00"
+draft: false
+---
 
 Just an introductory post here, nothing to see.

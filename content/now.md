@@ -1,7 +1,7 @@
-+++
-title = "Now"
-description = "What I'm up to, now"
-+++
+---
+title: Now
+description: What I'm up to, now
+---
 
 Readjusting to the cold weather - trying to get a few runs in before the New England winter hits.
 

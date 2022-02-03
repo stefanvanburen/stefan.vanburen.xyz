@@ -1,7 +1,7 @@
-+++
-title = "Colophon"
-description = "Details on tools and technologies used to build this site."
-+++
+---
+title: Colophon
+description: Details on tools and technologies used to build this site.
+---
 
 The code for this website is open source — you can find it on sourcehut at [~svbn/stefan.vanburen.xyz](https://git.sr.ht/~svbn/stefan.vanburen.xyz).
 

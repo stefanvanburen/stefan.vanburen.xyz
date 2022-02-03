@@ -1,7 +1,7 @@
-+++
-title = "Home"
-description = "Homepage of stefan.vanburen.xyz"
-+++
+---
+title: Home
+description: Homepage of stefan.vanburen.xyz
+---
 
 I'm a software engineer based in Boston.
 

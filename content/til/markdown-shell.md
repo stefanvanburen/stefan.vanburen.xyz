@@ -1,6 +1,6 @@
 ---
-title: "Shell in Markdown"
-date: 2022-01-28T16:23:20-05:00
+title: Shell in Markdown
+date: "2022-01-28T16:23:20-05:00"
 draft: false
 ---
 For a long time,

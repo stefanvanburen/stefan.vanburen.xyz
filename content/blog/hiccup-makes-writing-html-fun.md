@@ -1,9 +1,8 @@
-+++
-title = "Hiccup Makes Writing HTML Fun"
-date = 2021-03-21T19:48:36-04:00
-description = "A discussion on writing Hiccup syntax"
-draft = false
-+++
+---
+title: Hiccup Makes Writing HTML Fun
+date: "2021-03-21T19:48:36-04:00"
+draft: false
+---
 At $work, I've been writing a web application that is server-side rendered via Go's `html/template` package.
 
 I've been writing a toy application in Clojure with a similar approach: server rendered HTML with [Tailwind](https://tailwindcss.com) for styling and [AlpineJS](https://github.com/alpinejs/alpine) for a hint of interactivity.

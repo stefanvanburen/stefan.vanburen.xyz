@@ -1,9 +1,8 @@
-+++
-title = "gRPC and structlog in Python"
-description = ""
-date = 2019-11-13T15:13:01-05:00
-draft = true
-+++
+---
+title: gRPC and structlog in Python
+date: "2019-11-13T15:13:01-05:00"
+draft: true
+---
 
 [`structlog`](https://github.com/hynek/structlog) is a fantastic Python library for structured logging.
 One of it's best features, for the sake of request based applications, is thread-local storage.
