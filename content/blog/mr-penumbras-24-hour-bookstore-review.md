@@ -1,5 +1,5 @@
 +++
-title = "\"Mr. Penumbra's 24-hour Bookstore\" review"
+title = "Book Review: Mr. Penumbra's 24-hour Bookstore"
 description = ""
 date = 2019-12-26T20:40:50-05:00
 draft = false
