@@ -2,6 +2,7 @@
   /* Light theme colors */
   --background-color: hsl(0, 0%, 92%);
   --text-color: hsl(213, 12%, 17%);
+  --accent-color: hsl(3, 84%, 54%);
   --grey: hsl(0, 0%, 47%);
   --light-grey: hsl(0, 0%, 75%);  /* NOTE: This isn't terribly accessible against a light background. */
   --size-300: 0.75rem;
@@ -17,6 +18,7 @@
   :root {
     /* Dark theme colors */
     --background-color: hsl(0, 0%, 8%);
+    --accent-color: hsl(210, 100%, 50%);
     --text-color: hsl(0, 0%, 92%);
     --light-grey: hsl(0, 0%, 39%);
   }
@@ -125,7 +127,8 @@ p {
 
 a {
   color: var(--text-color);
-  text-decoration: underline;
+  text-decoration-line: underline;
+  text-decoration-color: var(--accent-color);
 }
 
 ol {
@@ -149,9 +152,7 @@ li > a {
 }
 
 a:hover {
-  color: var(--background-color);
-  background: var(--text-color);
-  text-decoration: none;
+  color: var(--accent-color);
 }
 
 /* for anchor links, don't underline regularly and hide by default. */
@@ -165,7 +166,7 @@ a:hover {
 .anchor:hover {
   color: var(--light-grey);
   background: var(--background-color);
-  text-decoration: underline;
+  text-decoration-line: underline;
 }
 
 a[href^="http"]::after {
@@ -173,7 +174,7 @@ a[href^="http"]::after {
 }
 
 ::selection {
-  background: var(--text-color);
+  background: var(--accent-color);
   color: var(--background-color);
 }
 
