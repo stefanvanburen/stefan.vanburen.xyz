@@ -122,7 +122,7 @@ p {
 a {
   color: var(--text-color);
   text-decoration-line: underline;
-  text-decoration-color: var(--text-color);
+  text-decoration-color: var(--grey);
 }
 
 ol {
@@ -134,6 +134,10 @@ ol {
 li > a {
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+a:hover {
+  text-decoration-color: var(--text-color);
 }
 
 .back-link {
