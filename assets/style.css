@@ -55,10 +55,6 @@ body {
   grid-template-rows: 1fr auto;
 }
 
-time {
-  font-style: italic;
-}
-
 footer {
   /* Add some vertical padding to the footer in both directions. */
   padding: 2em 0;
@@ -179,6 +175,10 @@ blockquote {
 
 .text-grey {
   color: var(--grey);
+}
+
+.mr-1 {
+  margin-right: 0.5em;
 }
 
 /* adjustments for larger screens */
