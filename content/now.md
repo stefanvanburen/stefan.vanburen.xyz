@@ -3,11 +3,7 @@ title: Now
 description: What I'm up to, now
 ---
 
-Readjusting to the cold weather - trying to get a few runs in before the New England winter hits.
-
-Integrating a third cat into our household.
-
-Looking forward to a great holiday season 🎄.
+s p r i n g i s i n t h e a i r.
 
 <span class="text-sm">Based on [nownownow.com](https://nownownow.com/).
-Last updated: <time datetime="2021-11-21">November 21, 2021</time></span>.
+Last updated: <time datetime="2022-03-09">March 9, 2022</time></span>.
