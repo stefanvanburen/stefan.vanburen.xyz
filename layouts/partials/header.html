@@ -9,6 +9,10 @@
 {{/* inform the browser that we prefer a light colorscheme, but support dark as well */}}
 <meta name="color-scheme" content="light dark">
 
+{{/* NOTE: keep these in sync with --background-color in assets/style.css */}}
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="hsl(0, 0%, 92%)">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="hsl(0, 0%, 8%)">
+
 {{ $css := resources.Get "style.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}">
 
