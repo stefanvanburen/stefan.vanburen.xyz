@@ -195,6 +195,12 @@ blockquote {
     max-width: 34em;
   }
 
+  /* match the article styles above, for pages not within an article */
+  p {
+    font-size: var(--size-500);
+    max-width: 34em;
+  }
+
   pre {
     font-size: var(--size-400);
   }
