@@ -150,8 +150,6 @@ a:hover {
 
 /* on hover of an anchor, underline but use the same colors */
 .anchor:hover {
-  color: var(--light-grey);
-  background: var(--background-color);
   text-decoration-line: underline;
 }
 
