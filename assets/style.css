@@ -194,14 +194,6 @@ blockquote {
     padding-right: 1rem;
   }
 
-  h1 {
-    font-size: var(--size-900);
-  }
-
-  h2 {
-    font-size: var(--size-700);
-  }
-
   p {
     font-size: var(--size-500);
   }
