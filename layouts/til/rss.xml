@@ -25,9 +25,9 @@
       <description>
         {{ .Content | html }}
         <hr />
-	{{ with partial "article-footer.html" . }}
-	{{ . | html }}
-	{{ end }}
+        {{ with partial "article-footer.html" . }}
+        {{ . | html }}
+        {{ end }}
       </description>
     </item>
     {{ end }}
