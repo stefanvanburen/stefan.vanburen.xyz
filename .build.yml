@@ -11,7 +11,7 @@ tasks:
 
   - package: |
       cd $site
-      tar -C public -cvz . > site-hugo.tar.gz
+      tar -C public -cvz . > site.tar.gz
 
   - upload: |
       cd $site
@@ -23,4 +23,4 @@ tasks:
         exit 0
       fi
 
-      hut pages publish -d $site site-hugo.tar.gz
+      hut pages publish -d $site site.tar.gz
