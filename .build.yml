@@ -1,18 +1,20 @@
-image: alpine/latest
+image: alpine/edge
 packages:
   - hugo
 oauth: pages.sr.ht/PAGES:RW
 environment:
   site: stefan.vanburen.xyz
 tasks:
-  - build-hugo: |
-      cd stefan.vanburen.xyz
+  - build: |
+      cd $site
       hugo
 
+  - package: |
+      cd $site
       tar -C public -cvz . > site-hugo.tar.gz
 
   - upload: |
-      cd stefan.vanburen.xyz
+      cd $site
 
       # Only upload on the main branch.
       if [ "$(git rev-parse origin/main)" != "$(git rev-parse HEAD)" ]
@@ -21,4 +23,4 @@ tasks:
         exit 0
       fi
 
-      acurl -f https://pages.sr.ht/publish/$site -Fcontent=@site-hugo.tar.gz
+      hut pages publish -d $site site-hugo.tar.gz
