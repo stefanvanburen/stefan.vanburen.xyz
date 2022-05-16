@@ -1,6 +1,7 @@
 image: alpine/edge
 packages:
   - hugo
+  - hut
 oauth: pages.sr.ht/PAGES:RW
 environment:
   site: stefan.vanburen.xyz
