@@ -28,7 +28,7 @@ Also, it helps with copy-paste.
 
 The other scenario is showing a shell _session_,
 which typically shows the command prompt, an entered command, and _the response to the command_.
-In this instance I'd use the [`console`, or `shell-session`](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml#L5685) syntax.
+In this instance I'd use the [`console`, or `sh-session`](https://github.com/github/linguist/blob/cddf7476af4c95d1572956ffc5c0cb84f7e431c5/lib/linguist/languages.yml#L5921) syntax.
 
 For example:
 
