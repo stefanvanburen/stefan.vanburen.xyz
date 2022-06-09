@@ -29,24 +29,21 @@
     <meta name="description" content="Stefan VanBuren's Résumé"/>
 
     <!--
-      inform the browser that we prefer a light colorscheme, but support dark as well
-      TODO: actually have a dark theme?
+      inform the browser that we prefer a light colorscheme,
+      but support dark as well
     -->
-    <!-- <meta name="color-scheme" content="light dark"> -->
+    <meta name="color-scheme" content="light dark">
 
     <style>
       html {
         font-family: system-ui;
       }
 
-      /* via http://bettermotherfuckingwebsite.com */
-
       body {
         margin: 40px auto;
         max-width: 650px;
         line-height: 1.6;
         font-size: 12px;
-        color: #444;
         padding: 0 10px;
       }
 
@@ -55,19 +52,6 @@
       h3 {
         line-height: 1.2;
       }
-
-      /* via https://github.com/hawkz/gdcss/blob/master/gd.css */
-
-      dl {
-        display: grid;
-        grid-template-columns: [dt] max-content [dd] 1fr;
-      }
-
-      dt {
-        font-weight: 700;
-      }
-
-      /* Our styles */
 
       h1 {
         display: flex;
@@ -114,11 +98,6 @@
         margin-left: 0.25em;
       }
 
-      .summary {
-        display: flex;
-        justify-content: center;
-      }
-
       a {
         color: black;
       }
@@ -129,6 +108,24 @@
           text-decoration: none;
         }
       }
+
+      @media (prefers-color-scheme: dark) {
+        a {
+          color: white;
+        }
+      }
+
+      /* via https://github.com/hawkz/gdcss/blob/master/gd.css */
+
+      dl {
+        display: grid;
+        grid-template-columns: [dt] max-content [dd] 1fr;
+      }
+
+      dt {
+        font-weight: 700;
+      }
+
     </style>
 
   </head>
@@ -148,17 +145,14 @@
 
       <hr>
 
-      <section>
-        <!-- <h2>Summary</h2> -->
-        <p>
-          I am a software engineer with a focus on designing, building, and maintaining
-          reliable, efficient, and scalable systems.
-          <!-- decomplected? -->
-          I enjoy learning new skills and applying them in my career,
-          leveraging my knowledge across the technology stack.
-          I take pride in my work and treat programming both as a craft and an engineering discipline.
-        </p>
-      </section>
+      <p>
+        I am a software engineer with a focus on designing, building, and maintaining
+        <!-- decomplected? -->
+        reliable, efficient, and scalable systems.
+        I enjoy learning new skills and applying them in my career,
+        leveraging my knowledge across the technology stack.
+        I take pride in my work and treat programming both as a craft and an engineering discipline.
+      </p>
     </header>
 
     <hr>
