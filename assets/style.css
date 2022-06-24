@@ -90,14 +90,14 @@ kbd,
 
 /* <code> directly within paragraphs */
 p > code {
-  background-color: var(--light-grey);
+  border: 1px dotted;
 
   /* ensure the entire <code></code> is on the same line */
   white-space: nowrap;
 }
 
 li > code {
-  background-color: var(--light-grey);
+  border: 1px dotted;
 }
 
 h1 {
