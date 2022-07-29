@@ -11,9 +11,7 @@ A page detailing my personal computing environment.
 
 ### Desk setup
 
-* Computers:
-  * Personal: **[MacBook Pro M1 13" (2020)](https://support.apple.com/kb/SP824)**
-  * Work: **[MacBook Pro 16" (2019)](https://support.apple.com/kb/SP809)**
+* Computer: **[MacBook Pro M1 13" (2020)](https://support.apple.com/kb/SP824)**
 * Monitor: **[Acer XR342CK (34" curved monitor)](https://www.acer.com/ac/en/US/content/model/UM.CX2AA.001)**
 * Keyboard(s):
   * **[Kinesis Advantage 2](https://kinesis-ergo.com/keyboards/advantage2-keyboard/)**
