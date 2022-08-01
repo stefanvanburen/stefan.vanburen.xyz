@@ -14,3 +14,6 @@ fix:
 clean:
 	rm -rf public/
 	rm -rf resources/
+
+htmltest:
+	hugo && htmltest -s

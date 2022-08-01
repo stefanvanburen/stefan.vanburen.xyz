@@ -9,6 +9,13 @@ repos:
         types: [css]
         files: ^assets/
         pass_filenames: true
+      - id: htmltest
+        name: htmltest
+        description: Build site and run `htmltest -s` to check the generated site.
+        entry: just htmltest
+        language: system
+        types_or: [markdown, html]
+        pass_filenames: false
   - repo: https://github.com/DavidAnson/markdownlint-cli2
     rev: v0.5.0
     hooks:
