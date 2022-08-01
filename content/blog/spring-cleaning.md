@@ -20,13 +20,14 @@ I had also accumulated a lot of files for tools I'm no longer using, that were s
 
 I finally reached a breaking point, [removing the `cheat` tool](https://github.com/stefanvanburen/dotfiles/commit/9ed3e0).
 There was nothing wrong with it, but I wasn't using it as often as I thought.
-I used this as momentum to move on to my [other](https://github.com/stefanvanburen/dotfiles/commits/master?after=f56b7bf67301f60785f7a7af1ced945d25b4d5c8+174) [configuration](https://github.com/stefanvanburen/dotfiles/commits/master?before=f56b7bf67301f60785f7a7af1ced945d25b4d5c8+175) [files](https://github.com/stefanvanburen/dotfiles/commits/master?before=f56b7bf67301f60785f7a7af1ced945d25b4d5c8+140), mostly my vimrc.
+I used this as momentum to move on to my [other](https://github.com/stefanvanburen/dotfiles/commits/main?after=f56b7bf67301f60785f7a7af1ced945d25b4d5c8+174) [configuration](https://github.com/stefanvanburen/dotfiles/commits/main?before=f56b7bf67301f60785f7a7af1ced945d25b4d5c8+175) [files](https://github.com/stefanvanburen/dotfiles/commits/main?before=f56b7bf67301f60785f7a7af1ced945d25b4d5c8+140), mostly my vimrc.
 Previously, I had been fairly lax on my git hygiene for the repo, using commit messages like ["Various updates"](https://github.com/stefanvanburen/dotfiles/commit/26852a) or simply a ["✨"](https://github.com/stefanvanburen/dotfiles/commit/579368).
 I knew that removing all that accumulated knowledge meant that I needed to have better practices, so I started using a `tool:` prefix on my commit subjects, and trying to be better about abiding to [atomic commits](https://en.wikipedia.org/wiki/Atomic_commit#Atomic_commit_convention).
 
 ## (neo)vim
 
-Now, my [vimrc](https://github.com/stefanvanburen/dotfiles/blob/master/vim/init.vim) is a lean ~350 lines!
+<del>Now, my [vimrc](https://github.com/stefanvanburen/dotfiles/commits/main/vim/init.vim) is a lean ~350 lines!</del>
+<ins>Update (August 2022): I'm now fully in on the Lua (actually, Fennel) neovim configuration, so the previous link is invalid.</ins>
 (Maybe not lean for a vanilla vim purist, but it's reasonable for me!)
 You'll also notice that I've converted over to neovim fully.
 I had a number of settings, plugins, and mappings that were working around some of vim's weirdness, and I was using neovim 98% of the time.

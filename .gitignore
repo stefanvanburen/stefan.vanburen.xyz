@@ -7,3 +7,6 @@ node_modules
 
 output/
 site.tar.gz
+
+# for htmltest
+tmp/

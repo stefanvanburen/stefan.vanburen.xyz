@@ -34,7 +34,7 @@ For the most part, my terminal software is configured in [my dotfiles](https://g
 * **[neovim](https://neovim.io)**: programming and writing
   * my [neovim dotfiles](https://github.com/stefanvanburen/dotfiles/tree/main/nvim), largely written in [Fennel](https://fennel-lang.org) via the magic of [Aniseed](https://github.com/Olical/aniseed)
 * **[fish](https://fishshell.com)**: shell
-  * my [config.fish](https://github.com/stefanvanburen/dotfiles/blob/main/config.fish), and my [custom fish functions](https://github.com/stefanvanburen/dotfiles/tree/main/fish_functions)
+  * my [config.fish](https://github.com/stefanvanburen/dotfiles/blob/main/config.fish), and my [custom fish functions](https://github.com/stefanvanburen/dotfiles/tree/main/fish-functions)
 * **[tmux](https://github.com/tmux/tmux)**: terminal multiplexer
   * my [tmux.conf](https://github.com/stefanvanburen/dotfiles/blob/main/tmux.conf)
 * **[git](https://git-scm.com)**: version control

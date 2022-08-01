@@ -15,14 +15,14 @@ PRAGMA foreign_keys = ON;
 
 In turn,
 
-[`PRAGMA journal_mode = WAL;`](pragma-journal-mode) sets the database into [WAL journaling mode](https://sqlite.org/wal.html#activating_and_configuring_wal_mode).
+[`PRAGMA journal_mode = WAL;`][pragma-journal-mode] sets the database into [WAL journaling mode](https://sqlite.org/wal.html#activating_and_configuring_wal_mode).
 Unlike the others, this doesn't necessarily need to be set on each connection; once a database is in WAL mode [it'll stay in that mode across database connections](https://sqlite.org/wal.html#persistence_of_wal_mode).
 WAL journaling mode is recommended for most SQLite server applications, because it makes writers not block readers.
 
-[`PRAGMA busy_timeout = 5000;`](pragma-busy-timeout) sets the [busy_timeout](https://sqlite.org/c3ref/busy_timeout.html) to 5000 milliseconds (5 seconds).
+[`PRAGMA busy_timeout = 5000;`][pragma-busy-timeout] sets the [busy_timeout](https://sqlite.org/c3ref/busy_timeout.html) to 5000 milliseconds (5 seconds).
 Without this setting, if a write transaction is running, and another write transaction starts, the second write transaction will fail immediately.
 
-[`PRAGMA foreign_keys = ON;`](pragma-foreign-keys) turns on SQLite's [foreign key support](https://sqlite.org/foreignkeys.html).
+[`PRAGMA foreign_keys = ON;`][pragma-foreign-keys] turns on SQLite's [foreign key support](https://sqlite.org/foreignkeys.html).
 Foreign Keys aren't enabled by default in SQLite for historical reasons, but foreign keys are great for maintaining data integrity.
 So -- use them!
 
