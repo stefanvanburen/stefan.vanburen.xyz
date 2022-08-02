@@ -12,7 +12,7 @@ A page detailing my personal computing environment.
 ### Desk setup
 
 * Computer: **[MacBook Pro M1 13" (2020)](https://support.apple.com/kb/SP824)**
-* Monitor: **[Acer XR342CK (34" curved monitor)](https://www.acer.com/ac/en/US/content/model/UM.CX2AA.001)**
+* Monitor: **Acer XR342CK (34" curved monitor)**
 * Keyboard(s):
   * **[Kinesis Advantage 2](https://kinesis-ergo.com/keyboards/advantage2-keyboard/)**
   * **[HHKB Professional 2](https://en.wikipedia.org/wiki/Happy_Hacking_Keyboard)**
