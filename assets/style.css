@@ -179,10 +179,8 @@ blockquote {
 /* adjustments for larger screens */
 @media (min-width: 45em) {
   body {
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    margin: 0 auto;
+    padding: 0 auto;
   }
 
   article {
