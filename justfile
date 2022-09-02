@@ -19,10 +19,7 @@ lint:
 	just htmltest
 	just html-validate
 	npx stylelint 'assets/*.css'
-	markdownlint-cli2 "content/**/*.md"
-
-fix:
-	markdownlint-cli2-fix "content/**/*.md"
+	npx markdownlint-cli2 "content/**/*.md"
 
 clean:
 	rm -rf public/
