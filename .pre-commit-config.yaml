@@ -16,6 +16,13 @@ repos:
         language: system
         types_or: [markdown, html]
         pass_filenames: false
+      - id: html-validate
+        name: html-validate
+        description: Build site and run `html-validate` to check the generated site.
+        entry: just html-validate
+        language: system
+        types_or: [markdown, html]
+        pass_filenames: false
   - repo: https://github.com/DavidAnson/markdownlint-cli2
     rev: v0.5.0
     hooks:
