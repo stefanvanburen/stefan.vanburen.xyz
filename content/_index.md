@@ -1,5 +1,5 @@
 ---
-title: Home
+title: Stefan VanBuren
 description: Homepage of stefan.vanburen.xyz
 ---
 
