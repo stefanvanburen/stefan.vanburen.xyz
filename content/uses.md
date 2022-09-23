@@ -15,7 +15,7 @@ A page detailing my personal computing environment.
 * Monitor: [**Apple Studio Display**](https://www.apple.com/studio-display/)
 * Keyboard(s):
   * **[Kinesis Advantage 2](https://kinesis-ergo.com/keyboards/advantage2-keyboard/)**
-  * **[HHKB Professional 2](https://en.wikipedia.org/wiki/Happy_Hacking_Keyboard)**
+  * **[HHKB Professional 2](https://www.hhkeyboard.com/uk/products/pro2)**
   * **[Keyboardio Atreus](https://shop.keyboard.io/products/keyboardio-atreus)**
 * Mouse: **Logitech MX Master 2**
 * Speakers: **[Harman Kardon SoundSticks](https://en.wikipedia.org/wiki/SoundSticks)**
