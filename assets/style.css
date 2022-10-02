@@ -39,8 +39,8 @@ body {
   margin-left: auto;
   margin-right: auto;
 
-  /* default line-height in tailwind */
-  line-height: 1.5;
+  /* https://practicaltypography.com/line-spacing.html */
+  line-height: 1.35;
 
   /* via https://blog.jim-nielsen.com/2020/system-fonts-on-the-web/
      Not including `system-ui`, because of https://infinnie.github.io/blog/2017/systemui.html,
