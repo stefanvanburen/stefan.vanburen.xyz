@@ -1,9 +1,9 @@
 :root {
   /* Light theme colors */
-  --background-color: hsl(0, 0%, 92%);
-  --text-color: hsl(213, 12%, 17%);
-  --grey: hsl(0, 0%, 47%);
-  --light-grey: hsl(0, 0%, 75%);  /* NOTE: This isn't terribly accessible against a light background. */
+  --background-color: hsl(0deg 0% 92%);
+  --text-color: hsl(213deg 12% 17%);
+  --grey: hsl(0deg 0% 47%);
+  --light-grey: hsl(0deg 0% 75%);  /* NOTE: This isn't terribly accessible against a light background. */
   --size-300: 0.75rem;
   --size-400: 1rem;
   --size-500: 1.33rem;
@@ -16,9 +16,9 @@
 @media (prefers-color-scheme: dark) {
   :root {
     /* Dark theme colors */
-    --background-color: hsl(0, 0%, 8%);
-    --text-color: hsl(0, 0%, 92%);
-    --light-grey: hsl(0, 0%, 39%);
+    --background-color: hsl(0deg 0% 8%);
+    --text-color: hsl(0deg 0% 92%);
+    --light-grey: hsl(0deg 0% 39%);
   }
 }
 
