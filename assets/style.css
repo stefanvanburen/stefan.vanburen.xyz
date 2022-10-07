@@ -4,13 +4,14 @@
   --text-color: hsl(213deg 12% 17%);
   --grey: hsl(0deg 0% 47%);
   --light-grey: hsl(0deg 0% 75%);  /* NOTE: This isn't terribly accessible against a light background. */
+
+  /* sizes, with a few unused removed,
+   * via https://piccalil.li/tutorial/improve-the-readability-of-the-content-on-your-website/#heading-base-css */
   --size-300: 0.75rem;
   --size-400: 1rem;
   --size-500: 1.33rem;
   --size-600: 1.77rem;
   --size-700: 2.36rem;
-  --size-800: 3.15rem;
-  --size-900: 4.2rem;
 }
 
 @media (prefers-color-scheme: dark) {
