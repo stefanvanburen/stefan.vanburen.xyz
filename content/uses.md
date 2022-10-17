@@ -20,7 +20,6 @@ A page detailing my personal computing environment.
 * Mouse: **Logitech MX Master 2**
 * Speakers: **[Harman Kardon SoundSticks](https://en.wikipedia.org/wiki/SoundSticks)**
 * Headphones: **Bowers & Wilkins P7 Headphones**
-* Webcam: **Logitech HD Pro Webcam C920**
 * Desk: **[Normann Copenhagen Journal Desk](https://www.normann-copenhagen.com/en/products/furniture/tables/desks/journal-desk-grey-602189)**
   * **[Alvin](https://www.alvindrafting.com) 24" x 36" Translucent Cutting Mat**
 * An **[IBM "THINK" Sign](https://americanhistory.si.edu/collections/search/object/nmah_690192)**, from my great-uncle
