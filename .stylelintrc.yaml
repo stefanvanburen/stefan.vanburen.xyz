@@ -1,0 +1,4 @@
+extends: "stylelint-config-standard"
+rules:
+  # allow for aligning color declarations
+  declaration-colon-space-after: null
