@@ -1,9 +1,9 @@
 :root {
   /* Light theme colors */
-  --background-color: hsl(0deg 0% 92%);
-  --text-color: hsl(213deg 12% 17%);
-  --grey: hsl(0deg 0% 47%);
-  --light-grey: hsl(0deg 0% 75%);  /* NOTE: This isn't terribly accessible against a light background. */
+  --background-color: hsl(0deg    0% 92%);
+  --text-color:       hsl(213deg 12% 17%);
+  --grey:             hsl(0deg    0% 47%);
+  --light-grey:       hsl(0deg    0% 75%);  /* NOTE: This isn't terribly accessible against a light background. */
 
   /* sizes, with a few unused removed,
    * via https://piccalil.li/tutorial/improve-the-readability-of-the-content-on-your-website/#heading-base-css */
@@ -17,9 +17,9 @@
 @media (prefers-color-scheme: dark) {
   :root {
     /* Dark theme colors */
-    --background-color: hsl(0deg 0% 8%);
-    --text-color: hsl(0deg 0% 92%);
-    --light-grey: hsl(0deg 0% 39%);
+    --background-color: hsl(0deg 0%  8%);
+    --text-color:       hsl(0deg 0% 92%);
+    --light-grey:       hsl(0deg 0% 39%);
   }
 }
 
