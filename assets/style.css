@@ -183,10 +183,6 @@ blockquote {
 
 /* adjustments for larger screens */
 @media (min-width: 45em) {
-  body {
-    margin: 0 auto;
-  }
-
   article {
     font-size: var(--size-500);
 
