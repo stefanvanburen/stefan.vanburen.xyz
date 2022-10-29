@@ -123,12 +123,9 @@ a {
   text-decoration-color: var(--grey);
 }
 
-ol {
+.post-list {
   margin: 0;
   padding: 0;
-}
-
-.list-style-none {
   list-style: none;
 }
 

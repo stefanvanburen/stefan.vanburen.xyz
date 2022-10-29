@@ -3,7 +3,7 @@
 {{ define "main" }}
 <h1>Blog <a class="text-sm" href="/blog/index.xml">(RSS Feed)</a></h1>
 
-<ol class="list-style-none">
+<ol class="post-list">
   {{ range .Pages.ByDate.Reverse }}
   <li>
     <time datetime={{ .Date.Format "2006-01-02" }} class="nums text-grey mr-1">{{ .Date.Format "2006-01-02" }}</time>
