@@ -11,17 +11,15 @@ A page detailing my personal computing environment.
 
 ### Desk setup
 
-* Computer: **[MacBook Pro M1 13" (2020)](https://support.apple.com/kb/SP824)**
+* Computer: **[MacBook Pro M1 13"](https://support.apple.com/kb/SP824)**
 * Monitor: [**Apple Studio Display**](https://www.apple.com/studio-display/)
 * Keyboard(s):
   * **[Kinesis Advantage 2](https://kinesis-ergo.com/keyboards/advantage2-keyboard/)**
   * **[HHKB Professional 2](https://www.hhkeyboard.com/uk/products/pro2)**
   * **[Keyboardio Atreus](https://shop.keyboard.io/products/keyboardio-atreus)**
 * Mouse: **Logitech MX Master 2**
-* Speakers: **[Harman Kardon SoundSticks](https://en.wikipedia.org/wiki/SoundSticks)**
-* Headphones: **Bowers & Wilkins P7 Headphones**
-* Desk: **[Normann Copenhagen Journal Desk](https://www.normann-copenhagen.com/en/products/furniture/tables/desks/journal-desk-grey-602189)**
-  * **[Alvin](https://www.alvindrafting.com) 24" x 36" Translucent Cutting Mat**
+* Headphones: **Bowers & Wilkins P7**
+* Desk: **[Normann Copenhagen Journal](https://www.normann-copenhagen.com/en/products/furniture/tables/desks/journal-desk-grey-602189)**
 
 ## Software
 
