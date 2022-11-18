@@ -8,7 +8,7 @@ disableKinds = ["taxonomy", "term"]
 
 # for RSS
 [params]
-  mainSections = ['blog', 'til']
+  mainSections = ["blog", "til"]
 
 [minify]
   # minify output by default
