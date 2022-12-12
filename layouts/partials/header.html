@@ -29,10 +29,6 @@
 <link rel="alternate" type="application/rss+xml" href="/blog/index.xml" title="Blog Posts RSS">
 <link rel="alternate" type="application/rss+xml" href="/til/index.xml" title="TILs RSS">
 
-{{ with .Title }}
-<title>{{ . }}</title>
-{{ end }}
-
-{{ with .Description }}
-<meta name="description" content="{{ . }}">
-{{ end }}
+{{/* Add " · stefan.vanburen.xyz" to the title shown in the title bar / tab name */}}
+{{ if .Title }}<title>{{ .Title }} · stefan.vanburen.xyz</title>{{ end }}
+{{ if .Description }}<meta name="description" content="{{ .Description }}" />{{ end }}
