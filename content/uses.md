@@ -28,7 +28,6 @@ For the most part, my terminal software is configured in [my dotfiles](https://g
 * **[fish](https://fishshell.com)**: shell
 * **[tmux](https://github.com/tmux/tmux)**: terminal multiplexer
 * **[fzf](https://github.com/junegunn/fzf)**: fuzzy finder, both in fish and neovim
-* **[just](https://github.com/casey/just)**: project specific commands
 * **[gh](https://cli.github.com)**: GitHub's command line interface
 * **[starship](https://starship.rs)**: shell prompt
 
