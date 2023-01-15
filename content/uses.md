@@ -17,7 +17,6 @@ A page detailing my personal computing environment.
   * **[Keyboardio Atreus](https://shop.keyboard.io/products/keyboardio-atreus)**
 * Mouse: **Logitech MX Master 2**
 * Headphones: **Bowers & Wilkins P7**
-* Desk: **[Normann Copenhagen Journal](https://www.normann-copenhagen.com/en/products/furniture/tables/desks/journal-desk-grey-602189)**
 
 ## Software
 
