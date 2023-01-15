@@ -24,7 +24,7 @@ A page detailing my personal computing environment.
 
 For the most part, my terminal software is configured in [my dotfiles](https://github.com/stefanvanburen/dotfiles).
 
-* **[neovim](https://neovim.io)**: programming and writing
+* **[neovim](https://neovim.io)**: text editor
 * **[fish](https://fishshell.com)**: shell
 * **[tmux](https://github.com/tmux/tmux)**: terminal multiplexer
 * **[fzf](https://github.com/junegunn/fzf)**: fuzzy finder, both in fish and neovim
