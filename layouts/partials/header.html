@@ -8,12 +8,6 @@
 
 <link rel="canonical" href="{{ .Permalink }}" />
 
-{{/* Open Graph bits */}}
-<meta property="og:type" content="blog">
-<meta property="og:site_name" content="stefan.vanburen.xyz">
-<meta property="og:email" content="stefan@vanburen.xyz">
-<meta property="og:url" content="{{ .Permalink }}">
-
 {{/* inform the browser that we prefer a light colorscheme, but support dark as well */}}
 <meta name="color-scheme" content="light dark">
 
@@ -40,10 +34,8 @@
 {{ if .Title }}
 {{/* Add " · stefan.vanburen.xyz" to the title shown in the title bar / tab name */}}
 <title>{{ .Title }} · stefan.vanburen.xyz</title>
-<meta property="og:title" content="{{ .Title }}"/>
 {{ end }}
 
 {{ if .Description }}
 <meta name="description" content="{{ .Description }}"/>
-<meta name="og:description" content="{{ .Description }}">
 {{ end }}
