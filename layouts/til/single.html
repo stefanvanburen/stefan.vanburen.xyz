@@ -1,19 +1,12 @@
 {{/* vim: set filetype=gohtmltmpl: */}}
 
 {{ define "header_extra" }}
-<meta property="article:published_time" content="{{ .Date }} "/>
+<meta property="article:published_time" content="{{ .Date }}"/>
 {{ end }}
 
 {{ define "main" }}
 <article>
   <a href="/til" class="back-link">⇠ back to TILs</a>
-
-  {{ if .Date }}
-  <time
-    class="text-sm text-grey"
-    datetime={{ .Date.Format "2006-01-02" }}
-  >{{ .Date.Format "January 2, 2006" }}</time>
-  {{ end }}
 
   <h1>{{ .Title }}</h1>
 
@@ -24,5 +17,10 @@
   <p class="text-sm">
     {{ partial "article-footer" . }}
   </p>
+
+  <time
+    class="text-sm text-grey"
+    datetime={{ .Date.Format "2006-01-02" }}
+  >{{ .Date.Format "January 2, 2006" }}</time>
 </article>
 {{ end }}
