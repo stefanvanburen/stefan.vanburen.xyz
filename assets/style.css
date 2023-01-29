@@ -143,6 +143,16 @@ a:hover {
   margin-bottom: 1rem;
 }
 
+hr {
+  border: none;
+  text-align: center;
+}
+
+hr::before {
+  color: hsl(3deg 84% 59%);
+  content: "⁂";
+}
+
 .nums {
   font-variant-numeric: tabular-nums;
 }
