@@ -8,7 +8,7 @@ I was browsing through my GitHub repositories the other day and noticed `small`,
 I finally polished up the repo and [published it for all to see](https://github.com/stefanvanburen/small).
 
 It's really not much, but it gave me a chance to think about the expected behaviors associated with a tool like `small`.
-In particular, support for being piped (`$ command | small`) is a critical bit of playing nice with other UNIX-y tools.[^1]
+In particular, support for being piped (`$ command | small`) is a critical bit of playing nice with other UNIX-y tools.
 
 Anyways, it was fun getting it out there.
 
@@ -29,5 +29,3 @@ $ small "here's some text!"
 ```
 
 🤖
-
-[^1]: Reminder to myself that _testing_ CLIs that support pipes in Go is _really hard_.
