@@ -12,12 +12,6 @@
 
   {{ .Content }}
 
-  <hr>
-
-  <p class="text-sm">
-    {{ partial "article-footer" . }}
-  </p>
-
   <time
     class="text-sm text-grey"
     datetime={{ .Date.Format "2006-01-02" }}
