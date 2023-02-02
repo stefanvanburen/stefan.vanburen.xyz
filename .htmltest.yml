@@ -1,2 +1,4 @@
 DirectoryPath: "public"
 IgnoreDirectoryMissingTrailingSlash: true
+# An empty hash is used as a link in the style-guide.
+IgnoreInternalEmptyHash: true
