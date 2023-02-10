@@ -2,13 +2,12 @@ repos:
   - repo: local
     hooks:
       - id: stylelint
-        name: stylelint
-        description: Runs stylelint on assets/*.css files.
-        entry: npx stylelint
-        language: system
-        types: [css]
-        files: ^assets/
-        pass_filenames: true
+        name: stylelint CSS linter
+        language: node
+        entry: stylelint
+        args: [--formatter, unix, --fix]
+        types_or: [css]
+        exclude: '.*\.min\.css'
       - id: htmltest
         name: htmltest
         description: Build site and run `htmltest -s` to check the generated site.
