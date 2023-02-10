@@ -2,7 +2,7 @@ dev:
 	hugo server -D
 
 install:
-	npm install
+	npm install --save-dev
 
 build:
 	hugo
