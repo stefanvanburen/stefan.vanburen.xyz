@@ -1,4 +1,6 @@
 :root {
+  --accent-color:     hsl(3deg   84% 59%);
+
   /* Light theme colors */
   --background-color: hsl(0deg    0% 92%);
   --text-color:       hsl(213deg 12% 17%);
@@ -149,7 +151,7 @@ hr {
 }
 
 hr::before {
-  color: hsl(3deg 84% 59%);
+  color: var(--accent-color);
   content: "⁂";
 }
 
