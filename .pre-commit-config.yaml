@@ -3,8 +3,8 @@ repos:
     hooks:
       - id: stylelint
         name: stylelint CSS linter
-        language: node
-        entry: stylelint
+        language: system
+        entry: npx stylelint
         args: [--formatter, unix, --fix]
         types_or: [css]
         exclude: '.*\.min\.css'
