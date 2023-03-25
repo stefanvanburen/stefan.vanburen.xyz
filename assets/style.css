@@ -1,7 +1,5 @@
 :root {
   color-scheme: light dark;
-  --background-color: Canvas;
-  --text-color:       CanvasText;
   --grey:             hsl(0deg    0% 47%);
   --accent-color:     hsl(3deg   84% 59%);
 
@@ -103,8 +101,6 @@ h3 {
 }
 
 a {
-  /* Make links match the text color, rather than the default blue */
-  color: var(--text-color);
   text-decoration-line: underline;
   text-decoration-style: dotted;
 }
