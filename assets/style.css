@@ -1,11 +1,9 @@
 :root {
-  --accent-color:     hsl(3deg   84% 59%);
-
-  /* Light theme colors */
-  --background-color: hsl(0deg    0% 92%);
-  --text-color:       hsl(213deg 12% 17%);
+  color-scheme: light dark;
+  --background-color: Canvas;
+  --text-color:       CanvasText;
   --grey:             hsl(0deg    0% 47%);
-  --light-grey:       hsl(0deg    0% 75%);  /* NOTE: This isn't terribly accessible against a light background. */
+  --accent-color:     hsl(3deg   84% 59%);
 
   /* sizes, with a few unused removed,
    * via https://piccalil.li/tutorial/improve-the-readability-of-the-content-on-your-website/#heading-base-css */
@@ -16,24 +14,12 @@
   --size-700: 2.36rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    /* Dark theme colors */
-    --background-color: hsl(0deg 0%  8%);
-    --text-color:       hsl(0deg 0% 92%);
-    --light-grey:       hsl(0deg 0% 39%);
-  }
-}
-
 html {
   /* Sticky footer. */
   height: 100%;
 }
 
 body {
-  background-color: var(--background-color);
-  color: var(--text-color);
-
   /* https://piccalil.li/tutorial/improve-the-readability-of-the-content-on-your-website#heading-the-post-block */
   width: 90vw;
   width: clamp(16rem, 90vw, 70rem);
@@ -82,9 +68,6 @@ pre {
   /* cap the width at 90% of the viewport
    * this is important for mobile so that we can scroll within <pre> */
   max-width: 90vw;
-
-  /* Override the background set by the code formatter */
-  background-color: var(--background-color) !important;
 }
 
 pre,
@@ -120,10 +103,10 @@ h3 {
 }
 
 a {
+  /* Make links match the text color, rather than the default blue */
   color: var(--text-color);
   text-decoration-line: underline;
   text-decoration-style: dotted;
-  text-decoration-color: var(--grey);
 }
 
 .post-list {
@@ -139,7 +122,6 @@ li > a {
 
 a:hover {
   text-decoration-style: solid;
-  text-decoration-color: var(--text-color);
 }
 
 .back-link {
@@ -163,8 +145,7 @@ hr::before {
 
 /* for anchor links, don't underline regularly and hide by default. */
 .anchor {
-  color: var(--light-grey);
-  background: var(--background-color);
+  color: var(--grey);
   text-decoration: none;
 }
 
