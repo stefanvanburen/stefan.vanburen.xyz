@@ -100,11 +100,6 @@ h3 {
   font-size: var(--size-500);
 }
 
-a {
-  text-decoration-line: underline;
-  text-decoration-style: dotted;
-}
-
 .post-list {
   margin: 0;
   padding: 0;
@@ -114,10 +109,6 @@ a {
 li > a {
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-a:hover {
-  text-decoration-style: solid;
 }
 
 .back-link {
