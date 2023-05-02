@@ -6,22 +6,18 @@ oauth: pages.sr.ht/PAGES:RW
 environment:
   site: stefan.vanburen.xyz
 tasks:
-- build: |
-    cd $site
-    hugo
-
-- package: |
-    cd $site
-    tar -C public -cvz . > site.tar.gz
-
-- upload: |
-    cd $site
-
-    # Only upload on the main branch.
-    if [ "$(git rev-parse origin/main)" != "$(git rev-parse HEAD)" ]
-    then
-      echo "Not on main branch, not publishing!"
-      exit 0
-    fi
-
-    hut pages publish -d $site site.tar.gz
+  - build: |
+      cd $site
+      hugo
+  - package: |
+      cd $site
+      tar -C public -cvz . > site.tar.gz
+  - upload: |
+      cd $site
+      # Only upload on the main branch.
+      if [ "$(git rev-parse origin/main)" != "$(git rev-parse HEAD)" ]
+      then
+        echo "Not on main branch, not publishing!"
+        exit 0
+      fi
+      hut pages publish -d $site site.tar.gz
