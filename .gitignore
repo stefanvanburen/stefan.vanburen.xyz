@@ -2,11 +2,3 @@
 /public/
 /resources/_gen/
 .hugo_build.lock
-
-node_modules
-
-output/
-site.tar.gz
-
-# for htmltest
-tmp/
