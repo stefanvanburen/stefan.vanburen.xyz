@@ -16,3 +16,4 @@ For the most part, my terminal software is configured in [my dotfiles](https://g
 
 * [neovim](https://neovim.io)
 * [fish](https://fishshell.com)
+* [kitty](https://sw.kovidgoyal.net/kitty/)
