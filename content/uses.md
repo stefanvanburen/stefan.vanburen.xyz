@@ -9,7 +9,6 @@ description: My personal computing environment.
 * [Apple Studio Display](https://www.apple.com/studio-display/)
 * [Kinesis Advantage 2](https://kinesis-ergo.com/keyboards/advantage2-keyboard/) / [HHKB Professional 2](https://www.hhkeyboard.com/uk/products/pro2) / [Keyboardio Atreus](https://shop.keyboard.io/products/keyboardio-atreus)
 * Logitech MX Master 2
-* Bowers & Wilkins P7
 
 ## Software
 
