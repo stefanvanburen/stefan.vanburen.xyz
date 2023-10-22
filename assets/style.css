@@ -168,18 +168,12 @@ blockquote {
 
 /* adjustments for larger screens */
 @media (min-width: 45em) {
-  article {
+  article, p {
     font-size: var(--size-500);
 
     /* tachyons' measure-wide
        http://tachyons.io/docs/typography/measure/
        This is needed on larger screens to constrain the width. */
-    max-width: 34em;
-  }
-
-  /* match the article styles above, for pages not within an article */
-  p {
-    font-size: var(--size-500);
     max-width: 34em;
   }
 
