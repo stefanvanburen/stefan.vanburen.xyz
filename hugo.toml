@@ -9,23 +9,23 @@ disableKinds = ["taxonomy", "term"]
 
 # for RSS
 [params]
-  mainSections = ["blog", "til"]
+mainSections = ["blog", "til"]
 
 [minify]
-  # minify output by default
-  minifyOutput = true
-  # don't minify xml files (RSS feeds)
-  disableXML = true
+# minify output by default
+minifyOutput = true
+# don't minify xml files (RSS feeds)
+disableXML = true
 
 [author]
-  # for feeds
-  name = "Stefan VanBuren"
-  email = "stefan@vanburen.xyz"
+# for feeds
+name = "Stefan VanBuren"
+email = "stefan@vanburen.xyz"
 
 [markup]
-  [markup.highlight]
-    style = "bw"
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      # allows for inline HTML
-      unsafe = true
+[markup.highlight]
+style = "bw"
+[markup.goldmark]
+[markup.goldmark.renderer]
+# allows for inline HTML
+unsafe = true
