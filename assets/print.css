@@ -1,6 +1,6 @@
 * {
-  background: #fff;
-  color: #000;
+  background: oklch(100% 0 0);
+  color: oklch(0% 0 0);
 }
 
 footer {

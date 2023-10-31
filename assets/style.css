@@ -1,7 +1,7 @@
 :root {
   color-scheme: light dark;
-  --grey:             hsl(0deg    0% 47%);
-  --accent-color:     hsl(3deg   84% 59%);
+  --grey:         oklch(57% 0 0);
+  --accent-color: oklch(64% 0.2 27.5);
 
   /* sizes, with a few unused removed,
    * via https://piccalil.li/tutorial/improve-the-readability-of-the-content-on-your-website/#heading-base-css */
