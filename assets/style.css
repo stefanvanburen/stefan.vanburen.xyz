@@ -47,6 +47,18 @@ body {
   grid-template-rows: 1fr auto;
 }
 
+article, p {
+  @media (min-width: 45em) {
+    font-size: var(--size-500);
+
+    /* tachyons' measure-wide
+    http://tachyons.io/docs/typography/measure/
+    This is needed on larger screens to constrain the width. */
+    max-width: 34em;
+  }
+}
+
+
 footer {
   /* Add some vertical padding to the footer in both directions. */
   padding: 2em 0;
@@ -55,6 +67,19 @@ footer {
   display: flex;
   flex-grow: 1;
   justify-content: space-between;
+
+  @media (min-width: 45em) {
+    font-size: var(--size-500);
+
+    /* for larger screens, display block so that links appear over to the left */
+    display: block;
+  }
+}
+
+footer > a {
+  @media (min-width: 45em) {
+    margin-right: 0.5em;
+  }
 }
 
 pre {
@@ -66,6 +91,10 @@ pre {
   /* cap the width at 90% of the viewport
    * this is important for mobile so that we can scroll within <pre> */
   max-width: 90vw;
+
+  @media (min-width: 45em) {
+    font-size: var(--size-400);
+  }
 }
 
 pre,
@@ -133,6 +162,25 @@ hr::before {
   content: "⁂";
 }
 
+ol,
+ul {
+  @media (min-width: 45em) {
+    font-size: var(--size-500);
+  }
+}
+
+blockquote {
+  border-left: medium solid #ccc;
+  padding-left: 1em;
+  margin: 0;
+}
+
+blockquote p {
+  @media (min-width: 45em) {
+    font-size: var(--size-500);
+  }
+}
+
 .nums {
   font-variant-numeric: tabular-nums;
 }
@@ -148,14 +196,12 @@ hr::before {
   text-decoration-line: underline;
 }
 
-blockquote {
-  border-left: medium solid #ccc;
-  padding-left: 1em;
-  margin: 0;
-}
-
 .text-sm {
   font-size: var(--size-300);
+
+  @media (min-width: 45em) {
+    font-size: var(--size-400);
+  }
 }
 
 .text-grey {
@@ -164,45 +210,4 @@ blockquote {
 
 .mr-1 {
   margin-right: 0.5em;
-}
-
-/* adjustments for larger screens */
-@media (min-width: 45em) {
-  article, p {
-    font-size: var(--size-500);
-
-    /* tachyons' measure-wide
-       http://tachyons.io/docs/typography/measure/
-       This is needed on larger screens to constrain the width. */
-    max-width: 34em;
-  }
-
-  pre {
-    font-size: var(--size-400);
-  }
-
-  ol,
-  ul {
-    font-size: var(--size-500);
-  }
-
-  blockquote p {
-    font-size: var(--size-500);
-  }
-
-  footer {
-    font-size: var(--size-500);
-
-    /* for larger screens, display block so that links appear over to the left */
-    display: block;
-  }
-
-  /* Space out the footer links a bit. */
-  footer > a {
-    margin-right: 0.5em;
-  }
-
-  .text-sm {
-    font-size: var(--size-400);
-  }
 }
