@@ -8,7 +8,7 @@ description: My personal computing environment.
 * [MacBook Pro M1 13"](https://support.apple.com/kb/SP824)
 * [Apple Studio Display](https://www.apple.com/studio-display/)
 * [Kinesis Advantage 2](https://kinesis-ergo.com/keyboards/advantage2-keyboard/) / [HHKB Professional 2](https://www.hhkeyboard.com/uk/products/pro2) / [Keyboardio Atreus](https://shop.keyboard.io/products/keyboardio-atreus)
-* Logitech MX Master 2
+* Logitech MX Master 3 for Mac
 
 ## Software
 
