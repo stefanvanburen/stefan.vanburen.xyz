@@ -30,3 +30,5 @@ Inspired by https://defaults.rknight.me, here's my current defaults:
 * Music: Spotify / [Doppler](https://brushedtype.co/doppler/)
 * Podcasts: Overcast
 * Password Management: 1Password
+
+Also see my [/uses](/uses) page for other hardware / software!
