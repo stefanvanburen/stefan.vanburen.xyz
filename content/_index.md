@@ -3,10 +3,9 @@ title: Stefan VanBuren
 description: Homepage of stefan.vanburen.xyz
 ---
 
-I'm a software engineer based in Boston.
+I'm a software engineer based in Boston - <a href="mailto:stefan@vanburen.xyz" rel="me">get in touch</a>.
 
-Maybe you're interested in [what I'm up to now?](/now)
+Elsewhere:
 
-Check out my open source work <a href="https://github.com/stefanvanburen" rel="me">on GitHub</a>.
-
-Feel free to <a href="mailto:stefan@vanburen.xyz" rel="me">send me an email</a>.
+* <a href="https://github.com/stefanvanburen" rel="me">GitHub</a>
+* <a href="https://sr.ht/~svbn" rel="me">sr.ht</a>
