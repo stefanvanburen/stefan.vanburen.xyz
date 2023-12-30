@@ -1,7 +1,7 @@
 ---
 title: "Smart Speed"
 date: 2023-12-30T18:00:27-05:00
-draft: true
+draft: false
 ---
 My [Overcast][overcast] settings screen shows the following:
 
