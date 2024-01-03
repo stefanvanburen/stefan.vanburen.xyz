@@ -20,4 +20,4 @@ tasks:
         echo "Not on main branch, not publishing!"
         exit 0
       fi
-      hut pages publish -d $site site.tar.gz
+      hut pages publish --domain $site site.tar.gz
