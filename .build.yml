@@ -12,7 +12,7 @@ tasks:
   - package: |
       cd $site
       tar -C public -cvz . > site.tar.gz
-  - upload: |
+  - publish: |
       cd $site
       # Only upload on the main branch.
       if [ "$(git rev-parse origin/main)" != "$(git rev-parse HEAD)" ]
