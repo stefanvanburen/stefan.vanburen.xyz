@@ -1,26 +1,14 @@
 :root {
   color-scheme: light dark;
-  --grey:         oklch(57% 0 0);
+  --grey: oklch(57% 0 0);
   --accent-color: oklch(64% 0.2 27.5);
-
-  /* sizes, with a few unused removed,
-   * via https://piccalil.li/tutorial/improve-the-readability-of-the-content-on-your-website/#heading-base-css */
-  --size-300: 0.75rem;
-  --size-400: 1rem;
-  --size-500: 1.33rem;
-  --size-600: 1.77rem;
-  --size-700: 2.36rem;
-}
-
-html {
-  /* Sticky footer. */
-  height: 100%;
 }
 
 body {
-  /* https://piccalil.li/tutorial/improve-the-readability-of-the-content-on-your-website#heading-the-post-block */
-  width: 90vw;
-  width: clamp(16rem, 90vw, 70rem);
+  /* tachyons' measure-wide
+    http://tachyons.io/docs/typography/measure/
+    This is needed on larger screens to constrain the width. */
+  max-width: 34em;
 
   /* consistent margins on left and right */
   margin-left: auto;
@@ -41,45 +29,23 @@ body {
        the user to override */
     sans-serif;
 
-  /* Sticky footer. */
-  min-height: 100%;
-  display: grid;
-  grid-template-rows: 1fr auto;
+  display: flex;
+  flex-direction: column;
 }
 
-article, p {
-  @media (min-width: 45em) {
-    font-size: var(--size-500);
-
-    /* tachyons' measure-wide
-    http://tachyons.io/docs/typography/measure/
-    This is needed on larger screens to constrain the width. */
-    max-width: 34em;
-  }
+main {
+  margin: 1rem;
 }
 
 
 footer {
+  margin: 1rem;
   /* Add some vertical padding to the footer in both directions. */
   padding: 2em 0;
-
-  /* Flex the links, so they are evenly spaced */
-  display: flex;
-  flex-grow: 1;
-  justify-content: space-between;
-
-  @media (min-width: 45em) {
-    font-size: var(--size-500);
-
-    /* for larger screens, display block so that links appear over to the left */
-    display: block;
-  }
 }
 
-footer > a {
-  @media (min-width: 45em) {
-    margin-right: 0.5em;
-  }
+footer>a {
+  margin-inline: 0.5em;
 }
 
 pre {
@@ -91,10 +57,6 @@ pre {
   /* cap the width at 90% of the viewport
    * this is important for mobile so that we can scroll within <pre> */
   max-width: 90vw;
-
-  @media (min-width: 45em) {
-    font-size: var(--size-400);
-  }
 }
 
 pre,
@@ -105,27 +67,15 @@ kbd {
 }
 
 /* <code> directly within paragraphs */
-p > code {
+p>code {
   border: 1px dotted;
 
   /* ensure the entire <code></code> is on the same line */
   white-space: nowrap;
 }
 
-li > code {
+li>code {
   border: 1px dotted;
-}
-
-h1 {
-  font-size: var(--size-700);
-}
-
-h2 {
-  font-size: var(--size-600);
-}
-
-h3 {
-  font-size: var(--size-500);
 }
 
 a {
@@ -142,7 +92,7 @@ a:hover {
   list-style: none;
 }
 
-li > a {
+li>a {
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -162,23 +112,10 @@ hr::before {
   content: "⁂";
 }
 
-ol,
-ul {
-  @media (min-width: 45em) {
-    font-size: var(--size-500);
-  }
-}
-
 blockquote {
   border-left: medium solid #ccc;
   padding-left: 1em;
   margin: 0;
-}
-
-blockquote p {
-  @media (min-width: 45em) {
-    font-size: var(--size-500);
-  }
 }
 
 .nums {
@@ -197,11 +134,7 @@ blockquote p {
 }
 
 .text-sm {
-  font-size: var(--size-300);
-
-  @media (min-width: 45em) {
-    font-size: var(--size-400);
-  }
+  font-size: small;
 }
 
 .text-grey {
