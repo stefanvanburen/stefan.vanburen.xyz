@@ -1,3 +1,3 @@
 # Run the development server, building drafts
 dev:
-	hugo server --buildDrafts
+    hugo server --buildDrafts
