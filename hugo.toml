@@ -2,7 +2,7 @@
 languageCode = "en-us"
 title = "Stefan VanBuren"
 baseurl = "https://stefan.vanburen.xyz/"
-copyright = "©️ 2023 Stefan VanBuren"
+copyright = "©️ 2024 Stefan VanBuren"
 description = "Stefan VanBuren's personal site."
 
 disableKinds = ["taxonomy", "term"]
