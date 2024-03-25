@@ -3,7 +3,7 @@ title: Style Guide
 draft: false
 ---
 <!-- markdownlint-disable -->
-Via https://poormansstyleguide.com
+Via https://www.bryanbraun.com/poor-mans-styleguide/
 
 # Headings
 
@@ -199,4 +199,4 @@ Monospace Text wrapped in "pre" tags:
 
 # Media and Form Elements
 
-The remaining sections contain elements that cannot be represented in markdown. Please consult [the HTML version](https://github.com/bryanbraun/poor-mans-styleguide/blob/gh-pages/index.html), to see these elements.
+The remaining sections contain elements that cannot be represented in markdown. Please consult [the HTML version](https://www.bryanbraun.com/poor-mans-styleguide/), to see these elements.
