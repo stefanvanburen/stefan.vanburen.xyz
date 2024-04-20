@@ -14,7 +14,7 @@ For example, [tweaking CSS indentation](https://git.sr.ht/~svbn/stefan.vanburen.
 Likewise, my dotfiles sit at a [healthy 910 commits](https://github.com/stefanvanburen/dotfiles) currently.
 I recently went through a bit of a [dotfile purge](/blog/spring-cleaning) that added quite a few of those, but in general, tweaking my dotfiles has been a hobby for the better part of a decade.
 
-Prutsen gives me a name for all this tweaking and fiddling - so cathartic!
+Prutsen gives me a name for all this tweaking and fiddling --- so cathartic!
 
 💆
 

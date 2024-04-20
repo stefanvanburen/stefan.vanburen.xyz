@@ -11,4 +11,4 @@ TIL of [Service Wrappers](https://naildrivin5.com/blog/2022/10/31/wrap-third-par
 > * Arguments should be whatever type is directly needed by the service, so passing in complex stuff like Active Record should be avoided.
 > * The return value should not be a complex object from the third party, but ideally only what data a caller will need (often nothing at all). If it must be a complex object, its name or properties should be in the domain of the service.
 
-The article is written from a Rails perspective, but is broadly useful - always nice to have a name for something useful!
+The article is written from a Rails perspective, but is broadly useful --- always nice to have a name for something useful!

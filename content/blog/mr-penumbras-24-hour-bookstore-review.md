@@ -15,7 +15,7 @@ I came into contact with the title via Robin Sloan's blog for 2019, [Year of the
 The assortment of links and life commentary has been wonderful all year, and I'm looking forward to Sloan's next project.
 
 Overall, the book flowed well and moved quickly; I'm not a very fast reader and made it through in around 5 and a half hours total, largely over the course of two days.
-The writing included a lot of references for a more technical crowd - or, at least, a crowd familiar with the Silicon Valley startup scene.
+The writing included a lot of references for a more technical crowd --- or, at least, a crowd familiar with the Silicon Valley startup scene.
 There were a handful of mentions of Google specific technologies, as well as allusions to computing history.
 
 However, I felt the novel was lacking in the department of having a serious antagonist, and a bit too much feeling of Deus ex machina at the end.

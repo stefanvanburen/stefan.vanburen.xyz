@@ -19,7 +19,7 @@ FROM
   ]) as balances
 ```
 
-This returns `7`, because while the "balance" field is a numeric JSON value, the [`->>` operator](https://www.postgresql.org/docs/current/functions-json.html#FUNCTIONS-JSON-PROCESSING) turns the value into text! - which makes the comparison a lexicographical one.
+This returns `7`, because while the "balance" field is a numeric JSON value, the [`->>` operator](https://www.postgresql.org/docs/current/functions-json.html#FUNCTIONS-JSON-PROCESSING) turns the value into text! --- which makes the comparison a lexicographical one.
 
 Instead, you need to make sure to [cast the values](https://www.postgresql.org/docs/current/sql-expressions.html#SQL-SYNTAX-TYPE-CASTS) before comparing:
 

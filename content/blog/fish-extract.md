@@ -8,7 +8,7 @@ I recently switched from [zsh](https://en.wikipedia.org/wiki/Z_shell) to [fish](
 I liked the idea of starting from scratch, with the sane defaults that fish provides, as my [zsh configuration files were getting a bit out of control](https://github.com/stefanvanburen/dotfiles/commit/10d9acc84179425772597d5a4c34c70a8bddd906#diff-53cae0c7df819f6e6a8104beae0f53a1).
 
 For the most part, the transition was fairly painless and straightforward.
-However, I still miss a few of the zsh niceties that I had been used to over the years - one being [`extract` function provided in oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/extract/extract.plugin.zsh).
+However, I still miss a few of the zsh niceties that I had been used to over the years --- one being [`extract` function provided in oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/extract/extract.plugin.zsh).
 Even after moving away from oh-my-zsh as my plugin manager in zsh, I had used my new manager to grab [just that plugin](https://github.com/stefanvanburen/dotfiles/blob/74dd7a02b83ca1874d721e242e0f466ca1f65692/zshrc#L13-L14) for my usage.
 
 After a cursory google, it seemed like a fish port of the plugin didn't exist, so I decided to try to port over the plugin myself.
@@ -23,7 +23,7 @@ function extract -d "extract files from archives"
     # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/extract
 ```
 
-The function first checks if we have arguments - if we have none, there's nothing to do, so we'll echo a usage string to stderr and exit.
+The function first checks if we have arguments --- if we have none, there's nothing to do, so we'll echo a usage string to stderr and exit.
 
 ```fish
     # no arguments, write usage
@@ -62,7 +62,7 @@ First, we ensure that the filename arguments are valid files:
         end
 ```
 
-We default our success value to `0` - if the file's extension isn't something we can deal with, we'll set this to `1` so that we can avoid removing the file even if the remove option is set.
+We default our success value to `0` --- if the file's extension isn't something we can deal with, we'll set this to `1` so that we can avoid removing the file even if the remove option is set.
 Then, we grab the extension via some fish regex matching, using the `string match` function.
 
 ```fish

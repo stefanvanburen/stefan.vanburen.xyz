@@ -16,7 +16,7 @@ error: cannot pull with rebase: You have unstaged changes.
 error: please commit or stash them.
 ```
 
-To work around this, I'd typically do a compound shell command (I'm using `fish` - you would typically do this with `&&` in `bash`):
+To work around this, I'd typically do a compound shell command (I'm using `fish` --- you would typically do this with `&&` in `bash`):
 
 ```console
 $ git stash; and git pull; and git stash pop

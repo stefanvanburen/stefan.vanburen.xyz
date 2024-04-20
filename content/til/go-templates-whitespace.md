@@ -26,7 +26,7 @@ The actual output HTML would look something like:
 <a href="/posts"><span> Text </span> foo </a>
 ```
 
-Which isn't what you want, because there's extra spaces - both around "Text" and around "foo".
+Which isn't what you want, because there's extra spaces --- both around "Text" and around "foo".
 
 Instead, you could do:
 

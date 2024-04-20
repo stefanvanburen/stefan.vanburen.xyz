@@ -23,4 +23,4 @@ func main() {
 }
 ```
 
-For more control, [`time.NewTicker`](https://pkg.go.dev/time#NewTicker) works wonders - there's no better example than the one [from the docs](https://go.dev/play/p/nG23A6LEd19)!
+For more control, [`time.NewTicker`](https://pkg.go.dev/time#NewTicker) works wonders --- there's no better example than the one [from the docs](https://go.dev/play/p/nG23A6LEd19)!

@@ -11,8 +11,8 @@ But, the cleanup I'm most proud of is my [dotfiles](https://github.com/stefanvan
 
 ## the purge
 
-For awhile, I was a bit of a dotfiles pack rat.
-I worried that the knowledge I had gained - the choices I had made - would be lost to the depths of time if I were to remove them from the text of the files themselves.
+For awhile, I was a bit of a dotfiles packrat.
+I worried that the knowledge I had gained --- the choices I had made --- would be lost to the depths of time if I were to remove them from the text of the files themselves.
 That meant old color schemes, old key bindings, old tips and tricks, all stayed in their respective places.
 Perhaps moved around, but not deleted.
 Over the years, this meant that my [vimrc had bloated up to ~1600 lines](https://github.com/stefanvanburen/dotfiles/blob/4d1f7f/vimrc)!
