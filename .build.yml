@@ -2,16 +2,14 @@ image: alpine/edge
 packages:
 - hugo
 - hut
+- just
 oauth: pages.sr.ht/PAGES:RW
 environment:
   site: stefan.vanburen.xyz
 tasks:
   - build: |
       cd $site
-      hugo
-  - package: |
-      cd $site
-      tar -C public -cvz . > site.tar.gz
+      just build
   - publish: |
       cd $site
       # Only upload on the main branch.
@@ -20,4 +18,4 @@ tasks:
         echo "Not on main branch, not publishing!"
         exit 0
       fi
-      hut pages publish --domain $site site.tar.gz
+      just publish
