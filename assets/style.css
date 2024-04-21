@@ -41,10 +41,10 @@ footer {
   margin: 1rem;
   /* Add some vertical padding to the footer in both directions. */
   padding: 2em 0;
-}
 
-footer>a {
-  margin-inline: 0.5em;
+  &>a {
+    margin-inline: 0.5em;
+  }
 }
 
 pre {
@@ -84,10 +84,10 @@ li>code {
 
 a {
   color: CanvasText;
-}
 
-a:hover {
-  color: var(--accent-color);
+  &:hover {
+    color: var(--accent-color);
+  }
 }
 
 .post-list {
@@ -109,11 +109,11 @@ li>a {
 hr {
   border: none;
   text-align: center;
-}
 
-hr::before {
-  color: var(--accent-color);
-  content: "⁂";
+  &::before {
+    color: var(--accent-color);
+    content: "⁂";
+  }
 }
 
 blockquote {
@@ -130,11 +130,11 @@ blockquote {
 .anchor {
   color: var(--grey);
   text-decoration: none;
-}
 
-/* on hover of an anchor, underline but use the same colors */
-.anchor:hover {
-  text-decoration-line: underline;
+  &:hover {
+    /* on hover of an anchor, underline but use the same colors */
+    text-decoration-line: underline;
+  }
 }
 
 .text-sm {
