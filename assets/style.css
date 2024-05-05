@@ -2,6 +2,9 @@
   color-scheme: light dark;
   --grey: oklch(57% 0 0);
   --accent-color: oklch(64% 0.2 27.5);
+
+  --bruins-gold: oklch(82% 42% 80deg);
+  --bruins-black: oklch(0% 0 0);
 }
 
 body {
@@ -60,7 +63,18 @@ pre {
 
 h1 {
   /* Blantantly stolen from https://force-color.org */
-  text-shadow: 2px 2px #ef3550, 4px 4px #f48fb1, 6px 6px #7e57c2, 8px 8px #2196f3, 10px 10px #26c6da, 12px 12px #43a047, 14px 14px #eeff41, 16px 16px #f9a825, 18px 18px #ff5722;
+  /*text-shadow: 2px 2px #ef3550, 4px 4px #f48fb1, 6px 6px #7e57c2, 8px 8px #2196f3, 10px 10px #26c6da, 12px 12px #43a047, 14px 14px #eeff41, 16px 16px #f9a825, 18px 18px #ff5722;*/
+
+  text-shadow:
+    2px 2px var(--bruins-gold),
+    4px 4px var(--bruins-black),
+    6px 6px var(--bruins-gold),
+    8px 8px var(--bruins-black),
+    10px 10px var(--bruins-gold),
+    12px 12px var(--bruins-black),
+    14px 14px var(--bruins-gold),
+    16px 16px var(--bruins-black),
+    18px 18px var(--bruins-gold);
 }
 
 pre,
