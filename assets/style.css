@@ -68,28 +68,14 @@ h1 {
 
   text-shadow:
     2px 2px var(--celtics-green),
-    4px 4px var(--celtics-black),
+    4px 4px light-dark(var(--celtics-black), var(--celtics-white)),
     6px 6px var(--celtics-green),
-    8px 8px var(--celtics-black),
+    8px 8px light-dark(var(--celtics-black), var(--celtics-white)),
     10px 10px var(--celtics-green),
-    12px 12px var(--celtics-black),
+    12px 12px light-dark(var(--celtics-black), var(--celtics-white)),
     14px 14px var(--celtics-green),
-    16px 16px var(--celtics-black),
+    16px 16px light-dark(var(--celtics-black), var(--celtics-white)),
     18px 18px var(--celtics-green);
-
-  @media (prefers-color-scheme: dark) {
-    text-shadow:
-      2px 2px var(--celtics-green),
-      4px 4px var(--celtics-white),
-      6px 6px var(--celtics-green),
-      8px 8px var(--celtics-white),
-      10px 10px var(--celtics-green),
-      12px 12px var(--celtics-white),
-      14px 14px var(--celtics-green),
-      16px 16px var(--celtics-white),
-      18px 18px var(--celtics-green);
-  }
-
 }
 
 pre,
