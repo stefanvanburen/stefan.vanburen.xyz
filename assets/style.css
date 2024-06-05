@@ -20,17 +20,8 @@ body {
   /* https://practicaltypography.com/line-spacing.html */
   line-height: 1.35;
 
-  /* via https://blog.jim-nielsen.com/2020/system-fonts-on-the-web/
-     Not including `system-ui`, because of https://infinnie.github.io/blog/2017/systemui.html,
-     and because it's really only supported on Apple systems: https://caniuse.com/extended-system-fonts */
-  font-family:
-    /* use the sans-serif font that the operating system
-       classifies as a sans-serif font for native apps */
-    ui-sans-serif,
-    /* use a sans-serif family as determined by the browser
-       which may or may not be a configurable option for
-       the user to override */
-    sans-serif;
+  /* https://github.com/system-fonts/modern-font-stacks#system-ui */
+  font-family: system-ui, sans-serif;
 
   display: flex;
   flex-direction: column;
