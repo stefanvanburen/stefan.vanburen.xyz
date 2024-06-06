@@ -1,7 +1,7 @@
 ---
 title: "Neovim nfnl Directory Configuration"
 date: 2024-05-31T08:16:19-04:00
-draft: true
+draft: false
 ---
 
 I've long wanted to figure out how to get [`nfnl's` directory-local configuration][1] working,
