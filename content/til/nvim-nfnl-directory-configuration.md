@@ -16,6 +16,7 @@ Next, create an `.nfnl.fnl` file in the directory.
 I've been creating mine as:
 
 ```fennel
+;; .nfnl.fnl
 {:source-file-patterns [:.nvim.fnl]}
 ```
 
@@ -26,6 +27,7 @@ Often this is to set up a particular project-local formatter or linter with conf
 so it may look something like:
 
 ```fennel
+;; .nvim.fnl
 (let [conform (require :conform)]
   (set conform.formatters_by_ft.json [:prettier]))
 ```
