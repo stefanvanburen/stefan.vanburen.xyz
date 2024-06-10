@@ -123,7 +123,7 @@ hr {
 }
 
 blockquote {
-  border-left: medium solid #ccc;
+  border-left: medium solid oklch(84.52% 0 0);
   padding-left: 1em;
   margin: 0;
 }
