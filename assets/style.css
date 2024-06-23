@@ -2,10 +2,6 @@
   color-scheme: light dark;
   --grey: oklch(57% 0 0);
   --accent-color: oklch(64% 0.2 27.5);
-
-  --celtics-green: oklch(54% 34% 155deg);
-  --celtics-black: oklch(0% 0 0);
-  --celtics-white: oklch(100% 0 0);
 }
 
 body {
@@ -57,16 +53,7 @@ h1 {
   /* Blantantly stolen from https://force-color.org */
   /*text-shadow: 2px 2px #ef3550, 4px 4px #f48fb1, 6px 6px #7e57c2, 8px 8px #2196f3, 10px 10px #26c6da, 12px 12px #43a047, 14px 14px #eeff41, 16px 16px #f9a825, 18px 18px #ff5722;*/
 
-  text-shadow:
-    2px 2px var(--celtics-green),
-    4px 4px light-dark(var(--celtics-black), var(--celtics-white)),
-    6px 6px var(--celtics-green),
-    8px 8px light-dark(var(--celtics-black), var(--celtics-white)),
-    10px 10px var(--celtics-green),
-    12px 12px light-dark(var(--celtics-black), var(--celtics-white)),
-    14px 14px var(--celtics-green),
-    16px 16px light-dark(var(--celtics-black), var(--celtics-white)),
-    18px 18px var(--celtics-green);
+  color: var(--accent-color);
 }
 
 pre,
