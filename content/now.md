@@ -3,11 +3,17 @@ title: Now
 description: What I'm up to, now
 ---
 <!-- Remember to update "Last updated"!-->
-Friendship ended with the Bruins, I'm a Celtics fan now.
+Managing the summer heat:
 
-🏀
+* Early morning runs
+* Avoiding the oven
+* Ceiling fans
 
-<small>Last updated: <time datetime="2024-19-05">May 19th, 2024</time></small>
+but/and enjoying the warm weather.
+
+🌞
+
+<small>Last updated: <time datetime="2024-06-23">June 23rd, 2024</time></small>
 
 <small class="text-sm text-grey">
   Based on <a href="https://nownownow.com/">nownownow.com</a>.
