@@ -29,3 +29,7 @@ So -- use them!
 [pragma-journal-mode]: https://sqlite.org/pragma.html#pragma_journal_mode
 [pragma-foreign-keys]: https://sqlite.org/pragma.html#pragma_foreign_keys
 [pragma-busy-timeout]: https://sqlite.org/pragma.html#pragma_busy_timeout
+
+---
+
+_Update(2024-06-30)_: A more complete discussion of these settings and more can be found over at [kerkour.com/sqlite-for-servers](https://kerkour.com/sqlite-for-servers)
