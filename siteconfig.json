@@ -3,7 +3,7 @@
     {
       "glob": "*.css",
       "options": {
-        "cacheControl": "max-age=7200"
+        "cacheControl": "max-age=31536000, immutable"
       }
     }
   ]
