@@ -13,4 +13,4 @@ publish:
     rm -rf public
     hugo
     tar --directory public --create --gzip --verbose . > site.tar.gz
-    hut pages publish --domain stefan.vanburen.xyz site.tar.gz
+    hut pages publish --domain stefan.vanburen.xyz --site-config siteconfig.json site.tar.gz
