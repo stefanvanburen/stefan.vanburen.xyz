@@ -94,6 +94,17 @@ li>a {
   text-overflow: ellipsis;
 }
 
+/* Shamelessly stolen and tweaked from https://kayserifserif.place */
+@counter-style manicule {
+  system: cyclic;
+  symbols: "☞";
+  suffix: " ";
+}
+
+ul {
+  list-style: manicule;
+}
+
 .back-link {
   display: block;
   margin-bottom: 1rem;
