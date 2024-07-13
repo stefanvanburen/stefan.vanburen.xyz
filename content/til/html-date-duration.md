@@ -9,7 +9,9 @@ Last week I learned that an HTML `datetime` attribute can [represent a duration]
 For example:
 
 ```html
-<time datetime="PT4H18M3S">4 hours, 18 minutes and 3 seconds</time>
+<time datetime="PT4H18M3S">
+  4 hours, 18 minutes and 3 seconds
+</time>
 ```
 
 The syntax is an [ISO 8601 Duration][iso-8601].
