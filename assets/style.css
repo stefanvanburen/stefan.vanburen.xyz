@@ -2,6 +2,8 @@
   color-scheme: light dark;
   --grey: oklch(57% 0 0);
   --accent-color: oklch(64% 0.2 27.5);
+  /* Use black for printed text. */
+  --black: oklch(0% 0 0);
 }
 
 body {
@@ -36,6 +38,11 @@ footer {
   &>a {
     margin-inline: 0.5em;
   }
+
+  /* Don't show the footer links on the printed page. */
+  @media print {
+    display: none;
+  }
 }
 
 pre {
@@ -54,6 +61,10 @@ h1 {
   /*text-shadow: 2px 2px #ef3550, 4px 4px #f48fb1, 6px 6px #7e57c2, 8px 8px #2196f3, 10px 10px #26c6da, 12px 12px #43a047, 14px 14px #eeff41, 16px 16px #f9a825, 18px 18px #ff5722;*/
 
   color: var(--accent-color);
+
+  @media print {
+    color: var(--black);
+  }
 }
 
 pre,
@@ -77,6 +88,10 @@ li>code {
 
 a {
   color: CanvasText;
+
+  @media print {
+    color: var(--black);
+  }
 
   &:hover {
     color: var(--accent-color);
@@ -116,6 +131,11 @@ hr {
 
   &::before {
     color: var(--accent-color);
+
+    @media print {
+      color: var(--black);
+    }
+
     content: "⁂";
   }
 }
@@ -133,6 +153,11 @@ blockquote {
 /* for anchor links, don't underline regularly and hide by default. */
 .anchor {
   color: var(--grey);
+
+  @media print {
+    color: var(--black);
+  }
+
   text-decoration: none;
 
   &:hover {
@@ -147,6 +172,10 @@ blockquote {
 
 .text-grey {
   color: var(--grey);
+
+  @media print {
+    color: var(--black);
+  }
 }
 
 .mr-1 {

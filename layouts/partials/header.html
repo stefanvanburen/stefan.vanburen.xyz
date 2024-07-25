@@ -14,9 +14,6 @@
 {{ $css := resources.Get "style.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}">
 
-{{ $css := resources.Get "print.css" | minify | fingerprint }}
-<link rel="stylesheet" href="{{ $css.RelPermalink }}" media="print">
-
 {{/* Favicon */}}
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="mask-icon" href="/favicon.svg" color="oklch(64% 0.2 27.5)">
