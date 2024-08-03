@@ -11,7 +11,7 @@ disableKinds = ["taxonomy", "term"]
 [params]
 mainSections = ["blog", "til"]
 
-[author]
+[params.author]
 # for feeds
 name = "Stefan VanBuren"
 email = "stefan@vanburen.xyz"
