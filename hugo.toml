@@ -18,7 +18,7 @@ email = "stefan@vanburen.xyz"
 
 [markup]
 [markup.highlight]
-style = "bw"
+noClasses = false
 [markup.goldmark]
 [markup.goldmark.renderer]
 # allows for inline HTML
