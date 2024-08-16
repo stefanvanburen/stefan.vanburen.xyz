@@ -12,7 +12,7 @@ fmt.Sprintf("this needs quoting: \"%s\"", "input")
 
 But the `%q` verb obviates the need for that manual quoting.
 
-From the [package documentation](https://pkg.go.dev/fmt@go1.17):
+From the [package documentation](https://pkg.go.dev/fmt):
 
 > %s    the uninterpreted bytes of the string or slice
 >
@@ -36,5 +36,4 @@ func main() {
 	fmt.Printf("%q", test)
 	// Output: "I'm a test string"
 }
-
 ```

@@ -123,6 +123,10 @@ ul {
 .back-link {
   display: block;
   margin-bottom: 1rem;
+
+  &::before {
+    content: "☜ ";
+  }
 }
 
 hr {
@@ -180,4 +184,8 @@ blockquote {
 
 .mr-1 {
   margin-right: 0.5em;
+}
+
+ins {
+  text-decoration: none;
 }

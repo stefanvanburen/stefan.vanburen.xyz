@@ -6,15 +6,18 @@
 
 {{ define "main" }}
 <article>
-  <a href="/til" class="back-link">⇠ back to TILs</a>
+  <a href="/til" class="back-link">back to TILs</a>
 
   <h1>{{ .Title }}</h1>
 
   {{ .Content }}
 
-  <time
-    class="text-sm text-grey"
-    datetime={{ .Date.Format "2006-01-02" }}
-  >{{ .Date.Format "January 2, 2006" }}</time>
+  {{/* Ensure the inline time element is separate from an ending inline element */}}
+  <div>
+    <time
+      class="text-sm text-grey"
+      datetime={{ .Date.Format "2006-01-02" }}
+    >{{ .Date.Format "January 2, 2006" }}</time>
+  </div>
 </article>
 {{ end }}
