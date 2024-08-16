@@ -3,6 +3,7 @@
     <title>Stefan VanBuren · Blog Posts</title>
     <link>{{ .Permalink }}</link>
     <description>Blog Posts on stefan.vanburen.xyz</description>
+    <generator>Hugo</generator>
     <language>{{.Site.LanguageCode}}</language>
     {{ $email := .Site.Author.email }}
     {{ $name := .Site.Author.name }}
@@ -21,7 +22,7 @@
       <link>{{ .Permalink }}</link>
       <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
       <guid>{{ .Permalink }}</guid>
-      <description>{{ .Content | html }}</description>
+      <description>{{ .Content | safeHTML }}</description>
     </item>
     {{ end }}
   </channel>
