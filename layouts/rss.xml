@@ -5,8 +5,8 @@
     <description>All content on stefan.vanburen.xyz</description>
     <generator>Hugo</generator>
     <language>{{.Site.LanguageCode}}</language>
-    {{ $email := .Site.Author.email }}
-    {{ $name := .Site.Author.name }}
+    {{ $email := .Site.Params.author.email }}
+    {{ $name := .Site.Params.author.name }}
     <managingEditor>{{$email}} ({{$name}})</managingEditor>
     <webMaster>{{$email}} ({{$name}})</webMaster>
     <copyright>{{.Site.Copyright}}</copyright>
