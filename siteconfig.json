@@ -1,4 +1,5 @@
 {
+  "notFound": "static/404.html",
   "fileConfigs": [
     {
       "glob": "*.css",
