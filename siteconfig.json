@@ -6,6 +6,12 @@
       "options": {
         "cacheControl": "max-age=31536000, immutable"
       }
+    },
+    {
+      "glob": "*.html",
+      "options": {
+        "cacheControl": "max-age=7200"
+      }
     }
   ]
 }
