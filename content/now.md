@@ -3,12 +3,12 @@ title: Now
 description: What I'm up to, now
 ---
 <!-- Remember to update "Last updated"!-->
-Ready for fall.
+Preparing for sp00ky szn.
 
 🎃
 
 <small>
-  Last updated: <time datetime="2024-08-23">August 23rd, 2024</time>
+  Last updated: <time datetime="2024-09-30">September 30th, 2024</time>
 </small>
 
 <small class="text-sm text-grey">
