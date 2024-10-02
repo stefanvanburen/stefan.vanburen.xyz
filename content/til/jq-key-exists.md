@@ -18,7 +18,7 @@ By default, "querying" a key via `jq` will return `null` whether the key exists 
 △ echo $json | jq .test
 null
 
-△ echo $json | jq .nonexistant
+△ echo $json | jq .nonexistent
 null
 ```
 
@@ -28,6 +28,6 @@ Instead, you can use the `jq`'s [`has`](https://stedolan.github.io/jq/manual/#ha
 △ echo $json | jq 'has("test")'
 true
 
-△ echo $json | jq 'has("nonexistant")'
+△ echo $json | jq 'has("nonexistent")'
 false
 ```
