@@ -2,7 +2,7 @@ default: dev
 
 # Run the development server, building drafts.
 dev:
-    hugo server --buildDrafts
+    hugo server --buildDrafts --openBrowser --navigateToChanged --buildFuture
 
 # Build the site.
 build:
