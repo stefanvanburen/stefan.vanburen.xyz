@@ -7,10 +7,14 @@ It's Christmas season -- best time of the year.
 
 🎄
 
-<small>
-  Last updated: <time datetime="2024-11-01">November 1st, 2024</time>
-</small>
+<p>
+  <small>
+    Last updated: <time datetime="2024-11-01">November 1st, 2024</time>
+  </small>
+</p>
 
-<small class="text-sm text-grey">
-  Based on <a href="https://nownownow.com/">nownownow.com</a>.
-</small>
+<p>
+  <small class="text-sm text-grey">
+    Based on <a href="https://nownownow.com/">nownownow.com</a>.
+  </small>
+</p>
