@@ -3,13 +3,13 @@ title: Now
 description: What I'm up to, now
 ---
 <!-- Remember to update "Last updated"!-->
-It's Christmas season -- best time of the year.
+Preparing for the new year and new beginnings.
 
-🎄
+🏡👶
 
 <p>
   <small>
-    Last updated: <time datetime="2024-11-01">November 1st, 2024</time>
+    Last updated: <time datetime="2024-12-29">December 29th, 2024</time>
   </small>
 </p>
 
