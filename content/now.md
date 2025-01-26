@@ -3,13 +3,13 @@ title: Now
 description: What I'm up to, now
 ---
 <!-- Remember to update "Last updated"!-->
-Preparing for the new year and new beginnings.
+One last week in the city, before the Return to the Suburbs.
 
-🏡👶
+🏡
 
 <p>
   <small>
-    Last updated: <time datetime="2024-12-29">December 29th, 2024</time>
+    Last updated: <time datetime="2025-01-26">January 26th, 2025</time>
   </small>
 </p>
 
