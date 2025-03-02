@@ -18,8 +18,3 @@ Change is imminent!
     Based on <a href="https://nownownow.com/">nownownow.com</a>.
   </small>
 </p>
-
-{{ $image := resources.GetRemote "https://media.tate.org.uk/art/images/work/N/N01/N01615_10.jpg" }}
-{{ with $image }}
-<img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}">
-{{ end }}
