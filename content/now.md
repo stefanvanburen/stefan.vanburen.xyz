@@ -1,6 +1,7 @@
 ---
 title: Now
 description: What I'm up to, now
+layout: now
 ---
 <!-- Remember to update "Last updated"!-->
 Change is imminent!
