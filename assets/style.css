@@ -189,3 +189,11 @@ blockquote {
 ins {
   text-decoration: none;
 }
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+  object-fit: scale-down;
+}
