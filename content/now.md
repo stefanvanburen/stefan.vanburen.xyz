@@ -4,13 +4,12 @@ description: What I'm up to, now
 layout: now
 ---
 <!-- Remember to update "Last updated"!-->
-Change is imminent!
 
-👶
+One month down, a lifetime to go.
 
 <p>
   <small>
-    Last updated: <time datetime="2025-02-23">February 23rd, 2025</time>
+    Last updated: <time datetime="2025-03-31">March 31st, 2025</time>
   </small>
 </p>
 
