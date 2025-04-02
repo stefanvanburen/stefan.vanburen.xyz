@@ -4,15 +4,18 @@
 <h1>{{ .Title }}</h1>
 {{ .Content }}
 
-{{ $image := resources.GetRemote "https://media.tate.org.uk/art/images/work/N/N01/N01615_10.jpg" }}
+{{ $image := resources.GetRemote "https://mdl.artvee.com/sdl/935615ilsdl.jpg" }}
 {{ $image := $image.Resize "400x" }}
 {{ with $image }}
-<img
-  src="{{ .RelPermalink }}"
-  width="{{ .Width }}"
-  height="{{ .Height }}"
-  alt="'Carnation, Lily, Lily, Rose', by John Singer Sargent"
->
+<figure>
+  <img
+    src="{{ .RelPermalink }}"
+    width="{{ .Width }}"
+    height="{{ .Height }}"
+    alt="Ipswich Town, or Harbor Scene by Arthur Wesley Dow"
+  />
+  <figcaption>Ipswich Town, or Harbor Scene by Arthur Wesley Dow</figcaption>
+</figure>
 {{ end }}
 
 {{ end }}
