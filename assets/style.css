@@ -197,3 +197,13 @@ picture {
   display: block;
   object-fit: scale-down;
 }
+
+figcaption {
+  display: block;
+  text-align: right;
+}
+
+figcaption > a {
+  font-size: small;
+  color: var(--grey);
+}
