@@ -194,12 +194,16 @@ ins {
 img,
 picture {
   width: 100%;
-  display: block;
   object-fit: scale-down;
 }
 
+figure {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 figcaption {
-  display: block;
   text-align: right;
 }
 
