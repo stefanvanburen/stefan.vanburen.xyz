@@ -5,7 +5,7 @@
 {{ .Content }}
 
 {{ $image := resources.GetRemote "https://mdl.artvee.com/sdl/935615ilsdl.jpg" }}
-{{ $image := $image.Resize "400x" }}
+{{ $image := $image.Resize "x600" }}
 {{ with $image }}
 <figure>
   <img

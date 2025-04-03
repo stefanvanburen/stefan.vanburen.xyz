@@ -193,7 +193,7 @@ ins {
 /* Make images easier to work with */
 img,
 picture {
-  max-width: 100%;
+  width: 100%;
   display: block;
   object-fit: scale-down;
 }
@@ -206,4 +206,5 @@ figcaption {
 figcaption > a {
   font-size: small;
   color: var(--grey);
+  text-wrap: balance;
 }
