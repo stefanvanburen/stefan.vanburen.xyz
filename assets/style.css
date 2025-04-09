@@ -58,13 +58,21 @@ pre {
 
 h1 {
   /* Blatantly stolen from https://force-color.org */
-  /*text-shadow: 2px 2px #ef3550, 4px 4px #f48fb1, 6px 6px #7e57c2, 8px 8px #2196f3, 10px 10px #26c6da, 12px 12px #43a047, 14px 14px #eeff41, 16px 16px #f9a825, 18px 18px #ff5722;*/
+  text-shadow: 2px 2px #ef3550, 4px 4px #f48fb1, 6px 6px #7e57c2, 8px 8px #2196f3, 10px 10px #26c6da, 12px 12px #43a047, 14px 14px #eeff41, 16px 16px #f9a825, 18px 18px #ff5722;
 
   color: var(--accent-color);
 
   @media print {
     color: var(--black);
   }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;;
 }
 
 pre,
