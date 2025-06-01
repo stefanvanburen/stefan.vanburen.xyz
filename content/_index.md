@@ -4,7 +4,7 @@ description: Homepage of stefan.vanburen.xyz
 ---
 
 I'm a software engineer based in Ipswich, Massachusetts.
-I care about craftsmanship --- always seeking the sublime.
+<!-- I care about craftsmanship --- always seeking the sublime. -->
 <a href="mailto:stefan@vanburen.xyz" rel="me">Get in touch</a>.
 
 Elsewhere:
