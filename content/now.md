@@ -5,11 +5,12 @@ layout: now
 ---
 <!-- Remember to update "Last updated"!-->
 
-One month down, a lifetime to go.
+Dealing with a high-maintenance four month old,
+one day at a time :).
 
 <p>
   <small>
-    Last updated: <time datetime="2025-03-31">March 31st, 2025</time>
+    Last updated: <time datetime="2025-07-06">July 6th, 2025</time>
   </small>
 </p>
 
