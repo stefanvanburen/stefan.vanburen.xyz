@@ -1,8 +1,23 @@
-{{/* vim: set filetype=gohtmltmpl: */}}
-
 {{ define "main" }}
 <h1>{{ .Title }}</h1>
 {{ .Content }}
+
+{{ with .GitInfo }}
+<p>
+  <small>
+    Last updated:
+    <time datetime="{{ .CommitDate.Format "2006-01-02" }}">
+      {{ .CommitDate.Format "January _2, 2006" }}
+    </time>
+  </small>
+</p>
+{{ end }}
+
+<p>
+  <small class="text-sm text-grey">
+    Based on <a href="https://nownownow.com/">nownownow.com</a>.
+  </small>
+</p>
 
 {{ $image := resources.GetRemote "https://mdl.artvee.com/sdl/935615ilsdl.jpg" }}
 {{ with $image }}

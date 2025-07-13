@@ -4,6 +4,7 @@ title = "Stefan VanBuren"
 baseurl = "https://stefan.vanburen.xyz/"
 copyright = "©️ 2024 Stefan VanBuren"
 description = "Stefan VanBuren's personal site."
+enableGitInfo = true
 
 disableKinds = ["taxonomy", "term"]
 
