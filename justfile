@@ -1,4 +1,7 @@
-default: dev
+# https://just.systems
+
+[private]
+@default: dev
 
 # Run the development server, building drafts.
 dev:
