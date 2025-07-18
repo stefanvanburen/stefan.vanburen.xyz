@@ -8,7 +8,7 @@
 
 body {
   /* tachyons' measure-wide
-    http://tachyons.io/docs/typography/measure/
+    https://tachyons.io/docs/typography/measure/
     This is needed on larger screens to constrain the width. */
   max-width: 34em;
 
