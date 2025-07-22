@@ -1,2 +1,3 @@
 -- [nfnl] .nvim.fnl
-return vim.filetype.add({pattern = {["layouts/.*.html"] = "gotmpl"}})
+vim.filetype.add({pattern = {["layouts/.*.html"] = "gotmpl"}})
+return vim.filetype.add({pattern = {["layouts/.*.xml"] = "gotmpl"}})
