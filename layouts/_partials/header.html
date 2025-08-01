@@ -9,6 +9,38 @@
 {{/* inform the browser that we prefer a light colorscheme, but support dark as well */}}
 <meta name="color-scheme" content="light dark">
 
+{{/*
+Informing the styles in ../../assets/style.css.
+Based on the builtin colorschemes from mini.hues:
+- minispring
+- minisummer
+- miniautumn
+- miniwinter
+*/}}
+<style>
+:root {
+{{ with $month := now.Format "01" }}
+{{ if (or (eq $month "01") (eq $month "02") (eq $month "03")) }}
+  {{/* winter; purple -> green */}}
+  --h1-color: #014772;
+  --h1-shadow: 2px 2px #ffb3f6, 4px 4px #beb3ff, 6px 6px #90ceff, 8px 8px #6af9ff, 10px 10px #83ffb3;
+{{ else if (or (eq $month "04") (eq $month "05") (eq $month "06")) }}
+  {{/* spring; green -> red */}}
+  --h1-color: #2e5e00;
+  --h1-shadow: 2px 2px #80ffb8, 4px 4px #e6ed62, 6px 6px #ffc688, 8px 8px #ffaaa7;
+{{ else if (or (eq $month "07") (eq $month "08") (eq $month "09")) }}
+  {{/* summer; red -> green */}}
+  --h1-color: #804e00;
+  --h1-shadow: 2px 2px #ffb2ee, 4px 4px #ffaba5, 6px 6px #ffc888, 8px 8px #e3ee65;
+{{ else if (or (eq $month "10") (eq $month "11") (eq $month "12")) }}
+  {{/* autumn; orange, red, blue, purple */}}
+  --h1-color: #431256;
+  --h1-shadow: 2px 2px #ffaba1, 4px 4px #ffb0e9, 6px 6px #92c8ff, 8px 8px #cab3ff;
+{{ end }}
+{{ end }}
+}
+</style>
+
 {{ $css := resources.Get "style.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}">
 
