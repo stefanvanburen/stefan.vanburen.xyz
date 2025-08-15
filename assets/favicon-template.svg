@@ -1,0 +1,53 @@
+{{/*
+Based on the builtin colorschemes from mini.hues:
+- minispring
+- minisummer
+- miniautumn
+- miniwinter
+
+See ../layouts/_partials/header.html.
+*/}}
+{{ $stop1 := "" }}
+{{ $stop2 := "" }}
+{{ $stop3 := "" }}
+{{ $stop4 := "" }}
+{{ with $month := now.Format "01" }}
+{{ if (or (eq $month "01") (eq $month "02") (eq $month "03")) }}
+  {{/* winter */}}
+  {{ $stop1 = "#ffb3f6" }}
+  {{ $stop2 = "#beb3ff" }}
+  {{ $stop3 = "#90ceff" }}
+  {{ $stop4 = "#6af9ff" }}
+{{ else if (or (eq $month "04") (eq $month "05") (eq $month "06")) }}
+  {{/* spring */}}
+  {{ $stop1 = "#80ffb8" }}
+  {{ $stop2 = "#e6ed62" }}
+  {{ $stop3 = "#ffc688" }}
+  {{ $stop4 = "#ffaaa7" }}
+{{ else if (or (eq $month "07") (eq $month "08") (eq $month "09")) }}
+  {{/* summer */}}
+  {{ $stop1 = "#ffb2ee" }}
+  {{ $stop2 = "#ffaba5" }}
+  {{ $stop3 = "#ffc888" }}
+  {{ $stop4 = "#e3ee65" }}
+{{ else if (or (eq $month "10") (eq $month "11") (eq $month "12")) }}
+  {{/* autumn */}}
+  {{ $stop1 = "#ffaba1" }}
+  {{ $stop2 = "#ffb0e9" }}
+  {{ $stop3 = "#92c8ff" }}
+  {{ $stop4 = "#cab3ff" }}
+{{ end }}
+{{ end }}
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="season">
+      <stop offset="10%" stop-color="{{ $stop1 }}" />
+      <stop offset="30%" stop-color="{{ $stop2 }}" />
+      <stop offset="70%" stop-color="{{ $stop3 }}" />
+      <stop offset="90%" stop-color="{{ $stop4 }}" />
+    </linearGradient>
+  </defs>
+  <g fill="url('#season')">
+    <circle cx="50" cy="50" r="50"/>
+  </g>
+</svg>

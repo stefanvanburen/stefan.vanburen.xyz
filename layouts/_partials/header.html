@@ -53,8 +53,12 @@ Based on the builtin colorschemes from mini.hues:
 <link rel="stylesheet" href="{{ $css.RelPermalink }}">
 
 {{/* Favicon */}}
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="mask-icon" href="/favicon.svg" color="oklch(64% 0.2 27.5)">
+{{ $faviconTemplate := resources.Get "favicon-template.svg" -}}
+{{ $favicon := $faviconTemplate | resources.Minify | resources.ExecuteAsTemplate "favicon.svg" . -}}
+<link rel=icon type=image/svg+xml href={{ $favicon.Permalink }}>
+
+{{/* <link rel="icon" type="image/svg+xml" href="/favicon.svg"> */}}
+{{/* <link rel="mask-icon" href="/favicon.svg" color="oklch(64% 0.2 27.5)"> */}}
 
 <link rel="alternate" type="application/rss+xml" href="/index.xml" title="Stefan VanBuren · All Content RSS">
 <link rel="alternate" type="application/rss+xml" href="/blog/index.xml" title="Stefan VanBuren · Blog Posts RSS">
