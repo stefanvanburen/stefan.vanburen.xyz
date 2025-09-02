@@ -38,7 +38,7 @@ In turn,
 [pragma-foreign-keys]: https://sqlite.org/pragma.html#pragma_foreign_keys
 [pragma-busy-timeout]: https://sqlite.org/pragma.html#pragma_busy_timeout
 
----
+* * *
 
 <ins datetime="2024-06-30">
   Update(2024-06-30): A more complete discussion of these settings and more can be found over at
