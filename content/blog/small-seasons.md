@@ -42,3 +42,10 @@ despite the indoor setting,
 along with our morning stroller walks!
 
 🍂
+
+* * *
+
+P.S.: Another way I've found to mind the seasons is to update my [Living Worlds app][1] on the first day of each month,
+as a reminder of the passing time.
+
+[1]: https://pixfabrik.com/livingworlds/
