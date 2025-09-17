@@ -24,8 +24,8 @@ However, I had come across the following code, from [the source code of builds.s
 
 ```go
 var (
-  jobId int
-  op    string
+	jobId int
+	op    string
 )
 _, err := fmt.Sscanf(r.URL.Path, "/job/%d/%s", &jobId, &op)
 ```
@@ -38,10 +38,10 @@ So, I tried it:
 var id1, id2 string
 matchCount, err := fmt.Sscanf(r.URL.Path, "/path/%s/%s", &id1, &id2)
 if err != nil {
-    fmt.Printf("err: %s, match count: %d\n", err, matchCount)
-    fmt.Printf("id1: %s, id2: %s", id1, id2)
+	fmt.Printf("err: %s, match count: %d\n", err, matchCount)
+	fmt.Printf("id1: %s, id2: %s", id1, id2)
 } else {
-    fmt.Printf("no err, id1: %s, id2: %s", id1, id2)
+	fmt.Printf("no err, id1: %s, id2: %s", id1, id2)
 }
 ```
 
