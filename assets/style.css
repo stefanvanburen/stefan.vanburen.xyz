@@ -1,7 +1,7 @@
 :root {
   color-scheme: light dark;
   --grey: oklch(57% 0 0);
-  --accent-color: oklch(64% 0.2 27.5);
+  --accent-color: light-dark(var(--color-light), var(--color-dark));
   /* Use black for printed text. */
   --black: black;
 }
@@ -58,11 +58,11 @@ pre {
 
 h1 {
   /* Set in ../layouts/_partials/header.html based on the month of the build. */
-  color: light-dark(var(--h1-color-light), var(--h1-color-dark));
+  color: var(--accent-color);
   /* text-shadow doesn't use light-dark */
-  text-shadow: var(--h1-shadow-light);
+  text-shadow: var(--shadow-light);
   @media (prefers-color-scheme: dark) {
-    text-shadow: var(--h1-shadow-dark);
+    text-shadow: var(--shadow-dark);
   }
 
   @media print {
@@ -109,7 +109,11 @@ a {
   }
 
   &:hover {
-    color: var(--accent-color);
+    color: var(--color-light);
+    text-shadow: var(--shadow-light);
+    @media (prefers-color-scheme: dark) {
+      text-shadow: var(--shadow-dark);
+    }
   }
 }
 
@@ -149,10 +153,15 @@ hr {
   text-align: center;
 
   &::before {
-    color: var(--accent-color);
+    color: var(--color-light);
+    text-shadow: var(--shadow-light);
+    @media (prefers-color-scheme: dark) {
+      text-shadow: var(--shadow-dark);
+    }
 
     @media print {
       color: var(--black);
+      text-shadow: unset;
     }
 
     content: "∗ ∗ ∗";

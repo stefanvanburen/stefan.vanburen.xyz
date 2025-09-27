@@ -22,28 +22,28 @@ Based on the builtin colorschemes from mini.hues:
 {{ with $month := now.Format "01" }}
 {{ if (or (eq $month "01") (eq $month "02") (eq $month "03")) }}
   {{/* winter; purple -> green */}}
-  --h1-color-light: #014772;
-  --h1-shadow-light: 2px 2px #ffb3f6, 4px 4px #beb3ff, 6px 6px #90ceff, 8px 8px #6af9ff, 10px 10px #83ffb3;
-  --h1-color-dark: #b3daf9;
-  --h1-shadow-dark: 2px 2px #371134, 4px 4px #211a46, 6px 6px #00324f, 8px 8px #004c4e, 10px 10px #003415;
+  --color-light: #014772;
+  --shadow-light: 2px 2px #ffb3f6, 4px 4px #beb3ff, 6px 6px #90ceff, 8px 8px #6af9ff, 10px 10px #83ffb3;
+  --color-dark: #b3daf9;
+  --shadow-dark: 2px 2px #371134, 4px 4px #211a46, 6px 6px #00324f, 8px 8px #004c4e, 10px 10px #003415;
 {{ else if (or (eq $month "04") (eq $month "05") (eq $month "06")) }}
   {{/* spring; green -> red */}}
-  --h1-color-light: #2e5e00;
-  --h1-shadow-light: 2px 2px #80ffb8, 4px 4px #e6ed62, 6px 6px #ffc688, 8px 8px #ffaaa7;
-  --h1-color-dark: #bee2ad;
-  --h1-shadow-dark: 2px 2px #00381d, 4px 4px #373700, 6px 6px #492900, 8px 8px #410d12;
+  --color-light: #2e5e00;
+  --shadow-light: 2px 2px #80ffb8, 4px 4px #e6ed62, 6px 6px #ffc688, 8px 8px #ffaaa7;
+  --color-dark: #bee2ad;
+  --shadow-dark: 2px 2px #00381d, 4px 4px #373700, 6px 6px #492900, 8px 8px #410d12;
 {{ else if (or (eq $month "07") (eq $month "08") (eq $month "09")) }}
   {{/* summer; red -> green */}}
-  --h1-color-light: #804e00;
-  --h1-shadow-light: 2px 2px #ffb2ee, 4px 4px #ffaba5, 6px 6px #ffc888, 8px 8px #e3ee65;
-  --h1-color-dark: #f6cc9b;
-  --h1-shadow-dark: 2px 2px #3a0f2e, 4px 4px #410d0c, 6px 6px #492c00, 8px 8px #313600;
+  --color-light: #804e00;
+  --shadow-light: 2px 2px #ffb2ee, 4px 4px #ffaba5, 6px 6px #ffc888, 8px 8px #e3ee65;
+  --color-dark: #f6cc9b;
+  --shadow-dark: 2px 2px #3a0f2e, 4px 4px #410d0c, 6px 6px #492c00, 8px 8px #313600;
 {{ else if (or (eq $month "10") (eq $month "11") (eq $month "12")) }}
   {{/* autumn; orange, red, blue, purple */}}
-  --h1-color-light: #431256;
-  --h1-shadow-light: 2px 2px #ffaba1, 4px 4px #ffb0e9, 6px 6px #92c8ff, 8px 8px #cab3ff;
-  --h1-color-dark: #e4caf1;
-  --h1-shadow-dark: 2px 2px #410d0d, 4px 4px #3a0f2f, 6px 6px #00284a, 8px 8px #261844;
+  --color-light: #431256;
+  --shadow-light: 2px 2px #ffaba1, 4px 4px #ffb0e9, 6px 6px #92c8ff, 8px 8px #cab3ff;
+  --color-dark: #e4caf1;
+  --shadow-dark: 2px 2px #410d0d, 4px 4px #3a0f2f, 6px 6px #00284a, 8px 8px #261844;
 {{ end }}
 {{ end }}
 }
