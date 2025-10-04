@@ -1,9 +1,8 @@
 # https://gohugo.io/getting-started/configuration/
 languageCode = "en-us"
 title = "Stefan VanBuren"
-baseurl = "https://stefan.vanburen.xyz/"
-copyright = "©️ 2024 Stefan VanBuren"
-description = "Stefan VanBuren's personal site."
+baseURL = "https://stefan.vanburen.xyz/"
+copyright = "©️ 2025 Stefan VanBuren"
 enableGitInfo = true
 
 disableKinds = ["taxonomy", "term"]
