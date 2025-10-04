@@ -21,25 +21,25 @@ Based on the builtin colorschemes from mini.hues:
 :root {
 {{ $month := now.Format "01" }}
 {{ $day := now.Day }}
-{{ if (or (and (eq $month "11") (ge day 8)) (eq $month "12") (eq $month "01") (and (eq $month "02") (lt day 4))) }}
+{{ if (or (and (eq $month "11") (ge $day 8)) (eq $month "12") (eq $month "01") (and (eq $month "02") (lt $day 4))) }}
   {{/* winter; purple -> green */}}
   --color-light: #014772;
   --shadow-light: 2px 2px #ffb3f6, 4px 4px #beb3ff, 6px 6px #90ceff, 8px 8px #6af9ff, 10px 10px #83ffb3;
   --color-dark: #b3daf9;
   --shadow-dark: 2px 2px #371134, 4px 4px #211a46, 6px 6px #00324f, 8px 8px #004c4e, 10px 10px #003415;
-{{ else if (or (and (eq $month "02") (ge day 4)) (eq $month "03") (eq $month "04") (and (eq $month "05") (lt day 6))) }}
+{{ else if (or (and (eq $month "02") (ge $day 4)) (eq $month "03") (eq $month "04") (and (eq $month "05") (lt $day 6))) }}
   {{/* spring; green -> red */}}
   --color-light: #2e5e00;
   --shadow-light: 2px 2px #80ffb8, 4px 4px #e6ed62, 6px 6px #ffc688, 8px 8px #ffaaa7;
   --color-dark: #bee2ad;
   --shadow-dark: 2px 2px #00381d, 4px 4px #373700, 6px 6px #492900, 8px 8px #410d12;
-{{ else if (or (and (eq $month "05") (ge day 6)) (eq $month "06") (eq $month "07") (and (eq $month "08") (lt day 8))) }}
+{{ else if (or (and (eq $month "05") (ge $day 6)) (eq $month "06") (eq $month "07") (and (eq $month "08") (lt $day 8))) }}
   {{/* summer; red -> green */}}
   --color-light: #804e00;
   --shadow-light: 2px 2px #ffb2ee, 4px 4px #ffaba5, 6px 6px #ffc888, 8px 8px #e3ee65;
   --color-dark: #f6cc9b;
   --shadow-dark: 2px 2px #3a0f2e, 4px 4px #410d0c, 6px 6px #492c00, 8px 8px #313600;
-{{ else if (or (and (eq $month "08") (ge day 8)) (eq $month "09") (eq $month "10") (and (eq $month "11") (lt day 8))) }}
+{{ else if (or (and (eq $month "08") (ge $day 8)) (eq $month "09") (eq $month "10") (and (eq $month "11") (lt $day 8))) }}
   {{/* autumn; orange, red, blue, purple */}}
   --color-light: #431256;
   --shadow-light: 2px 2px #ffaba1, 4px 4px #ffb0e9, 6px 6px #92c8ff, 8px 8px #cab3ff;

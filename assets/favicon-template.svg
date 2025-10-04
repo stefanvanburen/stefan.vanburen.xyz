@@ -11,32 +11,32 @@ See ../layouts/_partials/header.html.
 {{ $stop2 := "" }}
 {{ $stop3 := "" }}
 {{ $stop4 := "" }}
-{{ with $month := now.Format "01" }}
-{{ if (or (and (eq $month "11") (ge day 8)) (eq $month "12") (eq $month "01") (and (eq $month "02") (lt day 4))) }}
+{{ $month := now.Format "01" }}
+{{ $day := now.Day }}
+{{ if (or (and (eq $month "11") (ge $day 8)) (eq $month "12") (eq $month "01") (and (eq $month "02") (lt $day 4))) }}
   {{/* winter */}}
   {{ $stop1 = "#ffb3f6" }}
   {{ $stop2 = "#beb3ff" }}
   {{ $stop3 = "#90ceff" }}
   {{ $stop4 = "#6af9ff" }}
-{{ else if (or (and (eq $month "02") (ge day 4)) (eq $month "03") (eq $month "04") (and (eq $month "05") (lt day 6))) }}
+{{ else if (or (and (eq $month "02") (ge $day 4)) (eq $month "03") (eq $month "04") (and (eq $month "05") (lt $day 6))) }}
   {{/* spring */}}
   {{ $stop1 = "#80ffb8" }}
   {{ $stop2 = "#e6ed62" }}
   {{ $stop3 = "#ffc688" }}
   {{ $stop4 = "#ffaaa7" }}
-{{ else if (or (and (eq $month "05") (ge day 6)) (eq $month "06") (eq $month "07") (and (eq $month "08") (lt day 8))) }}
+{{ else if (or (and (eq $month "05") (ge $day 6)) (eq $month "06") (eq $month "07") (and (eq $month "08") (lt $day 8))) }}
   {{/* summer */}}
   {{ $stop1 = "#ffb2ee" }}
   {{ $stop2 = "#ffaba5" }}
   {{ $stop3 = "#ffc888" }}
   {{ $stop4 = "#e3ee65" }}
-{{ else if (or (and (eq $month "08") (ge day 8)) (eq $month "09") (eq $month "10") (and (eq $month "11") (lt day 8))) }}
+{{ else if (or (and (eq $month "08") (ge $day 8)) (eq $month "09") (eq $month "10") (and (eq $month "11") (lt $day 8))) }}
   {{/* autumn */}}
   {{ $stop1 = "#ffaba1" }}
   {{ $stop2 = "#ffb0e9" }}
   {{ $stop3 = "#92c8ff" }}
   {{ $stop4 = "#cab3ff" }}
-{{ end }}
 {{ end }}
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
   <defs>
