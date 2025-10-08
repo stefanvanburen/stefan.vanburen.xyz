@@ -17,3 +17,9 @@ The site has no JavaScript on any pages, and has a single, very simple [styleshe
 The body font is your system's sans-serif font, and for the monospaced bits, your system's monospaced font.
 I'm deliberately avoiding web fonts for the sake of site speed and page size.
 If something looks off, [let me know](mailto:stefan@vanburen.xyz)!
+
+<small>
+  <a href="/blog/small-seasons/#:~:text=I%20configured%20neovim%20to%20change%20between%20echanovski’s%20mini{spring%2Csummer%2Cautumn%2Cwinter}%20colorschemes%20based%20on%20the%20change%20of%20the%20small%20seasons%2C%20and%20similarly%20updated%20my%20site’s%20%3Ch1%3Es%20and%20favicon%20to%20follow%20suit.">
+  What are these colors?
+  </a>
+</small>
