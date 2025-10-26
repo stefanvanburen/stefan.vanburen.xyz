@@ -4,6 +4,7 @@ description: Homepage of stefan.vanburen.xyz
 ---
 
 I'm a software engineer based in Ipswich, Massachusetts.
+
 <a href="mailto:stefan@vanburen.xyz" rel="me">Get in touch</a>.
 
 * * *
