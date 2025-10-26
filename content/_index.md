@@ -7,8 +7,6 @@ I'm a software engineer based in Ipswich, Massachusetts.
 
 <a href="mailto:stefan@vanburen.xyz" rel="me">Get in touch</a>.
 
-* * *
-
 Elsewhere:
 
 * <a href="https://github.com/stefanvanburen" rel="me">GitHub</a>
