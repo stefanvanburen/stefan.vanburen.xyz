@@ -49,6 +49,24 @@ Based on the builtin colorschemes from mini.hues:
 }
 </style>
 
+{{ if (or (and (eq $month "11") (ge $day 8)) (eq $month "12") (eq $month "01") (and (eq $month "02") (lt $day 4))) }}
+  {{/* winter; purple -> green */}}
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#014772">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#b3daf9">
+{{ else if (or (and (eq $month "02") (ge $day 4)) (eq $month "03") (eq $month "04") (and (eq $month "05") (lt $day 6))) }}
+  {{/* spring; green -> red */}}
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#2e5e00">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#bee2ad">
+{{ else if (or (and (eq $month "05") (ge $day 6)) (eq $month "06") (eq $month "07") (and (eq $month "08") (lt $day 8))) }}
+  {{/* summer; red -> green */}}
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#804e00">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#f6cc9b">
+{{ else if (or (and (eq $month "08") (ge $day 8)) (eq $month "09") (eq $month "10") (and (eq $month "11") (lt $day 8))) }}
+  {{/* autumn; orange, red, blue, purple */}}
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#431256">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#e4caf1">
+{{ end }}
+
 {{ $css := resources.Get "style.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}">
 
