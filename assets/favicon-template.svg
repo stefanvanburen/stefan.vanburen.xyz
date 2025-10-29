@@ -5,7 +5,7 @@ Based on the builtin colorschemes from mini.hues:
 - miniautumn
 - miniwinter
 
-See ../layouts/_partials/header.html.
+See ../layouts/_partials/head.html.
 */}}
 {{ $stop1 := "" }}
 {{ $stop2 := "" }}
