@@ -1,7 +1,7 @@
 ---
 title: "Fog of War"
-date: 2025-10-09T20:29:36-04:00
-draft: true
+date: 2025-11-01T20:00:36-04:00
+draft: false
 ---
 Growing up [playing World of Warcraft (WoW)][^1], I became familiar with the concept of
 ["Fog of War"][1] — that is, areas of the world that your character hadn't visited.
