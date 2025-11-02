@@ -1,6 +1,6 @@
 ---
 title: "Fog of War"
-date: 2025-11-01T20:00:36-04:00
+date: 2025-11-01T19:45:36-04:00
 draft: false
 ---
 Growing up [playing World of Warcraft (WoW)][^1], I became familiar with the concept of
