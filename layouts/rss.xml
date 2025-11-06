@@ -23,6 +23,7 @@
       <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
       <guid>{{ .Permalink }}</guid>
       <description>{{ .Content | html }}</description>
+      <source:markdown>{{ .Content }}</source:markdown>
     </item>
     {{ end }}
   </channel>
