@@ -19,16 +19,15 @@
   </small>
 </p>
 
-{{ $image := resources.GetRemote "https://ids.lib.harvard.edu/ids/view/20410755" }}
-{{ with $image }}
+{{ with resources.GetRemote "https://www.artic.edu/iiif/2/c09da1f4-09ff-04b5-6747-bfd54c3e71c4/full/1686,/0/default.jpg" }}
 <figure>
   <img
-    src="{{ .RelPermalink }}"
-    alt="Marsh Creek by Arthur Wesley Dow"
+    src="{{ .RelPermalink}}"
+    alt="A Merry Christmas by Henri de Toulouse-Lautrec"
   />
   <figcaption>
-    <a href="https://hvrd.art/o/256726">
-      Marsh Creek by Arthur Wesley Dow
+    <a href="https://www.artic.edu/artworks/84458/a-merry-christmas">
+      A Merry Christmas by Henri de Toulouse-Lautrec
     </a>
   </figcaption>
 </figure>
