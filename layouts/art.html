@@ -2,54 +2,82 @@
 <h1>{{ .Title }}</h1>
 {{ .Content }}
 
+{{ with resources.GetRemote "https://ids.lib.harvard.edu/ids/view/17386628" }}
 <figure>
   <img
-    src="https://ids.lib.harvard.edu/ids/view/17386628"
+    src="{{ .RelPermalink }}"
     alt="Homosassa Jungle by Winslow Homer"
   />
   <figcaption>
+    Homosassa Jungle by Winslow Homer
     <a href="/blog/fog-of-war">From /blog/fog-of-war</a>
     (<a href="https://harvardartmuseums.org/collections/object/306835">Permalink</a>)
   </figcaption>
 </figure>
+{{ end }}
 
 <hr>
 
+{{ with resources.GetRemote "https://iiif.micr.io/uIpfV/full/%5E830,/0/default.webp" }}
 <figure>
   <img
-    src="https://iiif.micr.io/uIpfV/full/%5E830,/0/default.webp"
+    src="{{ .RelPermalink}}"
     alt="Tokubei running through a street by Kunimori"
   />
   <figcaption>
+    Tokubei running through a street by Kunimori
     <a href="/blog/fog-of-war">From /blog/fog-of-war</a>
     (<a href="https://www.rijksmuseum.nl/en/collection/object/Tokubei-running-through-a-street--7e5f432ba724707931197c90284c5867?tab=data">Permalink</a>)
   </figcaption>
 </figure>
+{{ end }}
 
 <hr>
 
+{{ with resources.GetRemote "https://www.artic.edu/iiif/2/c09da1f4-09ff-04b5-6747-bfd54c3e71c4/full/1686,/0/default.jpg" }}
 <figure>
   <img
-    src="https://ids.lib.harvard.edu/ids/view/20410755"
+    src="{{ .RelPermalink}}"
+    alt="A Merry Christmas by Henri de Toulouse-Lautrec"
+  />
+  <figcaption>
+    A Merry Christmas by Henri de Toulouse-Lautrec
+    <a href="/now">From /now</a>
+    (<a href="https://www.artic.edu/artworks/84458/a-merry-christmas">Permalink</a>)
+  </figcaption>
+</figure>
+{{ end }}
+
+<hr>
+
+{{ with resources.GetRemote "https://ids.lib.harvard.edu/ids/view/20410755" }}
+<figure>
+  <img
+    src="{{ .RelPermalink }}"
     alt="Marsh Creek by Arthur Wesley Dow"
   />
   <figcaption>
-    <a href="/now">From /now</a>
+    Marsh Creek by Arthur Wesley Dow
+    <a href="/now">Previously on /now</a>
     (<a href="https://harvardartmuseums.org/collections/object/256726">Permalink</a>)
   </figcaption>
 </figure>
+{{ end }}
 
 <hr>
 
+{{ with resources.GetRemote "https://mdl.artvee.com/sftb/935615il.jpg" }}
 <figure>
   <img
-    src="https://mdl.artvee.com/sftb/935615il.jpg"
+    src="{{ .RelPermalink }}"
     alt="Ipswich Town, or Harbor Scene by Arthur Wesley Dow"
   />
   <figcaption>
+    Ipswich Town, or Harbor Scene by Arthur Wesley Dow
     <a href="/now">Previously on /now</a>
     (<a href="https://artvee.com/dl/ipswich-town-or-harbor-scene">Permalink</a>)
   </figcaption>
 </figure>
+{{ end }}
 
 {{ end }}
