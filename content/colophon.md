@@ -11,6 +11,8 @@ The code is licensed under the [MIT License](https://git.sr.ht/~svbn/stefan.vanb
 
 The content is licensed as [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
+I've included a "gallery" of the art I've hot-linked to at [/art](/art).
+
 The design of this site is intentionally sparse, in an effort to focus on content.
 The site has no JavaScript on any pages, and has a single, very simple [stylesheet](https://git.sr.ht/~svbn/stefan.vanburen.xyz/tree/main/item/assets/style.css).
 
