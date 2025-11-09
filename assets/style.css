@@ -36,8 +36,9 @@ footer {
   /* Add some vertical padding to the footer in both directions. */
   padding: 2em 0;
 
-  display: flex;
-  justify-content: space-between;
+  &>a {
+    margin-inline: 0.5em;
+  }
 
   /* Don't show the footer links on the printed page. */
   @media print {
