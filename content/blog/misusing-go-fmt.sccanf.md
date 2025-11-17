@@ -55,7 +55,7 @@ Here's a [slightly modified version on play.golang.org](https://play.golang.org/
   </samp>
 </details>
 
----
+* * *
 
 So, the first match hit by the scan, because it's `%s`, continues through the `/` character and picks up `id2`'s value as well, leaving nothing for `id2`.
 
