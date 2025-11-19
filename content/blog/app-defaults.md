@@ -4,7 +4,7 @@ date: 2023-11-14T18:17:01-05:00
 draft: false
 ---
 
-Inspired by https://defaults.rknight.me, here's my current defaults:
+Inspired by <https://defaults.rknight.me>, here are my current defaults:
 
 * Mail Client: Mail.app
 * Mail Server: [Migadu](https://migadu.com)
