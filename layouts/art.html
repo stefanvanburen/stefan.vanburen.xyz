@@ -2,77 +2,60 @@
 <h1>{{ .Title }}</h1>
 {{ .Content }}
 
-{{ with resources.GetRemote "https://ids.lib.harvard.edu/ids/view/17386628" }}
-<figure>
-  <img
-    src="{{ .RelPermalink }}"
-    alt="Homosassa Jungle by Winslow Homer"
-  />
-  <figcaption>
-    <a href="https://harvardartmuseums.org/collections/object/306835">Homosassa Jungle by Winslow Homer</a>
-    <a href="/blog/fog-of-war">(From /blog/fog-of-war)</a>
-  </figcaption>
-</figure>
-{{ end }}
+{{/* A poor man's JSON */}}
+{{ $images := slice
+  (dict
+    "imageURL" "https://www.artic.edu/iiif/2/b8ca5039-1d0c-648d-ad46-838ecea3e14c/full/1686,/0/default.jpg"
+    "detailsURL" "https://www.artic.edu/artworks/144467/farm-near-duivendrecht"
+    "caption" "Farm near Duivendrecht by Piet Mondrian"
+    "siteLocation" "/now"
+    "siteInfo" "(From /now)"
+  )
+  (dict
+    "imageURL" "https://ids.lib.harvard.edu/ids/view/17386628"
+    "detailsURL" "https://harvardartmuseums.org/collections/object/306835"
+    "caption" "Homosassa Jungle by Winslow Homer"
+    "siteLocation" "/blog/fog-of-war"
+    "siteInfo" "(From /blog/fog-of-war)"
+  )
+  (dict
+    "imageURL" "https://iiif.micr.io/uIpfV/full/%5E830,/0/default.webp"
+    "detailsURL" "https://www.rijksmuseum.nl/en/collection/object/Tokubei-running-through-a-street--7e5f432ba724707931197c90284c5867"
+    "caption" "Tokubei running through a street by Kunimori"
+    "siteLocation" "/blog/fog-of-war"
+    "siteInfo" "(From /blog/fog-of-war)"
+  )
+  (dict
+    "imageURL" "https://www.artic.edu/iiif/2/c09da1f4-09ff-04b5-6747-bfd54c3e71c4/full/1686,/0/default.jpg"
+    "detailsURL" "https://www.artic.edu/artworks/84458/a-merry-christmas"
+    "caption" "A Merry Christmas by Henri de Toulouse-Lautrec"
+    "siteLocation" "/now"
+    "siteInfo" "(Previously on /now)"
+  )
+  (dict
+    "imageURL" "https://ids.lib.harvard.edu/ids/view/20410755"
+    "detailsURL" "https://harvardartmuseums.org/collections/object/256726"
+    "caption" "Marsh Creek by Arthur Wesley Dow"
+    "siteLocation" "/now"
+    "siteInfo" "(Previously on /now)"
+  )
+  (dict
+    "imageURL" "https://mdl.artvee.com/sftb/935615il.jpg"
+    "detailsURL" "https://artvee.com/dl/ipswich-town-or-harbor-scene"
+    "caption" "Ipswich Town, or Harbor Scene by Arthur Wesley Dow"
+    "siteLocation" "/now"
+    "siteInfo" "(Previously on /now)"
+  )
+}}
 
-<hr>
-
-{{ with resources.GetRemote "https://iiif.micr.io/uIpfV/full/%5E830,/0/default.webp" }}
-<figure>
-  <img
-    src="{{ .RelPermalink}}"
-    alt="Tokubei running through a street by Kunimori"
-  />
-  <figcaption>
-    <a href="https://www.rijksmuseum.nl/en/collection/object/Tokubei-running-through-a-street--7e5f432ba724707931197c90284c5867?tab=data">Tokubei running through a street by Kunimori</a>
-    <a href="/blog/fog-of-war">(From /blog/fog-of-war)</a>
-  </figcaption>
-</figure>
-{{ end }}
-
-<hr>
-
-{{ with resources.GetRemote "https://www.artic.edu/iiif/2/c09da1f4-09ff-04b5-6747-bfd54c3e71c4/full/1686,/0/default.jpg" }}
-<figure>
-  <img
-    src="{{ .RelPermalink}}"
-    alt="A Merry Christmas by Henri de Toulouse-Lautrec"
-  />
-  <figcaption>
-    <a href="https://www.artic.edu/artworks/84458/a-merry-christmas">A Merry Christmas by Henri de Toulouse-Lautrec</a>
-    <a href="/now">(From /now)</a>
-  </figcaption>
-</figure>
-{{ end }}
-
-<hr>
-
-{{ with resources.GetRemote "https://ids.lib.harvard.edu/ids/view/20410755" }}
-<figure>
-  <img
-    src="{{ .RelPermalink }}"
-    alt="Marsh Creek by Arthur Wesley Dow"
-  />
-  <figcaption>
-    <a href="https://harvardartmuseums.org/collections/object/256726">Marsh Creek by Arthur Wesley Dow</a>
-    <a href="/now">(Previously on /now)</a>
-  </figcaption>
-</figure>
-{{ end }}
-
-<hr>
-
-{{ with resources.GetRemote "https://mdl.artvee.com/sftb/935615il.jpg" }}
-<figure>
-  <img
-    src="{{ .RelPermalink }}"
-    alt="Ipswich Town, or Harbor Scene by Arthur Wesley Dow"
-  />
-  <figcaption>
-    <a href="https://artvee.com/dl/ipswich-town-or-harbor-scene">Ipswich Town, or Harbor Scene by Arthur Wesley Dow</a>
-    <a href="/now">(Previously on /now)</a>
-  </figcaption>
-</figure>
-{{ end }}
-
+{{ range $images }}
+  {{ $image := resources.GetRemote .imageURL }}
+  <figure>
+    <img src="{{ $image.RelPermalink }}" alt="{{ .caption }}" />
+    <figcaption>
+      <a href="{{ .detailsURL }}">{{ .caption }}</a>
+      <a href="{{ .siteLocation }}">{{ .siteInfo }}</a>
+    </figcaption>
+  </figure>
+  {{ end }}
 {{ end }}
