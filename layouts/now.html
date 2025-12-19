@@ -20,14 +20,14 @@
 </p>
 
 {{ $imageURL := "https://img.artsmia.org/web_objects_cache/125000/300/80/125388/mia_8004717_800.jpg" }}
-{{ $imageReferenceLink := "https://collections.artsmia.org/art/125388/brook-in-winter-e-ambrose-webster" }}
+{{ $detailsURL := "https://collections.artsmia.org/art/125388/brook-in-winter-e-ambrose-webster" }}
 {{ $caption := "Brook in Winter by E. Ambrose Webster" }}
 
 {{ with resources.GetRemote $imageURL }}
 <figure>
   <img src="{{ .RelPermalink}}" alt="{{ $caption }}" />
   <figcaption>
-    <a href="{{ $imageReferenceLink }}">{{ $caption }}</a>
+    <a href="{{ $detailsURL }}">{{ $caption }}</a>
   </figcaption>
 </figure>
 {{ end }}
