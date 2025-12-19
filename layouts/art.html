@@ -42,13 +42,13 @@
 }}
 
 {{ range $images }}
-  {{ $image := resources.GetRemote .imageURL }}
-  <figure>
-    <img src="{{ $image.RelPermalink }}" alt="{{ .caption }}" />
-    <figcaption>
-      <a href="{{ .detailsURL }}">{{ .caption }}</a>
-      <a href="{{ .siteLocation }}">{{ .siteInfo }}</a>
-    </figcaption>
-  </figure>
-  {{ end }}
+<figure>
+  <img src="{{ .imageURL }}" alt="{{ .caption }}" />
+  <figcaption>
+    <a href="{{ .detailsURL }}">{{ .caption }}</a>
+    <a href="{{ .siteLocation }}">{{ .siteInfo }}</a>
+  </figcaption>
+</figure>
+{{ end }}
+
 {{ end }}

@@ -23,13 +23,11 @@
 {{ $detailsURL := "https://collections.artsmia.org/art/125388/brook-in-winter-e-ambrose-webster" }}
 {{ $caption := "Brook in Winter by E. Ambrose Webster" }}
 
-{{ with resources.GetRemote $imageURL }}
 <figure>
-  <img src="{{ .RelPermalink}}" alt="{{ $caption }}" />
+  <img src="{{ $imageURL }}" alt="{{ $caption }}" />
   <figcaption>
     <a href="{{ $detailsURL }}">{{ $caption }}</a>
   </figcaption>
 </figure>
-{{ end }}
 
 {{ end }}
