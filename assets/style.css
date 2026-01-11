@@ -217,8 +217,8 @@ ins {
 /* Make images easier to work with */
 img,
 picture {
-  width: 100%;
-  object-fit: scale-down;
+  max-width: 100%;
+  height: auto;
 }
 
 figure {
