@@ -26,6 +26,8 @@ But finally I landed on:
 :Inspect
 ```
 
+([neovim docs](https://neovim.io/doc/user/lua.html#%3AInspect%21))
+
 which prints both treesitter and semantic tokens,
 but in a much cleaner way than the two lua functions.
 
