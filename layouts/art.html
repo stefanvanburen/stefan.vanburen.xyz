@@ -2,7 +2,10 @@
 <h1>{{ .Title }}</h1>
 {{ .Content }}
 
-{{/* A poor man's JSON */}}
+{{/*
+A poor man's JSON.
+Safari adds the image size in the title bar.
+*/}}
 {{ $images := slice
   (dict
     "imageURL" "https://www.artic.edu/iiif/2/d1cda60c-c21d-9fbc-8195-4e7c3d6e9650/full/1686,/0/default.jpg"
@@ -10,6 +13,8 @@
     "caption" "The Winter Sun by George Gardner Symons"
     "siteLocation" "/now"
     "siteInfo" "(From /now)"
+    "width" 1686
+    "height" 1113
   )
   (dict
     "imageURL" "https://img.artsmia.org/web_objects_cache/125000/300/80/125388/mia_8004717_800.jpg"
@@ -17,6 +22,8 @@
     "caption" "Brook in Winter by E. Ambrose Webster"
     "siteLocation" "/now"
     "siteInfo" "(Previously on /now)"
+    "width" 800
+    "height" 602
   )
   (dict
     "imageURL" "https://www.artic.edu/iiif/2/b8ca5039-1d0c-648d-ad46-838ecea3e14c/full/1686,/0/default.jpg"
@@ -24,6 +31,8 @@
     "caption" "Farm near Duivendrecht by Piet Mondrian"
     "siteLocation" "/now"
     "siteInfo" "(Previously on /now)"
+    "width" 1686
+    "height" 1339
   )
   (dict
     "imageURL" "https://ids.lib.harvard.edu/ids/view/17386628"
@@ -31,6 +40,8 @@
     "caption" "Homosassa Jungle by Winslow Homer"
     "siteLocation" "/blog/fog-of-war"
     "siteInfo" "(From /blog/fog-of-war)"
+    "width" 1024
+    "height" 661
   )
   (dict
     "imageURL" "https://iiif.micr.io/uIpfV/full/%5E830,/0/default.webp"
@@ -38,6 +49,8 @@
     "caption" "Tokubei running through a street by Kunimori"
     "siteLocation" "/blog/fog-of-war"
     "siteInfo" "(From /blog/fog-of-war)"
+    "width" 830
+    "height" 1152
   )
   (dict
     "imageURL" "https://www.artic.edu/iiif/2/c09da1f4-09ff-04b5-6747-bfd54c3e71c4/full/1686,/0/default.jpg"
@@ -45,6 +58,8 @@
     "caption" "A Merry Christmas by Henri de Toulouse-Lautrec"
     "siteLocation" "/now"
     "siteInfo" "(Previously on /now)"
+    "width" 1686
+    "height" 2206
   )
   (dict
     "imageURL" "https://ids.lib.harvard.edu/ids/view/20410755"
@@ -52,6 +67,8 @@
     "caption" "Marsh Creek by Arthur Wesley Dow"
     "siteLocation" "/now"
     "siteInfo" "(Previously on /now)"
+    "width" 1024
+    "height" 670
   )
   (dict
     "imageURL" "https://mdl.artvee.com/sftb/935615il.jpg"
@@ -59,12 +76,20 @@
     "caption" "Ipswich Town, or Harbor Scene by Arthur Wesley Dow"
     "siteLocation" "/now"
     "siteInfo" "(Previously on /now)"
+    "width" 800
+    "height" 1546
   )
 }}
 
 {{ range $images }}
 <figure>
-  <img src="{{ .imageURL }}" alt="{{ .caption }}" />
+  <img
+    src="{{ .imageURL }}"
+    alt="{{ .caption }}"
+    width="{{ .width }}"
+    height="{{ .height }}"
+    loading=lazy
+  />
   <figcaption>
     <a href="{{ .detailsURL }}">{{ .caption }}</a>
     <a href="{{ .siteLocation }}">{{ .siteInfo }}</a>
