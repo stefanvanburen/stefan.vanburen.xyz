@@ -1,37 +1,37 @@
 {{ define "main" }}
-<h1>Stefan VanBuren</h1>
-{{ .Content }}
 
+{{ $emoji := "👹" }}
 {{ with $month := now.Format "01" }}
 
 {{ if eq $month "01" }}
-🥶
+{{ $emoji = "🥶" }}
 {{ else if eq $month "02" }}
-☃️
+{{ $emoji = "☃️" }}
 {{ else if eq $month "03" }}
-🎂
+{{ $emoji = "🎂" }}
 {{ else if eq $month "04" }}
-🌧️
+{{ $emoji = "🌧️" }}
 {{ else if eq $month "05" }}
-🌺
+{{ $emoji = "🌺" }}
 {{ else if eq $month "06" }}
-🏖️
+{{ $emoji = "🏖️" }}
 {{ else if eq $month "07" }}
-🌞
+{{ $emoji = "🌞" }}
 {{ else if eq $month "08" }}
-🐕
+{{ $emoji = "🐕" }}
 {{ else if eq $month "09" }}
-🍂
+{{ $emoji = "🍂" }}
 {{ else if eq $month "10" }}
-🎃
+{{ $emoji = "🎃" }}
 {{ else if eq $month "11" }}
-🦃
+{{ $emoji = "🦃" }}
 {{ else if eq $month "12" }}
-🎄
-{{ else }}
-👹
+{{ $emoji = "🎄" }}
 {{ end }}
 
 {{ end }}
+
+<h1>Stefan VanBuren {{ $emoji }}</h1>
+{{ .Content }}
 
 {{ end }}
