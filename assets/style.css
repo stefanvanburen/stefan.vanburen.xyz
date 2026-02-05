@@ -92,8 +92,9 @@ kbd {
   font-family: ui-monospace, monospace;
 }
 
-/* <code> directly within paragraphs */
-p>code {
+/* <code> directly within paragraphs or description terms */
+p>code,
+dt>code {
   border: 1px dotted;
 
   /* ensure the entire <code></code> is on the same line */
@@ -247,4 +248,13 @@ figcaption>a {
 
 figure:not(:last-child) {
   margin-bottom: 2em;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: [dt] max-content [dd] 1fr;
+}
+
+dt {
+  font-weight: 700;
 }
