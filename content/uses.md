@@ -43,7 +43,7 @@ For the most part, my terminal software is configured in [my dotfiles](https://g
 
 <dl>
   <dt>Mail Client</dt>
-  <dd>Mail.app</dd>
+  <dd><a href="https://en.wikipedia.org/wiki/Mail_(application)">Mail.app</a></dd>
   <dt>Mail Server</dt>
   <dd><a href="https://migadu.com">Migadu</a></dd>
   <dt>Notes</dt>
@@ -51,35 +51,35 @@ For the most part, my terminal software is configured in [my dotfiles](https://g
   <dt>To-Do</dt>
   <dd><a href="https://culturedcode.com/things/">Things</a></dd>
   <dt>iPhone Photo Shooting</dt>
-  <dd>Camera.app</dd>
+  <dd><a href="https://en.wikipedia.org/wiki/IPhone_camera">Camera.app</a></dd>
   <dt>Photo Management</dt>
-  <dd>Photos.app</dd>
+  <dd><a href="https://en.wikipedia.org/wiki/Photos_(software)">Photos.app</a></dd>
   <dt>Calendar</dt>
-  <dd>Calendar.app</dd>
+  <dd><a href="https://en.wikipedia.org/wiki/Calendar_(Apple)">Calendar.app</a></dd>
   <dt>Cloud File Storage</dt>
-  <dd>iCloud Drive</dd>
+  <dd><a href="https://en.wikipedia.org/wiki/ICloud">iCloud Drive</a></dd>
   <dt>RSS</dt>
   <dd><a href="https://netnewswire.com">NetNewsWire</a> (client) + <a href="https://feedbin.com">Feedbin</a> (server)</dd>
   <dt>Contacts</dt>
   <dd><a href="https://flexibits.com/cardhop">Cardhop</a></dd>
   <dt>Browser</dt>
-  <dd>Safari</dd>
+  <dd><a href="https://en.wikipedia.org/wiki/Safari_(web_browser)">Safari</a></dd>
   <dt>Chat</dt>
-  <dd>Messages</dd>
+  <dd><a href="https://en.wikipedia.org/wiki/Messages_(application)">Messages</a></dd>
   <dt>Bookmarks</dt>
   <dd><a href="https://pinboard.in">Pinboard</a></dd>
   <dt>Read It Later</dt>
   <dd><a href="https://www.instapaper.com">Instapaper</a>; transitioning back from Reeder's read-it-later</dd>
   <dt>Shopping Lists</dt>
-  <dd>Grocery</dd>
+  <dd><a href="https://apps.apple.com/app/grocery-smart-shopping-list/id1195676848">Grocery</a></dd>
   <dt>Meal Planning</dt>
   <dd><a href="https://getdrafts.com">Drafts</a> / <a href="https://mela.recipes">Mela</a></dd>
   <dt>News</dt>
   <dd>Hacker News / lobste.rs / text.npr.org</dd>
   <dt>Music</dt>
-  <dd>Spotify / <a href="https://brushedtype.co/doppler/">Doppler</a></dd>
+  <dd><a href="https://www.spotify.com">Spotify</a> / <a href="https://brushedtype.co/doppler/">Doppler</a></dd>
   <dt>Podcasts</dt>
-  <dd>Overcast</dd>
+  <dd><a href="https://overcast.fm">Overcast</a></dd>
   <dt>Password Management</dt>
-  <dd>1Password</dd>
+  <dd><a href="https://1password.com">1Password</a></dd>
 </dl>
