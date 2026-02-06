@@ -257,4 +257,10 @@ dl {
 
 dt {
   font-weight: 700;
+  grid-column: dt;
+}
+
+dd {
+  grid-column: dd;
+  text-align: right;
 }
