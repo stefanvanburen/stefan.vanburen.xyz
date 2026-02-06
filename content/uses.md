@@ -45,6 +45,7 @@ For the most part, my terminal software is configured in [my dotfiles](https://g
   <dd><a href="https://culturedcode.com/things/">Things</a></dd>
   <dt>iPhone Photo Shooting</dt>
   <dd><a href="https://en.wikipedia.org/wiki/IPhone_camera">Camera.app</a></dd>
+  <dd><a href="https://notbor.ing/product/camera">!Camera</a></dd>
   <dt>Photo Management</dt>
   <dd><a href="https://en.wikipedia.org/wiki/Photos_(software)">Photos.app</a></dd>
   <dt>Calendar</dt>
@@ -61,11 +62,11 @@ For the most part, my terminal software is configured in [my dotfiles](https://g
   <dt>Chat</dt>
   <dd><a href="https://en.wikipedia.org/wiki/Messages_(application)">Messages</a></dd>
   <dt>Bookmarks</dt>
-  <dd><a href="https://pinboard.in">Pinboard</a></dd>
+  <dd><a href="https://anybox.app">Anybox</a></dd>
   <dt>Read It Later</dt>
-  <dd><a href="https://www.instapaper.com">Instapaper</a>; transitioning back from Reeder's read-it-later</dd>
+  <dd><a href="https://goodlinks.app">GoodLinks</a></dd>
   <dt>Shopping Lists</dt>
-  <dd><a href="https://apps.apple.com/app/grocery-smart-shopping-list/id1195676848">Grocery</a></dd>
+  <dd><a href="https://getdrafts.com">Drafts</a></dd>
   <dt>Meal Planning</dt>
   <dd><a href="https://getdrafts.com">Drafts</a></dd>
   <dd><a href="https://mela.recipes">Mela</a></dd>
@@ -74,10 +75,12 @@ For the most part, my terminal software is configured in [my dotfiles](https://g
   <dd><a href="https://lobste.rs">Lobsters</a></dd>
   <dd><a href="https://text.npr.org">text.npr.org</a></dd>
   <dt>Music</dt>
-  <dd><a href="https://www.spotify.com">Spotify</a></dd>
+  <dd><a href="https://longplay.rocks">Longplay</a></dd>
+  <dd><a href="https://doppi.app">Doppi</a></dd>
   <dd><a href="https://brushedtype.co/doppler/">Doppler</a></dd>
+  <dd><a href="https://www.spotify.com">Spotify</a></dd>
   <dt>Podcasts</dt>
   <dd><a href="https://overcast.fm">Overcast</a></dd>
   <dt>Password Management</dt>
-  <dd><a href="https://1password.com">1Password</a></dd>
+  <dd><a href="https://support.apple.com/en-us/120758">Passwords.app</a></dd>
 </dl>
