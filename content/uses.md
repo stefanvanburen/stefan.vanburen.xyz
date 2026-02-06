@@ -11,13 +11,9 @@ description: My personal computing environment.
   <dt>Monitor</dt>
   <dd><a href="https://www.apple.com/studio-display/">Apple Studio Display</a></dd>
   <dt>Keyboard</dt>
-  <dd>
-    <a href="https://kinesis-ergo.com/keyboards/advantage2-keyboard/">Kinesis Advantage 2</a>
-    /
-    <a href="https://www.hhkeyboard.com/uk/products/pro2">HHKB Professional 2</a>
-    /
-    <a href="https://shop.keyboard.io/products/keyboardio-atreus">Keyboardio Atreus</a>
-  </dd>
+  <dd><a href="https://kinesis-ergo.com/keyboards/advantage2-keyboard/">Kinesis Advantage 2</a></dd>
+  <dd><a href="https://www.hhkeyboard.com/uk/products/pro2">HHKB Professional 2</a></dd>
+  <dd><a href="https://shop.keyboard.io/products/keyboardio-atreus">Keyboardio Atreus</a></dd>
   <dt>Mouse</dt>
   <dd>Logitech MX Master 3 for Mac</dd>
 </dl>
@@ -32,11 +28,8 @@ For the most part, my terminal software is configured in [my dotfiles](https://g
   <dt>shell</dt>
   <dd><a href="https://fishshell.com">fish</a></dd>
   <dt>terminal emulator</dt>
-  <dd>
-    <a href="https://sw.kovidgoyal.net/kitty/">kitty</a>
-    /
-    <a href="https://ghostty.org/">ghostty</a>
-  </dd>
+  <dd><a href="https://sw.kovidgoyal.net/kitty/">kitty</a></dd>
+  <dd><a href="https://ghostty.org/">ghostty</a></dd>
 </dl>
 
 ### Applications
@@ -59,7 +52,8 @@ For the most part, my terminal software is configured in [my dotfiles](https://g
   <dt>Cloud File Storage</dt>
   <dd><a href="https://en.wikipedia.org/wiki/ICloud">iCloud Drive</a></dd>
   <dt>RSS</dt>
-  <dd><a href="https://netnewswire.com">NetNewsWire</a> (client) + <a href="https://feedbin.com">Feedbin</a> (server)</dd>
+  <dd><a href="https://netnewswire.com">NetNewsWire</a> (client)</dd>
+  <dd><a href="https://feedbin.com">Feedbin</a> (server)</dd>
   <dt>Contacts</dt>
   <dd><a href="https://flexibits.com/cardhop">Cardhop</a></dd>
   <dt>Browser</dt>
@@ -73,11 +67,13 @@ For the most part, my terminal software is configured in [my dotfiles](https://g
   <dt>Shopping Lists</dt>
   <dd><a href="https://apps.apple.com/app/grocery-smart-shopping-list/id1195676848">Grocery</a></dd>
   <dt>Meal Planning</dt>
-  <dd><a href="https://getdrafts.com">Drafts</a> / <a href="https://mela.recipes">Mela</a></dd>
+  <dd><a href="https://getdrafts.com">Drafts</a></dd>
+  <dd><a href="https://mela.recipes">Mela</a></dd>
   <dt>News</dt>
   <dd>Hacker News / lobste.rs / text.npr.org</dd>
   <dt>Music</dt>
-  <dd><a href="https://www.spotify.com">Spotify</a> / <a href="https://brushedtype.co/doppler/">Doppler</a></dd>
+  <dd><a href="https://www.spotify.com">Spotify</a></dd>
+  <dd><a href="https://brushedtype.co/doppler/">Doppler</a></dd>
   <dt>Podcasts</dt>
   <dd><a href="https://overcast.fm">Overcast</a></dd>
   <dt>Password Management</dt>
