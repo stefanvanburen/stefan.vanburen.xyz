@@ -70,7 +70,9 @@ For the most part, my terminal software is configured in [my dotfiles](https://g
   <dd><a href="https://getdrafts.com">Drafts</a></dd>
   <dd><a href="https://mela.recipes">Mela</a></dd>
   <dt>News</dt>
-  <dd>Hacker News / lobste.rs / text.npr.org</dd>
+  <dd><a href="https://hcker.news">Hacker News</a></dd>
+  <dd><a href="https://lobste.rs">Lobsters</a></dd>
+  <dd><a href="https://text.npr.org">text.npr.org</a></dd>
   <dt>Music</dt>
   <dd><a href="https://www.spotify.com">Spotify</a></dd>
   <dd><a href="https://brushedtype.co/doppler/">Doppler</a></dd>
