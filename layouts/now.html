@@ -22,9 +22,17 @@
 {{ $imageURL := "https://www.artic.edu/iiif/2/d1cda60c-c21d-9fbc-8195-4e7c3d6e9650/full/1686,/0/default.jpg" }}
 {{ $detailsURL := "https://www.artic.edu/artworks/64476/the-winter-sun" }}
 {{ $caption := "The Winter Sun by George Gardner Symons" }}
+{{ $width := 1686 }}
+{{ $height := 1113 }}
 
 <figure>
-  <img src="{{ $imageURL }}" alt="{{ $caption }}" />
+  <img
+    src="{{ $imageURL }}"
+    alt="{{ $caption }}"
+    width="{{ $width }}"
+    height="{{ $height }}"
+    loading=lazy
+  />
   <figcaption>
     <a href="{{ $detailsURL }}">{{ $caption }}</a>
   </figcaption>
