@@ -16,7 +16,7 @@ I've included a "gallery" of the art I've hot-linked to at [/art](/art).
 The design of this site is intentionally sparse, in an effort to focus on content.
 The site has no JavaScript on any pages, and has a single, very simple [stylesheet](https://git.sr.ht/~svbn/stefan.vanburen.xyz/tree/main/item/assets/style.css).
 
-The body font is your system's sans-serif font, and for the monospaced bits, your system's monospaced font.
+The body font uses the [Modern Font Stacks transitional serif stack](https://github.com/system-fonts/modern-font-stacks?tab=readme-ov-file#transitional), headings use the [Modern Font Stacks system-ui stack](https://github.com/system-fonts/modern-font-stacks?tab=readme-ov-file#system-ui), and for the monospaced bits, your system's monospaced font.
 I'm deliberately avoiding web fonts for the sake of site speed and page size.
 If something looks off, [let me know](mailto:stefan@vanburen.xyz)!
 

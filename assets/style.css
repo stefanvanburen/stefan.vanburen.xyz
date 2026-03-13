@@ -19,8 +19,8 @@ body {
   /* https://practicaltypography.com/line-spacing.html */
   line-height: 1.35;
 
-  /* https://github.com/system-fonts/modern-font-stacks#system-ui */
-  font-family: system-ui, sans-serif;
+  /* Modern Font Stacks transitional serif stack: https://github.com/system-fonts/modern-font-stacks?tab=readme-ov-file#transitional */
+  font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
 
   display: flex;
   flex-direction: column;
@@ -77,6 +77,8 @@ h3,
 h4,
 h5,
 h6 {
+  /* Modern Font Stacks system-ui stack: https://github.com/system-fonts/modern-font-stacks?tab=readme-ov-file#system-ui */
+  font-family: system-ui, sans-serif;
   text-wrap: balance;
 }
 
