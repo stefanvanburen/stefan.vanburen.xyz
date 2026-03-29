@@ -4,9 +4,6 @@ description: What I'm up to, now.
 layout: now
 ---
 
-Spring is springing.
-Wood needs burning,
-gardens need clearing,
-snow is melting. Finally.
-
-Finally back out to the great outdoors.
+Yard work calls as greens pop up in the garden;
+birthday month draws to a close.
+Lovely!
