@@ -1,7 +1,8 @@
+@import 'hugo:vars';
+
 :root {
   color-scheme: light dark;
   --grey: oklch(57% 0 0);
-  /* Set in ../layouts/_partials/head.html based on the month of the build. */
   --accent-color: light-dark(var(--color-light), var(--color-dark));
   /* Use black for printed text. */
   --black: black;
