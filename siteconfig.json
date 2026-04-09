@@ -12,6 +12,12 @@
       "options": {
         "cacheControl": "max-age=7200"
       }
+    },
+    {
+      "glob": "favicon.svg",
+      "options": {
+        "cacheControl": "max-age=86400"
+      }
     }
   ]
 }
