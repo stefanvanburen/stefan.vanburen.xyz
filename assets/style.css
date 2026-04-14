@@ -69,6 +69,30 @@ h1 {
   }
 }
 
+h3,
+h4,
+h5,
+h6 {
+  color: var(--accent-color);
+
+  @media print {
+    color: var(--black);
+  }
+}
+
+h2 {
+  color: var(--accent-color);
+  text-shadow: var(--shadow-light-half);
+
+  @media (prefers-color-scheme: dark) {
+    text-shadow: var(--shadow-dark-half);
+  }
+
+  @media print {
+    color: var(--black);
+  }
+}
+
 h1,
 h2,
 h3,
@@ -207,14 +231,6 @@ blockquote {
   font-size: small;
 }
 
-.text-grey {
-  color: var(--grey);
-
-  @media print {
-    color: var(--black);
-  }
-}
-
 .mr-1 {
   margin-right: 0.5em;
 }
@@ -242,7 +258,6 @@ figcaption {
 
 figcaption>a {
   font-size: small;
-  color: var(--grey);
   text-wrap: balance;
 }
 

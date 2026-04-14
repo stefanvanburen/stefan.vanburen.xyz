@@ -13,10 +13,10 @@
 
 {{/* Ensure the inline time element is separate from an ending inline element */}}
 <div>
-  <time
-    class="text-sm text-grey"
+  <i><time
+    class="text-sm"
     datetime={{ .Date.Format "2006-01-02" }}
-  >{{ .Date.Format "January 2, 2006" }}</time>
+  >{{ .Date.Format "January 2, 2006" }}</time></i>
 </div>
 
 {{ end }}

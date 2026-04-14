@@ -21,39 +21,51 @@ Based on the builtin colorschemes from mini.hues:
 {{ $day := now.Day }}
 {{ $colorLight := "" }}
 {{ $shadowLight := "" }}
+{{ $shadowLightHalf := "" }}
 {{ $colorDark := "" }}
 {{ $shadowDark := "" }}
+{{ $shadowDarkHalf := "" }}
 {{ if (or (and (eq $month "11") (ge $day 8)) (eq $month "12") (eq $month "01") (and (eq $month "02") (lt $day 4))) }}
   {{/* winter; purple -> green */}}
   {{ $colorLight = "#014772" }}
   {{ $shadowLight = "2px 2px #ffb3f6, 4px 4px #beb3ff, 6px 6px #90ceff, 8px 8px #6af9ff, 10px 10px #83ffb3" }}
+  {{ $shadowLightHalf = "2px 2px #ffb3f6, 4px 4px #beb3ff" }}
   {{ $colorDark = "#b3daf9" }}
   {{ $shadowDark = "2px 2px #371134, 4px 4px #211a46, 6px 6px #00324f, 8px 8px #004c4e, 10px 10px #003415" }}
+  {{ $shadowDarkHalf = "2px 2px #371134, 4px 4px #211a46" }}
 {{ else if (or (and (eq $month "02") (ge $day 4)) (eq $month "03") (eq $month "04") (and (eq $month "05") (lt $day 6))) }}
   {{/* spring; green -> red */}}
   {{ $colorLight = "#2e5e00" }}
   {{ $shadowLight = "2px 2px #80ffb8, 4px 4px #e6ed62, 6px 6px #ffc688, 8px 8px #ffaaa7" }}
+  {{ $shadowLightHalf = "2px 2px #80ffb8, 4px 4px #e6ed62" }}
   {{ $colorDark = "#bee2ad" }}
   {{ $shadowDark = "2px 2px #00381d, 4px 4px #373700, 6px 6px #492900, 8px 8px #410d12" }}
+  {{ $shadowDarkHalf = "2px 2px #00381d, 4px 4px #373700" }}
 {{ else if (or (and (eq $month "05") (ge $day 6)) (eq $month "06") (eq $month "07") (and (eq $month "08") (lt $day 8))) }}
   {{/* summer; red -> green */}}
   {{ $colorLight = "#804e00" }}
   {{ $shadowLight = "2px 2px #ffb2ee, 4px 4px #ffaba5, 6px 6px #ffc888, 8px 8px #e3ee65" }}
+  {{ $shadowLightHalf = "2px 2px #ffb2ee, 4px 4px #ffaba5" }}
   {{ $colorDark = "#f6cc9b" }}
   {{ $shadowDark = "2px 2px #3a0f2e, 4px 4px #410d0c, 6px 6px #492c00, 8px 8px #313600" }}
+  {{ $shadowDarkHalf = "2px 2px #3a0f2e, 4px 4px #410d0c" }}
 {{ else if (or (and (eq $month "08") (ge $day 8)) (eq $month "09") (eq $month "10") (and (eq $month "11") (lt $day 8))) }}
   {{/* autumn; orange, red, blue, purple */}}
   {{ $colorLight = "#431256" }}
   {{ $shadowLight = "2px 2px #ffaba1, 4px 4px #ffb0e9, 6px 6px #92c8ff, 8px 8px #cab3ff" }}
+  {{ $shadowLightHalf = "2px 2px #ffaba1, 4px 4px #ffb0e9" }}
   {{ $colorDark = "#e4caf1" }}
   {{ $shadowDark = "2px 2px #410d0d, 4px 4px #3a0f2f, 6px 6px #00284a, 8px 8px #261844" }}
+  {{ $shadowDarkHalf = "2px 2px #410d0d, 4px 4px #3a0f2f" }}
 {{ end }}
 
 {{ $vars := dict
   "color-light" $colorLight
   "shadow-light" $shadowLight
+  "shadow-light-half" $shadowLightHalf
   "color-dark" $colorDark
   "shadow-dark" $shadowDark
+  "shadow-dark-half" $shadowDarkHalf
 }}
 
 <meta name="theme-color" content="{{ $colorLight }}" media="(prefers-color-scheme: light)" />
