@@ -1,4 +1,4 @@
-# rumdl configuration file
+# https://rumdl.dev/global-settings/
 
 [global]
 disable = [
@@ -8,3 +8,6 @@ disable = [
 
 [MD035]
 style = "* * *"
+
+[per-file-ignores]
+"content/**/*.md" = ["MD057"]
