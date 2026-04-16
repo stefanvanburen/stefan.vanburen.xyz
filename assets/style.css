@@ -130,13 +130,17 @@ li>code {
 }
 
 a {
-  color: CanvasText;
+  color: var(--accent-color);
   text-underline-offset: 0.2em;
   text-decoration-thickness: 1px;
   text-decoration-color: oklch(from currentColor l c h / 50%);
 
   @media print {
     color: var(--black);
+  }
+
+  &:visited {
+    color: CanvasText;
   }
 
   &:hover {
