@@ -8,6 +8,3 @@ disable = [
 
 [MD035]
 style = "* * *"
-
-[per-file-ignores]
-"content/**/*.md" = ["MD057"]

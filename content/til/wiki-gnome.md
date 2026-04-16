@@ -11,6 +11,6 @@ TIL about [WikiGnomes][1]:
 
 Some of the most valuable work can be the tiny changes that leave things in a better place than they were found.
 
-Also, sounds a little like [prutsen](../../blog/prutsen).
+Also, sounds a little like [prutsen](/blog/prutsen).
 
 [1]: https://en.m.wikipedia.org/wiki/Wikipedia:WikiGnome
