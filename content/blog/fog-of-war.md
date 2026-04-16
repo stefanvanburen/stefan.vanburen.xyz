@@ -3,6 +3,7 @@ title: "Fog of War"
 date: 2025-11-01T19:45:36-04:00
 draft: false
 ---
+
 Growing up playing World of Warcraft (WoW)[^1], I became familiar with the concept of
 ["Fog of War"][1] — that is, areas of the world that your character hadn't visited.
 Once you moved close enough to a certain area on the map, the fog would "lift", and that

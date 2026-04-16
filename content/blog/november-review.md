@@ -3,6 +3,7 @@ title: "November Review"
 date: 2022-12-02T12:08:30-05:00
 draft: false
 ---
+
 A quick retrospective on my [November Goals](/blog/november-goals) post:
 
 > Run 80 miles

@@ -3,6 +3,7 @@ title: "November Goals"
 date: 2022-10-28T20:00:30-04:00
 draft: false
 ---
+
 Setting some November goals a little early:
 
 1. Run 80 miles

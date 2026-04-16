@@ -3,6 +3,7 @@ title: "Smart Speed"
 date: 2023-12-30T18:00:27-05:00
 draft: false
 ---
+
 My [Overcast][overcast] settings screen shows the following:
 
 > Smart Speed has saved you an extra 949 hours beyond speed adjustments alone.

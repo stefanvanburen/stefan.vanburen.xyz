@@ -3,6 +3,7 @@ title: "Neovim :InspectTree Tree-sitter"
 date: 2025-09-10T19:50:36-04:00
 draft: false
 ---
+
 I had assumed that to interact with Tree-sitter in Neovim,
 you still needed to use the utilities from [nvim-treesitter][1].
 Apparently that's not the case ---

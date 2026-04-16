@@ -3,6 +3,7 @@ title: "Wrapping arrays in jq"
 date: 2025-08-20T08:55:08-04:00
 draft: false
 ---
+
 Riffing on [Tom MacWright's "Using super" post][1] from yesterday,
 I saw the post and immediately thought of using [`jq`][2].
 

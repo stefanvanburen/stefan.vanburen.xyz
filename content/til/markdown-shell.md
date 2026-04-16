@@ -3,6 +3,7 @@ title: Shell in Markdown
 date: "2022-01-28T16:23:20-05:00"
 draft: false
 ---
+
 For a long time,
 I've used `commandline` as the name for the syntax of code fences in markdown whenever I've wanted to denote a shell command or session.
 

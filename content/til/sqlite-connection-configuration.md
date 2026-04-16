@@ -3,6 +3,7 @@ title: "SQLite Connection Configuration"
 date: 2022-04-02T10:54:44-04:00
 draft: false
 ---
+
 These notes are basically cribbed from Ben Johnson's excellent "Building Production Applications Using Go & SQLite" GopherCon talk,
 specifically the ["Configuring SQLite" section](https://youtu.be/XcAYkriuQ1o?t=430).
 
