@@ -1,35 +1,23 @@
 {{ define "main" }}
 
-{{ $emoji := "👹" }}
-{{ with $month := now.Format "01" }}
+{{/* Monthly emojis - add more to each month's slice for variety! */}}
+{{ $emojis := slice
+  (slice "🥶" "❄️" "🧊" "⛷️" "🧣" "🎿" "🐧")
+  (slice "☃️" "💕" "🌨️" "💝" "💌" "💘" "🌹")
+  (slice "🎂" "🌱" "🪻" "☘️" "🪁" "🐑")
+  (slice "🌧️" "🌷" "🐣" "🌈" "🌂" "🐰")
+  (slice "🌺" "🌸" "🐝" "🌼" "🦋" "🐞" "💐")
+  (slice "🏖️" "☀️" "🌻" "🍦" "🌊" "🐚")
+  (slice "🌞" "🎆" "🏊" "🎇" "🌭")
+  (slice "🐕" "🌴" "😎" "🌅" "⛱️")
+  (slice "🌾" "🌙" "🍄" "🦔")
+  (slice "🎃" "👻" "🍁" "🦇" "🕷️" "🕸️" "💀")
+  (slice "🦃" "🥧" "🍽️" "🥮" "🌰" "🥖")
+  (slice "🎄" "🎁" "⛄" "🕯️" "🎅" "🦌" "🛷" "🌟" "🔔" "🍪")
+}}
 
-{{ if eq $month "01" }}
-{{ $emoji = "🥶" }}
-{{ else if eq $month "02" }}
-{{ $emoji = "☃️" }}
-{{ else if eq $month "03" }}
-{{ $emoji = "🎂" }}
-{{ else if eq $month "04" }}
-{{ $emoji = "🌧️" }}
-{{ else if eq $month "05" }}
-{{ $emoji = "🌺" }}
-{{ else if eq $month "06" }}
-{{ $emoji = "🏖️" }}
-{{ else if eq $month "07" }}
-{{ $emoji = "🌞" }}
-{{ else if eq $month "08" }}
-{{ $emoji = "🐕" }}
-{{ else if eq $month "09" }}
-{{ $emoji = "🍂" }}
-{{ else if eq $month "10" }}
-{{ $emoji = "🎃" }}
-{{ else if eq $month "11" }}
-{{ $emoji = "🦃" }}
-{{ else if eq $month "12" }}
-{{ $emoji = "🎄" }}
-{{ end }}
-
-{{ end }}
+{{ $monthEmojis := index $emojis (sub (int (now.Format "1")) 1) }}
+{{ $emoji := index (shuffle $monthEmojis) 0 }}
 
 <h1>Stefan VanBuren {{ $emoji }}</h1>
 {{ .Content }}
