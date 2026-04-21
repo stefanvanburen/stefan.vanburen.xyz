@@ -187,8 +187,11 @@ ul {
 hr {
   border: none;
   text-align: center;
+  margin-block: 1lh;
 
   &::before {
+    font-size: 1.2em;
+    letter-spacing: 0.5em;
     color: var(--accent-color);
     text-shadow: var(--shadow-light);
 
