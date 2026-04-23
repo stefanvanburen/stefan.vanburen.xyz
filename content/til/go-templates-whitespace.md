@@ -4,7 +4,7 @@ date: "2021-08-31T18:41:20-04:00"
 draft: false
 ---
 
-When writing HTML templates in Go, knowing about the [whitespace modifiers](https://pkg.go.dev/text/template#hdr-Text_and_spaces) is crucial for keeping both the templates and the output HTML looking good.
+When writing <abbr title="HyperText Markup Language">HTML</abbr> templates in Go, knowing about the [whitespace modifiers](https://pkg.go.dev/text/template#hdr-Text_and_spaces) is crucial for keeping both the templates and the output <abbr title="HyperText Markup Language">HTML</abbr> looking good.
 
 For example, if you had the following template, with `.SomeText` being `"foo"` and `.Something` being `true`:
 
@@ -21,7 +21,7 @@ For example, if you had the following template, with `.SomeText` being `"foo"` a
 </a>
 ```
 
-The actual output HTML would look something like:
+The actual output <abbr title="HyperText Markup Language">HTML</abbr> would look something like:
 
 ```html
 <a href="/posts"><span> Text </span> foo </a>
@@ -50,4 +50,4 @@ to get
 <a href="/posts"><span>Text</span>foo</a>
 ```
 
-Which makes both the source code and HTML nice and neat.
+Which makes both the source code and <abbr title="HyperText Markup Language">HTML</abbr> nice and neat.

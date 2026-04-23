@@ -6,7 +6,7 @@ draft: false
 
 At $work, I've been writing a web application that is server-side rendered via Go's `html/template` package.
 
-I've been writing a toy application in Clojure with a similar approach: server rendered HTML with [Tailwind](https://tailwindcss.com) for styling and [AlpineJS](https://github.com/alpinejs/alpine) for a hint of interactivity.
+I've been writing a toy application in Clojure with a similar approach: server rendered <abbr title="HyperText Markup Language">HTML</abbr> with [Tailwind](https://tailwindcss.com) for styling and [AlpineJS](https://github.com/alpinejs/alpine) for a hint of interactivity.
 
 With the introduction of Go's new `embed` package in 1.16, I was tempted to port the application to Go.
 I was imagining being able to embed the templates and assets in a static binary.
@@ -16,11 +16,11 @@ But I hesitated as soon as I reached the portion of rewriting my templates in Go
 
 ## Hiccup
 
-[Hiccup](https://github.com/weavejester/hiccup) is a library for writing HTML in Clojure.
-Writing HTML in Hiccup is a *dream*:
+[Hiccup](https://github.com/weavejester/hiccup) is a library for writing <abbr title="HyperText Markup Language">HTML</abbr> in Clojure.
+Writing <abbr title="HyperText Markup Language">HTML</abbr> in Hiccup is a *dream*:
 
-* Unlike HTML, Hiccup automatically closes tags.
-* Hiccup doesn't require that you remember the proper way to close an HTML element.
+* Unlike <abbr title="HyperText Markup Language">HTML</abbr>, Hiccup automatically closes tags.
+* Hiccup doesn't require that you remember the proper way to close an <abbr title="HyperText Markup Language">HTML</abbr> element.
 * Hiccup has shortcuts for adding an `id` or `class` attributes.
 
 And, more than anything, Hiccup is written **within** your regular Clojure functions, which makes it incredibly easy to interweave logic with your templates.
@@ -68,11 +68,11 @@ The beauty begins when you start to weave in the logic:
             :disabled disabled?}])
 ```
 
-In this way, Hiccup is similar to the JSX syntax while writing React — and this approach has been taken to the ClojureScript side via the [Reagent](https://github.com/reagent-project/reagent) library.
+In this way, Hiccup is similar to the <abbr title="JavaScript XML">JSX</abbr> syntax while writing React — and this approach has been taken to the ClojureScript side via the [Reagent](https://github.com/reagent-project/reagent) library.
 (A more thorough example of Reagent-style Hiccup code can be found in my [seven-guis](https://github.com/stefanvanburen/seven-guis/blob/main/src/app/main.cljs) project).
 
-And, when you pair Hiccup with [Parinfer](http://shaunlebron.github.io/parinfer/) + [Conjure](https://github.com/Olical/conjure), the DX is too good to pass up.
-While I love writing Go, the conciseness, simplicity and the REPL of Clojure have drawn me in.
+And, when you pair Hiccup with [Parinfer](http://shaunlebron.github.io/parinfer/) + [Conjure](https://github.com/Olical/conjure), the <abbr title="Developer Experience">DX</abbr> is too good to pass up.
+While I love writing Go, the conciseness, simplicity and the <abbr title="Read-Eval-Print Loop">REPL</abbr> of Clojure have drawn me in.
 It's magical.
 
 🪄

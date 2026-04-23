@@ -27,7 +27,7 @@ s := "test"
 fmt.Sprintf("%[1]s %[1]s", s) // => "test test"
 ```
 
-This came up today at $WORK while providing a table name to a constructed SQL query -
+This came up today at $WORK while providing a table name to a constructed <abbr title="Structured Query Language">SQL</abbr> query -
 the table name needed to be supplied multiple times in an upsert, so we could simply do:
 
 ```go

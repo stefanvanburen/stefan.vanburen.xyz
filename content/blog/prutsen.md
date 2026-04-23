@@ -9,7 +9,7 @@ In a lot of ways, I think it encompasses a lot of how I approach some of my comp
 
 For example, this website, at the time of writing, has [135 commits on it](https://git.sr.ht/~svbn/stefan.vanburen.xyz).
 With a total of five published posts, and most of my posts being written within a commit or two, much of the work being done on this site is cosmetic.
-For example, [tweaking CSS indentation](https://git.sr.ht/~svbn/stefan.vanburen.xyz/commit/6107cf3e0cbea2313179880abab3fd3050693a12) or [ensuring the RSS feed contains the entire content of the post](https://git.sr.ht/~svbn/stefan.vanburen.xyz/commit/12330139fc35f3d5289910bc9367b5abee8b5e12).
+For example, <a href="https://git.sr.ht/~svbn/stefan.vanburen.xyz/commit/6107cf3e0cbea2313179880abab3fd3050693a12">tweaking <abbr title="Cascading Style Sheets">CSS</abbr> indentation</a> or [ensuring the RSS feed contains the entire content of the post](https://git.sr.ht/~svbn/stefan.vanburen.xyz/commit/12330139fc35f3d5289910bc9367b5abee8b5e12).
 
 Likewise, my dotfiles sit at a [healthy 910 commits](https://github.com/stefanvanburen/dotfiles) currently.
 I recently went through a bit of a [dotfile purge](/blog/spring-cleaning) that added quite a few of those, but in general, tweaking my dotfiles has been a hobby for the better part of a decade.

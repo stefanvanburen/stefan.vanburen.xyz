@@ -6,7 +6,7 @@ draft: false
 
 neovim released v0.11.0 a little while back,
 and in the interest of using the defaults,
-I [removed some of my LSP-related keymaps][1] that are now [automatically mapped][2].
+I [removed some of my <abbr title="Language Server Protocol">LSP</abbr>-related keymaps][1] that are now [automatically mapped][2].
 These are listed at [`:help lsp-defaults`][3].
 
 [1]: https://github.com/stefanvanburen/dotfiles/commit/8f8ad882a1092c8c032b13e118efc960317759f4#diff-568ff9545a264b9c3d0daec0395b05bf4217c6448328e6f2e70b1ad55adcbd4eL533-R534

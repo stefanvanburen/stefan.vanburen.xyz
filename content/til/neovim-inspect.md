@@ -5,7 +5,7 @@ draft: false
 ---
 
 Yesterday, I was working on [improving `buf`'s lsp protobuf semantic tokens][1],
-and needed to test out how my changes were working in a real LSP client.
+and needed to test out how my changes were working in a real <abbr title="Language Server Protocol">LSP</abbr> client.
 
 I knew neovim had a couple of helper functions for inspecting the current position;
 first I tried:

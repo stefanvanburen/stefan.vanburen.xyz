@@ -35,7 +35,7 @@ I removed all the settings that were the default in neovim and did a lot of `:he
 I also dropped plugins that I used sparingly, some of the filetype specific autocommands, and the sectioning comments used for folding.
 I've added a few plugins back that I wasn't quite able to shake (notably, I tried to learn vim's builtin autocomplete commands, but found [deoplete](https://github.com/Shougo/deoplete.nvim) to be something I couldn't avoid using).
 
-## [XDG Base Dir](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html)
+## [<abbr title="Cross-Desktop Group">XDG</abbr> Base Dir](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html)
 
 Switching over to neovim meant that I could remove the hacks around neovim finding vim's configuration directory, and move everything to ~/.config.
 I could also leverage neovim's data dir for [storing my plugins](https://github.com/stefanvanburen/dotfiles/blob/f56b7bf67301f60785f7a7af1ced945d25b4d5c8/vim/init.vim#L24).

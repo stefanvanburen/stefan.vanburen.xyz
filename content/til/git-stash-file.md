@@ -9,7 +9,7 @@ but I've looked this up enough to warrant writing it down.
 
 I'm often working on some code,
 and come across something unrelated that I want to change.
-So I do --- but it really doesn't belong in this commit or PR/patch/etc.!
+So I do --- but it really doesn't belong in this commit or <abbr title="Pull Request">PR</abbr>/patch/etc.!
 
 (I've yet to put in the reps to understand [worktrees][] or [jujutsu][],
 which I'm assuming are the "real" answers here.)

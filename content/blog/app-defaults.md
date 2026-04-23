@@ -14,7 +14,7 @@ Inspired by <https://defaults.rknight.me>, here are my current defaults:
 * Photo Management: Photos.app
 * Calendar: Calendar.app
 * Cloud File Storage: iCloud Drive
-* RSS: [NetNewsWire](https://netnewswire.com) (client) + [Feedbin](https://feedbin.com) (server)
+* <abbr title="Really Simple Syndication">RSS</abbr>: [NetNewsWire](https://netnewswire.com) (client) + [Feedbin](https://feedbin.com) (server)
 * Contacts: [Cardhop](https://flexibits.com/cardhop)
 * Browser: Safari
 * Chat: Messages

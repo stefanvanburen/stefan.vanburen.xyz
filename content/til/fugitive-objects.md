@@ -5,10 +5,10 @@ draft: false
 ---
 
 Last week, I watched a coworker bring up a file on a different branch using fugitive.vim's [:GBrowse][GBrowse] and I was floored:
-almost daily I find myself using it to open the URL to a file to share (or a few lines).
+almost daily I find myself using it to open the <abbr title="Uniform Resource Locator">URL</abbr> to a file to share (or a few lines).
 
 However, much of the time I'm working on a different branch than the one I want to share,
-and navigating to the same file on a different branch in the GitHub UI takes too many steps.
+and navigating to the same file on a different branch in the GitHub <abbr title="User Interface">UI</abbr> takes too many steps.
 First, you realize you're on the wrong branch,
 then you change branches,
 then you have to navigate back to the file again.

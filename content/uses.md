@@ -6,13 +6,13 @@ description: My personal computing environment.
 ## Hardware
 
 <dl>
-  <dt>PC</dt>
+  <dt><abbr title="Personal Computer">PC</abbr></dt>
   <dd><a href="https://support.apple.com/kb/SP824">MacBook Pro M1 13"</a></dd>
   <dt>Monitor</dt>
   <dd><a href="https://www.apple.com/studio-display/">Apple Studio Display</a></dd>
   <dt>Keyboard</dt>
   <dd><a href="https://kinesis-ergo.com/keyboards/advantage2-keyboard/">Kinesis Advantage 2</a></dd>
-  <dd><a href="https://www.hhkeyboard.com/uk/products/pro2">HHKB Professional 2</a></dd>
+  <dd><a href="https://www.hhkeyboard.com/uk/products/pro2"><abbr title="Happy Hacking Keyboard">HHKB</abbr> Professional 2</a></dd>
   <dd><a href="https://shop.keyboard.io/products/keyboardio-atreus">Keyboardio Atreus</a></dd>
   <dt>Mouse</dt>
   <dd>Logitech MX Master 3 for Mac</dd>
@@ -52,7 +52,7 @@ For the most part, my terminal software is configured in [my dotfiles](https://g
   <dd><a href="https://en.wikipedia.org/wiki/Calendar_(Apple)">Calendar.app</a></dd>
   <dt>Cloud File Storage</dt>
   <dd><a href="https://en.wikipedia.org/wiki/ICloud">iCloud Drive</a></dd>
-  <dt>RSS</dt>
+  <dt><abbr title="Really Simple Syndication">RSS</abbr></dt>
   <dd><a href="https://netnewswire.com">NetNewsWire</a> (client)</dd>
   <dd><a href="https://feedbin.com">Feedbin</a> (server)</dd>
   <dt>Contacts</dt>

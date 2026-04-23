@@ -4,9 +4,9 @@ date: "2021-04-22T11:11:03-04:00"
 draft: false
 ---
 
-I'm constantly using [`jq`](https://stedolan.github.io/jq/) to deal with JSON via the CLI.
+I'm constantly using [`jq`](https://stedolan.github.io/jq/) to deal with <abbr title="JavaScript Object Notation">JSON</abbr> via the <abbr title="Command-Line Interface">CLI</abbr>.
 
-Today I needed to figure out the difference between a key existing with a `null` value or not existing at all in a bit of JSON.
+Today I needed to figure out the difference between a key existing with a `null` value or not existing at all in a bit of <abbr title="JavaScript Object Notation">JSON</abbr>.
 
 By default, "querying" a key via `jq` will return `null` whether the key exists and is `null`, **or** the key doesn't exist:
 

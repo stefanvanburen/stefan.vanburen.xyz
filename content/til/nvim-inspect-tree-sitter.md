@@ -7,7 +7,7 @@ draft: false
 I had assumed that to interact with Tree-sitter in Neovim,
 you still needed to use the utilities from [nvim-treesitter][1].
 Apparently that's not the case ---
-Neovim has had a builtin [`:InspectTree`][2] command that brings up the AST from Tree-sitter in a split window,
+Neovim has had a builtin [`:InspectTree`][2] command that brings up the <abbr title="Abstract Syntax Tree">AST</abbr> from Tree-sitter in a split window,
 which is [`scrollbound`][3] to the original window and highlights the selected node in both windows.
 
 It also has a [query editor][4],

@@ -17,11 +17,11 @@ PRAGMA foreign_keys = ON;
 
 In turn,
 
-* [`PRAGMA journal_mode = WAL;`][pragma-journal-mode] sets the database into [WAL journaling mode](https://sqlite.org/wal.html#activating_and_configuring_wal_mode).
+* [`PRAGMA journal_mode = WAL;`][pragma-journal-mode] sets the database into <a href="https://www.sqlite.org/wal.html"><abbr title="Write-Ahead Logging">WAL</abbr> journaling mode</a>.
   Unlike the others,
   this doesn't necessarily need to be set on each connection;
-  once a database is in WAL mode [it'll stay in that mode across database connections](https://sqlite.org/wal.html#persistence_of_wal_mode).
-  WAL journaling mode is recommended for most SQLite server applications,
+  once a database is in <a href="https://www.sqlite.org/wal.html"><abbr title="Write-Ahead Logging">WAL</abbr></a> mode [it'll stay in that mode across database connections](https://sqlite.org/wal.html#persistence_of_wal_mode).
+  <a href="https://www.sqlite.org/wal.html"><abbr title="Write-Ahead Logging">WAL</abbr></a> journaling mode is recommended for most SQLite server applications,
   because it makes writers not block readers.
 
 * [`PRAGMA busy_timeout = 5000;`][pragma-busy-timeout] sets the [busy_timeout](https://sqlite.org/c3ref/busy_timeout.html) to 5000 milliseconds (5 seconds).
