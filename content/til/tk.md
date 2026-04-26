@@ -6,7 +6,7 @@ draft: false
 
 TK means ["to come"](https://en.wikipedia.org/wiki/To_come_(publishing)).
 You'll typically see it as "TKTK" or "TKTKTK",
-as a simple way to search (i.e., <kbd>⌘</kbd>+<kbd>f</kbd>) for details that haven't been written yet.
+as a simple way to search (i.e., <kbd><a href="https://en.wikipedia.org/wiki/Command_key">⌘</a></kbd>+<kbd>f</kbd>) for details that haven't been written yet.
 I use it when drafting blog posts to skip over a sentence or section I want to come back to write later,
 to avoid losing momentum.
 
