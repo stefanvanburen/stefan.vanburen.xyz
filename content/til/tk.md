@@ -12,7 +12,7 @@ to avoid losing momentum.
 
 I didn't learn this today,
 but within the last year or two (not too sure where!);
-I was just reminded by [seeing it in print][^1] in [my library][3]'s edition of [Jez Burrow's][1] [Dictionary Stories][2],
+I was just reminded by seeing it in print[^1] in [my library][3]'s edition of [Jez Burrow's][1] [Dictionary Stories][2],
 which is otherwise lovely so far.
 
 [^1]: To be fair, I get it:
