@@ -4,7 +4,7 @@ date: 2026-04-26T20:03:30-04:00
 draft: false
 ---
 
-[Again](./tk.md),
+[Again](/til/tk),
 not something I learned _today_,
 but within the last few weeks:
 "tangenting".
