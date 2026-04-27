@@ -12,13 +12,16 @@ to avoid losing momentum.
 
 I didn't learn this today,
 but within the last year or two (not too sure where!);
-I was just reminded by seeing it in print[^1] in [my library][3]'s edition of [Jez Burrow's][1] [Dictionary Stories][2],
+I was just reminded by seeing it in print[^1][^2] in [my library][3]'s edition of [Jez Burrow's][1] [Dictionary Stories][2],
 which is otherwise lovely so far.
 
 [^1]: To be fair, I get it:
 it's in a footnote where the "TK" is taking the place of a page number,
 which I imagine is one of the last things to be solidified in a print book after all of the typesetting has taken place.
 
+[^2]: Funny timing, but a post on Daring Fireball the day after this one [mentioned a similar snafu of printing "Headline Goes Here"][4] -- "TK" may have been useful there!
+
 [1]: https://www.jezburrows.com/
 [2]: http://www.dictionarystories.com
 [3]: https://en.wikipedia.org/wiki/Merrimack_Valley_Library_Consortium
+[4]: https://daringfireball.net/2026/04/nyt_wrong_crossword_grid
