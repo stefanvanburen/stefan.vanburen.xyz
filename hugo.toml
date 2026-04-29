@@ -1,15 +1,34 @@
 # https://gohugo.io/getting-started/configuration/
-languageCode = "en-us"
+locale = "en-us"
 title = "Stefan VanBuren"
 baseURL = "https://stefan.vanburen.xyz/"
 copyright = "©️ 2026 Stefan VanBuren"
 enableGitInfo = true
 
 disableKinds = ["taxonomy", "term"]
-
-# for RSS
-[params]
 mainSections = ["blog", "til"]
+
+[mediaTypes."application/atom+xml"]
+suffixes = ["xml"]
+delimiter = "."
+
+[outputFormats.Atom]
+mediaType = "application/atom+xml"
+baseName = "index"
+isPlainText = true
+rel = "alternate"
+
+[outputs]
+home = ["HTML", "Atom"]
+section = ["HTML", "Atom"]
+page = ["HTML"]
+
+# Only affects `hugo server`; has no effect on the built output.
+[server]
+[[server.headers]]
+for = "**/index.xml"
+[server.headers.values]
+Content-Type = "application/atom+xml; charset=utf-8"
 
 [params.author]
 # for feeds
