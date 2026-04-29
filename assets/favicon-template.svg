@@ -58,5 +58,5 @@ See ../layouts/_partials/head.html.
       <stop offset="100%" stop-color="{{ $stop4 }}" stop-opacity="0.6" />
     </radialGradient>
   </defs>
-  <circle cx="50" cy="50" r="50" fill="url('#season')"/>
+  <circle cx="50" cy="50" r="50" fill="url(#season)"/>
 </svg>
