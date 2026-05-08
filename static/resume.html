@@ -13,10 +13,9 @@
   * Generally, I want to keep the content here to just under a printed page.
     If that means occasionally trimming down or completely removing (or
     commenting out!) previous experience, so be it!
-  * Easy on the links - keep them mostly to previous companies, and make
-    them `noreferrer noopener`. The underlines will be removed in the
-    printed PDF, so don't use links in lieu of writing something out more
-    fully.
+  * Easy on the links - keep them mostly to previous companies. The underlines
+    will be removed in the printed PDF, so don't use links in lieu of writing
+    something out more fully.
   * Current job bullets should be in the present-tense, unless the bullet is
     about a particular (ended) project in which case it should be past-tense. All
     past job bullets should be in past-tense.
@@ -99,6 +98,10 @@
         margin-left: 0.25em;
       }
 
+      p {
+        text-wrap: pretty;
+      }
+
       a {
         color: black;
         @media print {
@@ -162,24 +165,18 @@
           <li>
             <div class="flex space-between">
               <h3>
-                <a href="https://buf.build" target="_blank" rel="noopener noreferrer">
-                  Buf Technologies
+                <a href="https://www.coreweave.com">
+                  CoreWeave
                 </a>
               </h3>
-              <span><time datetime="2022-07">July 2022</time>&ndash;Present</span>
+              <span><time datetime="2022-07">May 2026</time>&ndash;Present</span>
             </div>
 
-            <em>Software Engineer</em>
+            <em>Senior Software Engineer</em>
 
             <ul>
               <li>
-                Building and maintaining the
-                <a href="https://buf.build/docs/bsr/introduction" target="_blank" rel="noopener noreferrer">Buf Schema Registry</a>,
-                especially
-                <!-- Eventually, break these out into separate bullets or sub-bullets! -->
-                <a href="https://buf.build/docs/bsr/generated-sdks/overview" target="_blank" rel="noopener noreferrer">Generated SDKs</a>
-                and
-                <a href="https://buf.build/docs/bsr/policy-enforcement/breaking/overview" target="_blank" rel="noopener noreferrer">Policy Enforcement</a>
+                Something new.
               </li>
             </ul>
           </li>
@@ -187,7 +184,65 @@
           <li>
             <div class="flex space-between">
               <h3>
-                <a href="https://blues.io" target="_blank" rel="noopener noreferrer">
+                <a href="https://buf.build">
+                  Buf Technologies
+                </a>
+              </h3>
+              <span><time datetime="2022-07">July 2022</time>&ndash;<time datetime="2026-05">May 2026</time></span>
+            </div>
+
+            <em>Software Engineer</em>
+
+            <ul>
+              <li>
+                Built and maintained the
+                <a href="https://buf.build/docs/bsr/introduction">Buf Schema Registry</a>,
+                especially
+                <!-- Eventually, break these out into separate bullets or sub-bullets! -->
+                <a href="https://buf.build/docs/bsr/generated-sdks/overview">Generated SDKs</a>
+                and
+                <a href="https://buf.build/docs/bsr/policy-enforcement/breaking/overview">Policy Enforcement</a>.
+              </li>
+              <li>
+                Worked on integrating Bufstream with the Buf Schema Registry,
+                enabling its Semantic Validation features.
+                <ul>
+                  <li>Built out the OSS Kafka Serdes for <a href="https://github.com/bufbuild/bsr-kafka-serde-go">Go</a> and <a href="https://github.com/bufbuild/bsr-kafka-serde-java">Java</a></li>
+                </ul>
+              </li>
+              <li>
+                Maintainer of
+                <a href="https://github.com/connectrpc/connect-python">connect-python</a>,
+                part of the <a href="https://connectrpc.com">ConnectRPC</a> suite of RPC libraries and a <a href="https://www.cncf.io">CNCF</a> project.
+              </li>
+              <li>
+                Maintained <a href="https://github.com/bufbuild/protovalidate-python">protovalidate-python</a>.
+              </li>
+              <li>
+                Contributed to the <a href="https://github.com/bufbuild/buf"><code>buf</code> CLI toolchain</a>, largely in the <a href="https://buf.build/docs/cli/editors-lsp/"><abbr title="Language Server Protocol">LSP</abbr></a> area.
+                <ul>
+                  <li>Integrated the LSP into our editor integrations: <a href="https://github.com/bufbuild/vscode-buf">VS Code Buf</a> and <a href="https://github.com/bufbuild/intellij-buf">IntelliJ Buf</a></li>
+                </ul>
+              </li>
+              <li>
+                Maintained our auto-updating <a href="https://github.com/bufbuild/modules">modules</a> and <a href="https://github.com/bufbuild/plugins">plugins</a> repositories, syncing new updates to the BSR.
+              </li>
+              <li>
+                Maintained a variety of documentation projects, public and private, backing
+                  <a href="https://buf.build/docs">buf.build/docs</a>,
+                  <a href="https://protovalidate.com">protovalidate.com</a>,
+                  <a href="https://celbyexample.com">celbyexample.com</a>,
+                  <a href="https://protobuf.com">protobuf.com</a>,
+                  <a href="https://connectrpc.com">connectrpc.com</a>,
+                  and the <a href="https://protovalidate.com/playground">protovalidate playground</a>.
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <div class="flex space-between">
+              <h3>
+                <a href="https://blues.io">
                   Blues Wireless
                 </a>
               </h3>
@@ -199,31 +254,31 @@
             <ul>
               <li>
                 Enhanced and maintained the
-                <a href="https://notehub.io/product/com.blues.airnote/devices/" target="_blank" rel="noopener noreferrer">Notehub web application</a>,
-                including the Go web server backend,
-                the various supporting services (authentication, authorization, external data stores),
-                and the frontend HTML, CSS and JavaScript
+                <a href="https://notehub.io/product/com.blues.airnote/devices/">Notehub web application</a>.
+                <!-- including the Go web server backend, -->
+                <!-- the various supporting services (authentication, authorization, external data stores), -->
+                <!-- and the frontend HTML, CSS and JavaScript -->
               </li>
               <li>
-                Lead developer of the Notehub public API, handling the design, implementation, and documentation,
-                working in concert with the developer experience team to maximize API ergonomics
+                Lead developer of the Notehub public API.
+                <!-- handling the design, implementation, and documentation, working in concert with the developer experience team to maximize API ergonomics -->
               </li>
-              <li>
-                Developed and maintained the administrative interface of the Notehub platform
-              </li>
-              <li>
-                Contributed to the development of internal tools, documentation, coding standards, etc.
-              </li>
-              <li>
-                Designed, implemented, and oversaw the transition of the platform to a new pricing model
-              </li>
+              <!-- <li> -->
+              <!--   Developed and maintained the administrative interface of the Notehub platform -->
+              <!-- </li> -->
+              <!-- <li> -->
+              <!--   Contributed to the development of internal tools, documentation, coding standards, etc. -->
+              <!-- </li> -->
+              <!-- <li> -->
+              <!--   Designed, implemented, and oversaw the transition of the platform to a new pricing model -->
+              <!-- </li> -->
             </ul>
           </li>
 
           <li>
             <div class="flex space-between">
               <h3>
-                <a href="https://catch.co" target="_blank" rel="noopener noreferrer">
+                <a href="https://catch.co">
                   Catch
                 </a>
               </h3>
@@ -233,9 +288,13 @@
             <em>Senior Software Engineer</em>
 
             <ul>
-              <li>Led the design and implementation of the backend GraphQL API server, written in Go</li>
-              <li>Primary developer of the user authentication, platform notification, and financial data aggregation services, all written in Python and communicating via gRPC</li>
-              <li>Worked in tandem with the mobile apps and design teams to build clean abstractions and APIs</li>
+              <li>Led the design and implementation of the backend GraphQL API server.
+                <!-- , written in Go -->
+              </li>
+              <li>Primary developer of the user authentication, platform notification, and financial data aggregation services.
+                <!-- , all written in Python and communicating via gRPC -->
+              </li>
+              <!-- <li>Worked in tandem with the mobile apps and design teams to build clean abstractions and APIs</li> -->
             </ul>
           </li>
 
@@ -286,10 +345,10 @@
 
         <dl>
           <dt>Languages</dt>
-          <dd>Go, Python, HTML, CSS, JavaScript, SQL, Clojure, ClojureScript, TypeScript, C, C++, Java</dd>
+          <dd>Go, Python, SQL, HTML, CSS, Clojure, ClojureScript, TypeScript, JavaScript, Rust, C, C++, Java</dd>
 
           <dt>Tools</dt>
-          <dd>AWS, Git, GitHub, Postgres, SQLite, Unix command line tools</dd>
+          <dd>Git, GitHub, Postgres, SQLite, Unix command line tools, AWS, GCP</dd>
         </dl>
 
       </section>
