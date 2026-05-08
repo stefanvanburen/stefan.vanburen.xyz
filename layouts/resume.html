@@ -21,22 +21,8 @@
     past job bullets should be in past-tense.
   -->
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Stefan VanBuren">
-    <title>Stefan VanBuren Résumé</title>
-
-    <!--
-      inform the browser that we prefer a light colorscheme,
-      but support dark as well
-    -->
-    <meta name="color-scheme" content="light dark">
-
+    {{ partial "head.html" . }}
     <style>
-      html {
-        font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
-      }
-
       body {
         margin: 40px auto;
         max-width: 650px;
@@ -45,26 +31,29 @@
         padding: 0 10px;
       }
 
+      /* site CSS sets text-shadow on h1/h2 but doesn't unset it for print */
       h1,
-      h2,
-      h3 {
-        /* Modern Font Stacks system-ui stack: https://github.com/system-fonts/modern-font-stacks?tab=readme-ov-file#system-ui */
-        font-family: system-ui, sans-serif;
-        line-height: 1.2;
+      h2 {
+        @media print {
+          text-shadow: unset;
+        }
       }
 
       h1 {
         display: flex;
         justify-content: center;
         margin-bottom: 0.2em;
+        line-height: 1.2;
       }
 
       h2 {
         margin-block-end: 0.2em;
+        line-height: 1.2;
       }
 
       h3 {
         margin-bottom: 0;
+        line-height: 1.2;
       }
 
       ol {
@@ -98,23 +87,32 @@
         margin-left: 0.25em;
       }
 
-      p {
-        text-wrap: pretty;
+      hr {
+        border: none;
+        text-align: center;
+        margin: 0;
+        &::before {
+          font-size: 1.2em;
+          letter-spacing: 0.5em;
+          color: var(--accent-color);
+          text-shadow: var(--shadow-light);
+          @media (prefers-color-scheme: dark) {
+            text-shadow: var(--shadow-dark);
+          }
+          @media print {
+            color: black;
+            text-shadow: unset;
+          }
+          content: "\b7  \b7  \b7";
+        }
       }
 
-      a {
-        color: black;
-        @media print {
-          /* no need to underline links when printing */
-          text-decoration: none;
-        }
-        @media (prefers-color-scheme: dark) {
-          color: white;
-        }
+      hr + section > h2 {
+        margin-block-start: 0.2em;
       }
 
-      time {
-        font-variant-numeric: tabular-nums;
+      header > p {
+        margin-block-end: 0.2em;
       }
 
       /* via https://github.com/hawkz/gdcss/blob/master/gd.css */
@@ -127,9 +125,7 @@
       dt {
         font-weight: 700;
       }
-
     </style>
-
   </head>
   <body>
     <header>
@@ -154,8 +150,6 @@
         I take pride in my work and treat programming as both a craft and an engineering discipline.
       </p>
     </header>
-
-    <hr>
 
     <main>
       <section>
@@ -338,7 +332,6 @@
         </ol>
       </section>
 
-      <hr>
 
       <section>
         <h2>Skills</h2>
@@ -353,19 +346,19 @@
 
       </section>
 
-      <hr>
+      <!-- <hr> -->
 
-      <section>
-        <h2>Education</h2>
-        <h3>Virginia Tech</h3>
-        <dl>
-          <dt>Major</dt>
-          <dd>Computer Engineering</dd>
-
-          <dt>Minor</dt>
-          <dd>Computer Science</dd>
-        </dl>
-      </section>
+      <!-- <section> -->
+      <!--   <h2>Education</h2> -->
+      <!--   <h3>Virginia Tech</h3> -->
+      <!--   <dl> -->
+      <!--     <dt>Major</dt> -->
+      <!--     <dd>Computer Engineering</dd> -->
+      <!---->
+      <!--     <dt>Minor</dt> -->
+      <!--     <dd>Computer Science</dd> -->
+      <!--   </dl> -->
+      <!-- </section> -->
 
     </main>
   </body>
