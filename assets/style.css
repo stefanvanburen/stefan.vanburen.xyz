@@ -32,6 +32,7 @@ header {
   display: flex;
   align-items: center;
   gap: 1rem;
+  flex-wrap: wrap;
 
   & a {
     display: inline-block;
@@ -50,6 +51,14 @@ header {
     display: flex;
     gap: 0.5rem;
     margin-left: auto;
+
+    & a[aria-current="page"] {
+      text-decoration-color: currentColor;
+    }
+  }
+
+  @media print {
+    display: none;
   }
 }
 
