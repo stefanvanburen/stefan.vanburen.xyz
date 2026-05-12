@@ -24,6 +24,19 @@ body {
   flex-direction: column;
 }
 
+header {
+  margin: 1rem 1rem 0;
+
+  & img {
+    display: block;
+    border-radius: 50%;
+  }
+
+  & a:hover img {
+    box-shadow: 0 0 0 1px oklch(from var(--accent-color) l c h / 50%);
+  }
+}
+
 main {
   margin: 1rem;
 }
