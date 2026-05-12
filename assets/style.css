@@ -14,6 +14,9 @@ body {
     This is needed on larger screens to constrain the width. */
   max-width: 34em;
 
+  /* consistent margins on left and right */
+  margin-inline: auto;
+
   /* https://practicaltypography.com/line-spacing.html */
   line-height: 1.35;
 
