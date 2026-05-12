@@ -1,5 +1,5 @@
 ---
-title: "Wrapping arrays in jq"
+title: 'Wrapping arrays in `jq`'
 date: 2025-08-20T08:55:08-04:00
 draft: false
 ---

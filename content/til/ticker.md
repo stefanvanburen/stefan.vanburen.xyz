@@ -1,5 +1,5 @@
 ---
-title: time.Ticker in Go
+title: '`time.Ticker` in Go'
 date: "2021-05-21T20:25:49-04:00"
 draft: false
 ---

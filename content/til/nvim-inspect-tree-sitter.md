@@ -1,5 +1,5 @@
 ---
-title: "Neovim :InspectTree Tree-sitter"
+title: 'Neovim `:InspectTree` Tree-sitter'
 date: 2025-09-10T19:50:36-04:00
 draft: false
 ---

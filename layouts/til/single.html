@@ -6,7 +6,7 @@
 <a href="/til" class="back-link">back to TILs</a>
 
 <article>
-  <h1>{{ .Title }}</h1>
+  <h1>{{ .RenderString (dict "display" "inline") .Title }}</h1>
 
   {{ .Content }}
 </article>

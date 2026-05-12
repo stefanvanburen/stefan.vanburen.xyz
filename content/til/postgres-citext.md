@@ -1,5 +1,5 @@
 ---
-title: "Postgres citext type"
+title: 'Postgres `citext` type'
 date: 2024-08-21T07:49:04-04:00
 draft: false
 ---

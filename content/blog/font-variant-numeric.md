@@ -1,5 +1,5 @@
 ---
-title: font-variant-numeric
+title: '`font-variant-numeric`'
 date: "2021-01-24T12:55:27-05:00"
 draft: false
 ---

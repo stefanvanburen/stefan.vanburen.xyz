@@ -1,5 +1,5 @@
 ---
-title: git pull --autostash
+title: '`git pull --autostash`'
 date: "2020-05-13T19:11:09-04:00"
 draft: false
 ---

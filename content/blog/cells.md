@@ -1,5 +1,5 @@
 ---
-title: "cells - a language server for CEL"
+title: '`cells` - a language server for CEL'
 date: 2026-02-22T19:24:55-05:00
 draft: false
 ---

@@ -1,5 +1,5 @@
 ---
-title: "Neovim :Inspect"
+title: 'Neovim `:Inspect`'
 date: 2026-01-10T16:26:47-05:00
 draft: false
 ---
