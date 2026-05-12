@@ -29,6 +29,13 @@ body {
 
 header {
   margin: 1rem 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  & a {
+    display: inline-block;
+  }
 
   & img {
     display: block;
@@ -38,6 +45,12 @@ header {
   & a:hover img {
     box-shadow: 0 0 0 1px oklch(from var(--accent-color) l c h / 50%);
   }
+
+  & nav {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: auto;
+  }
 }
 
 main {
@@ -45,20 +58,6 @@ main {
 }
 
 
-footer {
-  margin: 1rem;
-  /* Add some vertical padding to the footer in both directions. */
-  padding: 2em 0;
-
-  &>a {
-    margin-inline: 0.5em;
-  }
-
-  /* Don't show the footer links on the printed page. */
-  @media print {
-    display: none;
-  }
-}
 
 pre {
   padding: 0.5rem;

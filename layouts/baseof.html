@@ -9,17 +9,16 @@
     {{ $favicon := $faviconTemplate | resources.Minify | resources.ExecuteAsTemplate "favicon.svg" . -}}
     <header>
       <a href="/" aria-label="Home"><img src="{{ $favicon.Permalink }}" width="32" height="32" alt=""></a>
+      <nav>
+        <a href="/blog">blog</a>
+        <a href="/til">TIL</a>
+        <a href="/colophon">colophon</a>
+        <a href="/now">now</a>
+        <a href="/uses">uses</a>
+      </nav>
     </header>
     <main>
       {{ block "main" . }}{{ end }}
     </main>
-    <footer>
-      <a href="/">home</a>
-      <a href="/blog">blog</a>
-      <a href="/til">TIL</a>
-      <a href="/colophon">colophon</a>
-      <a href="/now">now</a>
-      <a href="/uses">uses</a>
-    </footer>
   </body>
 </html>
