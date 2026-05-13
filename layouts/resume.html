@@ -26,9 +26,12 @@
       body {
         margin: 40px auto;
         max-width: 650px;
-        line-height: 1.6;
-        font-size: 12px;
         padding: 0 10px;
+
+        @media print {
+          font-size: 12px;
+          line-height: 1.6;
+        }
       }
 
       /* site CSS sets text-shadow on h1/h2 but doesn't unset it for print */
