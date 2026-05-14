@@ -55,10 +55,6 @@ body {
     & a[aria-current="page"] {
       text-decoration-color: currentColor;
     }
-
-    @media (max-width: 30em) {
-      flex-direction: column;
-    }
   }
 
   @media print {
