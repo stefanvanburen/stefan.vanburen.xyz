@@ -38,6 +38,19 @@ body {
     display: inline-block;
   }
 
+  & > a[aria-current="page"] {
+    position: relative;
+
+    &::after {
+      content: "☞";
+      position: absolute;
+      left: 50%;
+      top: 100%;
+      transform: translateX(-50%) rotate(-90deg);
+      line-height: 1;
+    }
+  }
+
   & img {
     display: block;
     border-radius: 50%;

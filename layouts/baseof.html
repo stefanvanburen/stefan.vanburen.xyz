@@ -8,7 +8,7 @@
     {{ $faviconTemplate := resources.Get "favicon-template.svg" -}}
     {{ $favicon := $faviconTemplate | resources.Minify | resources.ExecuteAsTemplate "favicon.svg" . -}}
     <header class="site-header">
-      <a href="/" aria-label="Home"><img src="{{ $favicon.Permalink }}" width="32" height="32" alt=""></a>
+      <a href="/" aria-label="Home" {{ if .IsHome }}aria-current="page"{{ end }}><img src="{{ $favicon.Permalink }}" width="32" height="32" alt=""></a>
       <nav aria-label="Site">
         <a href="/blog" {{ if eq .Section "blog" }}aria-current="page"{{ end }}>blog</a>
         <a href="/til" {{ if eq .Section "til" }}aria-current="page"{{ end }}>TIL</a>
