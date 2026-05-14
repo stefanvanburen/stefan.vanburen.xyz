@@ -1,385 +1,347 @@
-<!DOCTYPE html>
-<html lang="en">
-  <!--
-  Hello!
+{{/*
+Hello!
 
-  There are many résumés out there, but this is mine. Glad you're having a look!
+There are many résumés out there, but this is mine. Glad you're having a look!
 
-  Inspiration:
-  * https://typographyforlawyers.com/resumes.html
-  * https://microformats.org/wiki/h-resume (mostly have abandoned this)
+Inspiration:
+* https://typographyforlawyers.com/resumes.html
+* https://microformats.org/wiki/h-resume (mostly have abandoned this)
 
-  NOTE(s) (to myself):
-  * Generally, I want to keep the content here to just under a printed page.
-    If that means occasionally trimming down or completely removing (or
-    commenting out!) previous experience, so be it!
-  * Easy on the links - keep them mostly to previous companies. The underlines
-    will be removed in the printed PDF, so don't use links in lieu of writing
-    something out more fully.
-  * Current job bullets should be in the present-tense, unless the bullet is
-    about a particular (ended) project in which case it should be past-tense. All
-    past job bullets should be in past-tense.
-  -->
-  <head>
-    {{ partial "head.html" . }}
-    <style>
-      body {
-        margin: 40px auto;
-        max-width: 650px;
-        padding: 0 10px;
+NOTE(s) (to myself):
+* Generally, I want to keep the content here to just under a printed page.
+  If that means occasionally trimming down or completely removing (or
+  commenting out!) previous experience, so be it!
+* Easy on the links - keep them mostly to previous companies. The underlines
+  will be removed in the printed PDF, so don't use links in lieu of writing
+  something out more fully.
+* Current job bullets should be in the present-tense, unless the bullet is
+  about a particular (ended) project in which case it should be past-tense. All
+  past job bullets should be in past-tense.
+*/}}
+{{ define "head_extra" }}
+<style>
+  body {
+    @media print {
+      font-size: 12px;
+      line-height: 1.6;
+    }
+  }
 
-        @media print {
-          font-size: 12px;
-          line-height: 1.6;
-        }
-      }
+  /* site CSS sets text-shadow on h1/h2 but doesn't unset it for print */
+  h1,
+  h2 {
+    @media print {
+      text-shadow: unset;
+    }
+  }
 
-      /* site CSS sets text-shadow on h1/h2 but doesn't unset it for print */
-      h1,
-      h2 {
-        @media print {
-          text-shadow: unset;
-        }
-      }
+  h1 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.2em;
+    line-height: 1.2;
 
-      h1 {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 0.2em;
-        line-height: 1.2;
+    @media (max-width: 30em) {
+      justify-content: flex-start;
+    }
+  }
 
-        @media (max-width: 30em) {
-          justify-content: flex-start;
-        }
-      }
+  h2 {
+    margin-block-end: 0.2em;
+    line-height: 1.2;
+  }
 
-      h2 {
-        margin-block-end: 0.2em;
-        line-height: 1.2;
-      }
+  h3 {
+    margin-bottom: 0;
+    line-height: 1.2;
+  }
 
-      h3 {
-        margin-bottom: 0;
-        line-height: 1.2;
-      }
+  ol {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+  }
 
-      ol {
-        list-style: none;
-        padding-left: 0;
-        margin-top: 0;
-      }
+  ul {
+    list-style: square;
+  }
 
-      ul {
-        list-style: square;
-      }
+  .flex {
+    display: flex;
+    align-items: baseline;
+  }
 
-      .flex {
-        display: flex;
-        align-items: baseline;
-      }
+  .space-between {
+    justify-content: space-between;
+  }
 
-      .space-between {
-        justify-content: space-between;
-      }
+  address {
+    /* Seems to be set to italic in Safari. Remove the default. */
+    font-style: unset;
+    display: flex;
+    justify-content: center;
 
-      address {
-        /* Seems to be set to italic in Safari. Remove the default. */
-        font-style: unset;
-        display: flex;
-        justify-content: center;
+    @media (max-width: 30em) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
 
-        @media (max-width: 30em) {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-      }
+  .dot {
+    margin-right: 0.25em;
+    margin-left: 0.25em;
 
-      .dot {
-        margin-right: 0.25em;
-        margin-left: 0.25em;
+    @media (max-width: 30em) {
+      display: none;
+    }
+  }
 
-        @media (max-width: 30em) {
-          display: none;
-        }
-      }
+  hr {
+    margin: 0;
+  }
 
-      hr {
-        border: none;
-        text-align: center;
-        margin: 0;
-        &::before {
-          font-size: 1.2em;
-          letter-spacing: 0.5em;
-          color: var(--accent-color);
-          text-shadow: var(--shadow-light);
-          @media (prefers-color-scheme: dark) {
-            text-shadow: var(--shadow-dark);
-          }
-          @media print {
-            color: black;
-            text-shadow: unset;
-          }
-          content: "\b7  \b7  \b7";
-        }
-      }
+  hr + section > h2 {
+    margin-block-start: 0.2em;
+  }
 
-      main {
-        margin: 0;
-      }
-
-      hr + section > h2 {
-        margin-block-start: 0.2em;
-      }
-
-      header > p {
-        margin-block-end: 0.2em;
-      }
-
-      /* via https://github.com/hawkz/gdcss/blob/master/gd.css */
-
-      dl {
-        display: grid;
-        grid-template-columns: [dt] max-content [dd] 1fr;
-      }
-
-      dt {
-        font-weight: 700;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1 class="p-name">Stefan VanBuren</h1>
-
-      <address>
-        <a href="mailto:stefan@vanburen.xyz">stefan@vanburen.xyz</a>
-        <span class="dot">·</span>
-        <a href="https://github.com/stefanvanburen">github.com/stefanvanburen</a>
-        <span class="dot">·</span>
-        <!-- <a href="https://stefan.vanburen.xyz">stefan.vanburen.xyz</a> -->
-        <!-- <span class="dot">·</span> -->
-        <span>Ipswich, MA</span>
-      </address>
-
-      <p>
-        I am a software engineer with a focus on designing, building, and maintaining
-        <!-- decomplected? -->
-        reliable, efficient, and scalable systems.
-        I enjoy learning new skills and applying them in my career,
-        leveraging my knowledge across the technology stack.
-        I take pride in my work and treat programming as both a craft and an engineering discipline.
-      </p>
-    </header>
-
-    <main>
-      <section>
-        <h2>Experience</h2>
-
-        <ol>
-          <li>
-            <div class="flex space-between">
-              <h3>
-                <a href="https://www.coreweave.com">
-                  CoreWeave
-                </a>
-              </h3>
-              <span><time datetime="2022-07">May 2026</time>&ndash;Present</span>
-            </div>
-
-            <em>Senior Software Engineer</em>
-
-            <ul>
-              <li>
-                Something new.
-              </li>
-            </ul>
-          </li>
-
-          <li>
-            <div class="flex space-between">
-              <h3>
-                <a href="https://buf.build">
-                  Buf Technologies
-                </a>
-              </h3>
-              <span><time datetime="2022-07">July 2022</time>&ndash;<time datetime="2026-05">May 2026</time></span>
-            </div>
-
-            <em>Software Engineer</em>
-
-            <ul>
-              <li>
-                Built and maintained the
-                <a href="https://buf.build/docs/bsr/introduction">Buf Schema Registry</a>,
-                especially
-                <!-- Eventually, break these out into separate bullets or sub-bullets! -->
-                <a href="https://buf.build/docs/bsr/generated-sdks/overview">Generated SDKs</a>
-                and
-                <a href="https://buf.build/docs/bsr/policy-enforcement/breaking/overview">Policy Enforcement</a>.
-              </li>
-              <li>
-                Worked on integrating Bufstream with the Buf Schema Registry,
-                enabling its Semantic Validation features.
-                <ul>
-                  <li>Built out the OSS Kafka Serdes for <a href="https://github.com/bufbuild/bsr-kafka-serde-go">Go</a> and <a href="https://github.com/bufbuild/bsr-kafka-serde-java">Java</a></li>
-                </ul>
-              </li>
-              <li>
-                Maintainer of
-                <a href="https://github.com/connectrpc/connect-python">connect-python</a>,
-                part of the <a href="https://connectrpc.com">ConnectRPC</a> suite of RPC libraries and a <a href="https://www.cncf.io">CNCF</a> project.
-              </li>
-              <li>
-                Maintained <a href="https://github.com/bufbuild/protovalidate-python">protovalidate-python</a>.
-              </li>
-              <li>
-                Contributed to the <a href="https://github.com/bufbuild/buf"><code>buf</code> CLI toolchain</a>, largely in the <a href="https://buf.build/docs/cli/editors-lsp/"><abbr title="Language Server Protocol">LSP</abbr></a> area.
-                <ul>
-                  <li>Integrated the LSP into our editor integrations: <a href="https://github.com/bufbuild/vscode-buf">VS Code Buf</a> and <a href="https://github.com/bufbuild/intellij-buf">IntelliJ Buf</a></li>
-                </ul>
-              </li>
-              <li>
-                Maintained our auto-updating <a href="https://github.com/bufbuild/modules">modules</a> and <a href="https://github.com/bufbuild/plugins">plugins</a> repositories, syncing new updates to the BSR.
-              </li>
-              <li>
-                Maintained a variety of documentation projects, public and private, backing
-                  <a href="https://buf.build/docs">buf.build/docs</a>,
-                  <a href="https://protovalidate.com">protovalidate.com</a>,
-                  <a href="https://celbyexample.com">celbyexample.com</a>,
-                  <a href="https://protobuf.com">protobuf.com</a>,
-                  <a href="https://connectrpc.com">connectrpc.com</a>,
-                  and the <a href="https://protovalidate.com/playground">protovalidate playground</a>.
-              </li>
-            </ul>
-          </li>
-
-          <li>
-            <div class="flex space-between">
-              <h3>
-                <a href="https://blues.io">
-                  Blues Wireless
-                </a>
-              </h3>
-              <span><time datetime="2020-01">January 2020</time>&ndash;<time datetime="2022-07">July 2022</time></span>
-            </div>
-
-            <em>Staff Software Engineer</em>
-
-            <ul>
-              <li>
-                Enhanced and maintained the
-                <a href="https://notehub.io/product/com.blues.airnote/devices/">Notehub web application</a>.
-                <!-- including the Go web server backend, -->
-                <!-- the various supporting services (authentication, authorization, external data stores), -->
-                <!-- and the frontend HTML, CSS and JavaScript -->
-              </li>
-              <li>
-                Lead developer of the Notehub public API.
-                <!-- handling the design, implementation, and documentation, working in concert with the developer experience team to maximize API ergonomics -->
-              </li>
-              <!-- <li> -->
-              <!--   Developed and maintained the administrative interface of the Notehub platform -->
-              <!-- </li> -->
-              <!-- <li> -->
-              <!--   Contributed to the development of internal tools, documentation, coding standards, etc. -->
-              <!-- </li> -->
-              <!-- <li> -->
-              <!--   Designed, implemented, and oversaw the transition of the platform to a new pricing model -->
-              <!-- </li> -->
-            </ul>
-          </li>
-
-          <li>
-            <div class="flex space-between">
-              <h3>
-                <a href="https://catch.co">
-                  Catch
-                </a>
-              </h3>
-              <span><time datetime="2017-11">November 2017</time>&ndash;<time datetime="2019-11">November 2019</time></span>
-            </div>
-
-            <em>Senior Software Engineer</em>
-
-            <ul>
-              <li>Led the design and implementation of the backend GraphQL API server.
-                <!-- , written in Go -->
-              </li>
-              <li>Primary developer of the user authentication, platform notification, and financial data aggregation services.
-                <!-- , all written in Python and communicating via gRPC -->
-              </li>
-              <!-- <li>Worked in tandem with the mobile apps and design teams to build clean abstractions and APIs</li> -->
-            </ul>
-          </li>
-
-          <!-- <li> -->
-          <!--   <div class="flex space-between"> -->
-          <!--     <h3>RadiantBlue Technologies</h3> -->
-          <!--     <span><time datetime="2016-05">May 2016</time> - <time datetime="2016-08">August 2016</time></span> -->
-          <!--   </div> -->
-
-          <!--   <em>Software Development Intern</em> -->
-
-          <!--   <ul> -->
-          <!--     <li>Developed an open source event and trigger system using Go</li> -->
-          <!--     <li>Designed and implemented repeated messaging using cron-like syntax</li> -->
-          <!--     <!-1- <li>Coordinated with development lead on decisions concerning database and API structure</li> -1-> -->
-          <!--     <!-1- <li>Utilized Git and GitHub on a daily basis for code review and pull requests</li> -1-> -->
-          <!--   </ul> -->
-          <!-- </li> -->
-
-          <!-- <li> -->
-          <!--   <div class="flex"> -->
-          <!--     <h3>Leidos</h3> -->
-          <!--     <!-1- <em>Bethesda, MD</em> -1-> -->
-          <!--   </div> -->
-          <!--   Software Engineering Co-op (June 2014 - December 2014) -->
-          <!--   <ul> -->
-          <!--     <li>Built robust solutions for large scale ocean simulation software using Python and C++</li> -->
-          <!--     <li>Engineered messaging protocols for inter-application communication</li> -->
-          <!--     <li>Employed Linux systems and Mercurial version control</li> -->
-          <!--   </ul> -->
-          <!-- </li> -->
+  header > p {
+    margin-block-end: 0.2em;
+  }
 
 
-        <!-- ### Innovative Defensive Technologies (Arlington, VA): -->
-        <!-- Software Development Intern (May 2012 - August 2012) -->
+</style>
+{{ end }}
 
-        <!-- * Collaborated with other interns to create testing software for internal testing -->
-        <!-- * Worked with software engineers to develop test suite for DOD software -->
-        <!-- * Wrote shell scripts for retrieval and organization of generated data -->
+{{ define "main" }}
+<header>
+  <h1 class="p-name">Stefan VanBuren</h1>
 
-        </ol>
-      </section>
+  <address>
+    <a href="mailto:stefan@vanburen.xyz">stefan@vanburen.xyz</a>
+    <span class="dot">·</span>
+    <a href="https://github.com/stefanvanburen">github.com/stefanvanburen</a>
+    <span class="dot">·</span>
+    <!-- <a href="https://stefan.vanburen.xyz">stefan.vanburen.xyz</a> -->
+    <!-- <span class="dot">·</span> -->
+    <span>Ipswich, MA</span>
+  </address>
+
+  <p>
+    I am a software engineer with a focus on designing, building, and maintaining
+    <!-- decomplected? -->
+    reliable, efficient, and scalable systems.
+    I enjoy learning new skills and applying them in my career,
+    leveraging my knowledge across the technology stack.
+    I take pride in my work and treat programming as both a craft and an engineering discipline.
+  </p>
+</header>
+
+<section>
+  <h2>Experience</h2>
+
+  <ol>
+    <li>
+      <div class="flex space-between">
+        <h3>
+          <a href="https://www.coreweave.com">
+            CoreWeave
+          </a>
+        </h3>
+        <span><time datetime="2022-07">May 2026</time>&ndash;Present</span>
+      </div>
+
+      <em>Senior Software Engineer</em>
+
+      <ul>
+        <li>
+          Something new.
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <div class="flex space-between">
+        <h3>
+          <a href="https://buf.build">
+            Buf Technologies
+          </a>
+        </h3>
+        <span><time datetime="2022-07">July 2022</time>&ndash;<time datetime="2026-05">May 2026</time></span>
+      </div>
+
+      <em>Software Engineer</em>
+
+      <ul>
+        <li>
+          Built and maintained the
+          <a href="https://buf.build/docs/bsr/introduction">Buf Schema Registry</a>,
+          especially
+          <!-- Eventually, break these out into separate bullets or sub-bullets! -->
+          <a href="https://buf.build/docs/bsr/generated-sdks/overview">Generated SDKs</a>
+          and
+          <a href="https://buf.build/docs/bsr/policy-enforcement/breaking/overview">Policy Enforcement</a>.
+        </li>
+        <li>
+          Worked on integrating Bufstream with the Buf Schema Registry,
+          enabling its Semantic Validation features.
+          <ul>
+            <li>Built out the OSS Kafka Serdes for <a href="https://github.com/bufbuild/bsr-kafka-serde-go">Go</a> and <a href="https://github.com/bufbuild/bsr-kafka-serde-java">Java</a></li>
+          </ul>
+        </li>
+        <li>
+          Maintainer of
+          <a href="https://github.com/connectrpc/connect-python">connect-python</a>,
+          part of the <a href="https://connectrpc.com">ConnectRPC</a> suite of RPC libraries and a <a href="https://www.cncf.io">CNCF</a> project.
+        </li>
+        <li>
+          Maintained <a href="https://github.com/bufbuild/protovalidate-python">protovalidate-python</a>.
+        </li>
+        <li>
+          Contributed to the <a href="https://github.com/bufbuild/buf"><code>buf</code> CLI toolchain</a>, largely in the <a href="https://buf.build/docs/cli/editors-lsp/"><abbr title="Language Server Protocol">LSP</abbr></a> area.
+          <ul>
+            <li>Integrated the LSP into our editor integrations: <a href="https://github.com/bufbuild/vscode-buf">VS Code Buf</a> and <a href="https://github.com/bufbuild/intellij-buf">IntelliJ Buf</a></li>
+          </ul>
+        </li>
+        <li>
+          Maintained our auto-updating <a href="https://github.com/bufbuild/modules">modules</a> and <a href="https://github.com/bufbuild/plugins">plugins</a> repositories, syncing new updates to the BSR.
+        </li>
+        <li>
+          Maintained a variety of documentation projects, public and private, backing
+            <a href="https://buf.build/docs">buf.build/docs</a>,
+            <a href="https://protovalidate.com">protovalidate.com</a>,
+            <a href="https://celbyexample.com">celbyexample.com</a>,
+            <a href="https://protobuf.com">protobuf.com</a>,
+            <a href="https://connectrpc.com">connectrpc.com</a>,
+            and the <a href="https://protovalidate.com/playground">protovalidate playground</a>.
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <div class="flex space-between">
+        <h3>
+          <a href="https://blues.io">
+            Blues Wireless
+          </a>
+        </h3>
+        <span><time datetime="2020-01">January 2020</time>&ndash;<time datetime="2022-07">July 2022</time></span>
+      </div>
+
+      <em>Staff Software Engineer</em>
+
+      <ul>
+        <li>
+          Enhanced and maintained the
+          <a href="https://notehub.io/product/com.blues.airnote/devices/">Notehub web application</a>.
+          <!-- including the Go web server backend, -->
+          <!-- the various supporting services (authentication, authorization, external data stores), -->
+          <!-- and the frontend HTML, CSS and JavaScript -->
+        </li>
+        <li>
+          Lead developer of the Notehub public API.
+          <!-- handling the design, implementation, and documentation, working in concert with the developer experience team to maximize API ergonomics -->
+        </li>
+        <!-- <li> -->
+        <!--   Developed and maintained the administrative interface of the Notehub platform -->
+        <!-- </li> -->
+        <!-- <li> -->
+        <!--   Contributed to the development of internal tools, documentation, coding standards, etc. -->
+        <!-- </li> -->
+        <!-- <li> -->
+        <!--   Designed, implemented, and oversaw the transition of the platform to a new pricing model -->
+        <!-- </li> -->
+      </ul>
+    </li>
+
+    <li>
+      <div class="flex space-between">
+        <h3>
+          <a href="https://catch.co">
+            Catch
+          </a>
+        </h3>
+        <span><time datetime="2017-11">November 2017</time>&ndash;<time datetime="2019-11">November 2019</time></span>
+      </div>
+
+      <em>Senior Software Engineer</em>
+
+      <ul>
+        <li>Led the design and implementation of the backend GraphQL API server.
+          <!-- , written in Go -->
+        </li>
+        <li>Primary developer of the user authentication, platform notification, and financial data aggregation services.
+          <!-- , all written in Python and communicating via gRPC -->
+        </li>
+        <!-- <li>Worked in tandem with the mobile apps and design teams to build clean abstractions and APIs</li> -->
+      </ul>
+    </li>
+
+    <!-- <li> -->
+    <!--   <div class="flex space-between"> -->
+    <!--     <h3>RadiantBlue Technologies</h3> -->
+    <!--     <span><time datetime="2016-05">May 2016</time> - <time datetime="2016-08">August 2016</time></span> -->
+    <!--   </div> -->
+
+    <!--   <em>Software Development Intern</em> -->
+
+    <!--   <ul> -->
+    <!--     <li>Developed an open source event and trigger system using Go</li> -->
+    <!--     <li>Designed and implemented repeated messaging using cron-like syntax</li> -->
+    <!--     <!-1- <li>Coordinated with development lead on decisions concerning database and API structure</li> -1-> -->
+    <!--     <!-1- <li>Utilized Git and GitHub on a daily basis for code review and pull requests</li> -1-> -->
+    <!--   </ul> -->
+    <!-- </li> -->
+
+    <!-- <li> -->
+    <!--   <div class="flex"> -->
+    <!--     <h3>Leidos</h3> -->
+    <!--     <!-1- <em>Bethesda, MD</em> -1-> -->
+    <!--   </div> -->
+    <!--   Software Engineering Co-op (June 2014 - December 2014) -->
+    <!--   <ul> -->
+    <!--     <li>Built robust solutions for large scale ocean simulation software using Python and C++</li> -->
+    <!--     <li>Engineered messaging protocols for inter-application communication</li> -->
+    <!--     <li>Employed Linux systems and Mercurial version control</li> -->
+    <!--   </ul> -->
+    <!-- </li> -->
 
 
-      <section>
-        <h2>Skills</h2>
+  <!-- ### Innovative Defensive Technologies (Arlington, VA): -->
+  <!-- Software Development Intern (May 2012 - August 2012) -->
 
-        <dl>
-          <dt>Languages</dt>
-          <dd>Go, Python, SQL, HTML, CSS, Clojure, ClojureScript, TypeScript, JavaScript, Rust, C, C++, Java</dd>
+  <!-- * Collaborated with other interns to create testing software for internal testing -->
+  <!-- * Worked with software engineers to develop test suite for DOD software -->
+  <!-- * Wrote shell scripts for retrieval and organization of generated data -->
 
-          <dt>Tools</dt>
-          <dd>Git, GitHub, Postgres, SQLite, Unix command line tools, AWS, GCP</dd>
-        </dl>
+  </ol>
+</section>
 
-      </section>
 
-      <!-- <hr> -->
+<section>
+  <h2>Skills</h2>
 
-      <!-- <section> -->
-      <!--   <h2>Education</h2> -->
-      <!--   <h3>Virginia Tech</h3> -->
-      <!--   <dl> -->
-      <!--     <dt>Major</dt> -->
-      <!--     <dd>Computer Engineering</dd> -->
-      <!---->
-      <!--     <dt>Minor</dt> -->
-      <!--     <dd>Computer Science</dd> -->
-      <!--   </dl> -->
-      <!-- </section> -->
+  <dl>
+    <dt>Languages</dt>
+    <dd>Go, Python, SQL, HTML, CSS, Clojure, ClojureScript, TypeScript, JavaScript, Rust, C, C++, Java</dd>
 
-    </main>
-  </body>
-</html>
+    <dt>Tools</dt>
+    <dd>Git, GitHub, Postgres, SQLite, Unix command line tools, AWS, GCP</dd>
+  </dl>
+
+</section>
+
+<!-- <hr> -->
+
+<!-- <section> -->
+<!--   <h2>Education</h2> -->
+<!--   <h3>Virginia Tech</h3> -->
+<!--   <dl> -->
+<!--     <dt>Major</dt> -->
+<!--     <dd>Computer Engineering</dd> -->
+<!---->
+<!--     <dt>Minor</dt> -->
+<!--     <dd>Computer Science</dd> -->
+<!--   </dl> -->
+<!-- </section> -->
+
+{{ end }}
