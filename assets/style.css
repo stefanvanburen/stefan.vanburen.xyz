@@ -64,6 +64,8 @@ body {
     display: flex;
     gap: 0.5rem;
     margin-left: auto;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 
     & a[aria-current="page"] {
       text-decoration-color: currentColor;
