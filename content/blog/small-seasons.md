@@ -13,6 +13,8 @@ you know, those things that feel wonderful the first couple weeks they’re here
   <img
     src="https://nitter.net/pic/orig/media%2FFF-E7sJXoAwdFDz.jpg"
     alt="Pondering my seasons"
+    width="1600"
+    height="1200"
   />
   <figcaption>
     <a href="https://nitter.net/simonsarris/status/1468038376280530947">

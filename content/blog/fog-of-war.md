@@ -41,8 +41,10 @@ I bought my schematic (I think?), and hearthstone'd $HOME.
 
 <figure>
   <img
-    src="https://ids.lib.harvard.edu/ids/view/17386628"
+    src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Winslow_Homer_-_Homosassa_Jungle_%281904%29.jpg"
     alt="Homosassa Jungle by Winslow Homer"
+    width="1024"
+    height="661"
   />
   <figcaption>
     <a href="https://harvardartmuseums.org/collections/object/306835">
@@ -85,6 +87,8 @@ I remain, for now, 2nd out of 506 on the [Ipswich CityStrides leaderboard][3].
   <img
     src="https://iiif.micr.io/uIpfV/full/%5E830,/0/default.webp"
     alt="Tokubei running through a street by Kunimori"
+    width="830"
+    height="1152"
   />
   <figcaption>
     <a href="https://www.rijksmuseum.nl/en/collection/object/Tokubei-running-through-a-street--7e5f432ba724707931197c90284c5867?tab=data">
