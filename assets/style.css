@@ -54,26 +54,34 @@ body {
   & img {
     display: block;
     border-radius: 50%;
-    will-change: transform, filter;
-    transition: transform 0s, filter 0.3s ease, box-shadow 0.3s ease;
-
-    @media (prefers-reduced-motion: reduce) {
-      transition: none;
-    }
+    transition: filter 0.4s ease, box-shadow 0.3s ease;
   }
 
-  @media (hover: hover) and (pointer: fine) {
+  @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+    & img {
+      will-change: transform, filter;
+    }
+
     & a:hover img {
       box-shadow: 0 0 0 1px oklch(from var(--accent-color) l c h / 50%);
-      transform: rotate(360deg);
+      animation: spin 0.65s ease-out forwards;
       filter: hue-rotate(40deg) brightness(1.15) saturate(1.2);
-      transition: transform 0.65s ease-out, filter 0.4s ease, box-shadow 0.3s ease;
+      transition: filter 0.2s ease, box-shadow 0.2s ease;
     }
   }
 
-  & a:active img {
-    filter: brightness(1.3) saturate(1.3);
-    transition: filter 0.1s ease;
+  @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: reduce) {
+    & a:hover img {
+      box-shadow: 0 0 0 1px oklch(from var(--accent-color) l c h / 50%);
+      filter: hue-rotate(40deg) brightness(1.15) saturate(1.2);
+    }
+  }
+
+  @media (hover: none) {
+    & a:active img {
+      filter: brightness(1.3) saturate(1.3);
+      transition: filter 0.1s ease;
+    }
   }
 
   & nav {
@@ -355,4 +363,9 @@ dt {
 dd {
   grid-column: dd;
   text-align: right;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
 }
