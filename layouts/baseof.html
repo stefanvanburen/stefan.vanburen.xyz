@@ -10,14 +10,18 @@
     <header class="site-header">
       <a href="/" aria-label="Home" {{ if .IsHome }}aria-current="page"{{ end }}><img src="{{ $favicon.Permalink }}" width="32" height="32" alt=""></a>
       <nav aria-label="Site">
-        <a href="/blog" {{ if eq .Section "blog" }}aria-current="page"{{ end }}>blog</a>
-        <a href="/til" {{ if eq .Section "til" }}aria-current="page"{{ end }}>TIL</a>
-        <a href="/colophon" {{ if strings.HasPrefix .RelPermalink "/colophon" }}aria-current="page"{{ end }}>colophon</a>
-        <a href="/now" {{ if strings.HasPrefix .RelPermalink "/now" }}aria-current="page"{{ end }}>now</a>
-        <a href="/uses" {{ if strings.HasPrefix .RelPermalink "/uses" }}aria-current="page"{{ end }}>uses</a>
-        <a href="/art" {{ if strings.HasPrefix .RelPermalink "/art" }}aria-current="page"{{ end }}>art</a>
-        <a href="/feeds" {{ if strings.HasPrefix .RelPermalink "/feeds" }}aria-current="page"{{ end }}>feeds</a>
-        <a href="/resume" {{ if strings.HasPrefix .RelPermalink "/resume" }}aria-current="page"{{ end }}>résumé</a>
+        {{ $p := .RelPermalink }}
+        {{ range slice
+          (dict "href" "/blog" "label" "blog")
+          (dict "href" "/til" "label" "TIL")
+          (dict "href" "/now" "label" "now")
+          (dict "href" "/uses" "label" "uses")
+          (dict "href" "/art" "label" "art")
+          (dict "href" "/feeds" "label" "feeds")
+          (dict "href" "/colophon" "label" "colophon")
+        }}
+          <a href="{{ .href }}" {{ if strings.HasPrefix $p .href }}aria-current="page"{{ end }}>{{ .label }}</a>
+        {{ end }}
       </nav>
     </header>
     <main>
