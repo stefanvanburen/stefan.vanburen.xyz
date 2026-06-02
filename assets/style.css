@@ -6,13 +6,16 @@
   --accent-color: light-dark(var(--color-light), var(--color-dark));
   /* Use black for printed text. */
   --black: black;
+  /* code background tinted by the seasonal accent color */
+  --code-bg: light-dark(oklch(from var(--color-light) 96% 0.06 h), oklch(from var(--color-dark) 25% 0.08 h));
+  /* border at the same seasonal hue */
+  --code-border: light-dark(oklch(from var(--color-light) 83% 0.02 h), oklch(from var(--color-dark) 33% 0.02 h));
 }
 
 body {
-  /* tachyons' measure-wide
-    https://tachyons.io/docs/typography/measure/
-    This is needed on larger screens to constrain the width. */
-  max-width: 34em;
+  /* Practical Typography recommends 45–90 characters per line:
+     https://practicaltypography.com/line-length.html */
+  max-width: 38em;
 
   /* consistent margins on left and right */
   margin-inline: auto;
@@ -121,7 +124,8 @@ pre {
   padding: 0.5rem;
   line-height: 1.25;
   overflow-x: auto;
-  border: 1px dotted;
+  background-color: var(--code-bg);
+  border: 1px solid var(--code-border);
 
   /* cap the width at 90% of the viewport
    * this is important for mobile so that we can scroll within <pre> */
@@ -189,17 +193,25 @@ kbd {
   font-family: ui-monospace, monospace;
 }
 
-/* <code> directly within paragraphs or description terms */
-p>code,
-dt>code {
-  border: 1px dotted;
-
-  /* ensure the entire <code></code> is on the same line */
-  white-space: nowrap;
+pre::selection,
+pre *::selection,
+code::selection,
+code *::selection {
+  background-color: light-dark(oklch(from var(--color-light) 93% 0.09 h), oklch(from var(--color-dark) 40% 0.09 h));
 }
 
+/* <code> directly within paragraphs, list items, or description terms */
+p>code,
+dt>code,
 li>code {
-  border: 1px dotted;
+  background-color: var(--code-bg);
+  border: 1px solid var(--code-border);
+}
+
+p>code,
+dt>code {
+  /* ensure the entire <code></code> is on the same line */
+  white-space: nowrap;
 }
 
 :focus-visible {

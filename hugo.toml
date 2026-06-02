@@ -37,7 +37,7 @@ email = "stefan@vanburen.xyz"
 
 [markup]
 [markup.highlight]
-noClasses = false
+codeFences = false
 
 [markup.goldmark]
 [markup.goldmark.renderer]
