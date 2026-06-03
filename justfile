@@ -5,11 +5,15 @@
 
 # Run the development server, building drafts.
 dev:
-    hugo server --buildDrafts --openBrowser --navigateToChanged --buildFuture
+    hugo server --buildDrafts --openBrowser --navigateToChanged --buildFuture --renderToMemory
 
 # Build the site.
 build:
     hugo build
+
+# Run all git hooks against every file.
+lint:
+    prek run --all-files --hook-stage pre-push
 
 # Publish the site.
 publish:
