@@ -2,7 +2,7 @@
 locale = "en-us"
 title = "Stefan VanBuren"
 baseURL = "https://stefan.vanburen.xyz/"
-copyright = "©️ 2026 Stefan VanBuren"
+copyright = "Stefan VanBuren"
 enableGitInfo = true
 
 disableKinds = ["taxonomy", "term"]

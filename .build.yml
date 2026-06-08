@@ -7,9 +7,6 @@ oauth: pages.sr.ht/PAGES:RW
 environment:
   site: stefan.vanburen.xyz
 tasks:
-  - build: |
-      cd $site
-      just build
   - publish: |
       cd $site
       # Only upload on the main branch.

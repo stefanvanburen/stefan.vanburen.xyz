@@ -1,0 +1,3 @@
+{{- $faviconTemplate := resources.Get "favicon-template.svg" -}}
+{{- $favicon := $faviconTemplate | resources.Minify | resources.ExecuteAsTemplate "favicon.svg" . -}}
+{{- return $favicon -}}

@@ -5,8 +5,7 @@
     {{ block "head_extra" . }}{{ end }}
   </head>
   <body>
-    {{ $faviconTemplate := resources.Get "favicon-template.svg" -}}
-    {{ $favicon := $faviconTemplate | resources.Minify | resources.ExecuteAsTemplate "favicon.svg" . -}}
+    {{ $favicon := partial "favicon.html" . -}}
     <header class="site-header">
       <a href="/" aria-label="Home" {{ if .IsHome }}aria-current="page"{{ end }}><img src="{{ $favicon.Permalink }}" width="32" height="32" alt=""></a>
       <nav aria-label="Site">

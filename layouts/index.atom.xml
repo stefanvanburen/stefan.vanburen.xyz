@@ -8,7 +8,7 @@
   <id>{{ .Permalink }}</id>
   {{ $pages := (where (where .Site.RegularPages "Type" "in" site.MainSections) "Draft" "!=" true).ByDate.Reverse }}
   <updated>{{ if $pages }}{{ (index $pages 0).Lastmod.Format "2006-01-02T15:04:05Z07:00" }}{{ else }}{{ now.Format "2006-01-02T15:04:05Z07:00" }}{{ end }}</updated>
-  <rights>{{ .Site.Copyright }}</rights>
+  <rights>© {{ now.Year }} {{ .Site.Copyright }}</rights>
   <icon>{{ .Site.BaseURL }}favicon.svg</icon>
   <generator uri="https://gohugo.io/">Hugo</generator>
   <author>
