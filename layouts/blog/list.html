@@ -4,7 +4,7 @@
 <ol class="post-list">
   {{ range .Pages.ByDate.Reverse }}
   <li>
-    <i><time datetime={{ .Date.Format "2006-01-02" }} class="nums mr-1">{{ .Date.Format "2006-01-02" }}</time></i>
+    <i><time datetime="{{ .Date.Format "2006-01-02" }}" class="nums mr-1">{{ .Date.Format "2006-01-02" }}</time></i>
     <a href="{{.RelPermalink}}">{{ .RenderString (dict "display" "inline") .Title }}</a>
   </li>
   {{ end }}
