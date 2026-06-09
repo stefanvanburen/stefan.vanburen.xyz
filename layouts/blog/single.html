@@ -9,14 +9,13 @@
   <h1>{{ .RenderString (dict "display" "inline") .Title }}</h1>
 
   {{ .Content }}
-</article>
 
-{{/* Ensure the inline time element is separate from an ending inline element */}}
-<div>
-  <i><time
-    class="text-sm"
-    datetime="{{ .Date.Format "2006-01-02" }}"
-  >{{ .Date.Format "January 2, 2006" }}</time></i>
-</div>
+  <footer>
+    <i><time
+      class="text-sm"
+      datetime="{{ .Date.Format "2006-01-02" }}"
+    >{{ .Date.Format "January 2, 2006" }}</time></i>
+  </footer>
+</article>
 
 {{ end }}

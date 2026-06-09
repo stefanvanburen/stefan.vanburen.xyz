@@ -1,5 +1,11 @@
 @import 'hugo:vars';
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 :root {
   color-scheme: light dark;
   --grey: oklch(57% 0 0);
@@ -206,12 +212,7 @@ dt>code,
 li>code {
   background-color: var(--code-bg);
   border: 1px solid var(--code-border);
-}
-
-p>code,
-dt>code {
-  /* ensure the entire <code></code> is on the same line */
-  white-space: nowrap;
+  overflow-wrap: break-word;
 }
 
 :focus-visible {
