@@ -31,6 +31,8 @@ body {
 
   /* Modern Font Stacks transitional serif stack: https://github.com/system-fonts/modern-font-stacks?tab=readme-ov-file#transitional */
   font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
+  /* measured from Charter Roman glyph outlines: yMax(x) / unitsPerEm = 985/2048 */
+  font-size-adjust: ex-height 0.481;
 
   display: flex;
   flex-direction: column;
@@ -333,9 +335,6 @@ blockquote {
   }
 }
 
-.text-sm {
-  font-size: small;
-}
 
 .mr-1 {
   margin-right: 0.5em;
@@ -362,8 +361,7 @@ figcaption {
   text-align: right;
 }
 
-figcaption>a {
-  font-size: small;
+figcaption small {
   text-wrap: balance;
 }
 

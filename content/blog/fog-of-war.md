@@ -47,9 +47,9 @@ I bought my schematic (I think?), and hearthstone'd $HOME.
     height="661"
   />
   <figcaption>
-    <a href="https://harvardartmuseums.org/collections/object/306835">
+    <small><a href="https://harvardartmuseums.org/collections/object/306835">
       Not quite Stranglethorn Vale
-    </a>
+    </a></small>
   </figcaption>
 </figure>
 
@@ -91,9 +91,9 @@ I remain, for now, 2nd out of 506 on the [Ipswich CityStrides leaderboard][3].
     height="1152"
   />
   <figcaption>
-    <a href="https://www.rijksmuseum.nl/en/collection/object/Tokubei-running-through-a-street--7e5f432ba724707931197c90284c5867?tab=data">
+    <small><a href="https://www.rijksmuseum.nl/en/collection/object/Tokubei-running-through-a-street--7e5f432ba724707931197c90284c5867?tab=data">
       Running the Streets
-    </a>
+    </a></small>
   </figcaption>
 </figure>
 

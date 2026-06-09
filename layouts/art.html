@@ -12,8 +12,10 @@
     loading="lazy"
   />
   <figcaption>
-    <a href="{{ .detailsURL }}">{{ .caption }}</a>
-    <a href="{{ .siteLocation }}">{{ .siteInfo }}</a>
+    <small>
+      <a href="{{ .detailsURL }}">{{ .caption }}</a>
+      <a href="{{ .siteLocation }}">{{ .siteInfo }}</a>
+    </small>
   </figcaption>
 </figure>
 {{ end }}

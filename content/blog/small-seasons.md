@@ -17,9 +17,9 @@ you know, those things that feel wonderful the first couple weeks they’re here
     height="1200"
   />
   <figcaption>
-    <a href="https://nitter.net/simonsarris/status/1468038376280530947">
+    <small><a href="https://nitter.net/simonsarris/status/1468038376280530947">
       Pondering my seasons
-    </a>
+    </a></small>
   </figcaption>
 </figure>
 

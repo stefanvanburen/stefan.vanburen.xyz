@@ -11,10 +11,9 @@
   {{ .Content }}
 
   <footer>
-    <i><time
-      class="text-sm"
+    <i><small><time
       datetime="{{ .Date.Format "2006-01-02" }}"
-    >{{ .Date.Format "January 2, 2006" }}</time></i>
+    >{{ .Date.Format "January 2, 2006" }}</time></small></i>
   </footer>
 </article>
 

@@ -1,5 +1,5 @@
 {{ define "main" }}
-<h1>Blog <a class="text-sm" href="/blog/index.xml">(Feed)</a></h1>
+<h1>Blog <small><a href="/blog/index.xml">(Feed)</a></small></h1>
 
 <ol class="post-list">
   {{ range .Pages.ByDate.Reverse }}
