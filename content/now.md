@@ -3,11 +3,11 @@ title: Now
 description: What I'm up to, now.
 layout: now
 picture:
-  src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Denton_Brook_Trout_1896.png/3840px-Denton_Brook_Trout_1896.png"
-  detailsURL: "https://commons.wikimedia.org/wiki/File:Denton_Brook_Trout_1896.png"
-  caption: "Brook Trout by Sherman Foote Denton"
-  width: 3840
-  height: 2793
+  src: "https://upload.wikimedia.org/wikipedia/commons/f/f4/Maxfield_Parrish_The_Lantern_Bearers_1908.jpg"
+  detailsURL: "https://commons.wikimedia.org/wiki/File:Maxfield_Parrish_The_Lantern_Bearers_1908.jpg"
+  caption: "The Lantern Bearers by Maxfield Parrish"
+  width: 970
+  height: 1191
 ---
 
 Usually it's Spring that brings transition,
