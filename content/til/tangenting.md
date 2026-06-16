@@ -16,4 +16,9 @@ I read about this in the wonderful Looking At Picture Books Substack,
 
 The whole thing is worth a read, if only for the tangenting discussion.
 
+* * *
+
+Also related: [stamps][2].
+
 [1]: https://lookingatpicturebooks.com/p/goodnight-moon
+[2]: https://lookingatpicturebooks.com/p/we-have-a-question-about-the-goodnight
