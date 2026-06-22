@@ -3,11 +3,11 @@ title: Now
 description: What I'm up to, now.
 layout: now
 picture:
-  src: "https://upload.wikimedia.org/wikipedia/commons/f/f4/Maxfield_Parrish_The_Lantern_Bearers_1908.jpg"
-  detailsURL: "https://commons.wikimedia.org/wiki/File:Maxfield_Parrish_The_Lantern_Bearers_1908.jpg"
-  caption: "The Lantern Bearers by Maxfield Parrish"
-  width: 970
-  height: 1191
+  src: "https://upload.wikimedia.org/wikipedia/commons/2/24/Soir_Bleu.jpg"
+  detailsURL: "https://commons.wikimedia.org/wiki/File:Soir_Bleu.jpg"
+  caption: "Soir Bleu by Edward Hopper"
+  width: 2048
+  height: 1019
 ---
 
 Usually it's Spring that brings transition,
