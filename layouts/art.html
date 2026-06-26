@@ -4,13 +4,15 @@
 
 {{ range hugo.Data.art.images }}
 <figure>
-  <img
-    src="{{ .imageURL }}"
-    alt="{{ .caption }}"
-    width="{{ .width }}"
-    height="{{ .height }}"
-    loading="lazy"
-  />
+  <div class="img-wrap">
+    <img
+      src="{{ .imageURL }}"
+      alt="{{ .caption }}"
+      width="{{ .width }}"
+      height="{{ .height }}"
+      loading="lazy"
+    />
+  </div>
   <figcaption>
     <small>
       <a href="{{ .detailsURL }}">{{ .caption }}</a>

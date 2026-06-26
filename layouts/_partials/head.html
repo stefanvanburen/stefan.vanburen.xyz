@@ -25,38 +25,52 @@ Based on the builtin colorschemes from mini.hues:
 {{ $colorDark := "" }}
 {{ $shadowDark := "" }}
 {{ $shadowDarkHalf := "" }}
+{{ $gradientLight := "" }}
+{{ $gradientDark := "" }}
 {{ if (or (and (eq $month "11") (ge $day 8)) (eq $month "12") (eq $month "01") (and (eq $month "02") (lt $day 4))) }}
   {{/* winter; purple -> green */}}
   {{ $colorLight = "#014772" }}
-  {{ $shadowLight = "2px 2px #ffb3f6, 4px 4px #beb3ff, 6px 6px #90ceff, 8px 8px #6af9ff, 10px 10px #83ffb3" }}
-  {{ $shadowLightHalf = "2px 2px #ffb3f6, 4px 4px #beb3ff" }}
+  {{ $s1 := "#ffb3f6" }}{{ $s2 := "#beb3ff" }}{{ $s3 := "#90ceff" }}{{ $s4 := "#6af9ff" }}{{ $s5 := "#83ffb3" }}
+  {{ $shadowLight = printf "2px 2px %s, 4px 4px %s, 6px 6px %s, 8px 8px %s, 10px 10px %s" $s1 $s2 $s3 $s4 $s5 }}
+  {{ $shadowLightHalf = printf "2px 2px %s, 4px 4px %s" $s1 $s2 }}
+  {{ $gradientLight = printf "linear-gradient(to bottom, %s, %s, %s, %s, %s)" $s1 $s2 $s3 $s4 $s5 }}
   {{ $colorDark = "#b3daf9" }}
   {{ $shadowDark = "2px 2px #371134, 4px 4px #211a46, 6px 6px #00324f, 8px 8px #004c4e, 10px 10px #003415" }}
   {{ $shadowDarkHalf = "2px 2px #371134, 4px 4px #211a46" }}
+  {{ $gradientDark = "linear-gradient(to bottom, #fac5c7, #d1cffb, #b3daf9, #a6e1e2, #b8e1c1)" }}
 {{ else if (or (and (eq $month "02") (ge $day 4)) (eq $month "03") (eq $month "04") (and (eq $month "05") (lt $day 6))) }}
   {{/* spring; green -> red */}}
   {{ $colorLight = "#2e5e00" }}
-  {{ $shadowLight = "2px 2px #80ffb8, 4px 4px #e6ed62, 6px 6px #ffc688, 8px 8px #ffaaa7" }}
-  {{ $shadowLightHalf = "2px 2px #80ffb8, 4px 4px #e6ed62" }}
+  {{ $s1 := "#80ffb8" }}{{ $s2 := "#e6ed62" }}{{ $s3 := "#ffc688" }}{{ $s4 := "#ffaaa7" }}
+  {{ $shadowLight = printf "2px 2px %s, 4px 4px %s, 6px 6px %s, 8px 8px %s" $s1 $s2 $s3 $s4 }}
+  {{ $shadowLightHalf = printf "2px 2px %s, 4px 4px %s" $s1 $s2 }}
+  {{ $gradientLight = printf "linear-gradient(to right, %s, %s, %s, %s)" $s1 $s2 $s3 $s4 }}
   {{ $colorDark = "#bee2ad" }}
   {{ $shadowDark = "2px 2px #00381d, 4px 4px #373700, 6px 6px #492900, 8px 8px #410d12" }}
   {{ $shadowDarkHalf = "2px 2px #00381d, 4px 4px #373700" }}
+  {{ $gradientDark = "linear-gradient(to right, #abe5be, #d8da9d, #facb9e, #ffc1bf)" }}
 {{ else if (or (and (eq $month "05") (ge $day 6)) (eq $month "06") (eq $month "07") (and (eq $month "08") (lt $day 8))) }}
   {{/* summer; red -> green */}}
-  {{ $colorLight = "#804e00" }}
-  {{ $shadowLight = "2px 2px #ffb2ee, 4px 4px #ffaba5, 6px 6px #ffc888, 8px 8px #e3ee65" }}
-  {{ $shadowLightHalf = "2px 2px #ffb2ee, 4px 4px #ffaba5" }}
+  {{ $colorLight = "#61004f" }}
+  {{ $s1 := "#ffb2ee" }}{{ $s2 := "#ffaba5" }}{{ $s3 := "#ffc888" }}{{ $s4 := "#e3ee65" }}
+  {{ $shadowLight = printf "2px 2px %s, 4px 4px %s, 6px 6px %s, 8px 8px %s" $s1 $s2 $s3 $s4 }}
+  {{ $shadowLightHalf = printf "2px 2px %s, 4px 4px %s" $s1 $s2 }}
+  {{ $gradientLight = printf "linear-gradient(to top, %s, %s, %s, %s)" $s1 $s2 $s3 $s4 }}
   {{ $colorDark = "#f6cc9b" }}
   {{ $shadowDark = "2px 2px #3a0f2e, 4px 4px #410d0c, 6px 6px #492c00, 8px 8px #313600" }}
   {{ $shadowDarkHalf = "2px 2px #3a0f2e, 4px 4px #410d0c" }}
+  {{ $gradientDark = "linear-gradient(to top, #fac0e4, #ffc1b9, #f6cc9b, #d1db9f)" }}
 {{ else if (or (and (eq $month "08") (ge $day 8)) (eq $month "09") (eq $month "10") (and (eq $month "11") (lt $day 8))) }}
   {{/* autumn; orange, red, blue, purple */}}
   {{ $colorLight = "#431256" }}
-  {{ $shadowLight = "2px 2px #ffaba1, 4px 4px #ffb0e9, 6px 6px #92c8ff, 8px 8px #cab3ff" }}
-  {{ $shadowLightHalf = "2px 2px #ffaba1, 4px 4px #ffb0e9" }}
+  {{ $s1 := "#ffaba1" }}{{ $s2 := "#ffb0e9" }}{{ $s3 := "#92c8ff" }}{{ $s4 := "#cab3ff" }}
+  {{ $shadowLight = printf "2px 2px %s, 4px 4px %s, 6px 6px %s, 8px 8px %s" $s1 $s2 $s3 $s4 }}
+  {{ $shadowLightHalf = printf "2px 2px %s, 4px 4px %s" $s1 $s2 }}
+  {{ $gradientLight = printf "linear-gradient(to left, %s, %s, %s, %s)" $s1 $s2 $s3 $s4 }}
   {{ $colorDark = "#e4caf1" }}
   {{ $shadowDark = "2px 2px #410d0d, 4px 4px #3a0f2f, 6px 6px #00284a, 8px 8px #261844" }}
   {{ $shadowDarkHalf = "2px 2px #410d0d, 4px 4px #3a0f2f" }}
+  {{ $gradientDark = "linear-gradient(to left, #fac6c1, #f1c6e2, #b8d9fc, #d7cef9)" }}
 {{ end }}
 
 {{ $vars := dict
@@ -66,6 +80,8 @@ Based on the builtin colorschemes from mini.hues:
   "color-dark" $colorDark
   "shadow-dark" $shadowDark
   "shadow-dark-half" $shadowDarkHalf
+  "gradient-light" $gradientLight
+  "gradient-dark" $gradientDark
 }}
 
 <meta name="theme-color" content="{{ $colorLight }}" media="(prefers-color-scheme: light)" />
