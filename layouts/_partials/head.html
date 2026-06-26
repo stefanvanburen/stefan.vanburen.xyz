@@ -74,7 +74,7 @@ Based on the builtin colorschemes from mini.hues:
   {{ $gradientDark = "linear-gradient(to top, #fac0e4, #ffc1b9, #f6cc9b, #d1db9f)" }}
 {{ else if (or (and (eq $month "08") (ge $day 8)) (eq $month "09") (eq $month "10") (and (eq $month "11") (lt $day 8))) }}
   {{/* autumn; orange, red, blue, purple */}}
-  {{ $colorLight = "#431256" }}
+  {{ $colorLight = "#5c0207" }}
   {{ $s1 := "#ffaba1" }}{{ $s2 := "#ffb0e9" }}{{ $s3 := "#92c8ff" }}{{ $s4 := "#cab3ff" }}
   {{ $shadowLight = printf "2px 2px %s, 4px 4px %s, 6px 6px %s, 8px 8px %s" $s1 $s2 $s3 $s4 }}
   {{ $shadowLightHalf = printf "2px 2px %s, 4px 4px %s" $s1 $s2 }}
