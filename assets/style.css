@@ -184,8 +184,6 @@ h3,
 h4,
 h5,
 h6 {
-  /* Modern Font Stacks system-ui stack: https://github.com/system-fonts/modern-font-stacks?tab=readme-ov-file#system-ui */
-  font-family: system-ui, sans-serif;
   text-wrap: balance;
 }
 
@@ -198,7 +196,7 @@ pre,
 code,
 samp,
 kbd {
-  font-family: ui-monospace, monospace;
+  font-family: monospace;
 }
 
 pre::selection,
