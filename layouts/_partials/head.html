@@ -26,6 +26,13 @@ Based on the builtin colorschemes from mini.hues:
 {{ $shadowDark := "" }}
 {{ $shadowDarkHalf := "" }}
 {{ $gradientLight := "" }}
+{{/*
+  gradientLight is derived from the same $s1–$sN stops as shadowLight, so a color
+  change propagates to both. gradientDark is hardcoded with different (brighter) colors
+  because the dark shadow stops are near-black — they create text depth on a dark
+  background but would produce an invisible image tint. gradientDark uses the palette's
+  fg colors instead, which are bright enough to tint visibly in dark mode.
+*/}}
 {{ $gradientDark := "" }}
 {{ $faviconCx := "" }}
 {{ $faviconCy := "" }}
