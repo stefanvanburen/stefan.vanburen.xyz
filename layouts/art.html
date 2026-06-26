@@ -2,21 +2,21 @@
 <h1>{{ .Title }}</h1>
 {{ .Content }}
 
-{{ range hugo.Data.art.images }}
+{{ range $i, $img := hugo.Data.art.images }}
 <figure>
   <div class="img-wrap">
     <img
-      src="{{ .imageURL }}"
-      alt="{{ .caption }}"
-      width="{{ .width }}"
-      height="{{ .height }}"
-      loading="lazy"
+      src="{{ $img.imageURL }}"
+      alt="{{ $img.caption }}"
+      width="{{ $img.width }}"
+      height="{{ $img.height }}"
+      loading="{{ if eq $i 0 }}eager{{ else }}lazy{{ end }}"
     />
   </div>
   <figcaption>
     <small>
-      <a href="{{ .detailsURL }}">{{ .caption }}</a>
-      <a href="{{ .siteLocation }}">{{ .siteInfo }}</a>
+      <a href="{{ $img.detailsURL }}">{{ $img.caption }}</a>
+      <a href="{{ $img.siteLocation }}">{{ $img.siteInfo }}</a>
     </small>
   </figcaption>
 </figure>
