@@ -1,61 +1,15 @@
 {{/*
-Based on the builtin colorschemes from mini.hues:
-- minispring
-- minisummer
-- miniautumn
-- miniwinter
-
-See ../layouts/_partials/head.html.
+Stop colors and gradient focal point are passed from head.html, which
+already computes them for the CSS seasonal palette. See head.html.
 */}}
-{{ $stop1 := "" }}
-{{ $stop2 := "" }}
-{{ $stop3 := "" }}
-{{ $stop4 := "" }}
-{{ $cx := "" }}
-{{ $cy := "" }}
-{{ $month := now.Format "01" }}
-{{ $day := now.Day }}
-{{ if (or (and (eq $month "11") (ge $day 8)) (eq $month "12") (eq $month "01") (and (eq $month "02") (lt $day 4))) }}
-  {{/* winter - top */}}
-  {{ $stop1 = "#ffb3f6" }}
-  {{ $stop2 = "#beb3ff" }}
-  {{ $stop3 = "#90ceff" }}
-  {{ $stop4 = "#6af9ff" }}
-  {{ $cx = "50%" }}
-  {{ $cy = "30%" }}
-{{ else if (or (and (eq $month "02") (ge $day 4)) (eq $month "03") (eq $month "04") (and (eq $month "05") (lt $day 6))) }}
-  {{/* spring - left */}}
-  {{ $stop1 = "#80ffb8" }}
-  {{ $stop2 = "#e6ed62" }}
-  {{ $stop3 = "#ffc688" }}
-  {{ $stop4 = "#ffaaa7" }}
-  {{ $cx = "30%" }}
-  {{ $cy = "50%" }}
-{{ else if (or (and (eq $month "05") (ge $day 6)) (eq $month "06") (eq $month "07") (and (eq $month "08") (lt $day 8))) }}
-  {{/* summer - bottom */}}
-  {{ $stop1 = "#ffb2ee" }}
-  {{ $stop2 = "#ffaba5" }}
-  {{ $stop3 = "#ffc888" }}
-  {{ $stop4 = "#e3ee65" }}
-  {{ $cx = "50%" }}
-  {{ $cy = "70%" }}
-{{ else if (or (and (eq $month "08") (ge $day 8)) (eq $month "09") (eq $month "10") (and (eq $month "11") (lt $day 8))) }}
-  {{/* autumn - right */}}
-  {{ $stop1 = "#ffaba1" }}
-  {{ $stop2 = "#ffb0e9" }}
-  {{ $stop3 = "#92c8ff" }}
-  {{ $stop4 = "#cab3ff" }}
-  {{ $cx = "70%" }}
-  {{ $cy = "50%" }}
-{{ end }}
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <radialGradient id="season" cx="{{ $cx }}" cy="{{ $cy }}" r="75%">
-      <stop offset="0%" stop-color="{{ $stop1 }}" />
-      <stop offset="35%" stop-color="{{ $stop2 }}" />
-      <stop offset="60%" stop-color="{{ $stop3 }}" />
-      <stop offset="85%" stop-color="{{ $stop4 }}" />
-      <stop offset="100%" stop-color="{{ $stop4 }}" stop-opacity="0.6" />
+    <radialGradient id="season" cx="{{ .Cx }}" cy="{{ .Cy }}" r="75%">
+      <stop offset="0%" stop-color="{{ .Stop1 }}" />
+      <stop offset="35%" stop-color="{{ .Stop2 }}" />
+      <stop offset="60%" stop-color="{{ .Stop3 }}" />
+      <stop offset="85%" stop-color="{{ .Stop4 }}" />
+      <stop offset="100%" stop-color="{{ .Stop4 }}" stop-opacity="0.6" />
     </radialGradient>
   </defs>
   <circle cx="50" cy="50" r="50" fill="url(#season)"/>
