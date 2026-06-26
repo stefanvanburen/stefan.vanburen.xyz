@@ -373,7 +373,6 @@ figure .img-wrap {
   @media (hover: hover) {
     & img {
       filter: grayscale(1);
-      transition: filter 0.4s ease;
     }
 
     /* color overlay using the seasonal shadow gradient.
@@ -392,7 +391,12 @@ figure .img-wrap {
       mix-blend-mode: color;
       opacity: 0.5;
       pointer-events: none;
-      transition: opacity 0.4s ease;
+    }
+
+    /* transitions only when the user hasn't requested reduced motion */
+    @media (prefers-reduced-motion: no-preference) {
+      & img { transition: filter 0.4s ease; }
+      &::after { transition: opacity 0.4s ease; }
     }
 
     &:hover {
