@@ -44,7 +44,7 @@ width = 1080
 height = 1080
 
 [[images]]
-imageURL = "https://www.artic.edu/iiif/2/0787ea3c-9c03-65a2-adeb-5f5343794324/full/1686,/0/default.jpg"
+imageURL = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Robert_William_Vonnoh_-_Spring_in_France_-_1982.272_-_Art_Institute_of_Chicago.jpg/1920px-Robert_William_Vonnoh_-_Spring_in_France_-_1982.272_-_Art_Institute_of_Chicago.jpg"
 detailsURL = "https://www.artic.edu/artworks/97292/spring-in-france"
 caption = "Spring in France by Robert Vonnoh"
 siteLocation = "/now"
@@ -62,13 +62,13 @@ width = 543
 height = 800
 
 [[images]]
-imageURL = "https://www.artic.edu/iiif/2/d1cda60c-c21d-9fbc-8195-4e7c3d6e9650/full/1686,/0/default.jpg"
+imageURL = "https://upload.wikimedia.org/wikipedia/commons/e/e1/Art_Institute_Of_Chicago%2C_The_Winter_Sun%2C_Gardner_Symons_%28NBY_415836%29.jpg"
 detailsURL = "https://www.artic.edu/artworks/64476/the-winter-sun"
 caption = "The Winter Sun by George Gardner Symons"
 siteLocation = "/now"
 siteInfo = "(Previously on /now)"
-width = 1686
-height = 1113
+width = 828
+height = 523
 
 [[images]]
 imageURL = "https://img.artsmia.org/web_objects_cache/125000/300/80/125388/mia_8004717_800.jpg"
