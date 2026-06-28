@@ -366,33 +366,29 @@ figure .img-wrap {
 
   & img {
     display: block;
+    filter: grayscale(1);
   }
 
-  /* tint and reveal only apply when hover is available */
+  /* color overlay using the seasonal shadow gradient.
+     mix-blend-mode: color applies the hue/chroma but preserves luminosity,
+     so the image reads as a tinted monochrome rather than a flat wash.
+     gradient direction mirrors the favicon focal point per season:
+     winter top→bottom, spring left→right, summer bottom→top, autumn right→left. */
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-light);
+    @media (prefers-color-scheme: dark) {
+      background: var(--gradient-dark);
+    }
+    mix-blend-mode: color;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  /* hover devices: transitions + hover to reveal */
   @media (hover: hover) {
-    & img {
-      filter: grayscale(1);
-    }
-
-    /* color overlay using the seasonal shadow gradient.
-       mix-blend-mode: color applies the hue/chroma but preserves luminosity,
-       so the image reads as a tinted monochrome rather than a flat wash.
-       gradient direction mirrors the favicon focal point per season:
-       winter top→bottom, spring left→right, summer bottom→top, autumn right→left. */
-    &::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: var(--gradient-light);
-      @media (prefers-color-scheme: dark) {
-        background: var(--gradient-dark);
-      }
-      mix-blend-mode: color;
-      opacity: 0.5;
-      pointer-events: none;
-    }
-
-    /* transitions only when the user hasn't requested reduced motion */
     @media (prefers-reduced-motion: no-preference) {
       & img { transition: filter 0.4s ease; }
       &::after { transition: opacity 0.4s ease; }
@@ -404,26 +400,9 @@ figure .img-wrap {
     }
   }
 
-  /* on touch devices: grayscale by default, press to peek in full color.
-     no transitions — :active drops on finger lift, so the snap-back would look jarring. */
+  /* touch devices: press to peek in full color; no transitions since
+     :active drops on finger lift and the snap-back would look jarring. */
   @media (hover: none) {
-    & img {
-      filter: grayscale(1);
-    }
-
-    &::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: var(--gradient-light);
-      @media (prefers-color-scheme: dark) {
-        background: var(--gradient-dark);
-      }
-      mix-blend-mode: color;
-      opacity: 0.5;
-      pointer-events: none;
-    }
-
     &:active {
       & img { filter: none; }
       &::after { opacity: 0; }
