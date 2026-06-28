@@ -6,7 +6,7 @@ copyright = "Stefan VanBuren"
 enableGitInfo = true
 
 disableKinds = ["taxonomy", "term"]
-mainSections = ["blog", "til"]
+mainSections = ["blog", "notes", "til"]
 
 [mediaTypes."application/atom+xml"]
 suffixes = ["xml"]

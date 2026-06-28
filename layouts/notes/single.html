@@ -1,0 +1,20 @@
+{{ define "head_extra" }}
+<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}"/>
+{{ end }}
+
+{{ define "main" }}
+<a href="/notes" class="back-link">back to notes</a>
+
+<article>
+  <h1>{{ .RenderString (dict "display" "inline") .Title }}</h1>
+
+  {{ .Content }}
+
+  <footer>
+    <i><small><time
+      datetime="{{ .Date.Format "2006-01-02" }}"
+    >{{ .Date.Format "January 2, 2006" }}</time></small></i>
+  </footer>
+</article>
+
+{{ end }}
