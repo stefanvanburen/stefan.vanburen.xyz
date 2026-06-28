@@ -368,8 +368,7 @@ figure .img-wrap {
     display: block;
   }
 
-  /* tint and reveal only apply when hover is available;
-     on touch devices images show in full color */
+  /* tint and reveal only apply when hover is available */
   @media (hover: hover) {
     & img {
       filter: grayscale(1);
@@ -400,6 +399,32 @@ figure .img-wrap {
     }
 
     &:hover {
+      & img { filter: none; }
+      &::after { opacity: 0; }
+    }
+  }
+
+  /* on touch devices: grayscale by default, press to peek in full color.
+     no transitions — :active drops on finger lift, so the snap-back would look jarring. */
+  @media (hover: none) {
+    & img {
+      filter: grayscale(1);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--gradient-light);
+      @media (prefers-color-scheme: dark) {
+        background: var(--gradient-dark);
+      }
+      mix-blend-mode: color;
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    &:active {
       & img { filter: none; }
       &::after { opacity: 0; }
     }
