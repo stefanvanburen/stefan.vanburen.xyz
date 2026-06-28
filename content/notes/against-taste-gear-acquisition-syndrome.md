@@ -1,5 +1,5 @@
 ---
-title: "Against Taste / Gear Acquisition Syndrome"
+title: "Taste Acquisition Syndrome"
 date: 2026-06-27T21:20:10-04:00
 draft: false
 ---
@@ -12,7 +12,7 @@ I recently read Will Manidis' [Against Taste](https://minutes.substack.com/p/aga
 
 > Strip the transcendent out and what remains is raw consumption. You are no longer participating in a project that exceeds you. You are furnishing a room. The judgment may be exquisite. The room may be beautiful. But the activity has no telos. It is not pointed at heaven. It is not even pointed at the future. It is pointed at a living room wall.
 
-This morning, I thought it connected nicely to [Gear Acquisition Syndrome](https://blog.ielliott.io/gear-acquisition-syndrome), in the sense that "taste" is thought of as intellectual acquisition. _Acquiring_ taste, knowing the right brand/software/band/media/etc., has become separate from creation.
+This morning, I thought it connected nicely to [Gear Acquisition Syndrome](https://blog.ielliott.io/gear-acquisition-syndrome), in the sense that "taste" is thought of as intellectual acquisition. (Hence, the title of this post.) _Acquiring_ taste, knowing the right brand/software/band/media/etc., has become separate from creation.
 
 * * *
 
