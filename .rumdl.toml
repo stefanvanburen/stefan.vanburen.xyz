@@ -3,6 +3,7 @@
 [global]
 disable = [
   "MD013",  # Line length
+  "MD028",  # Blank line inside blockquote (sometimes you want separate blockquotes next to each other...)
   "MD033",  # Inline HTML
 ]
 
