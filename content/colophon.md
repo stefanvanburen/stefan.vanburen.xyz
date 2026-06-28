@@ -10,6 +10,7 @@ This website is built with [hugo](https://github.com/gohugoio/hugo) and hosted o
 The code is licensed under the [MIT License](https://git.sr.ht/~svbn/stefan.vanburen.xyz/tree/main/item/LICENSE).
 
 The content is licensed as [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+The content is all written by a human, flaws and all. (Please send me typos, bugs, etc.!)
 
 I've included a "gallery" of the art I've hot-linked to at [/art](/art).
 
