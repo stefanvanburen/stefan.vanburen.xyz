@@ -355,58 +355,29 @@ figure {
   padding: 0;
 }
 
-/* seasonal color tint on images; hover reveals full color.
-   .img-wrap is a plain div wrapper — needed because <img> is a replaced
-   element and doesn't support ::after. */
+/* seasonal color tint on images; hover/press reveals full color.
+   gradient direction mirrors the favicon focal point per season:
+   winter top→bottom, spring left→right, summer bottom→top, autumn right→left. */
 figure .img-wrap {
   display: block;
-  position: relative;
-  width: fit-content; /* prevent overlay extending past the image into surrounding whitespace */
+  width: fit-content; /* prevent background extending past the image */
   isolation: isolate; /* scope mix-blend-mode to just the image */
+  background: var(--gradient-light);
+  @media (prefers-color-scheme: dark) {
+    background: var(--gradient-dark);
+  }
 
   & img {
     display: block;
-    filter: grayscale(1);
+    mix-blend-mode: luminosity;
   }
 
-  /* color overlay using the seasonal shadow gradient.
-     mix-blend-mode: color applies the hue/chroma but preserves luminosity,
-     so the image reads as a tinted monochrome rather than a flat wash.
-     gradient direction mirrors the favicon focal point per season:
-     winter top→bottom, spring left→right, summer bottom→top, autumn right→left. */
-  &::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: var(--gradient-light);
-    @media (prefers-color-scheme: dark) {
-      background: var(--gradient-dark);
-    }
-    mix-blend-mode: color;
-    opacity: 0.5;
-    pointer-events: none;
-  }
-
-  /* hover devices: transitions + hover to reveal */
   @media (hover: hover) {
-    @media (prefers-reduced-motion: no-preference) {
-      & img { transition: filter 0.4s ease; }
-      &::after { transition: opacity 0.4s ease; }
-    }
-
-    &:hover {
-      & img { filter: none; }
-      &::after { opacity: 0; }
-    }
+    &:hover img { mix-blend-mode: normal; }
   }
 
-  /* touch devices: press to peek in full color; no transitions since
-     :active drops on finger lift and the snap-back would look jarring. */
   @media (hover: none) {
-    &:active {
-      & img { filter: none; }
-      &::after { opacity: 0; }
-    }
+    &:active img { mix-blend-mode: normal; }
   }
 }
 
