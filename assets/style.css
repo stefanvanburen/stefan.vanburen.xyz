@@ -308,7 +308,7 @@ hr {
 }
 
 blockquote {
-  border-left: medium solid oklch(from currentColor l c h / 30%);
+  border-left: 1px solid oklch(from var(--accent-color) l c h / 30%);
   padding-left: 1em;
   margin: 0;
 }
