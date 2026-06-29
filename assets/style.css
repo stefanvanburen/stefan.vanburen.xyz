@@ -190,6 +190,7 @@ h6 {
 p {
   text-wrap: pretty;
   margin-block: 1lh;
+  hanging-punctuation: first;
 }
 
 pre,
