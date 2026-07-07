@@ -1,5 +1,5 @@
 {{ define "main" }}
-<h1>Notes <small><a href="/notes/index.xml">(Feed)</a></small></h1>
+<h1>{{ .LinkTitle }} <small><a href="{{ with .OutputFormats.Get "Atom" }}{{ .RelPermalink }}{{ end }}">(Feed)</a></small></h1>
 
 <ol class="post-list">
   {{ range .Pages.ByDate.Reverse }}
