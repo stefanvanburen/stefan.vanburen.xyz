@@ -1,6 +1,8 @@
 {{ define "main" }}
 <h1>{{ .LinkTitle }} <small><a href="{{ with .OutputFormats.Get "Atom" }}{{ .RelPermalink }}{{ end }}">(Feed)</a></small></h1>
 
+{{ .Content }}
+
 <ol class="post-list">
   {{ range .Pages.ByDate.Reverse }}
   <li>
