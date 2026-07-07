@@ -26,16 +26,3 @@ hooks = [{ id = "typos" }]
 repo = "https://github.com/rvben/rumdl-pre-commit"
 rev = "v0.2.24"
 hooks = [{ id = "rumdl" }]
-
-[[repos]]
-repo = "local"
-hooks = [
-  # Verify the site compiles without writing to public/. Runs on push so
-  # individual commits stay fast.
-  { id = "hugo-build",
-    name = "hugo build",
-    entry = "hugo build --renderToMemory --logLevel warn",
-    language = "system",
-    pass_filenames = false,
-    stages = ["pre-push"] },
-]

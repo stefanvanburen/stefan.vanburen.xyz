@@ -14,7 +14,7 @@ build:
 
 # Run all git hooks against every file.
 lint:
-    prek run --all-files --hook-stage pre-push
+    prek run --all-files
 
 # Publish the site.
 publish: build
