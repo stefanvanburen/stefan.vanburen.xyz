@@ -9,6 +9,7 @@ dev:
 
 # Build the site.
 build:
+    rm -rf public
     hugo build --minify
 
 # Run all git hooks against every file.
@@ -16,8 +17,6 @@ lint:
     prek run --all-files --hook-stage pre-push
 
 # Publish the site.
-publish:
-    rm -rf public
-    hugo build --minify
+publish: build
     tar --directory public --create --gzip --verbose . > site.tar.gz
     hut pages publish --domain stefan.vanburen.xyz --site-config siteconfig.json site.tar.gz
