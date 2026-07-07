@@ -7,6 +7,10 @@ oauth: pages.sr.ht/PAGES:RW
 environment:
   site: stefan.vanburen.xyz
 tasks:
+  # Verify the site builds on every branch.
+  - build: |
+      cd $site
+      hugo build --renderToMemory --logLevel warn
   - publish: |
       cd $site
       # Only upload on the main branch.
