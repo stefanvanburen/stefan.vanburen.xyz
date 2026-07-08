@@ -20,89 +20,79 @@ Based on the builtin colorschemes from mini.hues:
 {{ $month := now.Format "01" }}
 {{ $day := now.Day }}
 {{ $colorLight := "" }}
-{{ $shadowLight := "" }}
-{{ $shadowLightHalf := "" }}
 {{ $colorDark := "" }}
-{{ $shadowDark := "" }}
-{{ $shadowDarkHalf := "" }}
-{{ $gradientLight := "" }}
 {{/*
-  gradientLight is derived from the same $s1–$sN stops as shadowLight, so a color
-  change propagates to both. gradientDark is hardcoded with different (brighter) colors
-  because the dark shadow stops are near-black — they create text depth on a dark
-  background but would produce an invisible image tint. gradientDark uses the palette's
-  fg colors instead, which are bright enough to tint visibly in dark mode.
+  Per-season stop lists, palest to deepest. lightStops drive the light-mode
+  shadows, gradient, and favicon. darkShadowStops are near-black — they create
+  text depth on a dark background but would produce an invisible image tint, so
+  darkGradientStops use the palette's fg colors instead, which are bright
+  enough to tint visibly in dark mode.
 */}}
-{{ $gradientDark := "" }}
+{{ $lightStops := slice }}
+{{ $darkShadowStops := slice }}
+{{ $darkGradientStops := slice }}
+{{ $gradientDirection := "" }}
 {{ $faviconCx := "" }}
 {{ $faviconCy := "" }}
-{{ $faviconStop1 := "" }}
-{{ $faviconStop2 := "" }}
-{{ $faviconStop3 := "" }}
-{{ $faviconStop4 := "" }}
 {{ if (or (and (eq $month "11") (ge $day 8)) (eq $month "12") (eq $month "01") (and (eq $month "02") (lt $day 4))) }}
   {{/* winter; purple -> green */}}
   {{ $colorLight = "#014772" }}
-  {{ $s1 := "#ffb3f6" }}{{ $s2 := "#beb3ff" }}{{ $s3 := "#90ceff" }}{{ $s4 := "#6af9ff" }}{{ $s5 := "#83ffb3" }}
-  {{ $shadowLight = printf "2px 2px %s, 4px 4px %s, 6px 6px %s, 8px 8px %s, 10px 10px %s" $s1 $s2 $s3 $s4 $s5 }}
-  {{ $shadowLightHalf = printf "2px 2px %s, 4px 4px %s" $s1 $s2 }}
-  {{ $gradientLight = printf "linear-gradient(to bottom, %s, %s, %s, %s, %s)" $s1 $s2 $s3 $s4 $s5 }}
-  {{ $faviconCx = "50%" }}{{ $faviconCy = "30%" }}
-  {{ $faviconStop1 = $s1 }}{{ $faviconStop2 = $s2 }}{{ $faviconStop3 = $s3 }}{{ $faviconStop4 = $s4 }}
   {{ $colorDark = "#b3daf9" }}
-  {{ $shadowDark = "2px 2px #371134, 4px 4px #211a46, 6px 6px #00324f, 8px 8px #004c4e, 10px 10px #003415" }}
-  {{ $shadowDarkHalf = "2px 2px #371134, 4px 4px #211a46" }}
-  {{ $gradientDark = "linear-gradient(to bottom, #fac5c7, #d1cffb, #b3daf9, #a6e1e2, #b8e1c1)" }}
+  {{ $lightStops = slice "#ffb3f6" "#beb3ff" "#90ceff" "#6af9ff" "#83ffb3" }}
+  {{ $darkShadowStops = slice "#371134" "#211a46" "#00324f" "#004c4e" "#003415" }}
+  {{ $darkGradientStops = slice "#fac5c7" "#d1cffb" "#b3daf9" "#a6e1e2" "#b8e1c1" }}
+  {{ $gradientDirection = "to bottom" }}
+  {{ $faviconCx = "50%" }}{{ $faviconCy = "30%" }}
 {{ else if (or (and (eq $month "02") (ge $day 4)) (eq $month "03") (eq $month "04") (and (eq $month "05") (lt $day 6))) }}
   {{/* spring; green -> red */}}
   {{ $colorLight = "#2e5e00" }}
-  {{ $s1 := "#80ffb8" }}{{ $s2 := "#e6ed62" }}{{ $s3 := "#ffc688" }}{{ $s4 := "#ffaaa7" }}
-  {{ $shadowLight = printf "2px 2px %s, 4px 4px %s, 6px 6px %s, 8px 8px %s" $s1 $s2 $s3 $s4 }}
-  {{ $shadowLightHalf = printf "2px 2px %s, 4px 4px %s" $s1 $s2 }}
-  {{ $gradientLight = printf "linear-gradient(to right, %s, %s, %s, %s)" $s1 $s2 $s3 $s4 }}
-  {{ $faviconCx = "30%" }}{{ $faviconCy = "50%" }}
-  {{ $faviconStop1 = $s1 }}{{ $faviconStop2 = $s2 }}{{ $faviconStop3 = $s3 }}{{ $faviconStop4 = $s4 }}
   {{ $colorDark = "#bee2ad" }}
-  {{ $shadowDark = "2px 2px #00381d, 4px 4px #373700, 6px 6px #492900, 8px 8px #410d12" }}
-  {{ $shadowDarkHalf = "2px 2px #00381d, 4px 4px #373700" }}
-  {{ $gradientDark = "linear-gradient(to right, #abe5be, #d8da9d, #facb9e, #ffc1bf)" }}
+  {{ $lightStops = slice "#80ffb8" "#e6ed62" "#ffc688" "#ffaaa7" }}
+  {{ $darkShadowStops = slice "#00381d" "#373700" "#492900" "#410d12" }}
+  {{ $darkGradientStops = slice "#abe5be" "#d8da9d" "#facb9e" "#ffc1bf" }}
+  {{ $gradientDirection = "to right" }}
+  {{ $faviconCx = "30%" }}{{ $faviconCy = "50%" }}
 {{ else if (or (and (eq $month "05") (ge $day 6)) (eq $month "06") (eq $month "07") (and (eq $month "08") (lt $day 8))) }}
   {{/* summer; red -> green */}}
   {{ $colorLight = "#61004f" }}
-  {{ $s1 := "#ffb2ee" }}{{ $s2 := "#ffaba5" }}{{ $s3 := "#ffc888" }}{{ $s4 := "#e3ee65" }}
-  {{ $shadowLight = printf "2px 2px %s, 4px 4px %s, 6px 6px %s, 8px 8px %s" $s1 $s2 $s3 $s4 }}
-  {{ $shadowLightHalf = printf "2px 2px %s, 4px 4px %s" $s1 $s2 }}
-  {{ $gradientLight = printf "linear-gradient(to top, %s, %s, %s, %s)" $s1 $s2 $s3 $s4 }}
-  {{ $faviconCx = "50%" }}{{ $faviconCy = "70%" }}
-  {{ $faviconStop1 = $s1 }}{{ $faviconStop2 = $s2 }}{{ $faviconStop3 = $s3 }}{{ $faviconStop4 = $s4 }}
   {{ $colorDark = "#f6cc9b" }}
-  {{ $shadowDark = "2px 2px #3a0f2e, 4px 4px #410d0c, 6px 6px #492c00, 8px 8px #313600" }}
-  {{ $shadowDarkHalf = "2px 2px #3a0f2e, 4px 4px #410d0c" }}
-  {{ $gradientDark = "linear-gradient(to top, #fac0e4, #ffc1b9, #f6cc9b, #d1db9f)" }}
+  {{ $lightStops = slice "#ffb2ee" "#ffaba5" "#ffc888" "#e3ee65" }}
+  {{ $darkShadowStops = slice "#3a0f2e" "#410d0c" "#492c00" "#313600" }}
+  {{ $darkGradientStops = slice "#fac0e4" "#ffc1b9" "#f6cc9b" "#d1db9f" }}
+  {{ $gradientDirection = "to top" }}
+  {{ $faviconCx = "50%" }}{{ $faviconCy = "70%" }}
 {{ else if (or (and (eq $month "08") (ge $day 8)) (eq $month "09") (eq $month "10") (and (eq $month "11") (lt $day 8))) }}
   {{/* autumn; orange, red, blue, purple */}}
   {{ $colorLight = "#5c0207" }}
-  {{ $s1 := "#ffaba1" }}{{ $s2 := "#ffb0e9" }}{{ $s3 := "#92c8ff" }}{{ $s4 := "#cab3ff" }}
-  {{ $shadowLight = printf "2px 2px %s, 4px 4px %s, 6px 6px %s, 8px 8px %s" $s1 $s2 $s3 $s4 }}
-  {{ $shadowLightHalf = printf "2px 2px %s, 4px 4px %s" $s1 $s2 }}
-  {{ $gradientLight = printf "linear-gradient(to left, %s, %s, %s, %s)" $s1 $s2 $s3 $s4 }}
-  {{ $faviconCx = "70%" }}{{ $faviconCy = "50%" }}
-  {{ $faviconStop1 = $s1 }}{{ $faviconStop2 = $s2 }}{{ $faviconStop3 = $s3 }}{{ $faviconStop4 = $s4 }}
   {{ $colorDark = "#e4caf1" }}
-  {{ $shadowDark = "2px 2px #410d0d, 4px 4px #3a0f2f, 6px 6px #00284a, 8px 8px #261844" }}
-  {{ $shadowDarkHalf = "2px 2px #410d0d, 4px 4px #3a0f2f" }}
-  {{ $gradientDark = "linear-gradient(to left, #fac6c1, #f1c6e2, #b8d9fc, #d7cef9)" }}
+  {{ $lightStops = slice "#ffaba1" "#ffb0e9" "#92c8ff" "#cab3ff" }}
+  {{ $darkShadowStops = slice "#410d0d" "#3a0f2f" "#00284a" "#261844" }}
+  {{ $darkGradientStops = slice "#fac6c1" "#f1c6e2" "#b8d9fc" "#d7cef9" }}
+  {{ $gradientDirection = "to left" }}
+  {{ $faviconCx = "70%" }}{{ $faviconCy = "50%" }}
 {{ end }}
+
+{{/*
+  Pair each light/dark stop via light-dark() so a single var serves both
+  schemes and follows the page's color-scheme, not the OS preference.
+*/}}
+{{ $shadowParts := slice }}
+{{ $gradientStops := slice }}
+{{ range $i, $light := $lightStops }}
+  {{ $offset := mul 2 (add $i 1) }}
+  {{ $shadowParts = $shadowParts | append (printf "%dpx %dpx light-dark(%s, %s)" $offset $offset $light (index $darkShadowStops $i)) }}
+  {{ $gradientStops = $gradientStops | append (printf "light-dark(%s, %s)" $light (index $darkGradientStops $i)) }}
+{{ end }}
+{{ $shadow := delimit $shadowParts ", " | string }}
+{{ $shadowHalf := delimit (first 2 $shadowParts) ", " | string }}
+{{ $gradient := printf "linear-gradient(%s, %s)" $gradientDirection (delimit $gradientStops ", ") }}
 
 {{ $vars := dict
   "color-light" $colorLight
-  "shadow-light" $shadowLight
-  "shadow-light-half" $shadowLightHalf
   "color-dark" $colorDark
-  "shadow-dark" $shadowDark
-  "shadow-dark-half" $shadowDarkHalf
-  "gradient-light" $gradientLight
-  "gradient-dark" $gradientDark
+  "shadow" $shadow
+  "shadow-half" $shadowHalf
+  "gradient" $gradient
 }}
 
 <meta name="theme-color" content="{{ $colorLight }}" media="(prefers-color-scheme: light)" />
@@ -119,7 +109,7 @@ Based on the builtin colorschemes from mini.hues:
 {{ end }}
 
 {{/* Favicon */}}
-{{ $favicon := partial "favicon.html" (dict "Cx" $faviconCx "Cy" $faviconCy "Stop1" $faviconStop1 "Stop2" $faviconStop2 "Stop3" $faviconStop3 "Stop4" $faviconStop4) -}}
+{{ $favicon := partial "favicon.html" (dict "Cx" $faviconCx "Cy" $faviconCy "Stop1" (index $lightStops 0) "Stop2" (index $lightStops 1) "Stop3" (index $lightStops 2) "Stop4" (index $lightStops 3)) -}}
 <link rel="icon" type="image/svg+xml" href="{{ $favicon.Permalink }}">
 
 <link rel="alternate" type="application/atom+xml" href="/index.xml" title="Stefan VanBuren · All Content">

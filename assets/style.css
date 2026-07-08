@@ -142,12 +142,7 @@ pre {
 
 h1 {
   color: var(--accent-color);
-  /* text-shadow doesn't use light-dark */
-  text-shadow: var(--shadow-light);
-
-  @media (prefers-color-scheme: dark) {
-    text-shadow: var(--shadow-dark);
-  }
+  text-shadow: var(--shadow);
 
   @media print {
     color: var(--black);
@@ -167,11 +162,7 @@ h6 {
 
 h2 {
   color: var(--accent-color);
-  text-shadow: var(--shadow-light-half);
-
-  @media (prefers-color-scheme: dark) {
-    text-shadow: var(--shadow-dark-half);
-  }
+  text-shadow: var(--shadow-half);
 
   @media print {
     color: var(--black);
@@ -239,11 +230,7 @@ a {
 
   &:hover {
     color: var(--accent-color);
-    text-shadow: var(--shadow-light);
-
-    @media (prefers-color-scheme: dark) {
-      text-shadow: var(--shadow-dark);
-    }
+    text-shadow: var(--shadow);
   }
 }
 
@@ -293,11 +280,7 @@ hr {
     font-size: 1.2em;
     letter-spacing: 0.5em;
     color: var(--accent-color);
-    text-shadow: var(--shadow-light);
-
-    @media (prefers-color-scheme: dark) {
-      text-shadow: var(--shadow-dark);
-    }
+    text-shadow: var(--shadow);
 
     @media print {
       color: var(--black);
@@ -363,10 +346,7 @@ figure .img-wrap {
   display: block;
   width: fit-content; /* prevent background extending past the image */
   isolation: isolate; /* scope mix-blend-mode to just the image */
-  background: var(--gradient-light);
-  @media (prefers-color-scheme: dark) {
-    background: var(--gradient-dark);
-  }
+  background: var(--gradient);
 
   & img {
     display: block;
