@@ -22,11 +22,18 @@ Based on the builtin colorschemes from mini.hues:
 {{ $colorLight := "" }}
 {{ $colorDark := "" }}
 {{/*
-  Per-season stop lists, palest to deepest. lightStops drive the light-mode
-  shadows, gradient, and favicon. darkShadowStops are near-black — they create
-  text depth on a dark background but would produce an invisible image tint, so
-  darkGradientStops use the palette's fg colors instead, which are bright
-  enough to tint visibly in dark mode.
+  Per-season stop lists. Every color is verbatim from the corresponding
+  mini.hues palette (colors/*.lua in mini.nvim), and each season walks the
+  same named hues in the same order through all three lists: lightStops are
+  the light palette's hue_bg colors, darkShadowStops the dark palette's
+  hue_bg colors, and darkGradientStops the dark palette's fg-lightness hues.
+  (One exception: winter's first darkGradient stop is miniwinter's dark red,
+  not its purple #edc7e7.)
+
+  lightStops drive the light-mode shadows, gradient, and favicon.
+  darkShadowStops are near-black — they create text depth on a dark
+  background but would produce an invisible image tint, so darkGradientStops
+  use those brighter fg-lightness colors instead.
 */}}
 {{ $lightStops := slice }}
 {{ $darkShadowStops := slice }}
