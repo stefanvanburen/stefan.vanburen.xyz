@@ -1,28 +1,30 @@
 {{/*
 Stop colors and gradient focal point are passed from head.html, which
 already computes them for the CSS seasonal palette. See head.html.
-The radial layout uses exactly four stops; any extra stops in a season's
-list (winter has five) are ignored.
+Offsets are tuned per stop count: a front-loaded ramp ending at 85%,
+finished by a translucent repeat of the last stop to fade the rim.
 
 Browsers evaluate the media query below against their own theme (favicons
 render outside the page), swapping the gradient to the dark palette.
 */}}
+{{- $offsets := index (dict
+  "4" (slice "0%" "35%" "60%" "85%")
+  "5" (slice "0%" "30%" "50%" "70%" "85%")
+) (printf "%d" (len .LightStops)) -}}
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
   <style>
     @media (prefers-color-scheme: dark) {
-      .s1 { stop-color: {{ index .DarkStops 0 }}; }
-      .s2 { stop-color: {{ index .DarkStops 1 }}; }
-      .s3 { stop-color: {{ index .DarkStops 2 }}; }
-      .s4 { stop-color: {{ index .DarkStops 3 }}; }
+      {{- range $i, $color := .DarkStops }}
+      .s{{ add $i 1 }} { stop-color: {{ $color }}; }
+      {{- end }}
     }
   </style>
   <defs>
     <radialGradient id="season" cx="{{ .Cx }}" cy="{{ .Cy }}" r="75%">
-      <stop class="s1" offset="0%" stop-color="{{ index .LightStops 0 }}" />
-      <stop class="s2" offset="35%" stop-color="{{ index .LightStops 1 }}" />
-      <stop class="s3" offset="60%" stop-color="{{ index .LightStops 2 }}" />
-      <stop class="s4" offset="85%" stop-color="{{ index .LightStops 3 }}" />
-      <stop class="s4" offset="100%" stop-color="{{ index .LightStops 3 }}" stop-opacity="0.6" />
+      {{- range $i, $color := .LightStops }}
+      <stop class="s{{ add $i 1 }}" offset="{{ index $offsets $i }}" stop-color="{{ $color }}" />
+      {{- end }}
+      <stop class="s{{ len .LightStops }}" offset="100%" stop-color="{{ index .LightStops (sub (len .LightStops) 1) }}" stop-opacity="0.6" />
     </radialGradient>
   </defs>
   <circle cx="50" cy="50" r="50" fill="url(#season)"/>
