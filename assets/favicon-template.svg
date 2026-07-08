@@ -1,6 +1,8 @@
 {{/*
 Stop colors and gradient focal point are passed from head.html, which
 already computes them for the CSS seasonal palette. See head.html.
+The radial layout uses exactly four stops; any extra stops in a season's
+list (winter has five) are ignored.
 
 Browsers evaluate the media query below against their own theme (favicons
 render outside the page), swapping the gradient to the dark palette.
@@ -8,9 +10,10 @@ render outside the page), swapping the gradient to the dark palette.
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
   <style>
     @media (prefers-color-scheme: dark) {
-      {{- range $i, $color := .DarkStops }}
-      .s{{ add $i 1 }} { stop-color: {{ $color }}; }
-      {{- end }}
+      .s1 { stop-color: {{ index .DarkStops 0 }}; }
+      .s2 { stop-color: {{ index .DarkStops 1 }}; }
+      .s3 { stop-color: {{ index .DarkStops 2 }}; }
+      .s4 { stop-color: {{ index .DarkStops 3 }}; }
     }
   </style>
   <defs>

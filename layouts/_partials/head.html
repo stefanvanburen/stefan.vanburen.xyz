@@ -32,8 +32,6 @@ Based on the builtin colorschemes from mini.hues:
 {{ $darkShadowStops := slice }}
 {{ $darkGradientStops := slice }}
 {{ $gradientDirection := "" }}
-{{ $faviconCx := "" }}
-{{ $faviconCy := "" }}
 {{ if (or (and (eq $month "11") (ge $day 8)) (eq $month "12") (eq $month "01") (and (eq $month "02") (lt $day 4))) }}
   {{/* winter; purple -> green */}}
   {{ $colorLight = "#014772" }}
@@ -42,7 +40,6 @@ Based on the builtin colorschemes from mini.hues:
   {{ $darkShadowStops = slice "#371134" "#211a46" "#00324f" "#004c4e" "#003415" }}
   {{ $darkGradientStops = slice "#fac5c7" "#d1cffb" "#b3daf9" "#a6e1e2" "#b8e1c1" }}
   {{ $gradientDirection = "to bottom" }}
-  {{ $faviconCx = "50%" }}{{ $faviconCy = "30%" }}
 {{ else if (or (and (eq $month "02") (ge $day 4)) (eq $month "03") (eq $month "04") (and (eq $month "05") (lt $day 6))) }}
   {{/* spring; green -> red */}}
   {{ $colorLight = "#2e5e00" }}
@@ -51,7 +48,6 @@ Based on the builtin colorschemes from mini.hues:
   {{ $darkShadowStops = slice "#00381d" "#373700" "#492900" "#410d12" }}
   {{ $darkGradientStops = slice "#abe5be" "#d8da9d" "#facb9e" "#ffc1bf" }}
   {{ $gradientDirection = "to right" }}
-  {{ $faviconCx = "30%" }}{{ $faviconCy = "50%" }}
 {{ else if (or (and (eq $month "05") (ge $day 6)) (eq $month "06") (eq $month "07") (and (eq $month "08") (lt $day 8))) }}
   {{/* summer; red -> green */}}
   {{ $colorLight = "#61004f" }}
@@ -60,7 +56,6 @@ Based on the builtin colorschemes from mini.hues:
   {{ $darkShadowStops = slice "#3a0f2e" "#410d0c" "#492c00" "#313600" }}
   {{ $darkGradientStops = slice "#fac0e4" "#ffc1b9" "#f6cc9b" "#d1db9f" }}
   {{ $gradientDirection = "to top" }}
-  {{ $faviconCx = "50%" }}{{ $faviconCy = "70%" }}
 {{ else if (or (and (eq $month "08") (ge $day 8)) (eq $month "09") (eq $month "10") (and (eq $month "11") (lt $day 8))) }}
   {{/* autumn; orange, red, blue, purple */}}
   {{ $colorLight = "#5c0207" }}
@@ -69,7 +64,6 @@ Based on the builtin colorschemes from mini.hues:
   {{ $darkShadowStops = slice "#410d0d" "#3a0f2f" "#00284a" "#261844" }}
   {{ $darkGradientStops = slice "#fac6c1" "#f1c6e2" "#b8d9fc" "#d7cef9" }}
   {{ $gradientDirection = "to left" }}
-  {{ $faviconCx = "70%" }}{{ $faviconCy = "50%" }}
 {{ end }}
 
 {{/*
@@ -83,8 +77,8 @@ Based on the builtin colorschemes from mini.hues:
   {{ $shadowParts = $shadowParts | append (printf "%dpx %dpx light-dark(%s, %s)" $offset $offset $light (index $darkShadowStops $i)) }}
   {{ $gradientStops = $gradientStops | append (printf "light-dark(%s, %s)" $light (index $darkGradientStops $i)) }}
 {{ end }}
-{{ $shadow := delimit $shadowParts ", " | string }}
-{{ $shadowHalf := delimit (first 2 $shadowParts) ", " | string }}
+{{ $shadow := delimit $shadowParts ", " }}
+{{ $shadowHalf := delimit (first 2 $shadowParts) ", " }}
 {{ $gradient := printf "linear-gradient(%s, %s)" $gradientDirection (delimit $gradientStops ", ") }}
 
 {{ $vars := dict
@@ -109,9 +103,17 @@ Based on the builtin colorschemes from mini.hues:
 {{ end }}
 
 {{/* Favicon */}}
+{{/* the focal point sits on the edge the gradient flows from, mirroring the
+     seasonal gradient direction (see the figure tint in style.css) */}}
+{{ $focal := index (dict
+  "to bottom" (dict "Cx" "50%" "Cy" "30%")
+  "to right" (dict "Cx" "30%" "Cy" "50%")
+  "to top" (dict "Cx" "50%" "Cy" "70%")
+  "to left" (dict "Cx" "70%" "Cy" "50%")
+) $gradientDirection }}
 {{/* dark favicon stops reuse the gradient colors: the near-black shadow stops
      would render an almost invisible icon on dark browser chrome */}}
-{{ $favicon := partial "favicon.html" (dict "Cx" $faviconCx "Cy" $faviconCy "LightStops" (first 4 $lightStops) "DarkStops" (first 4 $darkGradientStops)) -}}
+{{ $favicon := partial "favicon.html" (dict "Cx" $focal.Cx "Cy" $focal.Cy "LightStops" $lightStops "DarkStops" $darkGradientStops) -}}
 <link rel="icon" type="image/svg+xml" href="{{ $favicon.Permalink }}">
 
 <link rel="alternate" type="application/atom+xml" href="/index.xml" title="Stefan VanBuren · All Content">
