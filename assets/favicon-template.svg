@@ -1,15 +1,25 @@
 {{/*
 Stop colors and gradient focal point are passed from head.html, which
 already computes them for the CSS seasonal palette. See head.html.
+
+Browsers evaluate the media query below against their own theme (favicons
+render outside the page), swapping the gradient to the dark palette.
 */}}
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @media (prefers-color-scheme: dark) {
+      {{- range $i, $color := .DarkStops }}
+      .s{{ add $i 1 }} { stop-color: {{ $color }}; }
+      {{- end }}
+    }
+  </style>
   <defs>
     <radialGradient id="season" cx="{{ .Cx }}" cy="{{ .Cy }}" r="75%">
-      <stop offset="0%" stop-color="{{ .Stop1 }}" />
-      <stop offset="35%" stop-color="{{ .Stop2 }}" />
-      <stop offset="60%" stop-color="{{ .Stop3 }}" />
-      <stop offset="85%" stop-color="{{ .Stop4 }}" />
-      <stop offset="100%" stop-color="{{ .Stop4 }}" stop-opacity="0.6" />
+      <stop class="s1" offset="0%" stop-color="{{ index .LightStops 0 }}" />
+      <stop class="s2" offset="35%" stop-color="{{ index .LightStops 1 }}" />
+      <stop class="s3" offset="60%" stop-color="{{ index .LightStops 2 }}" />
+      <stop class="s4" offset="85%" stop-color="{{ index .LightStops 3 }}" />
+      <stop class="s4" offset="100%" stop-color="{{ index .LightStops 3 }}" stop-opacity="0.6" />
     </radialGradient>
   </defs>
   <circle cx="50" cy="50" r="50" fill="url(#season)"/>

@@ -109,7 +109,9 @@ Based on the builtin colorschemes from mini.hues:
 {{ end }}
 
 {{/* Favicon */}}
-{{ $favicon := partial "favicon.html" (dict "Cx" $faviconCx "Cy" $faviconCy "Stop1" (index $lightStops 0) "Stop2" (index $lightStops 1) "Stop3" (index $lightStops 2) "Stop4" (index $lightStops 3)) -}}
+{{/* dark favicon stops reuse the gradient colors: the near-black shadow stops
+     would render an almost invisible icon on dark browser chrome */}}
+{{ $favicon := partial "favicon.html" (dict "Cx" $faviconCx "Cy" $faviconCy "LightStops" (first 4 $lightStops) "DarkStops" (first 4 $darkGradientStops)) -}}
 <link rel="icon" type="image/svg+xml" href="{{ $favicon.Permalink }}">
 
 <link rel="alternate" type="application/atom+xml" href="/index.xml" title="Stefan VanBuren · All Content">
