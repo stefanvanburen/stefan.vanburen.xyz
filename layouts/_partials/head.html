@@ -27,8 +27,6 @@ Based on the builtin colorschemes from mini.hues:
   same named hues in the same order through all three lists: lightStops are
   the light palette's hue_bg colors, darkShadowStops the dark palette's
   hue_bg colors, and darkGradientStops the dark palette's fg-lightness hues.
-  (One exception: winter's first darkGradient stop is miniwinter's dark red,
-  not its purple #edc7e7.)
 
   lightStops drive the light-mode shadows, gradient, and favicon.
   darkShadowStops are near-black — they create text depth on a dark
@@ -45,7 +43,7 @@ Based on the builtin colorschemes from mini.hues:
   {{ $colorDark = "#b3daf9" }}
   {{ $lightStops = slice "#ffb3f6" "#beb3ff" "#90ceff" "#6af9ff" "#83ffb3" }}
   {{ $darkShadowStops = slice "#371134" "#211a46" "#00324f" "#004c4e" "#003415" }}
-  {{ $darkGradientStops = slice "#fac5c7" "#d1cffb" "#b3daf9" "#a6e1e2" "#b8e1c1" }}
+  {{ $darkGradientStops = slice "#edc7e7" "#d1cffb" "#b3daf9" "#a6e1e2" "#b8e1c1" }}
   {{ $gradientDirection = "to bottom" }}
 {{ else if (or (and (eq $month "02") (ge $day 4)) (eq $month "03") (eq $month "04") (and (eq $month "05") (lt $day 6))) }}
   {{/* spring; green -> red */}}
