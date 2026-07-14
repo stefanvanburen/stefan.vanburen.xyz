@@ -3,23 +3,16 @@
 {{ .Content }}
 
 {{ range $i, $img := hugo.Data.art.images }}
-<figure>
-  <div class="img-wrap">
-    <img
-      src="{{ $img.imageURL }}"
-      alt="{{ $img.caption }}"
-      width="{{ $img.width }}"
-      height="{{ $img.height }}"
-      loading="{{ if eq $i 0 }}eager{{ else }}lazy{{ end }}"
-    />
-  </div>
-  <figcaption>
-    <small>
-      <a href="{{ $img.detailsURL }}">{{ $img.caption }}</a>
-      <a href="{{ $img.siteLocation }}">{{ $img.siteInfo }}</a>
-    </small>
-  </figcaption>
-</figure>
+{{ partial "figure.html" (dict
+  "src" $img.imageURL
+  "alt" $img.caption
+  "width" $img.width
+  "height" $img.height
+  "loading" (cond (eq $i 0) "eager" "lazy")
+  "links" (slice
+    (dict "href" $img.detailsURL "text" $img.caption)
+    (dict "href" $img.siteLocation "text" $img.siteInfo))
+) }}
 {{ end }}
 
 {{ end }}

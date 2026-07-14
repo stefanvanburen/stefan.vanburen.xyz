@@ -1,0 +1,18 @@
+<figure>
+  <div class="img-wrap">
+    <img
+      src="{{ .src }}"
+      alt="{{ .alt }}"
+      width="{{ .width }}"
+      height="{{ .height }}"
+      loading="{{ .loading | default "lazy" }}"
+    />
+  </div>
+  <figcaption>
+    <small>
+      {{- range .links }}
+      <a href="{{ .href }}">{{ .text }}</a>
+      {{- end }}
+    </small>
+  </figcaption>
+</figure>

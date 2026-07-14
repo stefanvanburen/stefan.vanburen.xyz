@@ -3,20 +3,14 @@
 {{ .Content }}
 
 {{ with .Params.picture }}
-<figure>
-  <div class="img-wrap">
-    <img
-      src="{{ .src }}"
-      alt="{{ .caption }}"
-      width="{{ .width }}"
-      height="{{ .height }}"
-      loading="eager"
-    />
-  </div>
-  <figcaption>
-    <small><a href="{{ .detailsURL }}">{{ .caption }}</a></small>
-  </figcaption>
-</figure>
+{{ partial "figure.html" (dict
+  "src" .src
+  "alt" .caption
+  "width" .width
+  "height" .height
+  "loading" "eager"
+  "links" (slice (dict "href" .detailsURL "text" .caption))
+) }}
 {{ end }}
 
 
