@@ -1,9 +1,18 @@
 [[images]]
+imageURL = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Winslow_Homer_-_Breezing_Up_%28A_Fair_Wind%29_-_Google_Art_Project.jpg/1280px-Winslow_Homer_-_Breezing_Up_%28A_Fair_Wind%29_-_Google_Art_Project.jpg"
+detailsURL = "https://www.nga.gov/artworks/30228-breezing-fair-wind"
+caption = "Breezing Up (A Fair Wind) by Winslow Homer"
+siteLocation = "/now"
+siteInfo = "(From /now)"
+width = 1280
+height = 804
+
+[[images]]
 imageURL = "https://upload.wikimedia.org/wikipedia/commons/2/24/Soir_Bleu.jpg"
 detailsURL = "https://commons.wikimedia.org/wiki/File:Soir_Bleu.jpg"
 caption = "Soir Bleu by Edward Hopper"
 siteLocation = "/now"
-siteInfo = "(From /now)"
+siteInfo = "(Previously on /now)"
 width = 2048
 height = 1019
 
