@@ -2,23 +2,6 @@
 <h1>{{ .Title }}</h1>
 {{ .Content }}
 
-{{ with .GitInfo }}
-<p>
-  <small>
-    Last updated:
-    <time datetime="{{ .CommitDate.Format "2006-01-02" }}">
-      {{ .CommitDate.Format "January _2, 2006" }}
-    </time>
-  </small>
-</p>
-{{ end }}
-
-<p>
-  <small>
-    Based on <a href="https://nownownow.com/">nownownow.com</a>.
-  </small>
-</p>
-
 {{ with .Params.picture }}
 <figure>
   <div class="img-wrap">
@@ -35,5 +18,23 @@
   </figcaption>
 </figure>
 {{ end }}
+
+
+{{ with .GitInfo }}
+<p>
+  <small>
+    Last updated:
+    <time datetime="{{ .CommitDate.Format "2006-01-02" }}">
+      {{ .CommitDate.Format "January _2, 2006" }}
+    </time>.
+  </small>
+</p>
+{{ end }}
+
+<p>
+  <small>
+    Based on <a href="https://nownownow.com/">nownownow.com</a>.
+  </small>
+</p>
 
 {{ end }}

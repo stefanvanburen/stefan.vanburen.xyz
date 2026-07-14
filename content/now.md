@@ -3,15 +3,12 @@ title: Now
 description: What I'm up to, now.
 layout: now
 picture:
-  src: "https://upload.wikimedia.org/wikipedia/commons/2/24/Soir_Bleu.jpg"
-  detailsURL: "https://commons.wikimedia.org/wiki/File:Soir_Bleu.jpg"
-  caption: "Soir Bleu by Edward Hopper"
-  width: 2048
-  height: 1019
+  src: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Winslow_Homer_-_Breezing_Up_%28A_Fair_Wind%29_-_Google_Art_Project.jpg/1280px-Winslow_Homer_-_Breezing_Up_%28A_Fair_Wind%29_-_Google_Art_Project.jpg"
+  detailsURL: "https://www.nga.gov/artworks/30228-breezing-fair-wind"
+  caption: "Breezing Up (A Fair Wind) by Winslow Homer"
+  width: 1280
+  height: 804
 ---
 
-Usually it's Spring that brings transition,
-but this year it's Summer.
-New job,
-new role,
-new responsibilities.
+Breezing up the coast,
+hoping the fair wind will keep the greenheads away.
