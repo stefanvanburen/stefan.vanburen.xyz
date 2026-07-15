@@ -136,3 +136,34 @@ Based on the builtin colorschemes from mini.hues:
 {{ if .Description }}
 <meta name="description" content="{{ .Description }}"/>
 {{ end }}
+
+{{/*
+Open Graph tags, used by link preview generators (e.g. iMessage, Slack).
+og:image is only set where a page has an associated image: the `picture`
+front matter param (see now.md), or, for the art page, the current
+(index 0) image from data/art.toml.
+*/}}
+<meta property="og:site_name" content="Stefan VanBuren">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ .Permalink }}">
+{{ if .Title }}
+<meta property="og:title" content="{{ .Title }}">
+{{ end }}
+{{ if .Description }}
+<meta property="og:description" content="{{ .Description }}">
+{{ end }}
+
+{{ $ogImage := "" }}
+{{ if .Params.picture }}
+  {{ $ogImage = .Params.picture }}
+{{ else if eq .Layout "art" }}
+  {{ with index hugo.Data.art.images 0 }}
+    {{ $ogImage = dict "src" .imageURL "width" .width "height" .height "caption" .caption }}
+  {{ end }}
+{{ end }}
+{{ with $ogImage }}
+<meta property="og:image" content="{{ .src }}">
+{{ with .width }}<meta property="og:image:width" content="{{ . }}">{{ end }}
+{{ with .height }}<meta property="og:image:height" content="{{ . }}">{{ end }}
+{{ with .caption }}<meta property="og:image:alt" content="{{ . }}">{{ end }}
+{{ end }}
