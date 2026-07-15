@@ -3,6 +3,7 @@ packages:
   - hugo
   - hut
   - just
+  - rsvg-convert
 oauth: pages.sr.ht/PAGES:RW
 environment:
   site: stefan.vanburen.xyz
