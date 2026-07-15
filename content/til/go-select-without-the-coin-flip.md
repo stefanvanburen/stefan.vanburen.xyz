@@ -1,7 +1,7 @@
 ---
-title: "Go Nested Select"
+title: 'Go `select` without the coin flip'
 date: 2026-07-15T18:49:26-04:00
-draft: true
+draft: false
 ---
 
 In Go, it's common to wait on a condition via a channel while also respecting context cancellation.
