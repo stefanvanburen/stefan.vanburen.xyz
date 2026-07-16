@@ -1,0 +1,63 @@
+/* Syntax highlighting — Chroma's "algol_nu" style (after the ALGOL 60 report).
+ *
+ * Kept out of style.css on purpose: it's a wall of mechanical token→style
+ * mappings, bundled into the same stylesheet via `@import 'chroma.css'`.
+ *
+ * algol_nu is near-monochrome — emphasis is typographic (bold / italic), not
+ * chromatic — so it survives dark mode with only two neutral greys and the
+ * highlighted-line tint flipped. The <pre class="chroma"> inherits the seasonal
+ * --code-bg / --code-border from style.css; Chroma's own background and
+ * line-number rules are deliberately dropped.
+ *
+ * Regenerate the class list with: hugo gen chromastyles --style=algol_nu
+ */
+
+:root {
+  /* #666 → names & strings, #888 → comments; lighter in dark for --code-bg */
+  --chroma-name: light-dark(oklch(49% 0 0), oklch(72% 0 0));
+  --chroma-comment: light-dark(oklch(61% 0 0), oklch(66% 0 0));
+  --chroma-hl: light-dark(oklch(from var(--color-light) 90% 0.03 h), oklch(from var(--color-dark) 35% 0.05 h));
+}
+
+/* highlighted line */
+.chroma .hl {
+  background-color: var(--chroma-hl);
+}
+
+/* keywords, operators — bold */
+.chroma .k, .chroma .kc, .chroma .kn, .chroma .kp, .chroma .kr, .chroma .kt,
+.chroma .ow {
+  font-weight: bold;
+}
+
+/* declarations, builtins — bold italic */
+.chroma .kd, .chroma .nb, .chroma .bp {
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* names: class, constant, namespace, variable, function — grey bold italic */
+.chroma .nc, .chroma .no, .chroma .nn, .chroma .nv, .chroma .vc, .chroma .vg,
+.chroma .vi, .chroma .vm, .chroma .nf, .chroma .fm {
+  color: var(--chroma-name);
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* strings — grey italic */
+.chroma .s, .chroma .sa, .chroma .sb, .chroma .sc, .chroma .dl, .chroma .sd,
+.chroma .s2, .chroma .se, .chroma .sh, .chroma .si, .chroma .sx, .chroma .sr,
+.chroma .s1, .chroma .ss {
+  color: var(--chroma-name);
+  font-style: italic;
+}
+
+/* comments — grey italic; special / preproc bold */
+.chroma .c, .chroma .ch, .chroma .cm, .chroma .c1 {
+  color: var(--chroma-comment);
+  font-style: italic;
+}
+.chroma .cs, .chroma .cp, .chroma .cpf {
+  color: var(--chroma-comment);
+  font-weight: bold;
+}

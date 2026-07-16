@@ -1,4 +1,6 @@
 @import 'hugo:vars';
+/* syntax highlighting lives on its own — see chroma.css */
+@import 'chroma.css';
 
 *,
 *::before,

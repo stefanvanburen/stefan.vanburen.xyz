@@ -37,7 +37,9 @@ email = "stefan@vanburen.xyz"
 
 [markup]
 [markup.highlight]
-codeFences = false
+# Emit bare CSS classes (.chroma .k, …) instead of inline RGB styles, so our
+# own CSS supplies the colors — see assets/chroma.css.
+noClasses = false
 
 [markup.goldmark]
 [markup.goldmark.renderer]
