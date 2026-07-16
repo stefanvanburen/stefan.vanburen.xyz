@@ -28,10 +28,10 @@ Based on the builtin colorschemes from mini.hues:
   the light palette's hue_bg colors, darkShadowStops the dark palette's
   hue_bg colors, and darkGradientStops the dark palette's fg-lightness hues.
 
-  lightStops drive the light-mode shadows, gradient, and favicon.
+  lightStops drive the light-mode shadows and favicon.
   darkShadowStops are near-black — they create text depth on a dark
-  background but would produce an invisible image tint, so darkGradientStops
-  use those brighter fg-lightness colors instead.
+  background but would render an almost invisible favicon, so the dark
+  favicon uses the brighter fg-lightness colors in darkGradientStops.
 */}}
 {{ $lightStops := slice }}
 {{ $darkShadowStops := slice }}
@@ -76,22 +76,18 @@ Based on the builtin colorschemes from mini.hues:
   schemes and follows the page's color-scheme, not the OS preference.
 */}}
 {{ $shadowParts := slice }}
-{{ $gradientStops := slice }}
 {{ range $i, $light := $lightStops }}
   {{ $offset := mul 2 (add $i 1) }}
   {{ $shadowParts = $shadowParts | append (printf "%dpx %dpx light-dark(%s, %s)" $offset $offset $light (index $darkShadowStops $i)) }}
-  {{ $gradientStops = $gradientStops | append (printf "light-dark(%s, %s)" $light (index $darkGradientStops $i)) }}
 {{ end }}
 {{ $shadow := delimit $shadowParts ", " }}
 {{ $shadowHalf := delimit (first 2 $shadowParts) ", " }}
-{{ $gradient := printf "linear-gradient(%s, %s)" $gradientDirection (delimit $gradientStops ", ") }}
 
 {{ $vars := dict
   "color-light" $colorLight
   "color-dark" $colorDark
   "shadow" $shadow
   "shadow-half" $shadowHalf
-  "gradient" $gradient
 }}
 
 <meta name="theme-color" content="{{ $colorLight }}" media="(prefers-color-scheme: light)" />
@@ -108,8 +104,8 @@ Based on the builtin colorschemes from mini.hues:
 {{ end }}
 
 {{/* Favicon */}}
-{{/* the focal point sits on the edge the gradient flows from, mirroring the
-     seasonal gradient direction (see the figure tint in style.css) */}}
+{{/* the focal point sits on the edge the seasonal gradient direction
+     flows from: winter top, spring left, summer bottom, autumn right */}}
 {{ $focal := index (dict
   "to bottom" (dict "Cx" "50%" "Cy" "30%")
   "to right" (dict "Cx" "30%" "Cy" "50%")

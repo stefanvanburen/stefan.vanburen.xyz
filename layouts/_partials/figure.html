@@ -1,13 +1,11 @@
 <figure>
-  <div class="img-wrap">
-    <img
-      src="{{ .src }}"
-      alt="{{ .alt }}"
-      width="{{ .width }}"
-      height="{{ .height }}"
-      loading="{{ .loading | default "lazy" }}"
-    />
-  </div>
+  <img
+    src="{{ .src }}"
+    alt="{{ .alt }}"
+    width="{{ .width }}"
+    height="{{ .height }}"
+    loading="{{ .loading | default "lazy" }}"
+  />
   <figcaption>
     <small>
       {{- range .links }}

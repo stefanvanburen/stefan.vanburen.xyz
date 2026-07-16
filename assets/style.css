@@ -339,28 +339,9 @@ figure {
   max-width: 100%;
   margin: 0;
   padding: 0;
-}
-
-/* seasonal color tint on images; hover/press reveals full color.
-   gradient direction mirrors the favicon focal point per season:
-   winter top→bottom, spring left→right, summer bottom→top, autumn right→left. */
-figure .img-wrap {
-  display: block;
-  width: fit-content; /* prevent background extending past the image */
-  isolation: isolate; /* scope mix-blend-mode to just the image */
-  background: var(--gradient);
 
   & img {
     display: block;
-    mix-blend-mode: luminosity;
-  }
-
-  @media (hover: hover) {
-    &:hover img { mix-blend-mode: normal; }
-  }
-
-  @media (hover: none) {
-    &:active img { mix-blend-mode: normal; }
   }
 }
 
