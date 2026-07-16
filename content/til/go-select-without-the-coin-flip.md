@@ -41,4 +41,12 @@ Looking at [this Go proposal](https://github.com/golang/go/issues/52637),
 it looks like this is the best existing idiom,
 but I'd love to know if there's a better way of solving this without the nested-`select` smell.
 
+* * *
+
+P.S.:
+Vaguely related is the approach [bufbuild/buf's `thread.Parallelize` takes][2],
+with a similar nested `select`.
+Related PR: [bufbuild/buf#913](https://github.com/bufbuild/buf/pull/913).
+
 [1]: https://go.dev/tour/concurrency/5#:~:text=It%20chooses%20one%20at%20random%20if%20multiple%20are%20ready.
+[2]: https://github.com/bufbuild/buf/blob/efe167b22b3176a585992eb38a597dbc3c0c52ea/private/pkg/thread/thread.go#L86-L100
