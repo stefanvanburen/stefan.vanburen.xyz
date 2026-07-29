@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:source="https://source.scripting.com/" xml:lang="{{ .Site.Language.Lang }}">
-  <title>Stefan VanBuren · All Content</title>
+  <title>Stefan VanBuren · {{ if .IsHome }}All Content{{ else }}{{ .Title }}{{ end }}</title>
   <link href="{{ .Permalink }}" rel="alternate" type="text/html"/>
   {{ with .OutputFormats.Get "Atom" -}}
   {{ printf "<link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
   {{- end }}
   <id>{{ .Permalink }}</id>
-  {{ $pages := (where (where .Site.RegularPages "Type" "in" site.MainSections) "Draft" "!=" true).ByDate.Reverse }}
+  {{ $pages := .Pages }}
+  {{- if .IsHome }}{{ $pages = where .Site.RegularPages "Type" "in" site.MainSections }}{{ end }}
+  {{- $pages = $pages.ByDate.Reverse }}
   <updated>{{ if $pages }}{{ (index $pages 0).Lastmod.Format "2006-01-02T15:04:05Z07:00" }}{{ else }}{{ now.Format "2006-01-02T15:04:05Z07:00" }}{{ end }}</updated>
   <rights>© {{ now.Year }} {{ .Site.Copyright }}</rights>
   <icon>{{ .Site.BaseURL }}favicon.svg</icon>
@@ -17,13 +19,13 @@
   </author>
   {{ range $pages }}
   <entry>
-    <title type="html"><![CDATA[{{ .RenderString (dict "display" "inline") .Title }}]]></title>
+    <title type="html">{{ .RenderString (dict "display" "inline") .Title | transform.XMLEscape | safeHTML }}</title>
     <link href="{{ .Permalink }}" rel="alternate" type="text/html"/>
     <id>{{ .Permalink }}</id>
     <published>{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}</published>
     <updated>{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}</updated>
-    <content type="html"><![CDATA[{{ .Content }}]]></content>
-    <source:markdown><![CDATA[{{ .RawContent }}]]></source:markdown>
+    <content type="html">{{ .Content | transform.XMLEscape | safeHTML }}</content>
+    <source:markdown>{{ .RawContent | transform.XMLEscape | safeHTML }}</source:markdown>
   </entry>
   {{ end }}
 </feed>
