@@ -2,20 +2,20 @@
 <h1>{{ .Title }}</h1>
 
 <ul>
-  <li><a href="/">Home</a></li>
-  {{ range .Site.Sections }}
-  <li>
-    <a href="{{ .Permalink }}">{{ .Title }}</a>
-    <ul>
-      {{ range .Pages.ByDate.Reverse }}
-      <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-      {{ end }}
-    </ul>
-  </li>
-  {{ end }}
-  {{ range (where .Site.RegularPages "Section" "").ByTitle }}
-  <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-  {{ end }}
+	<li><a href="/">Home</a></li>
+	{{ range .Site.Sections }}
+		<li>
+			<a href="{{ .Permalink }}">{{ .Title }}</a>
+			<ul>
+				{{ range .Pages.ByDate.Reverse }}
+					<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+				{{ end }}
+			</ul>
+		</li>
+	{{ end }}
+	{{ range (where .Site.RegularPages "Section" "").ByTitle }}
+		<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+	{{ end }}
 </ul>
 
 {{ end }}

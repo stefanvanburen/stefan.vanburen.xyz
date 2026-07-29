@@ -3,16 +3,18 @@
 {{ .Content }}
 
 {{ range $i, $img := hugo.Data.art.images }}
-{{ partial "figure.html" (dict
-  "src" $img.imageURL
-  "alt" $img.caption
-  "width" $img.width
-  "height" $img.height
-  "loading" (cond (eq $i 0) "eager" "lazy")
-  "links" (slice
-    (dict "href" $img.detailsURL "text" $img.caption)
-    (dict "href" $img.siteLocation "text" $img.siteInfo))
-) }}
+	{{ partial "figure.html" (dict
+		"src" $img.imageURL
+		"alt" $img.caption
+		"width" $img.width
+		"height" $img.height
+		"loading" (cond (eq $i 0) "eager" "lazy")
+		"links" (slice
+		(dict "href" $img.detailsURL "text" $img.caption)
+		(dict "href" $img.siteLocation "text" $img.siteInfo)
+		)
+		)
+	}}
 {{ end }}
 
 {{ end }}

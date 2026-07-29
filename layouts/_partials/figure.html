@@ -1,16 +1,16 @@
 <figure>
-  <img
-    src="{{ .src }}"
-    alt="{{ .alt }}"
-    width="{{ .width }}"
-    height="{{ .height }}"
-    loading="{{ .loading | default "lazy" }}"
-  />
-  <figcaption>
-    <small>
-      {{- range .links }}
-      <a href="{{ .href }}">{{ .text }}</a>
-      {{- end }}
-    </small>
-  </figcaption>
+	<img
+		src="{{ .src }}"
+		alt="{{ .alt }}"
+		width="{{ .width }}"
+		height="{{ .height }}"
+		loading="{{ .loading | default "lazy" }}"
+	/>
+	<figcaption>
+		<small>
+			{{- range .links }}
+				<a href="{{ .href }}">{{ .text }}</a>
+			{{- end }}
+		</small>
+	</figcaption>
 </figure>

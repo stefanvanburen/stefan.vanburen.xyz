@@ -3,32 +3,33 @@
 {{ .Content }}
 
 {{ with .Params.picture }}
-{{ partial "figure.html" (dict
-  "src" .src
-  "alt" .caption
-  "width" .width
-  "height" .height
-  "loading" "eager"
-  "links" (slice (dict "href" .detailsURL "text" .caption))
-) }}
+	{{ partial "figure.html" (dict
+		"src" .src
+		"alt" .caption
+		"width" .width
+		"height" .height
+		"loading" "eager"
+		"links" (slice (dict "href" .detailsURL "text" .caption))
+		)
+	}}
 {{ end }}
 
 
 {{ with .GitInfo }}
-<p>
-  <small>
-    Last updated:
-    <time datetime="{{ .CommitDate.Format "2006-01-02" }}">
-      {{ .CommitDate.Format "January _2, 2006" }}
-    </time>.
-  </small>
-</p>
+	<p>
+		<small>
+			Last updated:
+			<time datetime="{{ .CommitDate.Format "2006-01-02" }}">
+				{{ .CommitDate.Format "January _2, 2006" }}
+			</time>.
+		</small>
+	</p>
 {{ end }}
 
 <p>
-  <small>
-    Based on <a href="https://nownownow.com/">nownownow.com</a>.
-  </small>
+	<small>
+		Based on <a href="https://nownownow.com/">nownownow.com</a>.
+	</small>
 </p>
 
 {{ end }}
