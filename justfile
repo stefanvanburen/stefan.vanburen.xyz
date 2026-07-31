@@ -45,10 +45,8 @@ gotmplfmt-install:
 gotmplfmt-run *files: gotmplfmt-install
     {{ gotmplfmt }} -w {{ files }}
 
-[private]
-@default: dev
-
 # Run the development server, building drafts.
+[default]
 dev:
     hugo server --buildDrafts --openBrowser --navigateToChanged --buildFuture --renderToMemory
 
