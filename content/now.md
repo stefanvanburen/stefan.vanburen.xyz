@@ -3,12 +3,13 @@ title: Now
 description: What I'm up to, now.
 layout: now
 picture:
-  src: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Winslow_Homer_-_Breezing_Up_%28A_Fair_Wind%29_-_Google_Art_Project.jpg/1280px-Winslow_Homer_-_Breezing_Up_%28A_Fair_Wind%29_-_Google_Art_Project.jpg"
-  detailsURL: "https://www.nga.gov/artworks/30228-breezing-fair-wind"
-  caption: "Breezing Up (A Fair Wind) by Winslow Homer"
-  width: 1280
-  height: 804
+  src: "https://upload.wikimedia.org/wikipedia/commons/c/c6/%27Lavender_and_Green%27_by_Arthur_Wesley_Dow%2C_Dayton_Art_Institute.JPG"
+  detailsURL: "https://commons.wikimedia.org/wiki/File:'Lavender_and_Green'_by_Arthur_Wesley_Dow,_Dayton_Art_Institute.JPG"
+  caption: "Lavender and Green by Arthur Wesley Dow"
+  width: 2556
+  height: 1800
 ---
 
-Breezing up the coast,
-hoping the fair wind will keep the greenheads away.
+Settling in for the end of summer:
+last trips on the boat and to the beach,
+races approach and sunset is back to a normal time.
