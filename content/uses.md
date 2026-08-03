@@ -52,7 +52,7 @@ For the most part, my terminal software is configured in [my dotfiles](https://g
   <dd><a href="https://en.wikipedia.org/wiki/Calendar_(Apple)">Calendar.app</a></dd>
   <dt>Cloud File Storage</dt>
   <dd><a href="https://en.wikipedia.org/wiki/ICloud">iCloud Drive</a></dd>
-  <dt><abbr title="Really Simple Syndication">RSS</abbr></dt>
+  <dt><a href="https://aboutfeeds.com">Feeds</a></dt>
   <dd><a href="https://netnewswire.com">NetNewsWire</a> (client)</dd>
   <dd><a href="https://feedbin.com">Feedbin</a> (server)</dd>
   <dt>Contacts</dt>
