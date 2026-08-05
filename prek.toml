@@ -33,8 +33,10 @@ hooks = [
   {
     id = "gotmplfmt",
     name = "gotmplfmt",
-    entry = "just gotmplfmt-run",
-    language = "system",
+    language = "golang",
+    # https://github.com/gohugoio/gotmplfmt/releases
+    additional_dependencies = ["github.com/gohugoio/gotmplfmt@v0.4.1"],
+    entry = "gotmplfmt -w",
     files = "^layouts/.*\\.(html|xml)$",
   },
 ]
