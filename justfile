@@ -23,7 +23,10 @@ fmt:
 lint:
     prek run --all-files
 
-# Publish the site.
-publish: build
+# Upload an already-built public/ to pages.sr.ht.
+upload:
     tar --directory public --create --gzip --verbose . > site.tar.gz
     hut pages publish --domain stefan.vanburen.xyz --site-config siteconfig.json site.tar.gz
+
+# Build and publish the site.
+publish: build upload

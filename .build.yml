@@ -8,10 +8,11 @@ oauth: pages.sr.ht/PAGES:RW
 environment:
   site: stefan.vanburen.xyz
 tasks:
-  # Verify the site builds on every branch.
+  # Build on every branch, exactly as `just publish` would, so what's
+  # verified is what ships: minified, with the apple-touch-icon rasterized.
   - build: |
       cd $site
-      hugo build --renderToMemory --logLevel warn
+      just build
   - publish: |
       cd $site
       # Only upload on the main branch.
@@ -20,4 +21,5 @@ tasks:
         echo "Not on main branch, not publishing!"
         exit 0
       fi
-      just publish
+      # Uploads public/ from the build task rather than rebuilding it.
+      just upload
