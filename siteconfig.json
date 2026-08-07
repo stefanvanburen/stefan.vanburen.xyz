@@ -10,13 +10,19 @@
     {
       "glob": "**/*.html",
       "options": {
-        "cacheControl": "max-age=7200"
+        "cacheControl": "max-age=600"
+      }
+    },
+    {
+      "glob": "sitemap.xml",
+      "options": {
+        "cacheControl": "max-age=86400"
       }
     },
     {
       "glob": "**/*.xml",
       "options": {
-        "cacheControl": "max-age=7200"
+        "cacheControl": "max-age=1800"
       }
     },
     {
