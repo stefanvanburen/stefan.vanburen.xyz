@@ -2,19 +2,37 @@
   "notFound": "404.html",
   "fileConfigs": [
     {
-      "glob": "*.css",
+      "glob": "**/*.css",
       "options": {
         "cacheControl": "max-age=31536000, immutable"
       }
     },
     {
-      "glob": "*.html",
+      "glob": "**/*.html",
       "options": {
         "cacheControl": "max-age=7200"
       }
     },
     {
-      "glob": "favicon.svg",
+      "glob": "**/*.xml",
+      "options": {
+        "cacheControl": "max-age=7200"
+      }
+    },
+    {
+      "glob": "favicon.min.svg",
+      "options": {
+        "cacheControl": "max-age=86400"
+      }
+    },
+    {
+      "glob": "apple-touch-icon.png",
+      "options": {
+        "cacheControl": "max-age=86400"
+      }
+    },
+    {
+      "glob": "robots.txt",
       "options": {
         "cacheControl": "max-age=86400"
       }
