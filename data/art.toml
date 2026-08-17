@@ -8,13 +8,13 @@ width = 1280
 height = 865
 
 [[images]]
-imageURL = "https://upload.wikimedia.org/wikipedia/commons/c/c6/%27Lavender_and_Green%27_by_Arthur_Wesley_Dow%2C_Dayton_Art_Institute.JPG"
+imageURL = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/%27Lavender_and_Green%27_by_Arthur_Wesley_Dow%2C_Dayton_Art_Institute.JPG/1280px-%27Lavender_and_Green%27_by_Arthur_Wesley_Dow%2C_Dayton_Art_Institute.JPG"
 detailsURL = "https://commons.wikimedia.org/wiki/File:'Lavender_and_Green'_by_Arthur_Wesley_Dow,_Dayton_Art_Institute.JPG"
 caption = "Lavender and Green by Arthur Wesley Dow"
 siteLocation = "/now"
 siteInfo = "(Previously on /now)"
-width = 2556
-height = 1800
+width = 1280
+height = 901
 
 [[images]]
 imageURL = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Winslow_Homer_-_Breezing_Up_%28A_Fair_Wind%29_-_Google_Art_Project.jpg/1280px-Winslow_Homer_-_Breezing_Up_%28A_Fair_Wind%29_-_Google_Art_Project.jpg"
@@ -26,13 +26,13 @@ width = 1280
 height = 804
 
 [[images]]
-imageURL = "https://upload.wikimedia.org/wikipedia/commons/2/24/Soir_Bleu.jpg"
+imageURL = "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Soir_Bleu.jpg/1280px-Soir_Bleu.jpg"
 detailsURL = "https://commons.wikimedia.org/wiki/File:Soir_Bleu.jpg"
 caption = "Soir Bleu by Edward Hopper"
 siteLocation = "/now"
 siteInfo = "(Previously on /now)"
-width = 2048
-height = 1019
+width = 1280
+height = 637
 
 [[images]]
 imageURL = "https://upload.wikimedia.org/wikipedia/commons/f/f4/Maxfield_Parrish_The_Lantern_Bearers_1908.jpg"
@@ -44,13 +44,13 @@ width = 970
 height = 1191
 
 [[images]]
-imageURL = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Denton_Brook_Trout_1896.png/3840px-Denton_Brook_Trout_1896.png"
+imageURL = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Denton_Brook_Trout_1896.png/1280px-Denton_Brook_Trout_1896.png"
 detailsURL = "https://commons.wikimedia.org/wiki/File:Denton_Brook_Trout_1896.png"
 caption = "Brook Trout by Sherman Foote Denton"
 siteLocation = "/now"
 siteInfo = "(Previously on /now)"
-width = 3840
-height = 2793
+width = 1280
+height = 931
 
 [[images]]
 imageURL = "https://tile.loc.gov/storage-services/service/pnp/ppmscd/05100/05132r.jpg"
@@ -71,13 +71,13 @@ width = 1080
 height = 1080
 
 [[images]]
-imageURL = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Robert_William_Vonnoh_-_Spring_in_France_-_1982.272_-_Art_Institute_of_Chicago.jpg/1920px-Robert_William_Vonnoh_-_Spring_in_France_-_1982.272_-_Art_Institute_of_Chicago.jpg"
+imageURL = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Robert_William_Vonnoh_-_Spring_in_France_-_1982.272_-_Art_Institute_of_Chicago.jpg/1280px-Robert_William_Vonnoh_-_Spring_in_France_-_1982.272_-_Art_Institute_of_Chicago.jpg"
 detailsURL = "https://www.artic.edu/artworks/97292/spring-in-france"
 caption = "Spring in France by Robert Vonnoh"
 siteLocation = "/now"
 siteInfo = "(Previously on /now)"
-width = 1686
-height = 1163
+width = 1280
+height = 883
 
 [[images]]
 imageURL = "https://img.artsmia.org/web_objects_cache/062000/400/40/62446/mia_44906a_800.jpg"
@@ -107,13 +107,13 @@ width = 800
 height = 602
 
 [[images]]
-imageURL = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Piet_Mondrian_-_Farm_near_Duivendrecht_-_2001.479_-_Art_Institute_of_Chicago.jpg/1920px-Piet_Mondrian_-_Farm_near_Duivendrecht_-_2001.479_-_Art_Institute_of_Chicago.jpg"
+imageURL = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Piet_Mondrian_-_Farm_near_Duivendrecht_-_2001.479_-_Art_Institute_of_Chicago.jpg/1280px-Piet_Mondrian_-_Farm_near_Duivendrecht_-_2001.479_-_Art_Institute_of_Chicago.jpg"
 detailsURL = "https://www.artic.edu/artworks/144467/farm-near-duivendrecht"
 caption = "Farm near Duivendrecht by Piet Mondrian"
 siteLocation = "/now"
 siteInfo = "(Previously on /now)"
-width = 1686
-height = 1338
+width = 1280
+height = 1016
 
 [[images]]
 imageURL = "https://upload.wikimedia.org/wikipedia/commons/a/a4/Winslow_Homer_-_Homosassa_Jungle_%281904%29.jpg"
@@ -134,28 +134,28 @@ width = 830
 height = 1152
 
 [[images]]
-imageURL = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Toulouse-Lautrec_-_A_Merry_Christmas%2C_1955.1092.jpg/1920px-Toulouse-Lautrec_-_A_Merry_Christmas%2C_1955.1092.jpg"
+imageURL = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Toulouse-Lautrec_-_A_Merry_Christmas%2C_1955.1092.jpg/1280px-Toulouse-Lautrec_-_A_Merry_Christmas%2C_1955.1092.jpg"
 detailsURL = "https://www.artic.edu/artworks/84458/a-merry-christmas"
 caption = "A Merry Christmas by Henri de Toulouse-Lautrec"
 siteLocation = "/now"
 siteInfo = "(Previously on /now)"
-width = 1686
-height = 2206
+width = 1280
+height = 1675
 
 [[images]]
-imageURL = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Arthur_Wesley_Dow_-_Marsh_creek.jpg/1920px-Arthur_Wesley_Dow_-_Marsh_creek.jpg"
+imageURL = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Arthur_Wesley_Dow_-_Marsh_creek.jpg/1280px-Arthur_Wesley_Dow_-_Marsh_creek.jpg"
 detailsURL = "https://harvardartmuseums.org/collections/object/256726"
 caption = "Marsh Creek by Arthur Wesley Dow"
 siteLocation = "/now"
 siteInfo = "(Previously on /now)"
-width = 1686
-height = 1011
+width = 1280
+height = 768
 
 [[images]]
-imageURL = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Ipswich_Town%2C_or_Harbor_Scene_MET_DP838309.jpg/1920px-Ipswich_Town%2C_or_Harbor_Scene_MET_DP838309.jpg"
+imageURL = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Ipswich_Town%2C_or_Harbor_Scene_MET_DP838309.jpg/1280px-Ipswich_Town%2C_or_Harbor_Scene_MET_DP838309.jpg"
 detailsURL = "https://artvee.com/dl/ipswich-town-or-harbor-scene"
 caption = "Ipswich Town, or Harbor Scene by Arthur Wesley Dow"
 siteLocation = "/now"
 siteInfo = "(Previously on /now)"
-width = 1920
-height = 3584
+width = 1280
+height = 2389
