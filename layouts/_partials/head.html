@@ -138,8 +138,10 @@ Based on the builtin colorschemes from mini.hues:
 	{{- end }}
 {{- end }}
 
+{{/* The home page's title is already the site name; everywhere else, append
+     it so tabs, bookmarks, and search results are attributed. */}}
 {{ if .Title }}
-	<title>{{ .Title }}</title>
+	<title>{{ .Title }}{{ if not .IsHome }} · {{ site.Title }}{{ end }}</title>
 {{ end }}
 
 {{ if .Description }}
