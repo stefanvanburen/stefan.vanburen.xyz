@@ -118,10 +118,6 @@ body {
       }
     }
   }
-
-  @media print {
-    display: none;
-  }
 }
 
 main {
@@ -145,10 +141,6 @@ pre {
 h1 {
   color: var(--accent-color);
   text-shadow: var(--shadow);
-
-  @media print {
-    color: var(--black);
-  }
 }
 
 h3,
@@ -156,19 +148,11 @@ h4,
 h5,
 h6 {
   color: var(--accent-color);
-
-  @media print {
-    color: var(--black);
-  }
 }
 
 h2 {
   color: var(--accent-color);
   text-shadow: var(--shadow-half);
-
-  @media print {
-    color: var(--black);
-  }
 }
 
 h1,
@@ -221,10 +205,6 @@ a {
   text-decoration-thickness: 1px;
   text-decoration-color: oklch(from currentColor l c h / 50%);
   transition: text-shadow 0.2s ease;
-
-  @media print {
-    color: var(--black);
-  }
 
   &:visited {
     color: CanvasText;
@@ -283,12 +263,6 @@ hr {
     letter-spacing: 0.5em;
     color: var(--accent-color);
     text-shadow: var(--shadow);
-
-    @media print {
-      color: var(--black);
-      text-shadow: unset;
-    }
-
     content: "· · ·";
   }
 }
@@ -306,11 +280,6 @@ blockquote {
 /* for anchor links, don't underline regularly and hide by default. */
 .anchor {
   color: var(--grey);
-
-  @media print {
-    color: var(--black);
-  }
-
   text-decoration: none;
 
   &:hover {
@@ -375,4 +344,112 @@ dd {
 @keyframes spin {
   from { transform: rotate(0deg); }
   to   { transform: rotate(360deg); }
+}
+
+/* Print.
+
+   Kept as one block rather than nested next to each screen rule, so the
+   printed page can be read as a whole instead of reassembled from fragments.
+   Being last, these win over the screen rules at equal specificity.
+
+   Goals: no site chrome, no seasonal color, no ink spent on decoration, and
+   nothing clipped or stranded across a page break. */
+@media print {
+  @page {
+    margin: 2cm;
+  }
+
+  /* The code border is tinted to the seasonal hue, which prints as a faint
+     wash of color; neutral grey does the same delineating job. */
+  :root {
+    --code-border: oklch(80% 0 0);
+  }
+
+  /* @page owns the margins; body keeps its 38em measure, which at print sizes
+     lands just inside the text width those margins leave. */
+  main {
+    margin: 0;
+  }
+
+  /* Navigation is meaningless on paper: the site header and its manicules,
+     the "back to blog posts" link, and the per-heading "#" anchors. */
+  .site-header,
+  .back-link,
+  .anchor {
+    display: none;
+  }
+
+  /* The seasonal accent and its layered shadows are screen decoration. The
+     shadows especially: they print as muddy offset copies of the glyphs. */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  a,
+  a:visited,
+  hr::before {
+    color: var(--black);
+    text-shadow: none;
+  }
+
+  /* Underlines mark something you can follow; on paper there's nothing to
+     follow, so they're just noise across the text. */
+  a {
+    text-decoration: none;
+  }
+
+  /* Tinted backgrounds are ink. The borders alone still delineate code. */
+  pre,
+  p > code,
+  dt > code,
+  li > code {
+    background: none;
+  }
+
+  pre {
+    /* Nothing scrolls on paper — wrap, or the overflow is silently cut off. */
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    max-width: none;
+    overflow-x: visible;
+  }
+
+  /* Screen truncates long list links to a single ellipsized line; in print
+     that would silently cut off post titles. */
+  li > a {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+  }
+
+  blockquote {
+    border-left-color: var(--black);
+  }
+
+  /* Don't strand a heading at the foot of a page, split a code block or
+     figure across two, or leave a lone line of a paragraph behind. */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    break-after: avoid;
+  }
+
+  pre,
+  figure,
+  blockquote,
+  img {
+    break-inside: avoid;
+  }
+
+  p,
+  li,
+  blockquote {
+    orphans: 3;
+    widows: 3;
+  }
 }
