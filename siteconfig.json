@@ -32,6 +32,12 @@
       }
     },
     {
+      "glob": "icon-512.png",
+      "options": {
+        "cacheControl": "max-age=86400"
+      }
+    },
+    {
       "glob": "favicon.png",
       "options": {
         "cacheControl": "max-age=86400"

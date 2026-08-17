@@ -18,6 +18,9 @@ build:
     # suppresses the browser's implicit /favicon.ico fallback, so clients that
     # can't render an SVG favicon need an explicit raster to fall back to.
     rsvg-convert --width 32 --height 32 public/favicon.min.svg -o public/favicon.png
+    # And once more for the Atom feeds' <icon>, which feed readers render at
+    # anything up to a retina list icon — 32px would be visibly soft there.
+    rsvg-convert --width 512 --height 512 public/favicon.min.svg -o public/icon-512.png
 
 # Format Go templates in layouts/, via the pinned gotmplfmt prek installs.
 fmt:
