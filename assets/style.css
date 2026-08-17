@@ -222,12 +222,6 @@ a {
   list-style: none;
 }
 
-li>a {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
 /* Shamelessly stolen and tweaked from https://kayserifserif.place */
 @counter-style manicule {
   system: cyclic;
@@ -414,14 +408,6 @@ dd {
     word-wrap: break-word;
     max-width: none;
     overflow-x: visible;
-  }
-
-  /* Screen truncates long list links to a single ellipsized line; in print
-     that would silently cut off post titles. */
-  li > a {
-    white-space: normal;
-    overflow: visible;
-    text-overflow: clip;
   }
 
   blockquote {
