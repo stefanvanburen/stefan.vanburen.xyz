@@ -117,10 +117,17 @@ Based on the builtin colorschemes from mini.hues:
 {{/* dark favicon stops reuse the gradient colors: the near-black shadow stops
      would render an almost invisible icon on dark browser chrome */}}
 {{ $favicon := partial "favicon.html" (dict "Cx" $focal.Cx "Cy" $focal.Cy "LightStops" $lightStops "DarkStops" $darkGradientStops) -}}
+{{/* Rasterized at build time (see justfile); not Hugo-managed resources.
+
+     Declared before the SVG because browsers use the last declaration they
+     understand: SVG-capable clients get the vector (and with it dark mode),
+     everything else falls back to the PNG. Without an explicit raster there
+     is no fallback at all — declaring rel="icon" at all suppresses the
+     implicit request for /favicon.ico. */}}
+<link rel="icon" type="image/png" href="{{ "favicon.png" | absURL }}">
 <link rel="icon" type="image/svg+xml" href="{{ $favicon.Permalink }}">
-{{/* Rasterized at build time (see justfile); not a Hugo-managed resource,
-     so link-preview fetchers (e.g. iMessage) that don't support SVG icons
-     still have a fallback. */}}
+{{/* The 180×180 icon Apple devices use for home-screen bookmarks, and the
+     fallback for link-preview fetchers (e.g. iMessage) without SVG support. */}}
 <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | absURL }}">
 
 <link rel="alternate" type="application/atom+xml" href="/index.xml" title="Stefan VanBuren · All Content">

@@ -14,6 +14,10 @@ build:
     # reliably support SVG. Not checked in: generated fresh every build so it
     # always matches the current seasonal favicon.
     rsvg-convert --width 180 --height 180 public/favicon.min.svg -o public/apple-touch-icon.png
+    # Same rasterization, at favicon size: declaring an SVG <link rel="icon">
+    # suppresses the browser's implicit /favicon.ico fallback, so clients that
+    # can't render an SVG favicon need an explicit raster to fall back to.
+    rsvg-convert --width 32 --height 32 public/favicon.min.svg -o public/favicon.png
 
 # Format Go templates in layouts/, via the pinned gotmplfmt prek installs.
 fmt:
