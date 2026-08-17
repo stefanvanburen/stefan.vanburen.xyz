@@ -3,11 +3,11 @@ title: Now
 description: What I'm up to, now.
 layout: now
 picture:
-  src: "https://upload.wikimedia.org/wikipedia/commons/c/c6/%27Lavender_and_Green%27_by_Arthur_Wesley_Dow%2C_Dayton_Art_Institute.JPG"
-  detailsURL: "https://commons.wikimedia.org/wiki/File:'Lavender_and_Green'_by_Arthur_Wesley_Dow,_Dayton_Art_Institute.JPG"
-  caption: "Lavender and Green by Arthur Wesley Dow"
-  width: 2556
-  height: 1800
+  src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/David_Teniers_%28II%29_-_Smoking_and_drinking_monkeys.jpg/1280px-David_Teniers_%28II%29_-_Smoking_and_drinking_monkeys.jpg"
+  detailsURL: "https://www.museodelprado.es/en/the-collection/art-work/monkeys-smoking-and-drinking/ab19352e-4d49-4513-a197-365c3c788641"
+  caption: "Monkeys smoking and drinking by David Teniers the Younger"
+  width: 1280
+  height: 865
 ---
 
 Settling in for the end of summer:
