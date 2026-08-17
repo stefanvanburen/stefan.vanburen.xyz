@@ -154,9 +154,22 @@ og:image is only set where a page has an associated image: the `picture`
 front matter param (see now.md), or, for the art page, the current
 (index 0) image from data/art.toml.
 */}}
+{{/* Dated, single-author posts are articles; section lists and standalone
+     pages (/now, /uses, …) stay the default "website". The article:* dates
+     below only take effect when og:type says "article" — Slack renders the
+     published date, Signal the modified one. */}}
+{{ $isArticle := and .IsPage (in site.MainSections .Section) }}
 <meta property="og:site_name" content="Stefan VanBuren">
-<meta property="og:type" content="website">
+<meta property="og:type" content="{{ cond $isArticle "article" "website" }}">
 <meta property="og:url" content="{{ .Permalink }}">
+{{ if $isArticle }}
+	<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+	{{/* .Lastmod comes from git (enableGitInfo), so it differs from .Date
+	     only where a post was actually edited after publishing. */}}
+	{{ if .Lastmod.After .Date }}
+		<meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
+	{{ end }}
+{{ end }}
 {{ if .Title }}
 	<meta property="og:title" content="{{ .Title }}">
 {{ end }}
