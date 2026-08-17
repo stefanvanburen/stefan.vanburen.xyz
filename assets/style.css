@@ -278,6 +278,29 @@ blockquote {
   margin: 0;
 }
 
+/* Goldmark's footnote block: an <hr>, then an <ol> of notes. Set it smaller
+   than the body so the notes read as an aside rather than as more article. */
+.footnotes {
+  font-size: 0.85em;
+
+  /* the notes are already set apart by the rule above them, so the usual
+     paragraph rhythm inside them is more air than they need */
+  & p {
+    margin-block: 0.5lh;
+  }
+}
+
+/* The superscript marker shouldn't drag the line it sits in taller. */
+.footnote-ref {
+  text-decoration: none;
+  line-height: 1;
+}
+
+/* A lone underlined ↩ reads as a stray mark; the glyph is the affordance. */
+.footnote-backref {
+  text-decoration: none;
+}
+
 .nums {
   font-variant-numeric: tabular-nums;
 }
