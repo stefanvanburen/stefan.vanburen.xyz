@@ -220,6 +220,17 @@ a {
   margin: 0;
   padding: 0;
   list-style: none;
+
+  /* Hang the title in its own column so a title that wraps lines up under
+     itself instead of resetting to the left margin under the date. The date
+     sizes itself, so there's no measure to keep in sync with the font. */
+  & li {
+    display: flex;
+
+    & > i {
+      flex: none;
+    }
+  }
 }
 
 /* Shamelessly stolen and tweaked from https://kayserifserif.place */
