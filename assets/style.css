@@ -10,7 +10,12 @@
 
 :root {
   color-scheme: light dark;
-  --grey: oklch(57% 0 0);
+  /* Subdued text (the heading permalinks). A single grey can only suit one
+     backdrop: 57% sat at 4.48:1 on white and 3.72:1 on the dark canvas, both
+     short of WCAG AA. Paired, each side clears it with room to spare — the
+     dark value especially, since the dark Canvas differs between browsers
+     (#1e1e1e here, #121212 elsewhere) and a lighter one eats the margin. */
+  --grey: light-dark(oklch(55% 0 0), oklch(66% 0 0));
   --accent-color: light-dark(var(--color-light), var(--color-dark));
   /* Use black for printed text. */
   --black: black;
