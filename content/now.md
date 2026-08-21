@@ -3,11 +3,11 @@ title: Now
 description: What I'm up to, now.
 layout: now
 picture:
-  src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/David_Teniers_%28II%29_-_Smoking_and_drinking_monkeys.jpg/1280px-David_Teniers_%28II%29_-_Smoking_and_drinking_monkeys.jpg"
-  detailsURL: "https://www.museodelprado.es/en/the-collection/art-work/monkeys-smoking-and-drinking/ab19352e-4d49-4513-a197-365c3c788641"
-  caption: "Monkeys smoking and drinking by David Teniers the Younger"
+  src: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Arthur_Wesley_Dow_-_The_Hill_Field.jpg/1280px-Arthur_Wesley_Dow_-_The_Hill_Field.jpg"
+  detailsURL: "https://americanart.si.edu/artwork/hill-field-6991"
+  caption: "The Hill Field by Arthur Wesley Dow"
   width: 1280
-  height: 865
+  height: 883
 ---
 
 Settling in for the end of summer:
