@@ -194,7 +194,13 @@ code *::selection {
   background-color: light-dark(oklch(from var(--color-light) 93% 0.09 h), oklch(from var(--color-dark) 40% 0.09 h));
 }
 
-/* <code> directly within paragraphs, list items, or description terms */
+/* <code> directly within paragraphs, list items, or description terms.
+   The child combinator is deliberate, not shorthand for a descendant one: it
+   keeps the box off <code> nested in a link or a heading. Those already set
+   the span apart — a link by its color and underline, a heading by its size
+   and shadows — so the box is redundant there, and its bottom border would
+   land a pixel or two from the link's underline, two hairlines in two colors.
+   Widening this to `p code` would reintroduce both. */
 p>code,
 dt>code,
 li>code {
