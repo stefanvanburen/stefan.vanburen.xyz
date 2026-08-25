@@ -19,6 +19,14 @@ Based on the builtin colorschemes from mini.hues:
 */}}
 {{ $month := now.Format "01" }}
 {{ $day := now.Day }}
+{{/*
+  The season's accent, dark enough to read on white and pale enough to read
+  on the dark canvas. The pair is one hue at two lightnesses, not two hues:
+  --code-bg, --code-border and --chroma-hl all derive their hue from
+  whichever of the two is in play, so a mismatched pair makes a season look
+  like two different seasons depending on the reader's color scheme. Both
+  values stay verbatim from the season's mini.hues palette.
+*/}}
 {{ $colorLight := "" }}
 {{ $colorDark := "" }}
 {{/*
@@ -64,7 +72,7 @@ Based on the builtin colorschemes from mini.hues:
 {{ else if (or (and (eq $month "08") (ge $day 8)) (eq $month "09") (eq $month "10") (and (eq $month "11") (lt $day 8))) }}
 	{{/* autumn; orange, red, blue, purple */}}
 	{{ $colorLight = "#5c0207" }}
-	{{ $colorDark = "#e4caf1" }}
+	{{ $colorDark = "#fac6c1" }}
 	{{ $lightStops = slice "#ffaba1" "#ffb0e9" "#92c8ff" "#cab3ff" }}
 	{{ $darkShadowStops = slice "#410d0d" "#3a0f2f" "#00284a" "#261844" }}
 	{{ $darkGradientStops = slice "#fac6c1" "#f1c6e2" "#b8d9fc" "#d7cef9" }}
