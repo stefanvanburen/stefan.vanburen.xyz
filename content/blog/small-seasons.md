@@ -11,13 +11,13 @@ you know, those things that feel wonderful the first couple weeks they’re here
 
 <figure>
   <img
-    src="https://nitter.net/pic/orig/media%2FFF-E7sJXoAwdFDz.jpg"
+    src="https://web.archive.org/web/20220617155930if_/https://pbs.twimg.com/media/FF-E7sJXoAwdFDz.jpg"
     alt="Pondering my seasons"
     width="1600"
     height="1200"
   />
   <figcaption>
-    <small><a href="https://nitter.net/simonsarris/status/1468038376280530947">
+    <small><a href="https://web.archive.org/web/20220617155929/https://twitter.com/simonsarris/status/1468038376280530947">
       Pondering my seasons
     </a></small>
   </figcaption>
