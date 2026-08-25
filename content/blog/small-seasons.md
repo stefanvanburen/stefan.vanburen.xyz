@@ -13,8 +13,8 @@ you know, those things that feel wonderful the first couple weeks they’re here
   <img
     src="https://web.archive.org/web/20220617155930if_/https://pbs.twimg.com/media/FF-E7sJXoAwdFDz.jpg"
     alt="Pondering my seasons"
-    width="1600"
-    height="1200"
+    width="1200"
+    height="900"
   />
   <figcaption>
     <small><a href="https://web.archive.org/web/20220617155929/https://twitter.com/simonsarris/status/1468038376280530947">
