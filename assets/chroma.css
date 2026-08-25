@@ -1,21 +1,37 @@
-/* Syntax highlighting — Chroma's "algol_nu" style (after the ALGOL 60 report).
+/* Syntax highlighting — Chroma's "modus" pair: modus-operandi (light) and
+ * modus-vivendi (dark), Protesilaos Stavrou's Emacs themes.
  *
  * Kept out of style.css on purpose: it's a wall of mechanical token→style
  * mappings, bundled into the same stylesheet via `@import 'chroma.css'`.
  *
- * algol_nu is near-monochrome — emphasis is typographic (bold / italic), not
- * chromatic — so it survives dark mode with only two neutral greys and the
- * highlighted-line tint flipped. The <pre class="chroma"> inherits the seasonal
- * --code-bg / --code-border from style.css; Chroma's own background and
- * line-number rules are deliberately dropped.
+ * The two modus themes are a designed light/dark pair, so every token colour
+ * is one light-dark() away from its counterpart — no separate dark block. The
+ * hex values are Protesilaos' own, left as authored rather than restated in
+ * oklch: they were picked against a contrast target, and moving them to
+ * another space would only obscure where they came from.
  *
- * Regenerate the class list with: hugo gen chromastyles --style=algol_nu
+ * modus targets WCAG AAA on pure white and pure black. Our <pre> sits on the
+ * seasonal --code-bg instead, so the margin is narrower than advertised:
+ * across all four seasons × both schemes the floor is 6.59:1 — comfortably
+ * past AA 4.5:1, a shade under AAA in places. The <pre class="chroma">
+ * inherits --code-bg / --code-border from style.css; Chroma's own background
+ * and line-number rules are deliberately dropped.
+ *
+ * Regenerate the class lists with:
+ *   hugo gen chromastyles --style=modus-operandi
+ *   hugo gen chromastyles --style=modus-vivendi
  */
 
 :root {
-  /* #666 → names & strings, #888 → comments; lighter in dark for --code-bg */
-  --chroma-name: light-dark(oklch(49% 0 0), oklch(72% 0 0));
-  --chroma-comment: light-dark(oklch(61% 0 0), oklch(66% 0 0));
+  --chroma-string: light-dark(#2544bb, #79a8ff);
+  --chroma-literal: light-dark(#0000c0, #00bcff);
+  --chroma-variable: light-dark(#00538b, #00d3d0);
+  --chroma-comment: light-dark(#505050, #a8a8a8);
+  --chroma-keyword: light-dark(#5317ac, #b6a0ff);
+  --chroma-builtin: light-dark(#8f0075, #f78fe7);
+  --chroma-function: light-dark(#721045, #feacd0);
+  --chroma-type: light-dark(#005a5f, #6ae4b9);
+  /* highlighted line: the seasonal accent, not modus' neutral grey */
   --chroma-hl: light-dark(oklch(from var(--color-light) 90% 0.03 h), oklch(from var(--color-dark) 35% 0.05 h));
 }
 
@@ -24,40 +40,81 @@
   background-color: var(--chroma-hl);
 }
 
-/* keywords, operators — bold */
-.chroma .k, .chroma .kc, .chroma .kn, .chroma .kp, .chroma .kr, .chroma .kt,
-.chroma .ow {
-  font-weight: bold;
+/* strings, including escapes, interpolation and regexes */
+.chroma .dl, .chroma .s, .chroma .s1, .chroma .s2, .chroma .sa, .chroma .sb,
+.chroma .sc, .chroma .sd, .chroma .se, .chroma .sh, .chroma .si, .chroma .sr,
+.chroma .ss, .chroma .sx {
+  color: var(--chroma-string);
 }
 
-/* declarations, builtins — bold italic */
-.chroma .kd, .chroma .nb, .chroma .bp {
-  font-weight: bold;
-  font-style: italic;
+/* numbers, and literals generally */
+.chroma .il, .chroma .kc, .chroma .l, .chroma .ld, .chroma .m, .chroma .mb,
+.chroma .mf, .chroma .mh, .chroma .mi, .chroma .mo {
+  color: var(--chroma-literal);
 }
 
-/* names: class, constant, namespace, variable, function — grey bold italic */
-.chroma .nc, .chroma .no, .chroma .nn, .chroma .nv, .chroma .vc, .chroma .vg,
-.chroma .vi, .chroma .vm, .chroma .nf, .chroma .fm {
-  color: var(--chroma-name);
-  font-weight: bold;
-  font-style: italic;
+/* operators and variables */
+.chroma .nv, .chroma .o, .chroma .or, .chroma .ow, .chroma .vc, .chroma .vg,
+.chroma .vi, .chroma .vm {
+  color: var(--chroma-variable);
 }
 
-/* strings — grey italic */
-.chroma .s, .chroma .sa, .chroma .sb, .chroma .sc, .chroma .dl, .chroma .sd,
-.chroma .s2, .chroma .se, .chroma .sh, .chroma .si, .chroma .sx, .chroma .sr,
-.chroma .s1, .chroma .ss {
-  color: var(--chroma-name);
-  font-style: italic;
-}
-
-/* comments — grey italic; special / preproc bold */
-.chroma .c, .chroma .ch, .chroma .cm, .chroma .c1 {
+/* comments, and preprocessor lines */
+.chroma .c, .chroma .c1, .chroma .ch, .chroma .cm, .chroma .cp, .chroma .cpf,
+.chroma .cs {
   color: var(--chroma-comment);
-  font-style: italic;
 }
-.chroma .cs, .chroma .cp, .chroma .cpf {
-  color: var(--chroma-comment);
-  font-weight: bold;
+
+/* keywords */
+.chroma .k, .chroma .kd, .chroma .kn, .chroma .kp, .chroma .kr {
+  color: var(--chroma-keyword);
+}
+
+/* builtins and pseudo-builtins (self, nil, …) */
+.chroma .bp, .chroma .nb {
+  color: var(--chroma-builtin);
+}
+
+/* function and method names */
+.chroma .fm, .chroma .nf {
+  color: var(--chroma-function);
+}
+
+/* types */
+.chroma .kt {
+  color: var(--chroma-type);
+}
+
+/* On paper the colour is only ink: eight hues reproduce as near-identical
+   greys on a mono printer, and style.css's print rules already strip the
+   seasonal tint from everything else. Neutralising the custom properties
+   retires all eight rules at once — `color: currentColor` computes to the
+   inherited colour — and the emphasis this file carried before modus takes
+   over, which survives monochrome intact. Last in the file, so it wins at
+   equal specificity. */
+@media print {
+  :root {
+    --chroma-string: currentColor;
+    --chroma-literal: currentColor;
+    --chroma-variable: currentColor;
+    --chroma-comment: currentColor;
+    --chroma-keyword: currentColor;
+    --chroma-builtin: currentColor;
+    --chroma-function: currentColor;
+    --chroma-type: currentColor;
+    /* a highlighted line is meaning, not decoration, so it keeps a band —
+       but a neutral one, matching the print --code-border. */
+    --chroma-hl: oklch(92% 0 0);
+  }
+
+  .chroma .k, .chroma .kd, .chroma .kn, .chroma .kp, .chroma .kr, .chroma .kt {
+    font-weight: bold;
+  }
+
+  .chroma .c, .chroma .c1, .chroma .ch, .chroma .cm, .chroma .cp,
+  .chroma .cpf, .chroma .cs, .chroma .dl, .chroma .s, .chroma .s1,
+  .chroma .s2, .chroma .sa, .chroma .sb, .chroma .sc, .chroma .sd,
+  .chroma .se, .chroma .sh, .chroma .si, .chroma .sr, .chroma .ss, .chroma .sx {
+    font-style: italic;
+  }
 }
