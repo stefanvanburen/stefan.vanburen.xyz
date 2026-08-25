@@ -19,8 +19,13 @@
   --accent-color: light-dark(var(--color-light), var(--color-dark));
   /* Use black for printed text. */
   --black: black;
-  /* code background tinted by the seasonal accent color */
-  --code-bg: light-dark(oklch(from var(--color-light) 96% 0.06 h), oklch(from var(--color-dark) 25% 0.08 h));
+  /* Code background tinted by the seasonal accent color. The tint is kept
+     faint on purpose: chroma.css now colors tokens by hue (modus), so a
+     strongly tinted backdrop becomes a ninth hue competing with the eight
+     doing the work — and in some seasons landing within a few degrees of
+     one of them. Half the chroma keeps the seasonal signal while leaving
+     every token a clear chroma gap to sit in. */
+  --code-bg: light-dark(oklch(from var(--color-light) 96% 0.03 h), oklch(from var(--color-dark) 25% 0.04 h));
   /* border at the same seasonal hue */
   --code-border: light-dark(oklch(from var(--color-light) 83% 0.02 h), oklch(from var(--color-dark) 33% 0.02 h));
 }
