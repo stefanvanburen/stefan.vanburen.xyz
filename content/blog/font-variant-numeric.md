@@ -8,15 +8,13 @@ I was reminded of the `font-variant-numeric` <abbr title="Cascading Style Sheets
 
 For context, without tabular-nums enabled, numbers on this site look like this:
 
-<p style="font-size: var(--size-700)">
 0123456789
-</p>
+{style="font-size: var(--size-700)"}
 
 And with it enabled, they look like this:
 
-<p style="font-size: var(--size-700)" class="nums">
 0123456789
-</p>
+{style="font-size: var(--size-700)" class="nums"}
 
 At least on Apple platforms, where the system sans-serif font is [San Francisco](https://developer.apple.com/fonts/), the "0" and "1" characters have a little additional spacing, making them equal size to the rest of the digits.
 
