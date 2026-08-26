@@ -14,6 +14,6 @@ For example:
 </time>
 ```
 
-The syntax is an <a href="https://en.wikipedia.org/wiki/ISO_8601#Durations"><abbr title="International Organization for Standardization">ISO</abbr> 8601 Duration</a>.
+The syntax is an [<abbr title="International Organization for Standardization">ISO</abbr> 8601 Duration](https://en.wikipedia.org/wiki/ISO_8601#Durations).
 
 [valid-datetime-values]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time#valid_datetime_values

@@ -17,11 +17,11 @@ PRAGMA foreign_keys = ON;
 
 In turn,
 
-* [`PRAGMA journal_mode = WAL;`][pragma-journal-mode] sets the database into <a href="https://www.sqlite.org/wal.html"><abbr title="Write-Ahead Logging">WAL</abbr> journaling mode</a>.
+* [`PRAGMA journal_mode = WAL;`][pragma-journal-mode] sets the database into [<abbr title="Write-Ahead Logging">WAL</abbr> journaling mode](https://www.sqlite.org/wal.html).
   Unlike the others,
   this doesn't necessarily need to be set on each connection;
-  once a database is in <a href="https://www.sqlite.org/wal.html"><abbr title="Write-Ahead Logging">WAL</abbr></a> mode [it'll stay in that mode across database connections](https://sqlite.org/wal.html#persistence_of_wal_mode).
-  <a href="https://www.sqlite.org/wal.html"><abbr title="Write-Ahead Logging">WAL</abbr></a> journaling mode is recommended for most SQLite server applications,
+  once a database is in [<abbr title="Write-Ahead Logging">WAL</abbr>](https://www.sqlite.org/wal.html) mode [it'll stay in that mode across database connections](https://sqlite.org/wal.html#persistence_of_wal_mode).
+  [<abbr title="Write-Ahead Logging">WAL</abbr>](https://www.sqlite.org/wal.html) journaling mode is recommended for most SQLite server applications,
   because it makes writers not block readers.
 
 * [`PRAGMA busy_timeout = 5000;`][pragma-busy-timeout] sets the [busy_timeout](https://sqlite.org/c3ref/busy_timeout.html) to 5000 milliseconds (5 seconds).
@@ -41,7 +41,4 @@ In turn,
 
 * * *
 
-<ins datetime="2024-06-30">
-  Update(2024-06-30): A more complete discussion of these settings and more can be found over at
-  <a href="https://kerkour.com/sqlite-for-servers">kerkour.com/sqlite-for-servers</a>
-</ins>
+<ins datetime="2024-06-30">Update(2024-06-30): A more complete discussion of these settings and more can be found over at [kerkour.com/sqlite-for-servers](https://kerkour.com/sqlite-for-servers)</ins>
