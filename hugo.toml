@@ -50,3 +50,14 @@ unsafe = true
 # Lets a blockquote carry `{source="…"}`, which the blockquote render hook
 # turns into a <figure> with an attributed <figcaption>.
 block = true
+
+[markup.goldmark.extensions.extras]
+# Markdown syntax for the elements GFM leaves out: ++ins++, ==mark==, ^sup^.
+# Subscript stays off — GFM strikethrough already claims a single ~, so `~2~`
+# renders as <del>, not <sub>. Write <sub> as inline HTML.
+[markup.goldmark.extensions.extras.insert]
+enable = true
+[markup.goldmark.extensions.extras.mark]
+enable = true
+[markup.goldmark.extensions.extras.superscript]
+enable = true

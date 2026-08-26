@@ -26,8 +26,8 @@ I knew that removing all that accumulated knowledge meant that I needed to have 
 
 ## (neo)vim
 
-<del>Now, my [vimrc](https://github.com/stefanvanburen/dotfiles/commits/main/vim/init.vim) is a lean ~350 lines!</del>
-<ins>Update (August 2022): I'm now fully in on the Lua (actually, Fennel) neovim configuration, so the previous link is invalid.</ins>
+~~Now, my [vimrc](https://github.com/stefanvanburen/dotfiles/commits/main/vim/init.vim) is a lean \~350 lines!~~
+++Update (August 2022): I'm now fully in on the Lua (actually, Fennel) neovim configuration, so the previous link is invalid.++
 (Maybe not lean for a vanilla vim purist, but it's reasonable for me!)
 You'll also notice that I've converted over to neovim fully.
 I had a number of settings, plugins, and mappings that were working around some of vim's weirdness, and I was using neovim 98% of the time.

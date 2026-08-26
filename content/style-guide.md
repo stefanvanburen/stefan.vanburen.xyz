@@ -104,11 +104,11 @@ The _em element_ example
 
 The _i element_ example
 
-The <ins>ins element</ins> example
+The ++ins element++ example
 
 The <kbd>kbd element</kbd> example
 
-The <mark>mark element</mark> example
+The ==mark element== example
 
 The <q>q element</q> example
 
@@ -126,7 +126,7 @@ The **strong element** example
 
 The <sub>sub element</sub> example
 
-The <sup>sup element</sup> example
+The ^sup element^ example
 
 The <time datetime="2005-05-15 19:00">time element</time> example
 
