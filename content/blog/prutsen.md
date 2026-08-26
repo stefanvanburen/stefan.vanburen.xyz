@@ -21,17 +21,9 @@ Prutsen gives me a name for all this tweaking and fiddling --- so cathartic!
 _Update_: After this post I truly could not remember where I had found "prutsen" in the first place.
 I finally found it: [Do Inhabit](https://thedobook.co/products/do-inhabit-style-your-space-for-a-creative-and-considered-life), by Sue Fan and Danielle Quigley.
 
-From the book:
+From page 11:
 
-<figure>
-  <blockquote>
-    <p>
-    This Dutch word translates loosely to doing something of very little significance that only looks like work, or tinkering.
-    </p>
-  </blockquote>
-  <figcaption>
-    Page 11, <cite>Do Inhabit</cite>
-  </figcaption>
-</figure>
+> This Dutch word translates loosely to doing something of very little significance that only looks like work, or tinkering.
+{source="[Do Inhabit](https://thedobook.co/products/do-inhabit-style-your-space-for-a-creative-and-considered-life)"}
 
 Good to know where it originally came from!
