@@ -184,12 +184,11 @@ Monospace Text wrapped in "pre" tags:
 
 ## Definition List
 
-<dl>
-  <dt>Definition Term 1</dt>
-  <dd>Definition Description 1</dd>
-  <dt>Definition Term 2</dt>
-  <dd>Definition Description 2</dd>
-</dl>
+Definition Term 1
+: Definition Description 1
+
+Definition Term 2
+: Definition Description 2
 
 * * *
 
