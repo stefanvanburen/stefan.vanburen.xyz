@@ -76,7 +76,7 @@ A blockquote given a `source` becomes a figure with its attribution:
 > "**This is an attributed blockquote**. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus."
 {source="[The Title of the Work](https://example.com)"}
 
-*Note: the [Figure-Figcaption](http://html5doctor.com/the-figure-figcaption-elements/) and [Details-Summary](http://html5doctor.com/the-details-and-summary-elements/) elements are not currently supported in markdown.*
+*Note: markdown has no syntax of its own for [Figure-Figcaption](http://html5doctor.com/the-figure-figcaption-elements/) — the attributed blockquote above is a render hook — or for [Details-Summary](http://html5doctor.com/the-details-and-summary-elements/), which is written as inline HTML.*
 
 * * *
 
