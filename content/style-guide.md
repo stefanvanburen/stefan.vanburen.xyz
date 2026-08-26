@@ -78,6 +78,14 @@ A blockquote given a `source` becomes a figure with its attribution:
 
 *Note: markdown has no syntax of its own for [Figure-Figcaption](http://html5doctor.com/the-figure-figcaption-elements/) — the attributed blockquote above is a render hook — or for [Details-Summary](http://html5doctor.com/the-details-and-summary-elements/), which is written as inline HTML.*
 
+## Footnotes
+
+A paragraph with a footnote reference.[^1]
+The notes themselves are collected at the foot of the page, whatever the order they are written in.[^2]
+
+[^1]: The first footnote, with a [link](https://example.com).
+[^2]: The second footnote.
+
 * * *
 
 #  Text Elements
