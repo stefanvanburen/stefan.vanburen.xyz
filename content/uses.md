@@ -5,106 +5,100 @@ description: My personal computing environment.
 
 ## Hardware
 
-<dl>
-  <dt><abbr title="Personal Computer">PC</abbr></dt>
-  <dd><a href="https://support.apple.com/kb/SP824">MacBook Pro M1 13"</a></dd>
+<abbr title="Personal Computer">PC</abbr>
+: [MacBook Pro M1 13"](https://support.apple.com/kb/SP824)
 
-  <dt>Monitor</dt>
-  <dd><a href="https://www.apple.com/studio-display/">Apple Studio Display</a></dd>
+Monitor
+: [Apple Studio Display](https://www.apple.com/studio-display/)
 
-  <dt>Keyboard</dt>
-  <dd><a href="https://kinesis-ergo.com/keyboards/advantage2-keyboard/">Kinesis Advantage 2</a></dd>
-  <dd><a href="https://www.hhkeyboard.com/uk/products/pro2"><abbr title="Happy Hacking Keyboard">HHKB</abbr> Professional 2</a></dd>
-  <dd><a href="https://shop.keyboard.io/products/keyboardio-atreus">Keyboardio Atreus</a></dd>
+Keyboard
+: [Kinesis Advantage 2](https://kinesis-ergo.com/keyboards/advantage2-keyboard/)
+: [<abbr title="Happy Hacking Keyboard">HHKB</abbr> Professional 2](https://www.hhkeyboard.com/uk/products/pro2)
+: [Keyboardio Atreus](https://shop.keyboard.io/products/keyboardio-atreus)
 
-  <dt>Mouse</dt>
-  <dd>Logitech MX Master 3 for Mac</dd>
-</dl>
+Mouse
+: Logitech MX Master 3 for Mac
 
 ## Software
 
 For the most part, my terminal software is configured in [my dotfiles](https://github.com/stefanvanburen/dotfiles).
 
-<dl>
-  <dt><code>$EDITOR</code></dt>
-  <dd><a href="https://neovim.io">neovim</a></dd>
+`$EDITOR`
+: [neovim](https://neovim.io)
 
-  <dt>shell</dt>
-  <dd><a href="https://fishshell.com">fish</a></dd>
+shell
+: [fish](https://fishshell.com)
 
-  <dt>terminal emulator</dt>
-  <dd><a href="https://sw.kovidgoyal.net/kitty/">kitty</a></dd>
-  <dd><a href="https://ghostty.org/">ghostty</a></dd>
-</dl>
+terminal emulator
+: [kitty](https://sw.kovidgoyal.net/kitty/)
+: [ghostty](https://ghostty.org/)
 
 ### Applications
 
-<dl>
-  <dt>Mail Client</dt>
-  <dd><a href="https://en.wikipedia.org/wiki/Mail_(application)">Mail.app</a></dd>
+Mail Client
+: [Mail.app](https://en.wikipedia.org/wiki/Mail_(application))
 
-  <dt>Mail Server</dt>
-  <dd><a href="https://migadu.com">Migadu</a></dd>
+Mail Server
+: [Migadu](https://migadu.com)
 
-  <dt>Notes</dt>
-  <dd><a href="https://getdrafts.com">Drafts</a></dd>
+Notes
+: [Drafts](https://getdrafts.com)
 
-  <dt>To-Do</dt>
-  <dd><a href="https://culturedcode.com/things/">Things</a></dd>
+To-Do
+: [Things](https://culturedcode.com/things/)
 
-  <dt>iPhone Photo Shooting</dt>
-  <dd><a href="https://en.wikipedia.org/wiki/IPhone_camera">Camera.app</a></dd>
-  <dd><a href="https://notbor.ing/product/camera">!Camera</a></dd>
+iPhone Photo Shooting
+: [Camera.app](https://en.wikipedia.org/wiki/IPhone_camera)
+: [!Camera](https://notbor.ing/product/camera)
 
-  <dt>Photo Management</dt>
-  <dd><a href="https://en.wikipedia.org/wiki/Photos_(software)">Photos.app</a></dd>
+Photo Management
+: [Photos.app](https://en.wikipedia.org/wiki/Photos_(software))
 
-  <dt>Calendar</dt>
-  <dd><a href="https://en.wikipedia.org/wiki/Calendar_(Apple)">Calendar.app</a></dd>
+Calendar
+: [Calendar.app](https://en.wikipedia.org/wiki/Calendar_(Apple))
 
-  <dt>Cloud File Storage</dt>
-  <dd><a href="https://en.wikipedia.org/wiki/ICloud">iCloud Drive</a></dd>
+Cloud File Storage
+: [iCloud Drive](https://en.wikipedia.org/wiki/ICloud)
 
-  <dt><a href="https://aboutfeeds.com">Feeds</a></dt>
-  <dd><a href="https://netnewswire.com">NetNewsWire</a> (client)</dd>
-  <dd><a href="https://feedbin.com">Feedbin</a> (server)</dd>
+[Feeds](https://aboutfeeds.com)
+: [NetNewsWire](https://netnewswire.com) (client)
+: [Feedbin](https://feedbin.com) (server)
 
-  <dt>Contacts</dt>
-  <dd><a href="https://flexibits.com/cardhop">Cardhop</a></dd>
+Contacts
+: [Cardhop](https://flexibits.com/cardhop)
 
-  <dt>Browser</dt>
-  <dd><a href="https://en.wikipedia.org/wiki/Safari_(web_browser)">Safari</a></dd>
+Browser
+: [Safari](https://en.wikipedia.org/wiki/Safari_(web_browser))
 
-  <dt>Chat</dt>
-  <dd><a href="https://en.wikipedia.org/wiki/Messages_(application)">Messages</a></dd>
+Chat
+: [Messages](https://en.wikipedia.org/wiki/Messages_(application))
 
-  <dt>Bookmarks</dt>
-  <dd><a href="https://anybox.app">Anybox</a></dd>
+Bookmarks
+: [Anybox](https://anybox.app)
 
-  <dt>Read It Later</dt>
-  <dd><a href="https://goodlinks.app">GoodLinks</a></dd>
+Read It Later
+: [GoodLinks](https://goodlinks.app)
 
-  <dt>Shopping Lists</dt>
-  <dd><a href="https://getdrafts.com">Drafts</a></dd>
+Shopping Lists
+: [Drafts](https://getdrafts.com)
 
-  <dt>Meal Planning</dt>
-  <dd><a href="https://getdrafts.com">Drafts</a></dd>
-  <dd><a href="https://mela.recipes">Mela</a></dd>
+Meal Planning
+: [Drafts](https://getdrafts.com)
+: [Mela](https://mela.recipes)
 
-  <dt>News</dt>
-  <dd><a href="https://hcker.news">Hacker News</a></dd>
-  <dd><a href="https://lobste.rs">Lobsters</a></dd>
-  <dd><a href="https://text.npr.org">text.npr.org</a></dd>
+News
+: [Hacker News](https://hcker.news)
+: [Lobsters](https://lobste.rs)
+: [text.npr.org](https://text.npr.org)
 
-  <dt>Music</dt>
-  <dd><a href="https://longplay.rocks">Longplay</a></dd>
-  <dd><a href="https://doppi.app">Doppi</a></dd>
-  <dd><a href="https://brushedtype.co/doppler/">Doppler</a></dd>
-  <dd><a href="https://www.spotify.com">Spotify</a></dd>
+Music
+: [Longplay](https://longplay.rocks)
+: [Doppi](https://doppi.app)
+: [Doppler](https://brushedtype.co/doppler/)
+: [Spotify](https://www.spotify.com)
 
-  <dt>Podcasts</dt>
-  <dd><a href="https://overcast.fm">Overcast</a></dd>
+Podcasts
+: [Overcast](https://overcast.fm)
 
-  <dt>Password Management</dt>
-  <dd><a href="https://support.apple.com/en-us/120758">Passwords.app</a></dd>
-</dl>
+Password Management
+: [Passwords.app](https://support.apple.com/en-us/120758)
