@@ -1,0 +1,12 @@
+{{- /* Overrides Hugo's built-in figure shortcode so content reaches the same
+       partial as the art and now pages — one place that decides what a figure
+       looks like. `loading` falls back to the partial's lazy default. */ -}}
+{{- partial "figure.html" (dict
+	"src" (.Get "src")
+	"alt" (.Get "alt")
+	"width" (.Get "width")
+	"height" (.Get "height")
+	"loading" (.Get "loading")
+	"links" (slice (dict "href" (.Get "href") "text" (.Get "text")))
+	)
+-}}

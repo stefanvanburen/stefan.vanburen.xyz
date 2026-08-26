@@ -9,19 +9,14 @@ I’ve been on a “seasons” kick —
 you know, those things that feel wonderful the first couple weeks they’re here and then eventually drag on until the next one comes along?
 (Currently waiting patiently for Autumn to get started in New England!)
 
-<figure>
-  <img
-    src="https://web.archive.org/web/20220617155930if_/https://pbs.twimg.com/media/FF-E7sJXoAwdFDz.jpg"
-    alt="Pondering my seasons"
-    width="1200"
-    height="900"
-  />
-  <figcaption>
-    <small><a href="https://web.archive.org/web/20220617155929/https://twitter.com/simonsarris/status/1468038376280530947">
-      Pondering my seasons
-    </a></small>
-  </figcaption>
-</figure>
+{{< figure
+  src="https://web.archive.org/web/20220617155930if_/https://pbs.twimg.com/media/FF-E7sJXoAwdFDz.jpg"
+  alt="Pondering my seasons"
+  width="1200"
+  height="900"
+  href="https://web.archive.org/web/20220617155929/https://twitter.com/simonsarris/status/1468038376280530947"
+  text="Pondering my seasons"
+>}}
 
 While I’m more thoroughly immersed in the seasons now than when I was in the city,
 I still spend a considerable chunk of time computing.

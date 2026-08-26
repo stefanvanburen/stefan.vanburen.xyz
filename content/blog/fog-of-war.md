@@ -39,19 +39,14 @@ south of Stranglethorn Vale's Booty Bay, where he could catch the ship to Steamw
 Port and continue onwards to Gadgetzan.
 I bought my schematic (I think?), and hearthstone'd $HOME.
 
-<figure>
-  <img
-    src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Winslow_Homer_-_Homosassa_Jungle_%281904%29.jpg"
-    alt="Homosassa Jungle by Winslow Homer"
-    width="1024"
-    height="661"
-  />
-  <figcaption>
-    <small><a href="https://harvardartmuseums.org/collections/object/306835">
-      Not quite Stranglethorn Vale
-    </a></small>
-  </figcaption>
-</figure>
+{{< figure
+  src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Winslow_Homer_-_Homosassa_Jungle_%281904%29.jpg"
+  alt="Homosassa Jungle by Winslow Homer"
+  width="1024"
+  height="661"
+  href="https://harvardartmuseums.org/collections/object/306835"
+  text="Not quite Stranglethorn Vale"
+>}}
 
 * * *
 
@@ -83,19 +78,14 @@ I'm now slowly restarting my quest for 100% (VanBurens are box checkers, after a
 with an eye towards finishing by the end of the year.
 I remain, for now, 2nd out of 506 on the [Ipswich CityStrides leaderboard][3].
 
-<figure>
-  <img
-    src="https://iiif.micr.io/uIpfV/full/%5E830,/0/default.webp"
-    alt="Tokubei running through a street by Kunimori"
-    width="830"
-    height="1152"
-  />
-  <figcaption>
-    <small><a href="https://www.rijksmuseum.nl/en/collection/object/Tokubei-running-through-a-street--7e5f432ba724707931197c90284c5867?tab=data">
-      Running the Streets
-    </a></small>
-  </figcaption>
-</figure>
+{{< figure
+  src="https://iiif.micr.io/uIpfV/full/%5E830,/0/default.webp"
+  alt="Tokubei running through a street by Kunimori"
+  width="830"
+  height="1152"
+  href="https://www.rijksmuseum.nl/en/collection/object/Tokubei-running-through-a-street--7e5f432ba724707931197c90284c5867?tab=data"
+  text="Running the Streets"
+>}}
 
 Still, it's not about reaching 100%: it's about understanding the area in which you're
 living at a deeper level, and looking closely at things (although, maybe not when cars
