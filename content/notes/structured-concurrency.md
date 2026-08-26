@@ -1,7 +1,7 @@
 ---
 title: "Structured Concurrency"
 date: 2026-08-25T20:28:21-04:00
-draft: true
+draft: false
 ---
 
 > Every time you write the statement `go` in a program, you should consider the question of how, and under what conditions, the goroutine you are about to start, will end.
