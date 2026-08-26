@@ -370,6 +370,17 @@ figure:not(:last-child) {
   margin-bottom: 2em;
 }
 
+/* Bind an attribution to its own quote: a caption sitting as far from its
+   quote as from the next one reads as floating between them. Image figures
+   keep the 2em rhythm above. */
+figure:has(blockquote) blockquote > :last-child {
+  margin-bottom: 0.35em;
+}
+
+figure:has(blockquote):not(:last-child) {
+  margin-bottom: 3em;
+}
+
 dl {
   display: grid;
   grid-template-columns: [dt] max-content [dd] 1fr;

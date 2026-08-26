@@ -45,3 +45,8 @@ noClasses = false
 [markup.goldmark.renderer]
 # allows for inline HTML
 unsafe = true
+
+[markup.goldmark.parser.attribute]
+# Lets a blockquote carry `{source="…"}`, which the blockquote render hook
+# turns into a <figure> with an attributed <figcaption>.
+block = true
