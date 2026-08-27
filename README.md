@@ -1,9 +1,7 @@
-# [stefan.vanburen.xyz](https://stefan.vanburen.xyz)
+# stefan.vanburen.xyz
 
-Built with [hugo](https://github.com/gohugoio/hugo).
+Development has moved to
+<https://tangled.org/stefan.vanburen.xyz/stefan.vanburen.xyz>.
 
-Published on [xmit](https://xmit.co).
-
-The code here is licensed under the [MIT License](./LICENSE).
-
-The content is licensed as [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+This repository is no longer updated. It stays here so that existing links
+keep resolving.
