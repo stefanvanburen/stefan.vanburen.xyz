@@ -24,9 +24,6 @@ clone:
 # left out here even though the build uses all of them.
 dependencies:
   nixpkgs:
-    # nixpkgs builds hugo with the `extended` tag, matching `extended: true` on
-    # the GitHub side, and is on 0.165.0, matching the version pinned there.
-    - hugo
     - just
     # rsvg-convert, for the icons `just build` rasterizes from the SVG favicon.
     - librsvg
@@ -35,6 +32,19 @@ dependencies:
     - curl
     - gnutar
     - gzip
+  # Not from the `nixpkgs` key above: nixery.tangled.sh pins its own, older
+  # nixpkgs and serves hugo 0.152.2, which predates the css.Build that
+  # layouts/_partials/head.html calls -- the site fails to render on it. Any
+  # key that isn't `nixpkgs` is installed with `nix profile add '<ref>#<pkg>'`
+  # instead, so this pulls hugo from a pinned nixos-unstable revision that has
+  # 0.165.0, the version the GitHub workflow pins. nixpkgs builds hugo with the
+  # `extended` tag, matching `extended: true` there.
+  #
+  # To bump: take a revision from https://channels.nixos.org/nixos-unstable
+  # (Hydra-built, so hugo substitutes from cache.nixos.org rather than building
+  # from source) and check its pkgs/by-name/hu/hugo/package.nix.
+  github:nixos/nixpkgs/9fbb54b33e91ee4ca368e35a78e0613c720600b3:
+    - hugo
 
 steps:
   # Build on every trigger, exactly as `just publish` would, so what's verified
