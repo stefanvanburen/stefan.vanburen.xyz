@@ -235,8 +235,8 @@
       HEIGHT * 0.8 + 6 * Math.sin(x * 0.014 + 2) + 3.75 * Math.sin(x * 0.038),
     );
 
-  /* Sprite art. `#` is ink, `o` is punched clear, and anything else is left
-     alone for the sky to show through. The distinction matters: a `.` window
+  /* Sprite art. `#` is ink, `o` is punched clear, `*` is a window that lights
+     after dark, and anything else is left alone for the sky to show through. The distinction matters: a `.` window
      would fill with sky dither on a dense night and vanish, so any opening
      that has to read as an opening is an `o`.
 
@@ -359,16 +359,16 @@
       ".........#................",
       "........###...............",
       ".......#####.........#....",
-      "......##oo###........#....",
-      ".....###oo####.########...",
+      "......##**###........#....",
+      ".....###**####.########...",
       "#.#.###################...",
       "...#####################..",
       "##########################",
-      ".################oo#oo###.",
-      ".#oo#############oo#oo###.",
-      ".#oo#####################.",
-      ".####oo####oo####oo#oo###.",
-      ".####oo####oo####oo#oo###.",
+      ".################**#**###.",
+      ".#**#############**#**###.",
+      ".#**#####################.",
+      ".####**####oo####**#**###.",
+      ".####**####oo####**#**###.",
       ".##########oo############.",
       "##########################",
     ],
@@ -884,10 +884,15 @@
     const glow = (x, y) => {
       if (inSky(x, y)) grid[y * width + x] = dark ? 1 : 0;
     };
-    /* The sun or moon's face, and the only thing here drawn in the second
-       color. Everything else on the band is ink or bare page. */
+    /* The sun or moon's face, drawn in the second color. */
     const disc = (x, y) => {
       if (inSky(x, y)) grid[y * width + x] = 2;
+    };
+    /* A lit window, in that same second color. Not sky-gated the way the disc
+       is: a window sits down in the body of a house, below the ridge line the
+       sky test uses. */
+    const lamp = (x, y) => {
+      if (inside(x, y)) grid[y * width + x] = 2;
     };
     /* Forced back to bare page — a window, a doorway, an arch. Distinct from
        simply not drawing: on a dense night sky an undrawn window fills with
@@ -1147,6 +1152,10 @@
       }
     }
 
+    /* Windows come on at the same light level the stars do, so the house
+       lights up as dusk closes rather than snapping on at sunset. */
+    const lampsOn = starlight > 0.4;
+
     /* --- the ridge and whatever is standing on it, always last --- */
 
     /* Anything that sinks brings a river with it. The channel runs between the
@@ -1233,12 +1242,16 @@
           const cell = line[col];
           if (cell === "#") stroke(item.x + col, y);
           else if (cell === "o") punch(item.x + col, y);
+          else if (cell === "*") (lampsOn ? lamp : punch)(item.x + col, y);
         }
       }
 
-      /* Only once the house is up — smoke from a half-built chimney reads as
-         a bug, and during the rise the anchor is still moving. */
-      if (item.smoke && t >= 1) {
+      /* Winter only: a woodstove running in July is the kind of wrong that
+         nags, and the lit windows carry the job of marking the house out the
+         rest of the year. Also gated on the house being fully up — smoke from
+         a half-built chimney reads as a bug, and during the rise the anchor is
+         still moving. */
+      if (item.smoke && t >= 1 && season === "winter") {
         const [col, row] = item.smoke;
         plume(item.x + col, base - (rows - 1 - row), seconds);
       }
