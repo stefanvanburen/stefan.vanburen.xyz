@@ -22,6 +22,11 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
+          # hugo.toml sets enableGitInfo, so Hugo dates each page from its last
+          # commit and the Atom feeds publish that as <updated>. The default
+          # shallow checkout leaves only the tip commit, which dates every page
+          # to the deploy and re-notifies every feed reader.
+          fetch-depth: 0
       - uses: extractions/setup-just@53165ef7e734c5c07cb06b3c8e7b647c5aa16db3 # v4
       - uses: peaceiris/actions-hugo@2752ce1d29631191ea3f27c23495fa06139a5b78 # v3.2.1
         with:
