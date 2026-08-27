@@ -374,6 +374,51 @@
     ],
   };
 
+  /* The windows, in the order they stay lit. The house winds down the way a
+     house does rather than at random: the room up in the gable goes dark
+     first, then the rooms to the right of the door, and the left of the house
+     is the last thing still burning at three in the morning. Within a side the
+     upstairs goes before the downstairs, since somebody is always up later
+     than they meant to be.
+
+     Each 2x2 opening is keyed by its top-left cell so both rows and both
+     columns get one answer -- half a lit window is a glitch -- and the order
+     is fixed rather than re-rolled, because a window that changes its mind
+     between frames reads as a fault instead of as a household. The door is the
+     opening in the middle and is never a window at all. */
+  const WINDOW_ORDER = (() => {
+    const art = HOME.art;
+    const middle = art[0].length / 2;
+    const corner = (r, c) => {
+      let wc = c;
+      let wr = r;
+      while (wc > 0 && art[wr][wc - 1] === "*") wc--;
+      while (wr > 0 && art[wr - 1][wc] === "*") wr--;
+      return wc + "," + wr;
+    };
+    const seen = new Set();
+    const windows = [];
+    art.forEach((row, r) => {
+      for (let c = 0; c < row.length; c++) {
+        if (row[c] !== "*") continue;
+        const key = corner(r, c);
+        if (seen.has(key)) continue;
+        seen.add(key);
+        const [wc, wr] = key.split(",").map(Number);
+        windows.push({ key, c: wc, r: wr });
+      }
+    });
+    const gable = Math.min(...windows.map((w) => w.r));
+    /* 0 stays lit longest, 2 goes dark first. */
+    const side = (w) => (w.r === gable ? 2 : w.c < middle ? 0 : 1);
+    windows.sort((x, y) => side(x) - side(y) || y.r - x.r || x.c - y.c);
+    return {
+      corner,
+      count: windows.length,
+      rank: new Map(windows.map((w, i) => [w.key, i])),
+    };
+  })();
+
   /* Two of these show at a time, drawn fresh on every load. */
   const LANDMARKS = [
     {
@@ -1153,8 +1198,20 @@
     }
 
     /* Windows come on at the same light level the stars do, so the house
-       lights up as dusk closes rather than snapping on at sunset. */
-    const lampsOn = starlight > 0.4;
+       lights up as dusk closes rather than snapping on at sunset. How many
+       stay on falls steeply across the night — most of the house is up just
+       after dark, one light is burning at three in the morning — but never
+       reaches zero, because a wholly dark house is a house you can't find.
+       clock.arc runs 0 at sunset to 1 at sunrise on this side of the day. */
+    const litWindows =
+      starlight > 0.4
+        ? Math.max(
+            1,
+            Math.round(
+              WINDOW_ORDER.count * (Math.pow(1 - clock.arc, 2) + 0.05),
+            ),
+          )
+        : 0;
 
     /* --- the ridge and whatever is standing on it, always last --- */
 
@@ -1242,7 +1299,10 @@
           const cell = line[col];
           if (cell === "#") stroke(item.x + col, y);
           else if (cell === "o") punch(item.x + col, y);
-          else if (cell === "*") (lampsOn ? lamp : punch)(item.x + col, y);
+          else if (cell === "*") {
+            const rank = WINDOW_ORDER.rank.get(WINDOW_ORDER.corner(row, col)) ?? 0;
+            (rank < litWindows ? lamp : punch)(item.x + col, y);
+          }
         }
       }
 
