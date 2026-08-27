@@ -1,0 +1,72 @@
+# Spindle pipeline for tangled.org, mirroring .github/workflows/ci.yaml. While
+# both forges are live, a change to one belongs in the other.
+#
+# Tangled's own site hosting has no custom-domain support yet, so this deploys
+# to xmit exactly as the GitHub workflow does rather than serving from Tangled.
+
+when:
+  - event: ["push", "manual"]
+    branch: ["main"]
+  - event: ["pull_request"]
+    branch: ["main"]
+
+engine: "nixery"
+
+clone:
+  # hugo.toml sets enableGitInfo, so Hugo dates each page from its last commit
+  # and the Atom feeds publish that as <updated>. Spindle's default depth of 1
+  # would leave only the tip commit and date every page to the deploy. There is
+  # no "full clone" option -- depth 0 is read as the default 1 -- so this is
+  # just a number comfortably above the repo's commit count (969 today).
+  depth: 10000
+
+# The nixery engine always adds bash, git, coreutils and nix, so those are
+# left out here even though the build uses all of them.
+dependencies:
+  nixpkgs:
+    # nixpkgs builds hugo with the `extended` tag, matching `extended: true` on
+    # the GitHub side, and is on 0.165.0, matching the version pinned there.
+    - hugo
+    - just
+    # rsvg-convert, for the icons `just build` rasterizes from the SVG favicon.
+    - librsvg
+    # For fetching and verifying the xmit release binary below.
+    - cacert
+    - curl
+    - gnutar
+    - gzip
+
+steps:
+  # Build on every trigger, exactly as `just publish` would, so what's verified
+  # is what ships: minified, with the apple-touch-icon rasterized.
+  - name: "Build"
+    command: just build
+
+  - name: "Publish"
+    environment:
+      # Bump these two together, from the checksums.txt on
+      # https://github.com/xmit-co/xmit/releases.
+      XMIT_VERSION: "0.5.2"
+      XMIT_SHA256: "2855c4b7348b4076cbce9bcf36758e210d164d454728534c7934028658053e74"
+    # XMIT_KEY comes from the repository's Settings -> Secrets.
+    command: |
+      set -euo pipefail
+
+      # Spindle has no per-step condition, so branch here: a pull request
+      # should build but not deploy.
+      if [ "${TANGLED_PIPELINE_KIND}" != "push" ]; then
+        echo "pipeline kind is ${TANGLED_PIPELINE_KIND}; skipping publish"
+        exit 0
+      fi
+
+      # xmit isn't in nixpkgs, so fetch the release binary and check it against
+      # a pinned digest.
+      curl --fail --silent --show-error --location \
+        --output xmit.tgz \
+        "https://github.com/xmit-co/xmit/releases/download/v${XMIT_VERSION}/xmit_${XMIT_VERSION}_linux_amd64.tgz"
+      echo "${XMIT_SHA256}  xmit.tgz" | sha256sum --check --strict -
+      tar --extract --gzip --file xmit.tgz --strip-components=1 \
+        "xmit_${XMIT_VERSION}_linux_amd64/xmit"
+
+      # Uploads public/ from the build step rather than rebuilding it.
+      PATH="${PWD}:${PATH}" just upload
