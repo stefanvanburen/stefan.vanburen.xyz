@@ -265,9 +265,9 @@
        out of a row of pixel-art houses that otherwise all look alike. */
     smoke: [21, 2],
     /* Where the swing hangs from the butternut, as [col, row] in the tree's
-       own sprite: out on the right-hand limbs, which is where it hangs.
-       Chosen because both the leafy and the leaf-off tree carry a limb at that
-       cell, and because it clears the trunk, so the rope runs down through
+       own sprite: out on the big right-hand limb, which is where it hangs.
+       Chosen because both the leafy and the leaf-off tree carry that limb at
+       the cell, and because it clears the trunk, so the rope runs down through
        open air in either season and the seat has room to swing. */
     swingAt: [23, 15],
     /* The butternut in the yard. Carried by the house rather than thrown in
@@ -283,12 +283,23 @@
        limbs show right through the canopy. Solid foliage would read as a
        maple.
 
+       The fork is lopsided, because the real one is. One massive limb leaves
+       it to the right at almost a diagonal and holds that line the whole way
+       out, past everything else, to the edge of the sprite — that's the limb
+       the swing hangs from. The left-hand limbs go out only a little way
+       before turning hard upward, and run near-vertical from there to the top,
+       so the crown stands tall and narrow on that side and reaches low and far
+       on the other. A tree that forks evenly to both sides is a diagram of a
+       tree; this one is a portrait of a particular one, and the lopsidedness
+       is the part you'd recognize from the yard.
+
        Foliage hangs at the branch ends and nowhere else, because butternut
        leaves are crowded at the tips and whorled, and the limbs stay visible
        in the gaps between the tufts -- that see-through, dappled crown is what
-       the species is known for. Every tip lands on a rounded envelope, narrow
-       at the top and widest about two thirds up. Fill the gaps in or size the
-       tufts up until they merge, and it stops being a butternut and becomes a
+       the species is known for. Every tip lands on the same lopsided envelope
+       the limbs describe — high and close in on the left, low and stretched
+       out along the diagonal on the right. Fill the gaps in or size the tufts
+       up until they merge, and it stops being a butternut and becomes a
        lollipop.
 
        In winter it stands in leaf-off instead: the same envelope drawn as
@@ -298,25 +309,25 @@
        from the season, since the season can't change while the page is open. */
     beside: {
       bare: [
-        "................#...............",
-        "...........#....#....#..........",
-        "#..........#...#.....#.........#",
-        "##.#......#.#..#....##......#.##",
-        ".#.##.....#.#..#....##.....##.#.",
-        ".##.#....#...#.#...#..#....#.##.",
-        "..#..#...#...####.##..#...#..#..",
-        "...#.#...#....#####...#...#.#...",
-        "...####.#......###.....#.####...",
-        "....###.#......###.....#.###....",
-        ".....##.#......###.....#.##.....",
-        "......##.......###......##......",
-        "......###......###.....###......",
-        ".....#.###.....###....###.#.....",
-        "......#####....###...#####......",
-        ".......#####...###..#####.......",
-        "........####..###...####........",
-        "..........###.###..###..........",
-        "...........######.###...........",
+        "......#...#.....................",
+        "......#...#.#...................",
+        "...#..#...#.#..#...........#....",
+        "...#.##..##..#.#..........#.....",
+        "..#..##..##...##.....##...###...",
+        "..#..##..##...##.....#...##.....",
+        "..#..##..##...##....##...#....#.",
+        "...#.##..##...##....#...##...#..",
+        "...#.##..##...##...##...##....##",
+        "....#.##.##...##...#...##...###.",
+        ".....###.###..##..##...##..##...",
+        "......###.##..##..#...##..##....",
+        ".......##.##..##.##...##.##.....",
+        "........####..####...##.##......",
+        ".........####.###....####.......",
+        "..........###.###...####........",
+        "...........######..####.........",
+        "............##########..........",
+        "............#########...........",
         "...........##########...........",
         "............########............",
         ".............######.............",
@@ -333,25 +344,25 @@
         "...........##########...........",
       ],
       art: [
-        "..............#####.............",
-        ".............#######.#..........",
-        ".........#####.####.###.........",
-        "......#.#######.#.#######.#.....",
-        "....##########..#..####.#####...",
-        "...#######.#...###...#.########.",
-        "####.#####.#.#######.#..########",
-        "##################.##.##########",
-        ".####.######.##.#.##.######.####",
-        "..#.#..#####..#####..#####.#....",
-        "....##..##...#######...#..##....",
-        "...######.....#####.....#####...",
-        "...######......###......#######.",
-        "...######......###.....#######..",
-        ".......###.....###....###..#....",
-        "......#####....###...#####......",
-        ".......#####..####..#####.......",
-        ".........####.###..####.........",
-        "..........#######.####..........",
+        ".....###..###...................",
+        "....#.#########.................",
+        "...#.####.###.##..........##....",
+        "..######.########....#...###....",
+        ".##.####.##..###....###.#.###...",
+        "..#.####.##...##...#.###.###.#..",
+        "..##.##.####..###..####.###.###.",
+        "...####.##############.###.#.#.#",
+        "..######.###..####.####.####.###",
+        ".##.#.#####.#.##..###.###.######",
+        "###.####.###########.####.######",
+        ".##.#.#######.#####.#####.###...",
+        "..###.##############.#######....",
+        "........#####.#####..##.####....",
+        "........#####.####..#####.#.....",
+        ".........####.###..#######......",
+        "..........#######..####.........",
+        "............##########..........",
+        "............#########...........",
         "...........##########...........",
         "............########............",
         ".............######.............",
