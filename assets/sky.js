@@ -76,6 +76,13 @@
   const FIREFLY_PER_PX = 0.15;
   const GEESE_PERIOD = 208;
 
+  /* The swing under the butternut: rope length, how far it carries, and how
+     slowly it does it. An empty swing in a breeze barely moves, so the arc is
+     small and the period runs about ten seconds. */
+  const SWING_ROPE = 12;
+  const SWING_ARC = 0.26;
+  const SWING_SPEED = 0.6;
+
   /* Chimney smoke: how many puffs are in the air at once, how long each takes
      to run the plume, and how far it rises and leans while it does. */
   const SMOKE_PUFFS = 7;
@@ -257,6 +264,11 @@
        the only moving thing on the ridge, which is how you pick your own house
        out of a row of pixel-art houses that otherwise all look alike. */
     smoke: [21, 2],
+    /* Where the swing hangs from the butternut, as [col, row] in the tree's
+       own sprite. Chosen because both the leafy and the leaf-off tree carry a
+       limb at that cell, and because it's well clear of the trunk, so the rope
+       runs down through open air. */
+    swingAt: [8, 15],
     /* The butternut in the yard. Carried by the house rather than thrown in
        with the woods, because it has to stand beside it — a tree that size is
        part of the house, not scenery that happened to land nearby.
@@ -494,9 +506,17 @@
     },
     {
       /* The one silhouette here that's all vertical, which is why it's worth
-         including — it breaks up a ridge of otherwise wide, low buildings. */
+         including — it breaks up a ridge of otherwise wide, low buildings.
+         Five pixels of rooster ride the spindle on top: the weathercock, the
+         one Updike put in "Couples". It is right at the edge of what this
+         resolution can hold a shape at, which is the argument for it rather
+         than against — nothing else up there is bird-shaped. */
       name: "the First Church steeple",
       art: [
+        ".....#..##......",
+        ".....#####......",
+        "......###.......",
+        ".......#........",
         ".......##.......",
         ".......##.......",
         ".......##.......",
@@ -769,6 +789,7 @@
         const tree = {
           art: treeArt,
           name: null,
+          swing: HOME.swingAt,
           x: treeLeft ? x : x + houseW + YARD,
           width: treeW,
           delay: 0,
@@ -1272,6 +1293,22 @@
       }
     };
 
+    /* A rope and a seat, swinging as a pendulum off a fixed pivot. Drawn after
+       the tree it hangs from, so it reads as being in front of the trunk. */
+    const hangSwing = (x0, y0, t) => {
+      const angle = Math.sin(t * SWING_SPEED) * SWING_ARC;
+      const sx = x0 + Math.sin(angle) * SWING_ROPE;
+      const sy = y0 + Math.cos(angle) * SWING_ROPE;
+      const steps = Math.round(SWING_ROPE);
+      for (let i = 1; i <= steps; i++) {
+        const f = i / steps;
+        stroke(Math.round(x0 + (sx - x0) * f), Math.round(y0 + (sy - y0) * f));
+      }
+      const seatX = Math.round(sx);
+      const seatY = Math.round(sy);
+      for (let dx = -1; dx <= 1; dx++) stroke(seatX + dx, seatY);
+    };
+
     for (const item of sprites) {
       const rows = item.art.length;
       const t = clamp01((elapsed - item.delay) / RISE_MS);
@@ -1314,6 +1351,12 @@
       if (item.smoke && t >= 1 && season === "winter") {
         const [col, row] = item.smoke;
         plume(item.x + col, base - (rows - 1 - row), seconds);
+      }
+
+      /* Same gate as the smoke: nothing hangs off a tree that's still rising. */
+      if (item.swing && t >= 1) {
+        const [col, row] = item.swing;
+        hangSwing(item.x + col, base - (rows - 1 - row), seconds);
       }
     }
 
