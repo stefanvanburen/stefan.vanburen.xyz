@@ -82,12 +82,21 @@ steps:
       # That binary is an ordinary glibc build: it wants
       # /lib64/ld-linux-x86-64.so.2, which doesn't exist in a Nix-store-only
       # image, so running it as shipped fails with exit 127. Borrow the
-      # interpreter from a binary the image already has, and take libc from
-      # alongside it. (xmit's npm package is no help here -- it's a launcher
-      # that spawns this same binary, and it exits 0 when the spawn fails,
-      # which turns a broken deploy into a green build.)
+      # interpreter from a binary the image already has.
+      #
+      # It gets invoked through that loader rather than patched to point at
+      # it: xmit is a Go binary, and rewriting its program headers with
+      # `patchelf --set-interpreter` makes it die on SIGSEGV instead. This way
+      # the bytes that run are exactly the ones the digest above covers.
+      #
+      # (xmit's npm package is no help here -- it's a launcher that spawns this
+      # same binary, and it exits 0 when the spawn fails, which turns a broken
+      # deploy into a green build.)
       loader=$(patchelf --print-interpreter "$(readlink -f "$(command -v git)")")
-      patchelf --set-interpreter "${loader}" --set-rpath "$(dirname "${loader}")" xmit
+      mkdir -p bin
+      printf '#!/bin/sh\nexec "%s" --library-path "%s" "%s/xmit" "$@"\n' \
+        "${loader}" "$(dirname "${loader}")" "${PWD}" > bin/xmit
+      chmod +x bin/xmit
 
       # Uploads public/ from the build step rather than rebuilding it.
-      PATH="${PWD}:${PATH}" just upload
+      PATH="${PWD}/bin:${PATH}" just upload
