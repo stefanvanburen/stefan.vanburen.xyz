@@ -807,6 +807,7 @@
   let meteor = null;
   let nextMeteorAt = null;
   let inkColor = null;
+  let bodyColor = null;
   let season = "";
 
   /* Cached, not read per frame: getComputedStyle forces a style recalculation,
@@ -820,6 +821,7 @@
   const readTheme = () => {
     const style = getComputedStyle(canvas);
     inkColor = channels(style.color);
+    bodyColor = channels(style.textDecorationColor);
     season = style.getPropertyValue("--season").trim();
   };
 
@@ -881,6 +883,11 @@
        thing, bare page where the page is. */
     const glow = (x, y) => {
       if (inSky(x, y)) grid[y * width + x] = dark ? 1 : 0;
+    };
+    /* The sun or moon's face, and the only thing here drawn in the second
+       color. Everything else on the band is ink or bare page. */
+    const disc = (x, y) => {
+      if (inSky(x, y)) grid[y * width + x] = 2;
     };
     /* Forced back to bare page — a window, a doorway, an arch. Distinct from
        simply not drawing: on a dense night sky an undrawn window fills with
@@ -1024,7 +1031,7 @@
         const chord = Math.sqrt(R * R - y * y);
         const lit =
           phase === null || (waxing ? x > k * chord : x < -k * chord);
-        if (lit) glow(bx + x, by + y);
+        if (lit) disc(bx + x, by + y);
       }
     }
     /* An outline, so the disc still reads in light mode where "lit" means
@@ -1262,9 +1269,10 @@
     const image = ctx.createImageData(width, HEIGHT);
     for (let i = 0; i < width * HEIGHT; i++) {
       if (!grid[i]) continue;
-      image.data[i * 4] = ink[0];
-      image.data[i * 4 + 1] = ink[1];
-      image.data[i * 4 + 2] = ink[2];
+      const c = grid[i] === 2 ? bodyColor : ink;
+      image.data[i * 4] = c[0];
+      image.data[i * 4 + 1] = c[1];
+      image.data[i * 4 + 2] = c[2];
       image.data[i * 4 + 3] = 255;
     }
     ctx.putImageData(image, 0, 0);

@@ -68,6 +68,15 @@ canvas.sky {
      Nothing sets a background: unpainted pixels are transparent and the page
      shows through, so the band can never disagree with what's behind it. */
   color: var(--accent-color);
+
+  /* The sun and moon's fill — the one thing on the band not drawn in the ink,
+     so a lit disc behind a lit tree separates from it by hue instead of fusing
+     into one shape. Parked on text-decoration-color because a canvas has no
+     text to decorate, so the declaration is inert; what matters is that it's a
+     real color property, and computed style therefore resolves its
+     light-dark() for the renderer to read back. Asking for the custom property
+     directly returns the unresolved light-dark(...) token instead. */
+  text-decoration-color: var(--sky-body);
 }
 
 .site-header {
