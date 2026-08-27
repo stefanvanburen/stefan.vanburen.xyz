@@ -1,0 +1,38 @@
+# xmit's per-site config, published into public/ from static/. It replaces
+# the siteconfig.json that pages.sr.ht used.
+# https://xmit.co/docs
+
+404 = "404.html"
+
+# `on` is an unanchored regex over the request path, and where several rules
+# match one path the last one wins — so these run general to specific.
+
+# Pages. They're served extensionless (/colophon, /blog/<slug>/), and slugs
+# can contain dots, so this is a catch-all rather than a pattern.
+[[headers]]
+name = "cache-control"
+value = "max-age=600"
+
+# Hugo fingerprints the stylesheet, so its URL never serves new content.
+[[headers]]
+name = "cache-control"
+value = "max-age=31536000, immutable"
+on = "\\.css$"
+
+# Atom feeds.
+[[headers]]
+name = "cache-control"
+value = "max-age=1800"
+on = "\\.xml$"
+
+# The sitemap, which turns over far more slowly than the feeds do.
+[[headers]]
+name = "cache-control"
+value = "max-age=86400"
+on = "^/sitemap\\.xml$"
+
+# Icons and robots.txt.
+[[headers]]
+name = "cache-control"
+value = "max-age=86400"
+on = "^/(favicon\\.min\\.svg|favicon\\.png|apple-touch-icon\\.png|icon-512\\.png|robots\\.txt)$"

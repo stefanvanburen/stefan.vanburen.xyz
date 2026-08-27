@@ -1,0 +1,55 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+permissions: {}
+
+# One deploy at a time; a superseded run has nothing worth finishing.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: extractions/setup-just@53165ef7e734c5c07cb06b3c8e7b647c5aa16db3 # v4
+      - uses: peaceiris/actions-hugo@f2acb7c5f695a87535fa8eb9040475c84c4f6909 # v3.2.1
+        with:
+          hugo-version: "0.165.0"
+          extended: true
+      # rsvg-convert, for the icons `just build` rasterizes from the SVG favicon.
+      - run: sudo apt-get update && sudo apt-get install --yes librsvg2-bin
+      # Build on every branch, exactly as `just publish` would, so what's
+      # verified is what ships: minified, with the apple-touch-icon rasterized.
+      - run: just build
+      # No action exists for xmit, so install the release binary. Bump
+      # XMIT_VERSION and XMIT_SHA256 together, from the checksums.txt on
+      # https://github.com/xmit-co/xmit/releases.
+      - name: Install xmit
+        env:
+          XMIT_VERSION: 0.5.2
+          XMIT_SHA256: 2855c4b7348b4076cbce9bcf36758e210d164d454728534c7934028658053e74
+        run: |
+          curl --fail --silent --show-error --location \
+            --output xmit.tgz \
+            "https://github.com/xmit-co/xmit/releases/download/v${XMIT_VERSION}/xmit_${XMIT_VERSION}_linux_amd64.tgz"
+          echo "${XMIT_SHA256}  xmit.tgz" | sha256sum --check --strict -
+          tar --extract --gzip --file xmit.tgz --strip-components=1 \
+            --directory "${RUNNER_TEMP}" "xmit_${XMIT_VERSION}_linux_amd64/xmit"
+          echo "${RUNNER_TEMP}" >> "${GITHUB_PATH}"
+      # Uploads public/ from the build step rather than rebuilding it.
+      - name: Publish
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        env:
+          XMIT_KEY: ${{ secrets.XMIT_KEY }}
+        run: just upload

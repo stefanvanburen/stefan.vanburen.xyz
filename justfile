@@ -30,10 +30,9 @@ fmt:
 lint:
     prek run --all-files
 
-# Upload an already-built public/ to pages.sr.ht.
+# Upload an already-built public/ to xmit.
 upload:
-    tar --directory public --create --gzip --verbose . > site.tar.gz
-    hut pages publish --domain stefan.vanburen.xyz --site-config siteconfig.json site.tar.gz
+    xmit stefan.vanburen.xyz public/
 
 # Build and publish the site.
 publish: build upload

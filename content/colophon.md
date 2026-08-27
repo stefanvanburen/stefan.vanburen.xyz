@@ -3,11 +3,11 @@ title: Colophon
 description: Details on tools and technologies used to build this site.
 ---
 
-The code for this website is open source --- you can find it on sourcehut at [~svbn/stefan.vanburen.xyz](https://git.sr.ht/~svbn/stefan.vanburen.xyz).
+The code for this website is open source --- you can find it on GitHub at [stefanvanburen/stefan.vanburen.xyz](https://github.com/stefanvanburen/stefan.vanburen.xyz).
 
-This website is built with [hugo](https://github.com/gohugoio/hugo) and hosted on [sourcehut pages](https://srht.site).
+This website is built with [hugo](https://github.com/gohugoio/hugo) and hosted on [xmit](https://xmit.co).
 
-The code is licensed under the [MIT License](https://git.sr.ht/~svbn/stefan.vanburen.xyz/tree/main/item/LICENSE).
+The code is licensed under the [MIT License](https://github.com/stefanvanburen/stefan.vanburen.xyz/blob/main/LICENSE).
 
 The content is licensed as [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 The content is all written by a human, flaws and all. (Please send me typos, bugs, etc.!)
@@ -15,7 +15,7 @@ The content is all written by a human, flaws and all. (Please send me typos, bug
 I've included a "gallery" of the art I've hot-linked to at [/art](/art).
 
 The design of this site is intentionally sparse, in an effort to focus on content.
-The site has no JavaScript on any pages, and has a single, very simple [stylesheet](https://git.sr.ht/~svbn/stefan.vanburen.xyz/tree/main/item/assets/style.css).
+The site has no JavaScript on any pages, and has a single, very simple [stylesheet](https://github.com/stefanvanburen/stefan.vanburen.xyz/blob/main/assets/style.css).
 
 The body font uses the [Modern Font Stacks transitional serif stack](https://github.com/system-fonts/modern-font-stacks?tab=readme-ov-file#transitional), headings use the [Modern Font Stacks system-ui stack](https://github.com/system-fonts/modern-font-stacks?tab=readme-ov-file#system-ui), and for the monospaced bits, your system's monospaced font.
 I'm deliberately avoiding web fonts for the sake of site speed and page size.

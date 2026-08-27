@@ -2,7 +2,7 @@
 
 Built with [hugo](https://github.com/gohugoio/hugo).
 
-Published on [sourcehut pages](https://srht.site).
+Published on [xmit](https://xmit.co).
 
 The code here is licensed under the [MIT License](./LICENSE).
 
