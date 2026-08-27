@@ -265,10 +265,11 @@
        out of a row of pixel-art houses that otherwise all look alike. */
     smoke: [21, 2],
     /* Where the swing hangs from the butternut, as [col, row] in the tree's
-       own sprite. Chosen because both the leafy and the leaf-off tree carry a
-       limb at that cell, and because it's well clear of the trunk, so the rope
-       runs down through open air. */
-    swingAt: [8, 15],
+       own sprite: out on the right-hand limbs, which is where it hangs.
+       Chosen because both the leafy and the leaf-off tree carry a limb at that
+       cell, and because it clears the trunk, so the rope runs down through
+       open air in either season and the seat has room to swing. */
+    swingAt: [23, 15],
     /* The butternut in the yard. Carried by the house rather than thrown in
        with the woods, because it has to stand beside it — a tree that size is
        part of the house, not scenery that happened to land nearby.
@@ -764,9 +765,8 @@
       return null;
     };
 
-    /* Home and its butternut are placed as a single unit, on whichever side
-       the coin lands, so the tree is always in the yard rather than wherever
-       the woods happened to scatter one. */
+    /* Home and its butternut are placed as a single unit, tree always to the
+       right of the house, because that's where it stands. */
     const placeHome = (attempts) => {
       const houseW = HOME.art[0].length;
       const treeArt = season === "winter" ? HOME.beside.bare : HOME.beside.art;
@@ -777,12 +777,11 @@
       for (let i = 0; i < attempts; i++) {
         const x = randomInt(0, width - span);
         if (!clearAt(x, span)) continue;
-        const treeLeft = Math.random() < 0.5;
         const house = {
           art: HOME.art,
           name: HOME.name,
           smoke: HOME.smoke,
-          x: treeLeft ? x + treeW + YARD : x,
+          x,
           width: houseW,
           delay: 0,
         };
@@ -790,7 +789,7 @@
           art: treeArt,
           name: null,
           swing: HOME.swingAt,
-          x: treeLeft ? x : x + houseW + YARD,
+          x: x + houseW + YARD,
           width: treeW,
           delay: 0,
         };
