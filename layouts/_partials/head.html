@@ -45,6 +45,11 @@ Based on the builtin colorschemes from mini.hues:
 {{ $darkShadowStops := slice }}
 {{ $darkGradientStops := slice }}
 {{ $gradientDirection := "" }}
+{{/* Named so the ridgeline art can match the palette. It travels through the
+     same css.Build vars the colors do, rather than being recomputed from the
+     reader's clock in JS: both are fixed at build time, so sharing the source
+     is what keeps snow from ever falling in summer's magenta. */}}
+{{ $season := "" }}
 {{ if (or (and (eq $month "11") (ge $day 8)) (eq $month "12") (eq $month "01") (and (eq $month "02") (lt $day 4))) }}
 	{{/* winter; purple -> green */}}
 	{{ $colorLight = "#014772" }}
@@ -53,6 +58,7 @@ Based on the builtin colorschemes from mini.hues:
 	{{ $darkShadowStops = slice "#371134" "#211a46" "#00324f" "#004c4e" "#003415" }}
 	{{ $darkGradientStops = slice "#edc7e7" "#d1cffb" "#b3daf9" "#a6e1e2" "#b8e1c1" }}
 	{{ $gradientDirection = "to bottom" }}
+	{{ $season = "winter" }}
 {{ else if (or (and (eq $month "02") (ge $day 4)) (eq $month "03") (eq $month "04") (and (eq $month "05") (lt $day 6))) }}
 	{{/* spring; green -> red */}}
 	{{ $colorLight = "#2e5e00" }}
@@ -61,6 +67,7 @@ Based on the builtin colorschemes from mini.hues:
 	{{ $darkShadowStops = slice "#00381d" "#373700" "#492900" "#410d12" }}
 	{{ $darkGradientStops = slice "#abe5be" "#d8da9d" "#facb9e" "#ffc1bf" }}
 	{{ $gradientDirection = "to right" }}
+	{{ $season = "spring" }}
 {{ else if (or (and (eq $month "05") (ge $day 6)) (eq $month "06") (eq $month "07") (and (eq $month "08") (lt $day 8))) }}
 	{{/* summer; red -> green */}}
 	{{ $colorLight = "#61004f" }}
@@ -69,6 +76,7 @@ Based on the builtin colorschemes from mini.hues:
 	{{ $darkShadowStops = slice "#3a0f2e" "#410d0c" "#492c00" "#313600" }}
 	{{ $darkGradientStops = slice "#fac0e4" "#ffc1b9" "#f6cc9b" "#d1db9f" }}
 	{{ $gradientDirection = "to top" }}
+	{{ $season = "summer" }}
 {{ else if (or (and (eq $month "08") (ge $day 8)) (eq $month "09") (eq $month "10") (and (eq $month "11") (lt $day 8))) }}
 	{{/* autumn; orange, red, blue, purple */}}
 	{{ $colorLight = "#5c0207" }}
@@ -77,6 +85,7 @@ Based on the builtin colorschemes from mini.hues:
 	{{ $darkShadowStops = slice "#410d0d" "#3a0f2f" "#00284a" "#261844" }}
 	{{ $darkGradientStops = slice "#fac6c1" "#f1c6e2" "#b8d9fc" "#d7cef9" }}
 	{{ $gradientDirection = "to left" }}
+	{{ $season = "autumn" }}
 {{ end }}
 
 {{/*
@@ -92,6 +101,7 @@ Based on the builtin colorschemes from mini.hues:
 {{ $shadowHalf := delimit (first 2 $shadowParts) ", " }}
 
 {{ $vars := dict
+	"season" $season
 	"color-light" $colorLight
 	"color-dark" $colorDark
 	"shadow" $shadow
@@ -107,6 +117,20 @@ Based on the builtin colorschemes from mini.hues:
 	{{ else }}
 		{{ with . | minify | fingerprint }}
 			<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+		{{ end }}
+	{{ end }}
+{{ end }}
+
+{{/* The pixel-art ridgeline above the header. The first script this site has
+     shipped, and it stays optional: it creates its own <canvas>, so with JS
+     off the page is exactly what it was before. Deferred because it appends to
+     <body>, which has to exist first. */}}
+{{ with resources.Get "sky.js" }}
+	{{ if hugo.IsDevelopment }}
+		<script defer src="{{ .RelPermalink }}"></script>
+	{{ else }}
+		{{ with . | minify | fingerprint }}
+			<script defer src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous"></script>
 		{{ end }}
 	{{ end }}
 {{ end }}

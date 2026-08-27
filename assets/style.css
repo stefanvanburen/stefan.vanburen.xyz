@@ -50,6 +50,26 @@ body {
   flex-direction: column;
 }
 
+/* The pixel-art ridgeline above the header. sky.js creates the element as
+   well as drawing it, so nothing here renders without JS — a decorative band
+   isn't worth a blank gap in the layout when the script doesn't run.
+
+   The bitmap is a few hundred pixels wide and the browser scales it up, so
+   `pixelated` is load-bearing: default smooth sampling averages the dither
+   back into flat grey and the whole technique disappears. */
+canvas.sky {
+  display: block;
+  width: 100%;
+  image-rendering: pixelated;
+
+  /* Not decoration — this is how the renderer learns its one color. It reads
+     it back off this element's computed style, where `light-dark()` has
+     already resolved, so the seasonal ink stays defined here and only here.
+     Nothing sets a background: unpainted pixels are transparent and the page
+     shows through, so the band can never disagree with what's behind it. */
+  color: var(--accent-color);
+}
+
 .site-header {
   margin: 1rem 1rem 0;
   display: flex;
@@ -427,10 +447,12 @@ dd {
   }
 
   /* Navigation is meaningless on paper: the site header and its manicules,
-     the "back to blog posts" link, and the per-heading "#" anchors. */
+     the "back to blog posts" link, and the per-heading "#" anchors. The
+     ridgeline goes too — it's a solid band of ink for no information. */
   .site-header,
   .back-link,
-  .anchor {
+  .anchor,
+  canvas.sky {
     display: none;
   }
 
