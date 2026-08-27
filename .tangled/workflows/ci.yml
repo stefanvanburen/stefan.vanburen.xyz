@@ -27,11 +27,10 @@ dependencies:
     - just
     # rsvg-convert, for the icons `just build` rasterizes from the SVG favicon.
     - librsvg
-    # For fetching and verifying the xmit release binary below.
+    # npx, to run xmit in the publish step below.
+    - nodejs
+    # TLS for the npm registry and the xmit API.
     - cacert
-    - curl
-    - gnutar
-    - gzip
   # Not from the `nixpkgs` key above: nixery.tangled.sh pins its own, older
   # nixpkgs and serves hugo 0.152.2, which predates the css.Build that
   # layouts/_partials/head.html calls -- the site fails to render on it. Any
@@ -54,10 +53,12 @@ steps:
 
   - name: "Publish"
     environment:
-      # Bump these two together, from the checksums.txt on
-      # https://github.com/xmit-co/xmit/releases.
-      XMIT_VERSION: "0.5.2"
-      XMIT_SHA256: "2855c4b7348b4076cbce9bcf36758e210d164d454728534c7934028658053e74"
+      # xmit ships both a Go release binary and an npm package. The binary is
+      # dynamically linked against /lib64/ld-linux-x86-64.so.2, which doesn't
+      # exist in a Nix-store-only image, so it dies with exit 127. The npm
+      # package is pure JavaScript (axios + tar) and has no such problem, so
+      # unlike the GitHub workflow this deploys through npx.
+      XMIT_VERSION: "0.5.2-0"
     # XMIT_KEY comes from the repository's Settings -> Secrets.
     command: |
       set -euo pipefail
@@ -69,14 +70,15 @@ steps:
         exit 0
       fi
 
-      # xmit isn't in nixpkgs, so fetch the release binary and check it against
-      # a pinned digest.
-      curl --fail --silent --show-error --location \
-        --output xmit.tgz \
-        "https://github.com/xmit-co/xmit/releases/download/v${XMIT_VERSION}/xmit_${XMIT_VERSION}_linux_amd64.tgz"
-      echo "${XMIT_SHA256}  xmit.tgz" | sha256sum --check --strict -
-      tar --extract --gzip --file xmit.tgz --strip-components=1 \
-        "xmit_${XMIT_VERSION}_linux_amd64/xmit"
+      # npx needs a writable HOME for its cache; the container sets none.
+      export HOME="${PWD}/.ci-home"
+      mkdir -p "${HOME}" bin
+
+      # A shim rather than a direct npx call, so that the domain to deploy to
+      # stays written down once, in the justfile.
+      printf '#!/bin/sh\nexec npx --yes "@xmit.co/xmit@%s" "$@"\n' \
+        "${XMIT_VERSION}" > bin/xmit
+      chmod +x bin/xmit
 
       # Uploads public/ from the build step rather than rebuilding it.
-      PATH="${PWD}:${PATH}" just upload
+      PATH="${PWD}/bin:${PATH}" just upload
