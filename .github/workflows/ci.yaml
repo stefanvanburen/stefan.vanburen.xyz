@@ -33,7 +33,14 @@ jobs:
           hugo-version: "0.165.0"
           extended: true
       # rsvg-convert, for the icons `just build` rasterizes from the SVG favicon.
-      - run: sudo apt-get update && sudo apt-get install --yes librsvg2-bin
+      #
+      # `apt-get update` is allowed to fail: the runner image carries
+      # third-party apt repositories this build doesn't use, and one of them
+      # being down takes the whole command down with it (packages.microsoft.com
+      # served 403s on 2026-08-27 and broke a deploy). If the Ubuntu archive is
+      # genuinely unreachable, the install below still fails loudly.
+      - run: sudo apt-get update || true
+      - run: sudo apt-get install --yes librsvg2-bin
       # Build on every branch, exactly as `just publish` would, so what's
       # verified is what ships: minified, with the apple-touch-icon rasterized.
       - run: just build
