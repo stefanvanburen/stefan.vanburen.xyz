@@ -1,8 +1,8 @@
-# Spindle pipeline for tangled.org, mirroring .github/workflows/ci.yaml. While
-# both forges are live, a change to one belongs in the other.
+# Spindle pipeline for tangled.org, which is where this repository lives. It
+# replaced a GitHub Actions workflow (git log .github/ for that history).
 #
-# Tangled's own site hosting has no custom-domain support yet, so this deploys
-# to xmit exactly as the GitHub workflow does rather than serving from Tangled.
+# Tangled's own site hosting has no custom-domain support yet, so this builds
+# the site and deploys it to xmit rather than serving it from Tangled.
 
 when:
   - event: ["push", "manual"]
@@ -38,8 +38,11 @@ dependencies:
   # layouts/_partials/head.html calls -- the site fails to render on it. Any
   # key that isn't `nixpkgs` is installed with `nix profile add '<ref>#<pkg>'`
   # instead, so this pulls hugo from a pinned nixos-unstable revision that has
-  # 0.165.0, the version the GitHub workflow pins. nixpkgs builds hugo with the
-  # `extended` tag, matching `extended: true` there.
+  # 0.165.0. nixpkgs builds hugo with the `extended` tag, matching the
+  # extended build the site was previously built with.
+  #
+  # Nothing bumps this automatically -- Tangled has no Dependabot -- so it goes
+  # stale until someone comes back to it.
   #
   # To bump: take a revision from https://channels.nixos.org/nixos-unstable
   # (Hydra-built, so hugo substitutes from cache.nixos.org rather than building
